@@ -528,9 +528,26 @@ async function syncBundledSongsInner() {
   }
 }
 
-// ---------- 서비스 워커 ----------
+// ---------- 서비스 워커 + 새 버전 자동 새로고침 ----------
 if ("serviceWorker" in navigator) {
-  window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
+  const hadController = !!navigator.serviceWorker.controller;
+  let refreshing = false;
+  // 새 서비스워커가 제어권을 잡으면(= 새 버전 배포됨) 한 번 새로고침
+  navigator.serviceWorker.addEventListener("controllerchange", () => {
+    if (refreshing || !hadController) return; // 첫 설치 때는 무시
+    refreshing = true;
+    location.reload();
+  });
+  window.addEventListener("load", async () => {
+    try {
+      const reg = await navigator.serviceWorker.register("sw.js");
+      // 앱을 오래 켜둔 경우에도 새 버전 확인: 주기적으로 + 포그라운드 복귀 시
+      setInterval(() => reg.update().catch(() => {}), 60000);
+      document.addEventListener("visibilitychange", () => {
+        if (document.visibilityState === "visible") reg.update().catch(() => {});
+      });
+    } catch {}
+  });
 }
 
 // ---------- 시작 ----------
