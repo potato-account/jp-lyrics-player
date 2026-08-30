@@ -9,433 +9,529 @@
       "t": 0.33,
       "orig": "思い出すのは君の歌",
       "pron": "오모이다스노와 키미노 우타",
-      "trans": "떠오르는 건 너의 노래"
+      "pronSrc": "user",
+      "trans": "기억이 나는 건 너의 노래",
+      "transSrc": "user"
     },
     {
       "t": 3.68,
       "orig": "会話よりも鮮明だ",
       "pron": "카이와요리모 센메이다",
-      "trans": "대화보다도 선명해"
+      "pronSrc": "user",
+      "trans": "대화보다도 더 선명해",
+      "transSrc": "user"
     },
     {
       "t": 6.85,
       "orig": "どこに行ってしまったの",
       "pron": "도코니 잇테 시맛타노",
-      "trans": "어디로 가 버린 거야"
+      "pronSrc": "user",
+      "trans": "어디로 가버린 거야",
+      "transSrc": "user"
     },
     {
       "t": 10.05,
       "orig": "いつも探すんだよ",
       "pron": "이츠모 사가슨다요",
-      "trans": "언제나 찾고 있어"
+      "pronSrc": "user",
+      "trans": "언제나 찾고 있어",
+      "transSrc": "user"
     },
     {
       "t": 13.27,
       "orig": "思い出すのは",
       "pron": "오모이다스노와",
-      "trans": "떠오르는 건"
+      "pronSrc": "user",
+      "trans": "기억이 나는 건",
+      "transSrc": "user"
     },
     {
       "t": 15.32,
       "orig": "君の歌",
       "pron": "키미노 우타",
-      "trans": "너의 노래"
+      "pronSrc": "user",
+      "trans": "너의 노래",
+      "transSrc": "user"
     },
     {
       "t": 16.31,
       "orig": "歌い笑う顔が鮮明だ",
       "pron": "우타이 와라우 카오가 센메이다",
-      "trans": "노래하며 웃는 얼굴이 선명해"
+      "pronSrc": "user",
+      "trans": "노래하며 웃던 얼굴이 선명해",
+      "transSrc": "user"
     },
     {
       "t": 19.61,
       "orig": "君に似合うんだよ",
       "pron": "키미니 니아운다요",
-      "trans": "너에게 어울려"
+      "pronSrc": "user",
+      "trans": "너한테 정말 잘 어울려",
+      "transSrc": "user"
     },
     {
       "t": 22.94,
       "orig": "ずっと見ていたいよ",
       "pron": "즛토 미테이타이요",
-      "trans": "계속 보고 있고 싶어"
+      "pronSrc": "user",
+      "trans": "계속 보고 싶을 정도야",
+      "transSrc": "user"
     },
     {
       "t": 26.36,
       "orig": "でも最後に見たいのは",
       "pron": "데모 사이고니 미타이노와",
-      "trans": "하지만 마지막에 보고 싶은 건"
+      "pronSrc": "user",
+      "trans": "하지만 마지막으로 보고 싶은 건",
+      "transSrc": "user"
     },
     {
       "t": 29.22,
       "orig": "きっともう君の夢の中",
       "pron": "킷토 모- 키미노 유메노 나카",
-      "trans": "분명 이제 너의 꿈속"
+      "pronSrc": "user",
+      "trans": "분명 이젠 네 꿈속에 있겠지",
+      "transSrc": "user"
     },
     {
       "t": 32.52,
       "orig": "もう一度",
       "pron": "모- 이치도",
-      "trans": "한 번 더"
+      "pronSrc": "user",
+      "trans": "한 번만 더",
+      "transSrc": "user"
     },
     {
       "t": 33.73,
       "orig": "また聞かせてくれよ",
-      "pron": "마타 키카세테 쿠레요",
-      "trans": "다시 들려 줘"
+      "pron": "마타 키카세테쿠레요",
+      "pronSrc": "user",
+      "trans": "다시 들려 줬으면 해",
+      "transSrc": "user"
     },
     {
       "t": 36.91,
       "orig": "聞きたいんだ",
       "pron": "키키타인다",
-      "trans": "듣고 싶어"
+      "pronSrc": "user",
+      "trans": "듣고 싶어",
+      "transSrc": "user"
     },
     {
       "t": 38.78,
       "orig": "もっと",
       "pron": "못토",
-      "trans": "더"
+      "pronSrc": "user",
+      "trans": "더 크게",
+      "transSrc": "user"
     },
     {
       "t": 39.52,
       "orig": "騒げ怪獣の歌",
       "pron": "사와게 카이쥬-노 우타",
-      "trans": "소리쳐라 괴수의 노래"
+      "pronSrc": "user",
+      "trans": "부르짖어 괴수의 노래",
+      "transSrc": "user"
     },
     {
       "t": 43.93,
       "orig": "まだ消えない",
       "pron": "마다 키에나이",
-      "trans": "아직 사라지지 않아"
+      "pronSrc": "user",
+      "trans": "아직 사라지지 않은",
+      "transSrc": "user"
     },
     {
       "t": 45.93,
       "orig": "夢の歌唱えて",
       "pron": "유메노 우타 토나에테",
-      "trans": "꿈의 노래를 읊어"
+      "pronSrc": "user",
+      "trans": "꿈의 노래를 불러 줘",
+      "transSrc": "user"
     },
     {
       "t": 50.88,
       "orig": "君がいつも",
       "pron": "키미가 이츠모",
-      "trans": "네가 언제나"
+      "pronSrc": "user",
+      "trans": "네가 언제나",
+      "transSrc": "user"
     },
     {
       "t": 52.35,
       "orig": "歌う怪獣の歌",
       "pron": "우타우 카이쥬-노 우타",
-      "trans": "부르는 괴수의 노래"
+      "pronSrc": "user",
+      "trans": "부르던 괴수의 노래",
+      "transSrc": "user"
     },
     {
       "t": 56.79,
       "orig": "まだ消えない",
       "pron": "마다 키에나이",
-      "trans": "아직 사라지지 않아"
+      "pronSrc": "user",
+      "trans": "아직 사라지지 않아",
+      "transSrc": "user"
     },
     {
       "t": 58.74,
       "orig": "口ずさんでしまうよ",
       "pron": "쿠치즈산데 시마우요",
-      "trans": "나도 모르게 흥얼거려"
+      "pronSrc": "user",
+      "trans": "흥얼거리게 되어 버려",
+      "transSrc": "user"
     },
     {
       "t": 64.49,
       "orig": "思い出すのは",
       "pron": "오모이다스노와",
-      "trans": "떠오르는 건"
+      "pronSrc": "user",
+      "trans": "기억이 나는 건",
+      "transSrc": "user"
     },
     {
       "t": 66.57,
       "orig": "君がいた",
       "pron": "키미가 이타",
-      "trans": "네가 있었어"
+      "pronSrc": "user",
+      "trans": "네가 있었어",
+      "transSrc": "user"
     },
     {
       "t": 67.88,
       "orig": "ギター持ってる",
       "pron": "기타- 못테루",
-      "trans": "기타를 든"
+      "pronSrc": "user",
+      "trans": "기타를 쥔",
+      "transSrc": "user"
     },
     {
       "t": 69.68,
       "orig": "君がいた",
       "pron": "키미가 이타",
-      "trans": "네가 있었어"
+      "pronSrc": "user",
+      "trans": "네가 있었어",
+      "transSrc": "user"
     },
     {
       "t": 70.91,
       "orig": "忘れられないんだよ",
       "pron": "와스레라레나인다요",
-      "trans": "잊을 수가 없어"
+      "pronSrc": "user",
+      "trans": "잊을 수가 없어",
+      "transSrc": "user"
     },
     {
       "t": 74.03,
       "orig": "だから僕が歌うよ",
       "pron": "다카라 보쿠가 우타우요",
-      "trans": "그러니까 내가 부를게"
+      "pronSrc": "user",
+      "trans": "그래서 내가 노래하는 거야",
+      "transSrc": "user"
     },
     {
       "t": 77.47,
       "orig": "でも最後に見たいのは",
       "pron": "데모 사이고니 미타이노와",
-      "trans": "하지만 마지막에 보고 싶은 건"
+      "pronSrc": "user",
+      "trans": "하지만 마지막으로 보고 싶은 건",
+      "transSrc": "user"
     },
     {
       "t": 80.56,
       "orig": "きっともう君の夢の中",
       "pron": "킷토 모- 키미노 유메노 나카",
-      "trans": "분명 이제 너의 꿈속"
+      "pronSrc": "user",
+      "trans": "분명 이젠 네 꿈속에 있겠지",
+      "transSrc": "user"
     },
     {
       "t": 83.56,
       "orig": "もう一度",
       "pron": "모- 이치도",
-      "trans": "한 번 더"
+      "pronSrc": "user",
+      "trans": "한 번만 더",
+      "transSrc": "user"
     },
     {
       "t": 84.81,
       "orig": "また聞かせてくれよ",
-      "pron": "마타 키카세테 쿠레요",
-      "trans": "다시 들려 줘"
+      "pron": "마타 키카세테쿠레요",
+      "pronSrc": "user",
+      "trans": "다시 들려 줬으면 해",
+      "transSrc": "user"
     },
     {
       "t": 88.14,
       "orig": "聞きたいんだ",
       "pron": "키키타인다",
-      "trans": "듣고 싶어"
+      "pronSrc": "user",
+      "trans": "듣고 싶어",
+      "transSrc": "user"
     },
     {
       "t": 89.52,
       "orig": "もっと",
       "pron": "못토",
-      "trans": "더"
+      "pronSrc": "user",
+      "trans": "더 크게",
+      "transSrc": "user"
     },
     {
       "t": 90.67,
       "orig": "騒げ怪獣の歌",
       "pron": "사와게 카이쥬-노 우타",
-      "trans": "소리쳐라 괴수의 노래"
+      "pronSrc": "user",
+      "trans": "부르짖어 괴수의 노래",
+      "transSrc": "user"
     },
     {
       "t": 95.11,
       "orig": "まだ消えない",
       "pron": "마다 키에나이",
-      "trans": "아직 사라지지 않아"
+      "pronSrc": "user",
+      "trans": "아직 사라지지 않은",
+      "transSrc": "user"
     },
     {
       "t": 97.15,
       "orig": "夢の歌唱えて",
       "pron": "유메노 우타 토나에테",
-      "trans": "꿈의 노래를 읊어"
+      "pronSrc": "user",
+      "trans": "꿈의 노래를 불러 줘",
+      "transSrc": "user"
     },
     {
       "t": 102.08,
       "orig": "君がいつも",
       "pron": "키미가 이츠모",
-      "trans": "네가 언제나"
+      "pronSrc": "user",
+      "trans": "네가 언제나",
+      "transSrc": "user"
     },
     {
       "t": 103.43,
       "orig": "歌う怪獣の歌",
       "pron": "우타우 카이쥬-노 우타",
-      "trans": "부르는 괴수의 노래"
+      "pronSrc": "user",
+      "trans": "부르던 괴수의 노래",
+      "transSrc": "user"
     },
     {
       "t": 107.99,
       "orig": "まだ消えない",
       "pron": "마다 키에나이",
-      "trans": "아직 사라지지 않아"
+      "pronSrc": "user",
+      "trans": "아직 사라지지 않아",
+      "transSrc": "user"
     },
     {
       "t": 109.95,
       "orig": "口ずさんでしまうよ",
       "pron": "쿠치즈산데 시마우요",
-      "trans": "나도 모르게 흥얼거려"
+      "pronSrc": "user",
+      "trans": "흥얼거리게 되어 버려",
+      "transSrc": "user"
     },
     {
       "t": 115.76,
       "orig": "落ちてく過去は鮮明で",
       "pron": "오치테쿠 카코와 센메이데",
-      "trans": "떨어져 가는 과거는 선명하고"
+      "pronSrc": "user",
+      "trans": "떨어지는 과거는 선명하고",
+      "transSrc": "user"
     },
     {
       "t": 119.01,
       "orig": "見せたい未来は繊細で",
       "pron": "미세타이 미라이와 센사이데",
-      "trans": "보여 주고 싶은 미래는 섬세하고"
+      "pronSrc": "user",
+      "trans": "보여주고 싶은 미래는 희미해서",
+      "transSrc": "user"
     },
     {
       "t": 122.28,
       "orig": "すぎてく日々には鈍感な君へ",
       "pron": "스기테쿠 히비니와 돈칸나 키미에",
-      "trans": "지나가는 나날엔 둔감한 너에게"
+      "pronSrc": "user",
+      "trans": "흘러가는 나날에는 둔감한 너에게",
+      "transSrc": "user"
     },
     {
       "t": 128.57,
       "orig": "落ちてく過去は鮮明で",
       "pron": "오치테쿠 카코와 센메이데",
-      "trans": "떨어져 가는 과거는 선명하고"
+      "pronSrc": "user",
+      "trans": "떨어지는 과거는 선명하고",
+      "transSrc": "user"
     },
     {
       "t": 131.79,
       "orig": "見せたい未来は繊細で",
       "pron": "미세타이 미라이와 센사이데",
-      "trans": "보여 주고 싶은 미래는 섬세하고"
+      "pronSrc": "user",
+      "trans": "보여주고 싶은 미래는 희미해서",
+      "transSrc": "user"
     },
     {
       "t": 134.71,
       "orig": "すぎてく日々には鈍感な君へ",
       "pron": "스기테쿠 히비니와 돈칸나 키미에",
-      "trans": "지나가는 나날엔 둔감한 너에게"
+      "pronSrc": "user",
+      "trans": "흘러가는 나날에는 둔감한 너에게",
+      "transSrc": "user"
     },
     {
       "t": 140.6,
       "orig": "ねぇ、もっと",
-      "pron": "네-, 못토",
-      "trans": "있잖아, 더"
+      "pron": "네- 못토",
+      "pronSrc": "user",
+      "trans": "있지、더 크게",
+      "transSrc": "user"
     },
     {
       "t": 141.93,
       "orig": "騒げ怪獣の歌",
       "pron": "사와게 카이쥬-노 우타",
-      "trans": "소리쳐라 괴수의 노래"
+      "pronSrc": "user",
+      "trans": "부르짖어 괴수의 노래",
+      "transSrc": "user"
     },
     {
       "t": 146.39,
       "orig": "まだ消えない",
       "pron": "마다 키에나이",
-      "trans": "아직 사라지지 않아"
+      "pronSrc": "user",
+      "trans": "아직 사라지지 않은",
+      "transSrc": "user"
     },
     {
       "t": 148.36,
       "orig": "夢の歌唱えて",
       "pron": "유메노 우타 토나에테",
-      "trans": "꿈의 노래를 읊어"
+      "pronSrc": "user",
+      "trans": "꿈의 노래를 불러 줘",
+      "transSrc": "user"
     },
     {
       "t": 153.22,
       "orig": "君がいつも",
       "pron": "키미가 이츠모",
-      "trans": "네가 언제나"
+      "pronSrc": "user",
+      "trans": "네가 언제나",
+      "transSrc": "user"
     },
     {
       "t": 154.73,
       "orig": "歌う怪獣の歌",
       "pron": "우타우 카이쥬-노 우타",
-      "trans": "부르는 괴수의 노래"
+      "pronSrc": "user",
+      "trans": "부르던 괴수의 노래",
+      "transSrc": "user"
     },
     {
       "t": 158.95,
       "orig": "まだ消えない",
       "pron": "마다 키에나이",
-      "trans": "아직 사라지지 않아"
+      "pronSrc": "user",
+      "trans": "아직 사라지지 않아",
+      "transSrc": "user"
     },
     {
       "t": 161.1,
       "orig": "口ずさんでしまうよ",
       "pron": "쿠치즈산데 시마우요",
-      "trans": "나도 모르게 흥얼거려"
+      "pronSrc": "user",
+      "trans": "흥얼거리게 되어 버려",
+      "transSrc": "user"
     },
     {
       "t": 166.21,
       "orig": "ねぇ、僕ら",
-      "pron": "네-, 보쿠라",
-      "trans": "있잖아, 우리는"
+      "pron": "네- 보쿠라",
+      "pronSrc": "user",
+      "trans": "있지、우리들",
+      "transSrc": "user"
     },
     {
       "t": 167.44,
       "orig": "眠れない夜に手を伸ばして",
       "pron": "네무레나이 요루니 테오 노바시테",
-      "trans": "잠 못 드는 밤에 손을 뻗어"
+      "pronSrc": "user",
+      "trans": "잠이 오지 않는 밤에 손을 뻗고",
+      "transSrc": "user"
     },
     {
       "t": 170.6,
       "orig": "眠らない夜をまた伸ばして",
       "pron": "네무라나이 요루오 마타 노바시테",
-      "trans": "잠들지 않는 밤을 또 늘려"
+      "pronSrc": "user",
+      "trans": "잠들지 않는 밤을 또다시 이어가며",
+      "transSrc": "user"
     },
     {
       "t": 173.84,
       "orig": "眠くないまだね",
       "pron": "네무쿠나이 마다네",
-      "trans": "아직 안 졸려"
+      "pronSrc": "user",
+      "trans": "졸리지 않아 아직은",
+      "transSrc": "user"
     },
     {
       "t": 175.62,
       "orig": "そんな日々でいたいのにな",
       "pron": "손나 히비데 이타이노니나",
-      "trans": "그런 나날로 있고 싶은데"
+      "pronSrc": "user",
+      "trans": "그런 나날에 머물고 싶은데",
+      "transSrc": "user"
     },
     {
       "t": 179.47,
       "orig": "懲りずに",
       "pron": "코리즈니",
-      "trans": "질리지도 않고"
+      "pronSrc": "user",
+      "trans": "질리지 않고",
+      "transSrc": "user"
     },
     {
       "t": 180.41,
       "orig": "眠れない夜に手を伸ばして",
       "pron": "네무레나이 요루니 테오 노바시테",
-      "trans": "잠 못 드는 밤에 손을 뻗어"
+      "pronSrc": "user",
+      "trans": "잠이 오지 않는 밤에 손을 뻗고",
+      "transSrc": "user"
     },
     {
       "t": 183.43,
       "orig": "眠らない夜をまた伸ばして",
       "pron": "네무라나이 요루오 마타 노바시테",
-      "trans": "잠들지 않는 밤을 또 늘려"
+      "pronSrc": "user",
+      "trans": "잠들지 않는 밤을 또다시 이어가며",
+      "transSrc": "user"
     },
     {
       "t": 186.52,
       "orig": "眠くないまだね",
       "pron": "네무쿠나이 마다네",
-      "trans": "아직 안 졸려"
+      "pronSrc": "user",
+      "trans": "졸리지 않아 아직은",
+      "transSrc": "user"
     },
     {
       "t": 188.53,
       "orig": "そんな夜に歌う",
       "pron": "손나 요루니 우타우",
-      "trans": "그런 밤에 부르는"
+      "pronSrc": "user",
+      "trans": "그런 밤에 부르는",
+      "transSrc": "user"
     },
     {
       "t": 190.91,
       "orig": "怪獣の歌",
       "pron": "카이쥬-노 우타",
-      "trans": "괴수의 노래"
-    },
-    {
-      "t": 192.54,
-      "orig": "(落ちてく過去は鮮明で)",
-      "pron": "(오치테쿠 카코와 센메이데)",
-      "trans": "(떨어져 가는 과거는 선명하고)"
-    },
-    {
-      "t": 195.78,
-      "orig": "(見せたい未来は繊細で)",
-      "pron": "(미세타이 미라이와 센사이데)",
-      "trans": "(보여 주고 싶은 미래는 섬세하고)"
-    },
-    {
-      "t": 198.9,
-      "orig": "(すぎてく日々には鈍感な君へ)",
-      "pron": "(스기테쿠 히비니와 돈칸나 키미에)",
-      "trans": "(지나가는 나날엔 둔감한 너에게)"
-    },
-    {
-      "t": 205.18,
-      "orig": "(落ちてく過去は鮮明で)",
-      "pron": "(오치테쿠 카코와 센메이데)",
-      "trans": "(떨어져 가는 과거는 선명하고)"
-    },
-    {
-      "t": 208.38,
-      "orig": "(見せたい未来は繊細で)",
-      "pron": "(미세타이 미라이와 센사이데)",
-      "trans": "(보여 주고 싶은 미래는 섬세하고)"
-    },
-    {
-      "t": 211.55,
-      "orig": "(すぎてく日々には鈍感な君へ)",
-      "pron": "(스기테쿠 히비니와 돈칸나 키미에)",
-      "trans": "(지나가는 나날엔 둔감한 너에게)"
+      "pronSrc": "user",
+      "trans": "괴수의 노래",
+      "transSrc": "user"
     }
   ]
 }

@@ -14,6 +14,15 @@ const oi = args.indexOf("--only");
 const ONLY = oi >= 0 ? new Set(args[oi + 1].split(",")) : null;
 
 const META = {
+  1: { yt: "3UbBjzFDkd4", slug: "hanauranai", title: "花占い" },
+  2: { yt: "6aP_zJ21Jmw", slug: "koikaze-ni-nosete", title: "恋風邪にのせて" },
+  3: { yt: "ZeIGVnkYX04", slug: "napori", title: "napori" },
+  4: { yt: "ZNS0f0DdUJY", slug: "mabataki", title: "mabataki" },
+  5: { yt: "iVB3nxzoLXI", slug: "missing", title: "Missing" },
+  6: { yt: "ClPuCDDYKaI", slug: "tomoshibi", title: "灯火" },
+  7: { yt: "wiJO_OgsyPE", slug: "chainsaw-blood", title: "CHAINSAW BLOOD" },
+  8: { yt: "hS2BVRnQiYI", slug: "tokyo-flash", title: "東京フラッシュ" },
+  9: { yt: "ENQANfv2ANQ", slug: "kaijuu-no-hanauta", title: "怪獣の花唄" },
   10: { yt: "bGQQfNgtlz8", slug: "fukakouryoku", title: "不可幸力" },
   11: { yt: "GXc9h3hXRUk", slug: "tokimeki", title: "Tokimeki" },
   12: { yt: "MecVtfGY4fk", slug: "soumatou", title: "走馬灯" },
