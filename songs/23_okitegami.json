@@ -1,0 +1,449 @@
+{
+  "title": "置き手紙",
+  "artist": "Vaundy",
+  "youtubeId": "iLnfe7uQuGw",
+  "bundleId": "vaundy-okitegami",
+  "offset": 0,
+  "lines": [
+    {
+      "t": 0.85,
+      "orig": "あれは",
+      "pron": "아레와",
+      "pronSrc": "user",
+      "trans": "그건",
+      "transSrc": "user"
+    },
+    {
+      "t": 3.06,
+      "orig": "何年前の話だ",
+      "pron": "난넨 마에노 하나시다",
+      "pronSrc": "user",
+      "trans": "몇 년 전의 이야기지",
+      "transSrc": "user"
+    },
+    {
+      "t": 7.62,
+      "orig": "ずいぶん",
+      "pron": "주이분",
+      "pronSrc": "user",
+      "trans": "꽤나",
+      "transSrc": "user"
+    },
+    {
+      "t": 9.85,
+      "orig": "前の長い話だ",
+      "pron": "마에노 나가이 하나시다",
+      "pronSrc": "user",
+      "trans": "오래된 긴 이야기야",
+      "transSrc": "user"
+    },
+    {
+      "t": 14.03,
+      "orig": "話そう",
+      "pron": "하나소-",
+      "pronSrc": "user",
+      "trans": "이야기할게",
+      "transSrc": "user"
+    },
+    {
+      "t": 28.22,
+      "orig": "これで",
+      "pron": "코레데",
+      "pronSrc": "user",
+      "trans": "이걸로",
+      "transSrc": "user"
+    },
+    {
+      "t": 30.14,
+      "orig": "やめる腹積りだったんだ",
+      "pron": "야메루 하라즈모리 닷탄다",
+      "pronSrc": "user",
+      "trans": "그만둘 작정이었어",
+      "transSrc": "user"
+    },
+    {
+      "t": 33.9,
+      "orig": "会いに行くつもりは",
+      "pron": "아이니 이쿠 츠모리와",
+      "pronSrc": "user",
+      "trans": "만나러 갈 생각은",
+      "transSrc": "user"
+    },
+    {
+      "t": 36.6,
+      "orig": "別になかったさ",
+      "pron": "베츠니 나캇타사",
+      "pronSrc": "user",
+      "trans": "딱히 없었다고",
+      "transSrc": "user"
+    },
+    {
+      "t": 41.91,
+      "orig": "今日は",
+      "pron": "쿄우와",
+      "pronSrc": "user",
+      "trans": "오늘은",
+      "transSrc": "user"
+    },
+    {
+      "t": 44.02,
+      "orig": "天気がいいみたいだ",
+      "pron": "텐키가 이이미타이다",
+      "pronSrc": "user",
+      "trans": "날씨가 좋은 모양이야",
+      "transSrc": "user"
+    },
+    {
+      "t": 47.13,
+      "orig": "雲一つない夜だ",
+      "pron": "쿠모 히토츠나이 요루다",
+      "pronSrc": "user",
+      "trans": "구름 한 점 없는 밤이야",
+      "transSrc": "user"
+    },
+    {
+      "t": 50.59,
+      "orig": "星を見にいこう",
+      "pron": "호시오 미니 이코우",
+      "pronSrc": "user",
+      "trans": "별을 보러 가자",
+      "transSrc": "user"
+    },
+    {
+      "t": 54.98,
+      "orig": "君は何も知らない顔で笑ってくれたよね",
+      "pron": "키미와 나니모시라나이카오데 와랏테 쿠레타요네",
+      "pronSrc": "user",
+      "trans": "너는 아무것도 모르는 얼굴로 미소 지어 주었었지",
+      "transSrc": "user"
+    },
+    {
+      "t": 61.67,
+      "orig": "だから僕らの日々が、",
+      "pron": "다카라 보쿠라노 히비가,",
+      "pronSrc": "user",
+      "trans": "그렇기에 우리들의 하루하루가,",
+      "transSrc": "user"
+    },
+    {
+      "t": 64.74,
+      "orig": "壊れ、崩れていこうとも",
+      "pron": "코와레, 쿠즈레테 이코우토모",
+      "pronSrc": "user",
+      "trans": "깨지고, 무너져 간다고 하여도",
+      "transSrc": "user"
+    },
+    {
+      "t": 68.15,
+      "orig": "言っちゃいな",
+      "pron": "잇챠이나",
+      "pronSrc": "user",
+      "trans": "말해 버려",
+      "transSrc": "user"
+    },
+    {
+      "t": 69.1,
+      "orig": "今伝えたいことが",
+      "pron": "이마 츠타에타이 코토가",
+      "pronSrc": "user",
+      "trans": "지금 전하고 싶은게",
+      "transSrc": "user"
+    },
+    {
+      "t": 75.74,
+      "orig": "僕たちが僕たちを思い合えるような",
+      "pron": "보쿠타치가 보쿠타치오 오모이아에루요-나",
+      "pronSrc": "user",
+      "trans": "우리가 우리를 서로 생각하게 만드는 듯한",
+      "transSrc": "user"
+    },
+    {
+      "t": 80.94,
+      "orig": "魔法の言葉",
+      "pron": "마호-노 코토바",
+      "pronSrc": "user",
+      "trans": "마법의 주문",
+      "transSrc": "user"
+    },
+    {
+      "t": 82.96,
+      "orig": "今伝えたいことが",
+      "pron": "이마 츠타에타이 코토가",
+      "pronSrc": "user",
+      "trans": "지금 전하고 싶은게",
+      "transSrc": "user"
+    },
+    {
+      "t": 89.39,
+      "orig": "無愛想な愛情もかき消すような",
+      "pron": "부아이소-나 아이죠-모 카키케스요-나",
+      "pronSrc": "user",
+      "trans": "무뚝뚝한 애정마저 감쪽같이 지워 버릴 듯한",
+      "transSrc": "user"
+    },
+    {
+      "t": 94.68,
+      "orig": "魔法の言葉",
+      "pron": "마호-노 코토바",
+      "pronSrc": "user",
+      "trans": "마법의 주문",
+      "transSrc": "user"
+    },
+    {
+      "t": 96.4,
+      "orig": "明日こそ君に伝えにいこう",
+      "pron": "아시타코소 키미니 츠타에니 이코-",
+      "pronSrc": "user",
+      "trans": "내일이야말로 너에게 전하러 가겠어",
+      "transSrc": "user"
+    },
+    {
+      "t": 107.59,
+      "orig": "『未練がここで消えずに",
+      "pron": "『미렌가 코코데 키에즈니",
+      "pronSrc": "user",
+      "trans": "『미련이 여기서 사라지지 않고",
+      "transSrc": "user"
+    },
+    {
+      "t": 113.26,
+      "orig": "もしも私が不死の病にかかったら』",
+      "pron": "모시모 와타시가 후시노 야마이니 카캇타라』",
+      "pronSrc": "user",
+      "trans": "만약에 내가 불사의 병에 걸린다면』",
+      "transSrc": "user"
+    },
+    {
+      "t": 120.54,
+      "orig": "なんてそれは",
+      "pron": "난테 소레와",
+      "pronSrc": "user",
+      "trans": "어쩌면 그건",
+      "transSrc": "user"
+    },
+    {
+      "t": 122.69,
+      "orig": "ゆるい、金縛りみたいに絡み",
+      "pron": "유루이, 카나시바리 미타이니 카라미",
+      "pronSrc": "user",
+      "trans": "부드러운, 가위에 눌리는 듯이 감겨서",
+      "transSrc": "user"
+    },
+    {
+      "t": 126.49,
+      "orig": "暖かい、君の方に潮は",
+      "pron": "앗타카이, 키미노 호-니 시오와",
+      "pronSrc": "user",
+      "trans": "따뜻한, 너의 방향으로 밀물은",
+      "transSrc": "user"
+    },
+    {
+      "t": 130.63,
+      "orig": "変わってた",
+      "pron": "카왓테타",
+      "pronSrc": "user",
+      "trans": "바뀌어 있었어",
+      "transSrc": "user"
+    },
+    {
+      "t": 133.71,
+      "orig": "今日も何も知らない顔で笑ってくれよね",
+      "pron": "쿄우모 나니모 시라나이 카오데 와랏테쿠레요네",
+      "pronSrc": "user",
+      "trans": "오늘도 아무것도 모르는 얼굴로 미소 지어 줘야 해",
+      "transSrc": "user"
+    },
+    {
+      "t": 140.56,
+      "orig": "たとえ息が詰まり、",
+      "pron": "타토에 이키가 츠마리,",
+      "pronSrc": "user",
+      "trans": "설령 숨이 막혀서,",
+      "transSrc": "user"
+    },
+    {
+      "t": 143.42,
+      "orig": "悶え、震えていようとも",
+      "pron": "모다에, 후루에테 이요-토모",
+      "pronSrc": "user",
+      "trans": "괴로워, 몸부림치고 있다 하여도",
+      "transSrc": "user"
+    },
+    {
+      "t": 147,
+      "orig": "言っちゃうわ",
+      "pron": "잇챠우와",
+      "pronSrc": "user",
+      "trans": "말해 버릴래",
+      "transSrc": "user"
+    },
+    {
+      "t": 148.18,
+      "orig": "今伝えたいことが",
+      "pron": "이마 츠타에타이 코토가",
+      "pronSrc": "user",
+      "trans": "지금 전하고 싶은게",
+      "transSrc": "user"
+    },
+    {
+      "t": 154.59,
+      "orig": "僕たちが僕たちを思い合えるような",
+      "pron": "보쿠타치가 보쿠타치오 오모이아에루요-나",
+      "pronSrc": "user",
+      "trans": "우리가 우리를 서로 생각하게 만드는 듯한",
+      "transSrc": "user"
+    },
+    {
+      "t": 159.84,
+      "orig": "魔法の言葉",
+      "pron": "마호-노 코토바",
+      "pronSrc": "user",
+      "trans": "마법의 주문",
+      "transSrc": "user"
+    },
+    {
+      "t": 161.7,
+      "orig": "今伝えたいことが",
+      "pron": "이마 츠타에타이 코토가",
+      "pronSrc": "user",
+      "trans": "지금 전하고 싶은게",
+      "transSrc": "user"
+    },
+    {
+      "t": 168.31,
+      "orig": "無愛想な愛情もかき消すような",
+      "pron": "부아이소-나 아이죠-모 카키케스요-나",
+      "pronSrc": "user",
+      "trans": "무뚝뚝한 애정마저 감쪽같이 지워 버릴 듯한",
+      "transSrc": "user"
+    },
+    {
+      "t": 173.39,
+      "orig": "魔法の言葉",
+      "pron": "마호-노 코토바",
+      "pronSrc": "user",
+      "trans": "마법의 주문",
+      "transSrc": "user"
+    },
+    {
+      "t": 175.21,
+      "orig": "明日までに唱えきるよ",
+      "pron": "아시타마데니 우타에키루요",
+      "pronSrc": "user",
+      "trans": "내일까지는 노래를 마칠게",
+      "transSrc": "user"
+    },
+    {
+      "t": 178.72,
+      "orig": "綴りきれない",
+      "pron": "츠즈리 키레나이",
+      "pronSrc": "user",
+      "trans": "끝내 써내리지 못 하는",
+      "transSrc": "user"
+    },
+    {
+      "t": 181.7,
+      "orig": "呼吸の数だけ生えた思いは",
+      "pron": "코큐-노 카즈다케 하에타 오모이와",
+      "pronSrc": "user",
+      "trans": "호흡의 횟수만큼 피어난 마음은",
+      "transSrc": "user"
+    },
+    {
+      "t": 188.83,
+      "orig": "溢れ育ってた",
+      "pron": "아후레 소닷테타",
+      "pronSrc": "user",
+      "trans": "넘쳐흘러서 자라났어",
+      "transSrc": "user"
+    },
+    {
+      "t": 192.35,
+      "orig": "不死の病がもしあるなら",
+      "pron": "후지노 야마이가 모시 아루나라",
+      "pronSrc": "user",
+      "trans": "불사의 병이 만약 있다면",
+      "transSrc": "user"
+    },
+    {
+      "t": 198.8,
+      "orig": "あぁ、もうやめよう",
+      "pron": "아아, 모- 야메요-",
+      "pronSrc": "user",
+      "trans": "아아, 더는 그만두자",
+      "transSrc": "user"
+    },
+    {
+      "t": 200.62,
+      "orig": "口に出さずに",
+      "pron": "쿠치니 다사즈니",
+      "pronSrc": "user",
+      "trans": "입에는 담지 않고",
+      "transSrc": "user"
+    },
+    {
+      "t": 202.52,
+      "orig": "『腐りきるまで、別てぬ二人で』",
+      "pron": "『쿠사리키루마데, 와카테누 후타리데』",
+      "pronSrc": "user",
+      "trans": "『썩어서 흔적도 없이 사라질 때까지, 갈라놓을 수 없는 두 사람으로』",
+      "transSrc": "user"
+    },
+    {
+      "t": 206.15,
+      "orig": "その伝えたいことは",
+      "pron": "소노 츠타에타이 코토가",
+      "pronSrc": "user",
+      "trans": "그 전하고 싶은 건",
+      "transSrc": "user"
+    },
+    {
+      "t": 212.82,
+      "orig": "僕たちが僕たちを思い合えるような",
+      "pron": "보쿠타치가 보쿠타치오 오모이아에루요-나",
+      "pronSrc": "user",
+      "trans": "우리가 우리를 서로 생각하게 만드는 듯한",
+      "transSrc": "user"
+    },
+    {
+      "t": 217.96,
+      "orig": "魔法の言葉",
+      "pron": "마호-노 코토바",
+      "pronSrc": "user",
+      "trans": "마법의 주문",
+      "transSrc": "user"
+    },
+    {
+      "t": 220,
+      "orig": "この伝えたいことが",
+      "pron": "코노 츠타에타이 코토가",
+      "pronSrc": "user",
+      "trans": "이 전하고 싶은 것이",
+      "transSrc": "user"
+    },
+    {
+      "t": 226.59,
+      "orig": "無愛想な愛情もかき消すような",
+      "pron": "부아이소-나 아이죠-모 카키케스요-나",
+      "pronSrc": "user",
+      "trans": "무뚝뚝한 애정마저 감쪽같이 지워 버릴 듯한",
+      "transSrc": "user"
+    },
+    {
+      "t": 231.75,
+      "orig": "魔法の言葉",
+      "pron": "마호-노 코토바",
+      "pronSrc": "user",
+      "trans": "마법의 주문",
+      "transSrc": "user"
+    },
+    {
+      "t": 233.48,
+      "orig": "なんて腐りきった二人の話",
+      "pron": "난테 쿠사리 킷타 후타리노 하나시",
+      "pronSrc": "user",
+      "trans": "..그런 썩어서 흔적도 남지 않은 두 사람의 이야기",
+      "transSrc": "user"
+    }
+  ]
+}

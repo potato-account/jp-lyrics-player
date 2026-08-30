@@ -1,0 +1,626 @@
+{
+  "title": "二人話",
+  "artist": "Vaundy",
+  "youtubeId": "o7aOhAYyTTU",
+  "bundleId": "vaundy-futaribanashi",
+  "offset": 0,
+  "lines": [
+    {
+      "t": 12.66,
+      "orig": "僕と君の不確かな日々を",
+      "pron": "보쿠토 키미노 후타시카나 히비오",
+      "pronSrc": "user",
+      "trans": "나와 너의 불확실한 날들을",
+      "transSrc": "user"
+    },
+    {
+      "t": 15.01,
+      "orig": "ここで終わらせたい",
+      "pron": "코코데 오와라세타이",
+      "pronSrc": "user",
+      "trans": "여기서 끝내고 싶어",
+      "transSrc": "user"
+    },
+    {
+      "t": 16.94,
+      "orig": "思い通りにならない明日を見たい",
+      "pron": "오모이도오리니 나라나이 아시타오 미타이",
+      "pronSrc": "user",
+      "trans": "생각대로 되지 않는 내일을 보고 싶어",
+      "transSrc": "user"
+    },
+    {
+      "t": 20.15,
+      "orig": "僕と君の不確かな相槌を",
+      "pron": "보쿠토 키미노 후타시카나 아이즈치오",
+      "pronSrc": "user",
+      "trans": "나와 너의 불확실한 맞장구를",
+      "transSrc": "user"
+    },
+    {
+      "t": 22.5,
+      "orig": "ここで終わらせたい",
+      "pron": "코코데 오와라세타이",
+      "pronSrc": "user",
+      "trans": "여기서 끝내고 싶어",
+      "transSrc": "user"
+    },
+    {
+      "t": 24.43,
+      "orig": "革命的な前夜に今夜はしたい",
+      "pron": "카쿠메이테키나 젠야니 콘야와 시타이",
+      "pronSrc": "user",
+      "trans": "혁명적인 전야에 오늘 밤은 그렇게 하고 싶어",
+      "transSrc": "user"
+    },
+    {
+      "t": 27.21,
+      "orig": "わかっちゃいたけど",
+      "pron": "와캇챠이타케도",
+      "pronSrc": "user",
+      "trans": "알고 있지만",
+      "transSrc": "user"
+    },
+    {
+      "t": 29.14,
+      "orig": "通る悲しみは",
+      "pron": "토오루 카나시미와",
+      "pronSrc": "user",
+      "trans": "서로 통하는 슬픔은",
+      "transSrc": "user"
+    },
+    {
+      "t": 30.42,
+      "orig": "離れ離れになったとしても",
+      "pron": "하나레바나레니 낫타토 시테모",
+      "pronSrc": "user",
+      "trans": "뿔뿔이 흩어지게 된다 하더라도",
+      "transSrc": "user"
+    },
+    {
+      "t": 32.99,
+      "orig": "ここでもしも君が手を掴み",
+      "pron": "코코데 모시모 키미가 테오 츠카미",
+      "pronSrc": "user",
+      "trans": "여기서 만약 네가 손을 붙잡고",
+      "transSrc": "user"
+    },
+    {
+      "t": 35.56,
+      "orig": "ねえずっと同じと言えていたら",
+      "pron": "네- 즛토 오나지토 이에테이타라",
+      "pronSrc": "user",
+      "trans": "계속 똑같다고 말할 수 있었다면",
+      "transSrc": "user"
+    },
+    {
+      "t": 38.55,
+      "orig": "きっと僕らは手を繋ぎ",
+      "pron": "킷토 보쿠라와 테오 츠나기",
+      "pronSrc": "user",
+      "trans": "분명 우리는 손을 잡고",
+      "transSrc": "user"
+    },
+    {
+      "t": 40.69,
+      "orig": "ねえずっと変われなかったんだろう",
+      "pron": "네- 즛토 카와레나캇탄다로-",
+      "pronSrc": "user",
+      "trans": "쭉 변할 수 없었겠지",
+      "transSrc": "user"
+    },
+    {
+      "t": 44.12,
+      "orig": "あれから何年経ったか",
+      "pron": "아레카라 난넨 탓타카",
+      "pronSrc": "user",
+      "trans": "그로부터 몇 년이 흘렀는지",
+      "transSrc": "user"
+    },
+    {
+      "t": 46.26,
+      "orig": "君は元気にしているかい？",
+      "pron": "키미와 겡키니시테 이루카이",
+      "pronSrc": "user",
+      "trans": "너는 잘 지내고 있니?",
+      "transSrc": "user"
+    },
+    {
+      "t": 48.61,
+      "orig": "僕は今日で数えるの終わりにしたいよ",
+      "pron": "보쿠와 쿄-데 카조에루노 오와리니 시타이요",
+      "pronSrc": "user",
+      "trans": "나는 오늘로 세는 것을 끝내고 싶어",
+      "transSrc": "user"
+    },
+    {
+      "t": 52.25,
+      "orig": "もうあれから何年経ったか",
+      "pron": "모- 아레카라 난넨 탓타카",
+      "pronSrc": "user",
+      "trans": "벌써 그로부터 몇 년이 흘렀는지",
+      "transSrc": "user"
+    },
+    {
+      "t": 54.82,
+      "orig": "僕は元気にしているよ",
+      "pron": "보쿠와 겡키니시테 이루요",
+      "pronSrc": "user",
+      "trans": "나는 잘 지내고 있어",
+      "transSrc": "user"
+    },
+    {
+      "t": 56.96,
+      "orig": "でもあの日",
+      "pron": "데모 아노히",
+      "pronSrc": "user",
+      "trans": "하지만 그날",
+      "transSrc": "user"
+    },
+    {
+      "t": 58.03,
+      "orig": "不確かの確かをなくしていたよ",
+      "pron": "후타시카노 타시카오 나쿠시테이타요",
+      "pronSrc": "user",
+      "trans": "불확실함의 확신을 잃어버렸어",
+      "transSrc": "user"
+    },
+    {
+      "t": 61.03,
+      "orig": "わかっちゃいたけども通る悲しみは",
+      "pron": "와캇챠이타케도모 토오루 카나시미와",
+      "pronSrc": "user",
+      "trans": "알고는 있었지만 서로 통하는 슬픔은",
+      "transSrc": "user"
+    },
+    {
+      "t": 64.45,
+      "orig": "離れ離れになった今も",
+      "pron": "하나레바나레니 낫타 이마모",
+      "pronSrc": "user",
+      "trans": "뿔뿔이 흩어졌어 지금도",
+      "transSrc": "user"
+    },
+    {
+      "t": 66.59,
+      "orig": "ここでもしも君が手を掴み",
+      "pron": "코코데 모시모 키미가 테오 츠카미",
+      "pronSrc": "user",
+      "trans": "여기서 만약 네가 손을 붙잡고",
+      "transSrc": "user"
+    },
+    {
+      "t": 69.16,
+      "orig": "ねえずっと同じと言えていたら",
+      "pron": "네- 즛토 오나지토 이에테이타라",
+      "pronSrc": "user",
+      "trans": "계속 똑같다고 말할 수 있었다면",
+      "transSrc": "user"
+    },
+    {
+      "t": 72.15,
+      "orig": "きっと僕らは手を繋ぎ",
+      "pron": "킷토 보쿠라와 테오 츠나기",
+      "pronSrc": "user",
+      "trans": "분명 우리는 손을 잡고",
+      "transSrc": "user"
+    },
+    {
+      "t": 74.29,
+      "orig": "ねえずっと変わらなかった",
+      "pron": "네- 즛토 카와라나캇타",
+      "pronSrc": "user",
+      "trans": "쭉 변하지 않았어",
+      "transSrc": "user"
+    },
+    {
+      "t": 76.86,
+      "orig": "ねえ",
+      "pron": "네-",
+      "pronSrc": "user",
+      "trans": "있지",
+      "transSrc": "user"
+    },
+    {
+      "t": 77.29,
+      "orig": "あの日々の確かに",
+      "pron": "아노 히비노 타시카니",
+      "pronSrc": "user",
+      "trans": "그 나날의 확실함에",
+      "transSrc": "user"
+    },
+    {
+      "t": 79,
+      "orig": "何度心救われたんだろう",
+      "pron": "난도 코코로 스쿠와레탄다로-",
+      "pronSrc": "user",
+      "trans": "몇 번이나 마음의 구원을 받았을까",
+      "transSrc": "user"
+    },
+    {
+      "t": 81.36,
+      "orig": "あの日々の確かを",
+      "pron": "아노 히비노 타시카오",
+      "pronSrc": "user",
+      "trans": "그 나날의 확실함을",
+      "transSrc": "user"
+    },
+    {
+      "t": 83.07,
+      "orig": "何度思い出していただろう",
+      "pron": "난도 오모이다시테 이타다로-",
+      "pronSrc": "user",
+      "trans": "몇 번이나 떠올리고 있었을까",
+      "transSrc": "user"
+    },
+    {
+      "t": 85.64,
+      "orig": "あの日々の確かで",
+      "pron": "아노 히비노 타시카데",
+      "pronSrc": "user",
+      "trans": "그날들의 확실함으로",
+      "transSrc": "user"
+    },
+    {
+      "t": 87.35,
+      "orig": "失っていたものも",
+      "pron": "우시낫테이타 모노모",
+      "pronSrc": "user",
+      "trans": "잃어버리고 있던 것도",
+      "transSrc": "user"
+    },
+    {
+      "t": 89.06,
+      "orig": "もういいよ もういいよ",
+      "pron": "모- 이이요 모- 이이요",
+      "pronSrc": "user",
+      "trans": "이제 됐어 이제 됐어",
+      "transSrc": "user"
+    },
+    {
+      "t": 91.2,
+      "orig": "だから",
+      "pron": "다카라",
+      "pronSrc": "user",
+      "trans": "그러니까",
+      "transSrc": "user"
+    },
+    {
+      "t": 91.84,
+      "orig": "ここでもしも僕が手を掴み",
+      "pron": "코코데 모시모 보쿠가 테오 츠카미",
+      "pronSrc": "user",
+      "trans": "여기서 만약 내가 손을 붙잡고",
+      "transSrc": "user"
+    },
+    {
+      "t": 94.41,
+      "orig": "ねえずっと同じと言ったとしたら",
+      "pron": "네- 즛토 오나지토 잇타토 시타라",
+      "pronSrc": "user",
+      "trans": "계속 똑같다고 말한다면",
+      "transSrc": "user"
+    },
+    {
+      "t": 97.62,
+      "orig": "そっと僕らは手を繋ぎ",
+      "pron": "솟토 보쿠라와 테오 츠나기",
+      "pronSrc": "user",
+      "trans": "살짝 우리는 손을 잡고",
+      "transSrc": "user"
+    },
+    {
+      "t": 99.76,
+      "orig": "ねえきっとふたりで変わっていけるだろう",
+      "pron": "네- 킷토 후타리데 카왓테 이케루다로-",
+      "pronSrc": "user",
+      "trans": "틀림없이 우리 함께 변해갈 수 있을 거야僕と君の不確かな日々を 보쿠토 키미노 후타시카나 히비오 나와 너의 불확실한 날들을",
+      "transSrc": "user"
+    },
+    {
+      "t": 103.83,
+      "orig": "ここで終わらせたい",
+      "pron": "코코데 오와라세타이",
+      "pronSrc": "user",
+      "trans": "여기서 끝내고 싶어",
+      "transSrc": "user"
+    },
+    {
+      "t": 105.75,
+      "orig": "思い通りにならない明日を見たい",
+      "pron": "오모이도오리니 나라나이 아시타오 미타이",
+      "pronSrc": "user",
+      "trans": "생각대로 되지 않는 내일을 보고 싶어",
+      "transSrc": "user"
+    },
+    {
+      "t": 108.96,
+      "orig": "僕と君の不確かな相槌を",
+      "pron": "보쿠토 키미노 후타시카나 아이즈치오",
+      "pronSrc": "user",
+      "trans": "나와 너의 불확실한 맞장구를",
+      "transSrc": "user"
+    },
+    {
+      "t": 111.32,
+      "orig": "ここで終わらせたい",
+      "pron": "코코데 오와라세타이",
+      "pronSrc": "user",
+      "trans": "여기서 끝내고 싶어",
+      "transSrc": "user"
+    },
+    {
+      "t": 113.24,
+      "orig": "革命的な前夜に今夜はしたい",
+      "pron": "카쿠메이테키나 젠야니 콘야와 시타이",
+      "pronSrc": "user",
+      "trans": "혁명적인 전야에 오늘 밤은 그렇게 하고 싶어",
+      "transSrc": "user"
+    },
+    {
+      "t": 116.03,
+      "orig": "わかっちゃいたけど",
+      "pron": "와캇챠이타케도",
+      "pronSrc": "user",
+      "trans": "알고 있지만",
+      "transSrc": "user"
+    },
+    {
+      "t": 117.95,
+      "orig": "通る悲しみは",
+      "pron": "토오루 카나시미와",
+      "pronSrc": "user",
+      "trans": "서로 통하는 슬픔은",
+      "transSrc": "user"
+    },
+    {
+      "t": 119.24,
+      "orig": "離れ離れになったとしても",
+      "pron": "하나레바나레니 낫타토 시테모",
+      "pronSrc": "user",
+      "trans": "뿔뿔이 흩어지게 된다 하더라도",
+      "transSrc": "user"
+    },
+    {
+      "t": 121.8,
+      "orig": "ここでもしも君が手を掴み",
+      "pron": "코코데 모시모 키미가 테오 츠카미",
+      "pronSrc": "user",
+      "trans": "여기서 만약 네가 손을 붙잡고",
+      "transSrc": "user"
+    },
+    {
+      "t": 124.37,
+      "orig": "ねえずっと同じと言えていたら",
+      "pron": "네- 즛토 오나지토 이에테이타라",
+      "pronSrc": "user",
+      "trans": "계속 똑같다고 말할 수 있었다면",
+      "transSrc": "user"
+    },
+    {
+      "t": 127.37,
+      "orig": "きっと僕らは手を繋ぎ",
+      "pron": "킷토 보쿠라와 테오 츠나기",
+      "pronSrc": "user",
+      "trans": "분명 우리는 손을 잡고",
+      "transSrc": "user"
+    },
+    {
+      "t": 129.51,
+      "orig": "ねえずっと変われなかったんだろう",
+      "pron": "네- 즛토 카와레나캇탄다로-",
+      "pronSrc": "user",
+      "trans": "쭉 변할 수 없었겠지",
+      "transSrc": "user"
+    },
+    {
+      "t": 132.93,
+      "orig": "あれから何年経ったか",
+      "pron": "아레카라 난넨 탓타카",
+      "pronSrc": "user",
+      "trans": "그로부터 몇 년이 흘렀는지",
+      "transSrc": "user"
+    },
+    {
+      "t": 135.07,
+      "orig": "君は元気にしているかい？",
+      "pron": "키미와 겡키니시테 이루카이",
+      "pronSrc": "user",
+      "trans": "너는 잘 지내고 있니?",
+      "transSrc": "user"
+    },
+    {
+      "t": 137.43,
+      "orig": "僕は今日で数えるの終わりにしたいよ",
+      "pron": "보쿠와 쿄-데 카조에루노 오와리니 시타이요",
+      "pronSrc": "user",
+      "trans": "나는 오늘로 세는 것을 끝내고 싶어",
+      "transSrc": "user"
+    },
+    {
+      "t": 141.06,
+      "orig": "もうあれから何年経ったか",
+      "pron": "모- 아레카라 난넨 탓타카",
+      "pronSrc": "user",
+      "trans": "벌써 그로부터 몇 년이 흘렀는지",
+      "transSrc": "user"
+    },
+    {
+      "t": 143.63,
+      "orig": "僕は元気にしているよ",
+      "pron": "보쿠와 겡키니시테 이루요",
+      "pronSrc": "user",
+      "trans": "나는 잘 지내고 있어",
+      "transSrc": "user"
+    },
+    {
+      "t": 145.77,
+      "orig": "でもあの日",
+      "pron": "데모 아노히",
+      "pronSrc": "user",
+      "trans": "하지만 그날",
+      "transSrc": "user"
+    },
+    {
+      "t": 146.84,
+      "orig": "不確かの確かをなくしていたよ",
+      "pron": "후타시카노 타시카오 나쿠시테이타요",
+      "pronSrc": "user",
+      "trans": "불확실함의 확신을 잃어버렸어",
+      "transSrc": "user"
+    },
+    {
+      "t": 149.84,
+      "orig": "わかっちゃいたけども通る悲しみは",
+      "pron": "와캇챠이타케도모 토오루 카나시미와",
+      "pronSrc": "user",
+      "trans": "알고는 있었지만 서로 통하는 슬픔은",
+      "transSrc": "user"
+    },
+    {
+      "t": 153.26,
+      "orig": "離れ離れになった今も",
+      "pron": "하나레바나레니 낫타 이마모",
+      "pronSrc": "user",
+      "trans": "뿔뿔이 흩어졌어 지금도",
+      "transSrc": "user"
+    },
+    {
+      "t": 155.4,
+      "orig": "ここでもしも君が手を掴み",
+      "pron": "코코데 모시모 키미가 테오 츠카미",
+      "pronSrc": "user",
+      "trans": "여기서 만약 네가 손을 붙잡고",
+      "transSrc": "user"
+    },
+    {
+      "t": 157.97,
+      "orig": "ねえずっと同じと言えていたら",
+      "pron": "네- 즛토 오나지토 이에테이타라",
+      "pronSrc": "user",
+      "trans": "계속 똑같다고 말할 수 있었다면",
+      "transSrc": "user"
+    },
+    {
+      "t": 160.97,
+      "orig": "きっと僕らは手を繋ぎ",
+      "pron": "킷토 보쿠라와 테오 츠나기",
+      "pronSrc": "user",
+      "trans": "분명 우리는 손을 잡고",
+      "transSrc": "user"
+    },
+    {
+      "t": 163.11,
+      "orig": "ねえずっと変わらなかった",
+      "pron": "네- 즛토 카와라나캇타",
+      "pronSrc": "user",
+      "trans": "쭉 변하지 않았어",
+      "transSrc": "user"
+    },
+    {
+      "t": 165.68,
+      "orig": "ねえ",
+      "pron": "네-",
+      "pronSrc": "user",
+      "trans": "있지",
+      "transSrc": "user"
+    },
+    {
+      "t": 166.1,
+      "orig": "あの日々の確かに",
+      "pron": "아노 히비노 타시카니",
+      "pronSrc": "user",
+      "trans": "그 나날의 확실함에",
+      "transSrc": "user"
+    },
+    {
+      "t": 167.82,
+      "orig": "何度心救われたんだろう",
+      "pron": "난도 코코로 스쿠와레탄다로-",
+      "pronSrc": "user",
+      "trans": "몇 번이나 마음의 구원을 받았을까",
+      "transSrc": "user"
+    },
+    {
+      "t": 170.17,
+      "orig": "あの日々の確かを",
+      "pron": "아노 히비노 타시카오",
+      "pronSrc": "user",
+      "trans": "그 나날의 확실함을",
+      "transSrc": "user"
+    },
+    {
+      "t": 171.88,
+      "orig": "何度思い出していただろう",
+      "pron": "난도 오모이다시테 이타다로-",
+      "pronSrc": "user",
+      "trans": "몇 번이나 떠올리고 있었을까",
+      "transSrc": "user"
+    },
+    {
+      "t": 174.45,
+      "orig": "あの日々の確かで",
+      "pron": "아노 히비노 타시카데",
+      "pronSrc": "user",
+      "trans": "그날들의 확실함으로",
+      "transSrc": "user"
+    },
+    {
+      "t": 176.16,
+      "orig": "失っていたものも",
+      "pron": "우시낫테이타 모노모",
+      "pronSrc": "user",
+      "trans": "잃어버리고 있던 것도",
+      "transSrc": "user"
+    },
+    {
+      "t": 177.87,
+      "orig": "もういいよ もういいよ",
+      "pron": "모- 이이요 모- 이이요",
+      "pronSrc": "user",
+      "trans": "이제 됐어 이제 됐어",
+      "transSrc": "user"
+    },
+    {
+      "t": 180.01,
+      "orig": "だから",
+      "pron": "다카라",
+      "pronSrc": "user",
+      "trans": "그러니까",
+      "transSrc": "user"
+    },
+    {
+      "t": 180.66,
+      "orig": "ここでもしも僕が手を掴み",
+      "pron": "코코데 모시모 보쿠가 테오 츠카미",
+      "pronSrc": "user",
+      "trans": "여기서 만약 내가 손을 붙잡고",
+      "transSrc": "user"
+    },
+    {
+      "t": 183.22,
+      "orig": "ねえずっと同じと言ったとしたら",
+      "pron": "네- 즛토 오나지토 잇타토 시타라",
+      "pronSrc": "user",
+      "trans": "계속 똑같다고 말한다면",
+      "transSrc": "user"
+    },
+    {
+      "t": 186.43,
+      "orig": "そっと僕らは手を繋ぎ",
+      "pron": "솟토 보쿠라와 테오 츠나기",
+      "pronSrc": "user",
+      "trans": "살짝 우리는 손을 잡고",
+      "transSrc": "user"
+    },
+    {
+      "t": 188.57,
+      "orig": "ねえきっとふたりで変わっていけるだろう",
+      "pron": "네- 킷토 후타리데 카왓테 이케루다로-",
+      "pronSrc": "user",
+      "trans": "틀림없이 우리 함께 변해갈 수 있을 거야",
+      "transSrc": "user"
+    }
+  ],
+  "approxTiming": true
+}

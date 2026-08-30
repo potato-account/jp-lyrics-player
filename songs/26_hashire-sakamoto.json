@@ -1,0 +1,397 @@
+{
+  "title": "走れSAKAMOTO",
+  "artist": "Vaundy",
+  "youtubeId": "uj1DkgXSR4w",
+  "bundleId": "vaundy-hashire-sakamoto",
+  "offset": 0,
+  "lines": [
+    {
+      "t": 39.71,
+      "orig": "坂道を見ていたせいで",
+      "pron": "사카미치오 미테이타 세이데",
+      "pronSrc": "user",
+      "trans": "언덕길을 보고 있었던 탓에",
+      "transSrc": "user"
+    },
+    {
+      "t": 45.17,
+      "orig": "眼の奥が痛む",
+      "pron": "메노 오쿠가 이타무",
+      "pronSrc": "user",
+      "trans": "눈 깊숙한 곳이 아파",
+      "transSrc": "user"
+    },
+    {
+      "t": 52.06,
+      "orig": "風を受け止まったせいで",
+      "pron": "카제오 우케토맛타 세이데",
+      "pronSrc": "user",
+      "trans": "바람을 받아 멈춰 선 탓에",
+      "transSrc": "user"
+    },
+    {
+      "t": 57.72,
+      "orig": "足首が痛む",
+      "pron": "아시쿠비가 이타무",
+      "pronSrc": "user",
+      "trans": "발목이 저려 와",
+      "transSrc": "user"
+    },
+    {
+      "t": 63.94,
+      "orig": "時折夜道が怖いなら",
+      "pron": "토키오리 요미치가 코와이나라",
+      "pronSrc": "user",
+      "trans": "이따금씩 밤길이 두렵다면",
+      "transSrc": "user"
+    },
+    {
+      "t": 70.28,
+      "orig": "指差し",
+      "pron": "유비사시",
+      "pronSrc": "user",
+      "trans": "가리키고",
+      "transSrc": "user"
+    },
+    {
+      "t": 71.9,
+      "orig": "踏み出し",
+      "pron": "후미다시",
+      "pronSrc": "user",
+      "trans": "내딛고",
+      "transSrc": "user"
+    },
+    {
+      "t": 73.4,
+      "orig": "肩を鳴らせ",
+      "pron": "카타오 나라세",
+      "pronSrc": "user",
+      "trans": "어깨를 풀어",
+      "transSrc": "user"
+    },
+    {
+      "t": 75.51,
+      "orig": "今だ",
+      "pron": "이마다",
+      "pronSrc": "user",
+      "trans": "지금이야",
+      "transSrc": "user"
+    },
+    {
+      "t": 76.37,
+      "orig": "真っ赤になるまでアクセル踏み込んで",
+      "pron": "맛카니 나루마데 아쿠세루 후미콘데",
+      "pronSrc": "user",
+      "trans": "새빨개질 때까지 액셀을 밟아",
+      "transSrc": "user"
+    },
+    {
+      "t": 82,
+      "orig": "それじゃ足りないまだ",
+      "pron": "소레쟈 타리나이 마다",
+      "pronSrc": "user",
+      "trans": "그걸론 부족해 아직",
+      "transSrc": "user"
+    },
+    {
+      "t": 84.17,
+      "orig": "クタクタになれ",
+      "pron": "쿠타쿠타니 나레",
+      "pronSrc": "user",
+      "trans": "끝까지 몰아붙여",
+      "transSrc": "user"
+    },
+    {
+      "t": 85.81,
+      "orig": "きっと航路に立っている",
+      "pron": "킷토 코-로니 탓테이루",
+      "pronSrc": "user",
+      "trans": "분명 항로 위에 서 있을 테니",
+      "transSrc": "user"
+    },
+    {
+      "t": 88.95,
+      "orig": "真っ赤になっても涙を飲み込んで",
+      "pron": "맛카니 낫테모 나미다오 노미콘데",
+      "pronSrc": "user",
+      "trans": "새빨개지더라도 눈물을 꾹 참아",
+      "transSrc": "user"
+    },
+    {
+      "t": 94.37,
+      "orig": "もう気にしないでいよう",
+      "pron": "모- 키니 시나이데 이요-",
+      "pronSrc": "user",
+      "trans": "더는 신경 쓰지 말자",
+      "transSrc": "user"
+    },
+    {
+      "t": 96.38,
+      "orig": "睨んでいよう",
+      "pron": "니란데 이요-",
+      "pronSrc": "user",
+      "trans": "노려보고 있자",
+      "transSrc": "user"
+    },
+    {
+      "t": 97.86,
+      "orig": "飛び出して",
+      "pron": "토비다시테",
+      "pronSrc": "user",
+      "trans": "박차고 나가",
+      "transSrc": "user"
+    },
+    {
+      "t": 100.03,
+      "orig": "走れ",
+      "pron": "하시레",
+      "pronSrc": "user",
+      "trans": "달려라",
+      "transSrc": "user"
+    },
+    {
+      "t": 100.66,
+      "orig": "SAKAMOTO DAYS",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 102.22,
+      "orig": "殺伐を溌溂で刺す店長に勝つ策略を",
+      "pron": "사츠바츠오 하츠라츠데 사스 텐쵸-니 카츠 사쿠랴쿠오",
+      "pronSrc": "user",
+      "trans": "살벌함을 발랄함으로 찌르는 점장을 이길 책략을",
+      "transSrc": "user"
+    },
+    {
+      "t": 107.1,
+      "orig": "否デブに説法",
+      "pron": "이야 데부니 셋포-",
+      "pronSrc": "user",
+      "trans": "아니 뚱보에게 설법을",
+      "transSrc": "user"
+    },
+    {
+      "t": 108.34,
+      "orig": "限界は超えてきた",
+      "pron": "겐카이와 코에테키타",
+      "pronSrc": "user",
+      "trans": "한계는 넘어섰다",
+      "transSrc": "user"
+    },
+    {
+      "t": 111.64,
+      "orig": "と彼の頬が言っていた",
+      "pron": "토 카레노 호호가 잇테이타",
+      "pronSrc": "user",
+      "trans": "며 그의 뺨이 말하고 있었어",
+      "transSrc": "user"
+    },
+    {
+      "t": 115.04,
+      "orig": "振り切ったものは全て",
+      "pron": "후리킷타 모노와 스베테",
+      "pronSrc": "user",
+      "trans": "떨쳐낸 것들은 전부",
+      "transSrc": "user"
+    },
+    {
+      "t": 121.27,
+      "orig": "心の中に宿る",
+      "pron": "코코로노 나카니 야도루",
+      "pronSrc": "user",
+      "trans": "마음속에 깃들지",
+      "transSrc": "user"
+    },
+    {
+      "t": 126.71,
+      "orig": "ここでは涙も強さだと",
+      "pron": "코코데와 나미다모 츠요사다토",
+      "pronSrc": "user",
+      "trans": "여기서는 눈물 또한 강함이라며",
+      "transSrc": "user"
+    },
+    {
+      "t": 133.01,
+      "orig": "指差し",
+      "pron": "유비사시",
+      "pronSrc": "user",
+      "trans": "가리키고",
+      "transSrc": "user"
+    },
+    {
+      "t": 134.5,
+      "orig": "「任せた」",
+      "pron": "마카세타",
+      "pronSrc": "user",
+      "trans": "「맡겼다」",
+      "transSrc": "user"
+    },
+    {
+      "t": 136.1,
+      "orig": "肩を鳴らせ",
+      "pron": "카타오 나라세",
+      "pronSrc": "user",
+      "trans": "어깨를 풀어",
+      "transSrc": "user"
+    },
+    {
+      "t": 138.58,
+      "orig": "ほら",
+      "pron": "호라",
+      "pronSrc": "user",
+      "trans": "어서",
+      "transSrc": "user"
+    },
+    {
+      "t": 139.23,
+      "orig": "真っ赤になるまでアクセル踏み込んで",
+      "pron": "맛카니 나루마데 아쿠세루 후미콘데",
+      "pronSrc": "user",
+      "trans": "새빨개질 때까지 액셀을 밟아",
+      "transSrc": "user"
+    },
+    {
+      "t": 144.76,
+      "orig": "それじゃ足りないまだ",
+      "pron": "소레쟈 타리나이 마다",
+      "pronSrc": "user",
+      "trans": "그걸론 부족해 아직",
+      "transSrc": "user"
+    },
+    {
+      "t": 146.91,
+      "orig": "クタクタになれ",
+      "pron": "쿠타쿠타니 나레",
+      "pronSrc": "user",
+      "trans": "끝까지 몰아붙여",
+      "transSrc": "user"
+    },
+    {
+      "t": 148.41,
+      "orig": "ずっと航路に立っている",
+      "pron": "즛토 코-로니 탓테이루",
+      "pronSrc": "user",
+      "trans": "계속 항로 위에 서 있을 테니",
+      "transSrc": "user"
+    },
+    {
+      "t": 151.64,
+      "orig": "真っ赤になっても涙を飲み込んで",
+      "pron": "맛카니 낫테모 나미다오 노미콘데",
+      "pronSrc": "user",
+      "trans": "새빨개지더라도 눈물을 꾹 참아",
+      "transSrc": "user"
+    },
+    {
+      "t": 156.94,
+      "orig": "もう気にしないでいろ",
+      "pron": "모- 키니 시나이데 이로",
+      "pronSrc": "user",
+      "trans": "더는 신경 쓰지 마",
+      "transSrc": "user"
+    },
+    {
+      "t": 159.56,
+      "orig": "睨んでいろ",
+      "pron": "니란데 이로",
+      "pronSrc": "user",
+      "trans": "노려보고 있어",
+      "transSrc": "user"
+    },
+    {
+      "t": 160.8,
+      "orig": "飛び出して",
+      "pron": "토비다시테",
+      "pronSrc": "user",
+      "trans": "박차고 나가",
+      "transSrc": "user"
+    },
+    {
+      "t": 176.18,
+      "orig": "たぎれ",
+      "pron": "타기레",
+      "pronSrc": "user",
+      "trans": "끓어올라라",
+      "transSrc": "user"
+    },
+    {
+      "t": 176.75,
+      "orig": "真っ赤になるまでアクセル踏み込んで",
+      "pron": "맛카니 나루마데 아쿠세루 후미콘데",
+      "pronSrc": "user",
+      "trans": "새빨개질 때까지 액셀을 밟아",
+      "transSrc": "user"
+    },
+    {
+      "t": 182.37,
+      "orig": "それじゃ足りないまだ",
+      "pron": "소레쟈 타리나이 마다",
+      "pronSrc": "user",
+      "trans": "그걸론 부족해 아직",
+      "transSrc": "user"
+    },
+    {
+      "t": 184.57,
+      "orig": "グシャグシャになれ",
+      "pron": "구샤구샤니 나레",
+      "pronSrc": "user",
+      "trans": "엉망이 되도록",
+      "transSrc": "user"
+    },
+    {
+      "t": 186.1,
+      "orig": "きっと航路を走っている",
+      "pron": "킷토 코-로오 하싯테이루",
+      "pronSrc": "user",
+      "trans": "분명 항로 위에 서 있을 테니",
+      "transSrc": "user"
+    },
+    {
+      "t": 189.28,
+      "orig": "真っ赤になっても涙を飲み込んで",
+      "pron": "맛카니 낫테모 나미다오 노미콘데",
+      "pronSrc": "user",
+      "trans": "새빨개지더라도 눈물을 꾹 참아",
+      "transSrc": "user"
+    },
+    {
+      "t": 194.58,
+      "orig": "もう気にしないでいよう",
+      "pron": "모- 키니 시나이데 이요-",
+      "pronSrc": "user",
+      "trans": "더는 신경 쓰지 말자",
+      "transSrc": "user"
+    },
+    {
+      "t": 197,
+      "orig": "笑っていよう",
+      "pron": "와랏테 이요-",
+      "pronSrc": "user",
+      "trans": "웃고 있자",
+      "transSrc": "user"
+    },
+    {
+      "t": 198.36,
+      "orig": "飛び出して",
+      "pron": "토비다시테",
+      "pronSrc": "user",
+      "trans": "박차고 나가",
+      "transSrc": "user"
+    },
+    {
+      "t": 200.73,
+      "orig": "走れ",
+      "pron": "하시레",
+      "pronSrc": "user",
+      "trans": "달려라",
+      "transSrc": "user"
+    },
+    {
+      "t": 201.17,
+      "orig": "SAKAMOTO DAYS",
+      "pron": "",
+      "trans": ""
+    }
+  ]
+}

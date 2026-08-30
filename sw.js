@@ -1,6 +1,6 @@
 // 오프라인 대비 캐시. 전략: 네트워크 우선(온라인이면 항상 최신 코드), 실패 시 캐시.
 // 개인용이라 최신 코드가 중요하고, 오프라인일 때만 캐시로 버틴다.
-const CACHE = "jlp-v8";
+const CACHE = "jlp-v9";
 const SHELL = [
   "./",
   "./index.html",
@@ -12,7 +12,7 @@ const SHELL = [
   "./js/kana2ko.js",
   "./js/autofill.js",
   "./songs/index.json",
-  "./songs/napori.json",
+  "./songs/03_napori.json",
   "./manifest.webmanifest",
   "./icons/icon.svg",
   "./icons/icon-192.png",

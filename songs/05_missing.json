@@ -7,213 +7,327 @@
   "lines": [
     {
       "t": 16.12,
-      "orig": "朱く染まる空 夜の合図が",
-      "pron": "아카쿠 소마루 소라 요루노 아이즈가",
-      "trans": "붉게 물드는 하늘 밤의 신호가"
+      "orig": "朱く染まる空",
+      "pron": "아카쿠 소마루 소라",
+      "pronSrc": "user",
+      "trans": "붉게 물드는 하늘",
+      "transSrc": "user"
+    },
+    {
+      "t": 20.11,
+      "orig": "夜の合図が",
+      "pron": "요루노 아이즈가",
+      "pronSrc": "user",
+      "trans": "밤의 신호가",
+      "transSrc": "user"
     },
     {
       "t": 23.44,
       "orig": "今日も僕らを駆り立ててく",
       "pron": "쿄-모 보쿠라오 카리타테테쿠",
-      "trans": "오늘도 우리를 몰아세워 가"
+      "pronSrc": "user",
+      "trans": "오늘도 우리를 재촉해",
+      "transSrc": "user"
     },
     {
       "t": 31.04,
-      "orig": "壁にもたれた 僕らの唄 口ずさめば",
-      "pron": "카베니 모타레타 보쿠라노 우타 쿠치즈사메바",
-      "trans": "벽에 기댄 우리의 노래 흥얼거리면"
+      "orig": "壁にもたれた",
+      "pron": "카베니 모타레타",
+      "pronSrc": "user",
+      "trans": "벽에 기대어",
+      "transSrc": "user"
+    },
+    {
+      "t": 35.86,
+      "orig": "僕らの唄 口ずさめば",
+      "pron": "보쿠라노 우타 쿠치즈사메바",
+      "pronSrc": "user",
+      "trans": "우리의 노래를 흥얼거리면",
+      "transSrc": "user"
     },
     {
       "t": 43.1,
-      "orig": "重なって 少し楽になって",
-      "pron": "카사낫테 스코시 라쿠니 낫테",
-      "trans": "겹쳐지고 조금 편해지고"
+      "orig": "重なって",
+      "pron": "카사낫테",
+      "pronSrc": "user",
+      "trans": "겹쳐지고",
+      "transSrc": "user"
+    },
+    {
+      "t": 44.64,
+      "orig": "少し楽になって",
+      "pron": "스코시 라쿠니 낫테",
+      "pronSrc": "user",
+      "trans": "조금은 가벼워지고",
+      "transSrc": "user"
     },
     {
       "t": 47.34,
-      "orig": "見つかっては ここに逃げ込んで",
-      "pron": "미츠캇테와 코코니 니게콘데",
-      "trans": "들키고는 여기로 숨어들어"
+      "orig": "見つかっては",
+      "pron": "미츠캇테와",
+      "pronSrc": "user",
+      "trans": "들키곤 하면",
+      "transSrc": "user"
+    },
+    {
+      "t": 48.98,
+      "orig": "ここに逃げ込んで",
+      "pron": "코코니 니게콘데",
+      "pronSrc": "user",
+      "trans": "여기로 숨어들어",
+      "transSrc": "user"
     },
     {
       "t": 51.17,
-      "orig": "笑ったこと 思い出して",
-      "pron": "와랏타 코토 오모이다시테",
-      "trans": "웃었던 걸 떠올리며"
+      "orig": "笑ったこと",
+      "pron": "와랏타 코토",
+      "pronSrc": "user",
+      "trans": "웃던 날들을",
+      "transSrc": "user"
+    },
+    {
+      "t": 52.73,
+      "orig": "思い出して",
+      "pron": "오모이다시테",
+      "pronSrc": "user",
+      "trans": "떠올려 줘",
+      "transSrc": "user"
     },
     {
       "t": 54.29,
-      "orig": "We're missing, we're missing, we're missing",
-      "pron": "위 미싱, 위 미싱, 위 미싱",
-      "trans": "We're missing, we're missing, we're missing"
+      "orig": "We're Missing",
+      "pron": "",
+      "trans": ""
     },
     {
-      "t": 60.04,
-      "orig": "あの火花みたいに 誠実なら",
-      "pron": "아노 히바나 미타이니 세이지츠나라",
-      "trans": "저 불꽃처럼 성실하다면"
+      "t": 58.49,
+      "orig": "あの火花みたいに",
+      "pron": "아노 히바나 미타이니",
+      "pronSrc": "user",
+      "trans": "저 불꽃처럼",
+      "transSrc": "user"
     },
     {
-      "t": 67.61,
+      "t": 61.28,
+      "orig": "誠実なら",
+      "pron": "세-지츠 나라",
+      "pronSrc": "user",
+      "trans": "진실했다면",
+      "transSrc": "user"
+    },
+    {
+      "t": 62.68,
       "orig": "迷う理由も見つかるのに",
-      "pron": "마요우 리유-모 미츠카루노니",
-      "trans": "헤맬 이유도 찾을 수 있을 텐데"
+      "pron": "마요- 리유-모 미츠카루노니",
+      "pronSrc": "user",
+      "trans": "망설일 이유도 찾았을 텐데",
+      "transSrc": "user"
     },
     {
-      "t": 75.08,
-      "orig": "足りない記憶 僕らの唄 口ずさめば",
-      "pron": "타리나이 키오쿠 보쿠라노 우타 쿠치즈사메바",
-      "trans": "부족한 기억 우리의 노래 흥얼거리면"
+      "t": 66.53,
+      "orig": "足りない記憶",
+      "pron": "타리나이 키오쿠",
+      "pronSrc": "user",
+      "trans": "모자란 기억을",
+      "transSrc": "user"
     },
     {
-      "t": 87.83,
-      "orig": "重なって 少し楽になって",
-      "pron": "카사낫테 스코시 라쿠니 낫테",
-      "trans": "겹쳐지고 조금 편해지고"
+      "t": 68.62,
+      "orig": "僕らの唄 口ずさめば",
+      "pron": "보쿠라노 우타 쿠치즈사메바",
+      "pronSrc": "user",
+      "trans": "우리의 노래를 흥얼거리면",
+      "transSrc": "user"
     },
     {
-      "t": 91.72,
-      "orig": "見つかっては ここに逃げ込んで",
-      "pron": "미츠캇테와 코코니 니게콘데",
-      "trans": "들키고는 여기로 숨어들어"
+      "t": 71.77,
+      "orig": "重なって",
+      "pron": "카사낫테",
+      "pronSrc": "user",
+      "trans": "겹쳐지고",
+      "transSrc": "user"
     },
     {
-      "t": 95.38,
-      "orig": "笑ったこと 思い出して",
-      "pron": "와랏타 코토 오모이다시테",
-      "trans": "웃었던 걸 떠올리며"
+      "t": 73.17,
+      "orig": "少し楽になって",
+      "pron": "스코시 라쿠니 낫테",
+      "pronSrc": "user",
+      "trans": "조금은 가벼워지고",
+      "transSrc": "user"
     },
     {
-      "t": 98.84,
-      "orig": "We're missing, we're missing, we're missing",
-      "pron": "위 미싱, 위 미싱, 위 미싱",
-      "trans": "We're missing, we're missing, we're missing"
+      "t": 75.62,
+      "orig": "見つかっては",
+      "pron": "미츠캇테와",
+      "pronSrc": "user",
+      "trans": "들키곤 하면",
+      "transSrc": "user"
     },
     {
-      "t": 102.8,
-      "orig": "間違って 少し失って",
-      "pron": "마치갓테 스코시 우시낫테",
-      "trans": "잘못하고 조금 잃어버리고"
+      "t": 77.71,
+      "orig": "ここに逃げ込んで",
+      "pron": "코코니 니게콘데",
+      "pronSrc": "user",
+      "trans": "여기로 숨어들어",
+      "transSrc": "user"
     },
     {
-      "t": 106.47,
-      "orig": "さまよっては 君に出会って",
-      "pron": "사마욧테와 키미니 데앗테",
-      "trans": "헤매고는 너를 만나"
+      "t": 80.51,
+      "orig": "笑ったこと",
+      "pron": "와랏타 코토",
+      "pronSrc": "user",
+      "trans": "웃던 날들을",
+      "transSrc": "user"
     },
     {
-      "t": 110.08,
-      "orig": "笑ったこと 思い出して",
-      "pron": "와랏타 코토 오모이다시테",
-      "trans": "웃었던 걸 떠올리며"
+      "t": 82.26,
+      "orig": "思い出して",
+      "pron": "오모이다시테",
+      "pronSrc": "user",
+      "trans": "떠올려 줘",
+      "transSrc": "user"
     },
     {
-      "t": 113.72,
-      "orig": "We're missing, we're missing, we're missing",
-      "pron": "위 미싱, 위 미싱, 위 미싱",
-      "trans": "We're missing, we're missing, we're missing"
+      "t": 84.01,
+      "orig": "We're Missing",
+      "pron": "",
+      "trans": ""
     },
     {
-      "t": 117.09,
-      "orig": "ソーダの中の宝石 入っていなかった金貨",
-      "pron": "소-다노 나카노 호-세키 하잇테 이나캇타 킨카",
-      "trans": "소다 속의 보석 들어 있지 않던 금화"
+      "t": 88.2,
+      "orig": "間違って",
+      "pron": "마치갓테",
+      "pronSrc": "user",
+      "trans": "틀리고",
+      "transSrc": "user"
     },
     {
-      "t": 124.16,
-      "orig": "たやすく折れたナイフ 羽の付いた髪飾り",
-      "pron": "타야스쿠 오레타 나이후 하네노 츠이타 카미카자리",
-      "trans": "쉽게 부러진 나이프 깃털 달린 머리 장식"
+      "t": 89.6,
+      "orig": "少し失って",
+      "pron": "스코시 우시낫테",
+      "pronSrc": "user",
+      "trans": "조금 잃어버리고",
+      "transSrc": "user"
     },
     {
-      "t": 131.3,
-      "orig": "一滴の水で泳ぐ 勝算みたいなもの",
-      "pron": "잇테키노 미즈데 오요구 쇼-산 미타이나 모노",
-      "trans": "한 방울의 물에서 헤엄치는 승산 같은 것"
+      "t": 91.35,
+      "orig": "さまよっては",
+      "pron": "사마욧테와",
+      "pronSrc": "user",
+      "trans": "헤매이다가",
+      "transSrc": "user"
     },
     {
-      "t": 138.79,
-      "orig": "あたたかい毛布も 大切なんだ",
-      "pron": "아타타카이 모-후모 타이세츠난다",
-      "trans": "따뜻한 담요도 소중한 거야"
+      "t": 93.45,
+      "orig": "君に出会って",
+      "pron": "키미니 데앗테",
+      "pronSrc": "user",
+      "trans": "너를 만나",
+      "transSrc": "user"
     },
     {
-      "t": 145.15,
-      "orig": "重なって 少し楽になって",
-      "pron": "카사낫테 스코시 라쿠니 낫테",
-      "trans": "겹쳐지고 조금 편해지고"
+      "t": 95.55,
+      "orig": "笑ったこと",
+      "pron": "와랏타 코토",
+      "pronSrc": "user",
+      "trans": "웃던 날들을",
+      "transSrc": "user"
     },
     {
-      "t": 148.95,
-      "orig": "見つかっては ここに逃げ込んで",
-      "pron": "미츠캇테와 코코니 니게콘데",
-      "trans": "들키고는 여기로 숨어들어"
+      "t": 97.29,
+      "orig": "思い出して",
+      "pron": "오모이다시테",
+      "pronSrc": "user",
+      "trans": "떠올려 줘",
+      "transSrc": "user"
     },
     {
-      "t": 152.62,
-      "orig": "笑ったこと 思い出して",
-      "pron": "와랏타 코토 오모이다시테",
-      "trans": "웃었던 걸 떠올리며"
+      "t": 99.04,
+      "orig": "We're Missing",
+      "pron": "",
+      "trans": ""
     },
     {
-      "t": 156.15,
-      "orig": "We're missing, we're missing, we're missing",
-      "pron": "위 미싱, 위 미싱, 위 미싱",
-      "trans": "We're missing, we're missing, we're missing"
+      "t": 103.24,
+      "orig": "ソーダの中の宝石",
+      "pron": "소-다노 나카노 호-세키",
+      "pronSrc": "user",
+      "trans": "소다 속의 보석",
+      "transSrc": "user"
     },
     {
-      "t": 159.9,
-      "orig": "間違って 少し失って",
-      "pron": "마치갓테 스코시 우시낫테",
-      "trans": "잘못하고 조금 잃어버리고"
+      "t": 105.68,
+      "orig": "入っていなかった金貨",
+      "pron": "하잇테 이나캇타 킨카",
+      "pronSrc": "user",
+      "trans": "들어 있지 않았던 금화",
+      "transSrc": "user"
     },
     {
-      "t": 163.7,
-      "orig": "さまよっては 君に出会って",
-      "pron": "사마욧테와 키미니 데앗테",
-      "trans": "헤매고는 너를 만나"
+      "t": 109.18,
+      "orig": "たやすく折れたナイフ",
+      "pron": "타야스쿠 오레타 나이후",
+      "pronSrc": "user",
+      "trans": "손쉽게 부러진 나이프",
+      "transSrc": "user"
     },
     {
-      "t": 167.36,
-      "orig": "笑ったこと 思い出して",
-      "pron": "와랏타 코토 오모이다시테",
-      "trans": "웃었던 걸 떠올리며"
+      "t": 112.68,
+      "orig": "羽の付いた髪飾り",
+      "pron": "하네노 츠이타 카미카자리",
+      "pronSrc": "user",
+      "trans": "날개 달린 머리장식",
+      "transSrc": "user"
     },
     {
-      "t": 170.97,
-      "orig": "We're missing, we're missing",
-      "pron": "위 미싱, 위 미싱",
-      "trans": "We're missing, we're missing"
+      "t": 115.47,
+      "orig": "一滴の水で泳ぐ",
+      "pron": "잇테키노 미즈데 오요구",
+      "pronSrc": "user",
+      "trans": "한 방울의 물로 헤엄치는",
+      "transSrc": "user"
     },
     {
-      "t": 172.79,
-      "orig": "We're missing, we're missing",
-      "pron": "위 미싱, 위 미싱",
-      "trans": "We're missing, we're missing"
+      "t": 117.92,
+      "orig": "勝算みたいなもの",
+      "pron": "쇼-산 미타이나 모노",
+      "pronSrc": "user",
+      "trans": "승산 같은 것들",
+      "transSrc": "user"
     },
     {
-      "t": 174.66,
+      "t": 120.72,
+      "orig": "あたたかい毛布も",
+      "pron": "아타타카이 모-후모",
+      "pronSrc": "user",
+      "trans": "따뜻한 담요도",
+      "transSrc": "user"
+    },
+    {
+      "t": 123.52,
+      "orig": "大切なんだ",
+      "pron": "타이세츠 난다",
+      "pronSrc": "user",
+      "trans": "다 소중한 거야",
+      "transSrc": "user"
+    },
+    {
+      "t": 125.26,
+      "orig": "We're Missing you",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 130.51,
+      "orig": "Since you left we still can't sleep at night",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 143.09,
       "orig": "We're missing",
-      "pron": "위 미싱",
-      "trans": "We're missing"
-    },
-    {
-      "t": 178.84,
-      "orig": "You",
-      "pron": "유",
-      "trans": "You"
-    },
-    {
-      "t": 182.18,
-      "orig": "Since you left, we still can't sleep at night",
-      "pron": "신스 유 레프트, 위 스틸 캔트 슬립 앳 나잇",
-      "trans": "네가 떠난 뒤로, 우린 아직 밤에 잠들지 못해"
-    },
-    {
-      "t": 185.27,
-      "orig": "We're missing, we're missing, we're missing",
-      "pron": "위 미싱, 위 미싱, 위 미싱",
-      "trans": "We're missing, we're missing, we're missing"
+      "pron": "",
+      "trans": ""
     }
   ]
 }

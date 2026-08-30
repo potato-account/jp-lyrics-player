@@ -1,0 +1,628 @@
+{
+  "title": "NEO JAPAN",
+  "artist": "Vaundy",
+  "youtubeId": "QC6gd_b1nz8",
+  "bundleId": "vaundy-neo-japan",
+  "offset": 0,
+  "lines": [
+    {
+      "t": 30.63,
+      "orig": "ある日気づいた 根付いた",
+      "pron": "아루히 키즈이타, 네즈이타",
+      "pronSrc": "user",
+      "trans": "어느날 깨달았어, 뿌리내린",
+      "transSrc": "user"
+    },
+    {
+      "t": 32.47,
+      "orig": "岸辺の球根",
+      "pron": "키시베노 큐우콘",
+      "pronSrc": "user",
+      "trans": "물가의 알뿌리**",
+      "transSrc": "user"
+    },
+    {
+      "t": 33.47,
+      "orig": "根回し手回し",
+      "pron": "네마와시테마와시",
+      "pronSrc": "user",
+      "trans": "사전논의 사전준비",
+      "transSrc": "user"
+    },
+    {
+      "t": 34.66,
+      "orig": "足りぬと、税の倍増",
+      "pron": "타리누토, 미츠기노바이조오",
+      "pronSrc": "user",
+      "trans": "부족하면, 세금 두배 늘리기-",
+      "transSrc": "user"
+    },
+    {
+      "t": 36.77,
+      "orig": "を総称は心の保証と",
+      "pron": "오 소오쇼오와 코코로노호쇼오토",
+      "pronSrc": "user",
+      "trans": "-의 총칭(総称)*은 마음의보증 으로",
+      "transSrc": "user"
+    },
+    {
+      "t": 39.15,
+      "orig": "干渉と化した暴行",
+      "pron": "칸쇼오토카시타 보오코오",
+      "pronSrc": "user",
+      "trans": "간섭으로 변화한 폭행",
+      "transSrc": "user"
+    },
+    {
+      "t": 41.23,
+      "orig": "その日気づいた ありゃ代打",
+      "pron": "소노히 키즈이타 아랴다이다",
+      "pronSrc": "user",
+      "trans": "그날 깨달았어, 그건 대타(代打)* -",
+      "transSrc": "user"
+    },
+    {
+      "t": 43.45,
+      "orig": "そりゃないなぁ",
+      "pron": "소랴 나이나",
+      "pronSrc": "user",
+      "trans": "-가 아니지",
+      "transSrc": "user"
+    },
+    {
+      "t": 44.77,
+      "orig": "口回りのいい、いいラッパー",
+      "pron": "쿠치마와리(노이이) 이이 랏파",
+      "pronSrc": "user",
+      "trans": "입을 잘 놀리는 래퍼",
+      "transSrc": "user"
+    },
+    {
+      "t": 46.84,
+      "orig": "その角のないリリックに踊らされ",
+      "pron": "소노 카도노나이 리릿쿠니 오도라사레",
+      "pronSrc": "user",
+      "trans": "그 부드러운 가사에 놀아난-",
+      "transSrc": "user"
+    },
+    {
+      "t": 49.5,
+      "orig": "後はポップなアッパーで煽るだけ",
+      "pron": "아토와 폿프나 앗파데아오루다케",
+      "pronSrc": "user",
+      "trans": "-뒤엔 팝 한 신나는 노래로 부추길 뿐",
+      "transSrc": "user"
+    },
+    {
+      "t": 52.46,
+      "orig": "彼の拝んだ未来は",
+      "pron": "카레노 오간다 미라이와",
+      "pronSrc": "user",
+      "trans": "그가 바라던 미래는",
+      "transSrc": "user"
+    },
+    {
+      "t": 55.91,
+      "orig": "霧がかってないか",
+      "pron": "키리가 캇테나이카",
+      "pronSrc": "user",
+      "trans": "안개가 끼지 않았어?",
+      "transSrc": "user"
+    },
+    {
+      "t": 59.37,
+      "orig": "ちりも積もらないな",
+      "pron": "치리모 츠모라나이나",
+      "pronSrc": "user",
+      "trans": "조금도 그렇질 않네.",
+      "transSrc": "user"
+    },
+    {
+      "t": 62.31,
+      "orig": "気持ちよくなって",
+      "pron": "키모치요쿠 낫테",
+      "pronSrc": "user",
+      "trans": "기분이 좋아져서",
+      "transSrc": "user"
+    },
+    {
+      "t": 65,
+      "orig": "前が見えてないな",
+      "pron": "마에가 미에테 나이나",
+      "pronSrc": "user",
+      "trans": "앞이 보이질 않네.",
+      "transSrc": "user"
+    },
+    {
+      "t": 67.68,
+      "orig": "世紀末までのらりくらり",
+      "pron": "세이키마츠마데 노라리 쿠라리",
+      "pronSrc": "user",
+      "trans": "세기말까지 빈둥 빈둥",
+      "transSrc": "user"
+    },
+    {
+      "t": 71.55,
+      "orig": "きっと彼はアキラが好きなだけ",
+      "pron": "킷토 카레와 아키라가 스키나다케",
+      "pronSrc": "user",
+      "trans": "분명 그는 아키라***를 좋아하는 것일 뿐",
+      "transSrc": "user"
+    },
+    {
+      "t": 74.51,
+      "orig": "僕らは向かうNEO JAPAN",
+      "pron": "보쿠라와무카우 NEO JAPAN",
+      "pronSrc": "user",
+      "trans": "우리는 향해 새로운 일본",
+      "transSrc": "user"
+    },
+    {
+      "t": 78.53,
+      "orig": "霧がかりの",
+      "pron": "키리가카리노",
+      "pronSrc": "user",
+      "trans": "안개 낀",
+      "transSrc": "user"
+    },
+    {
+      "t": 80.6,
+      "orig": "薔薇でも大丈夫さ",
+      "pron": "바라데모 다이조부사",
+      "pronSrc": "user",
+      "trans": "장미라도 괜찮아",
+      "transSrc": "user"
+    },
+    {
+      "t": 83.91,
+      "orig": "ふらりふらり",
+      "pron": "후라리후라리",
+      "pronSrc": "user",
+      "trans": "휘청 휘청",
+      "transSrc": "user"
+    },
+    {
+      "t": 85.57,
+      "orig": "僕らは集うNEO JAPAN",
+      "pron": "보쿠라와 츠도우 NEO JAPAN",
+      "pronSrc": "user",
+      "trans": "우리는 모여들어 새로운 일본",
+      "transSrc": "user"
+    },
+    {
+      "t": 89.15,
+      "orig": "言いがかりも",
+      "pron": "이이가카리모",
+      "pronSrc": "user",
+      "trans": "트집쟁이도",
+      "transSrc": "user"
+    },
+    {
+      "t": 90.81,
+      "orig": "ここなら大丈夫さ",
+      "pron": "코코나라 다이조부사",
+      "pronSrc": "user",
+      "trans": "여기라면 괜찮아",
+      "transSrc": "user"
+    },
+    {
+      "t": 93.01,
+      "orig": "ディストピア、 ディストピア、 ディストピア",
+      "pron": "",
+      "trans": "디스토피아 디스토피아 디스토피아",
+      "transSrc": "user"
+    },
+    {
+      "t": 97.98,
+      "orig": "ディストピア、 ディストピア、 ディストピア",
+      "pron": "",
+      "trans": "디스토피아 디스토피아 디스토피아",
+      "transSrc": "user"
+    },
+    {
+      "t": 102.94,
+      "orig": "否",
+      "pron": "이나",
+      "pronSrc": "user",
+      "trans": "부정",
+      "transSrc": "user"
+    },
+    {
+      "t": 103.22,
+      "orig": "気づかぬが仏、みな身につけるわ",
+      "pron": "키즈카누가호토케, 미나미니츠게루와",
+      "pronSrc": "user",
+      "trans": "눈치채지 못하지만 부처, 모두 몸에 붙여",
+      "transSrc": "user"
+    },
+    {
+      "t": 107.08,
+      "orig": "自動で",
+      "pron": "지도우데",
+      "pronSrc": "user",
+      "trans": "자동으로",
+      "transSrc": "user"
+    },
+    {
+      "t": 107.91,
+      "orig": "手掴み、刷り込み、他動作動、Flow",
+      "pron": "테즈카미 스리코미 타도오사도오 Flow",
+      "pronSrc": "user",
+      "trans": "손 잡기, 각인*, 타동작동(他動作動)*, Flow",
+      "transSrc": "user"
+    },
+    {
+      "t": 112.05,
+      "orig": "気にせず無能へ",
+      "pron": "키니세즈 무노오에",
+      "pronSrc": "user",
+      "trans": "신경쓰지말고 무능(無能)*에",
+      "transSrc": "user"
+    },
+    {
+      "t": 113.98,
+      "orig": "🦑",
+      "pron": "이카**",
+      "pronSrc": "user",
+      "trans": "오징어-**",
+      "transSrc": "user"
+    },
+    {
+      "t": 114.53,
+      "orig": "クセェのが個性で",
+      "pron": "쿠세노가 코세에데",
+      "pronSrc": "user",
+      "trans": "-냄새 나는게 개성이고",
+      "transSrc": "user"
+    },
+    {
+      "t": 116.74,
+      "orig": "今",
+      "pron": "이마",
+      "pronSrc": "user",
+      "trans": "지금",
+      "transSrc": "user"
+    },
+    {
+      "t": 117.01,
+      "orig": "妄想厨から逃走中",
+      "pron": "모오소오 추우 카라 토오소오추우",
+      "pronSrc": "user",
+      "trans": "망상충** 으로부터 도주 중-",
+      "transSrc": "user"
+    },
+    {
+      "t": 119.22,
+      "orig": "にでたヴァンパイア",
+      "pron": "니데타 반파이아",
+      "pronSrc": "user",
+      "trans": "-에 나온 뱀파이어",
+      "transSrc": "user"
+    },
+    {
+      "t": 121.7,
+      "orig": "もう漫才や",
+      "pron": "모오 만자이야",
+      "pronSrc": "user",
+      "trans": "이젠 코미디*야",
+      "transSrc": "user"
+    },
+    {
+      "t": 123.08,
+      "orig": "皆Ang Pang Men",
+      "pron": "미나 Ang Pang Men",
+      "pronSrc": "user",
+      "trans": "모두 호 빵 맨",
+      "transSrc": "user"
+    },
+    {
+      "t": 126.12,
+      "orig": "もう散々だ",
+      "pron": "모오산잔다",
+      "pronSrc": "user",
+      "trans": "이젠 엉망이야",
+      "transSrc": "user"
+    },
+    {
+      "t": 127.49,
+      "orig": "まだ足らない",
+      "pron": "마다타리나이",
+      "pronSrc": "user",
+      "trans": "아직부족해",
+      "transSrc": "user"
+    },
+    {
+      "t": 129.15,
+      "orig": "そこに財源",
+      "pron": "소코니 자이겐",
+      "pronSrc": "user",
+      "trans": "그곳의 재원(財源)*",
+      "transSrc": "user"
+    },
+    {
+      "t": 130.53,
+      "orig": "おつり合わんね",
+      "pron": "오츠리아완네",
+      "pronSrc": "user",
+      "trans": "(거스름)돈이 맞질 않네**",
+      "transSrc": "user"
+    },
+    {
+      "t": 132.46,
+      "orig": "「あぁ、まだ検討中」",
+      "pron": "아아 마다 켄토오추우",
+      "pronSrc": "user",
+      "trans": "' 아아, 아직 검토중 '",
+      "transSrc": "user"
+    },
+    {
+      "t": 134.39,
+      "orig": "目立たんね",
+      "pron": "메다탄네",
+      "pronSrc": "user",
+      "trans": "눈에 띄질 않네",
+      "transSrc": "user"
+    },
+    {
+      "t": 135.77,
+      "orig": "けつ拭き命令",
+      "pron": "케츠후키 메이레이",
+      "pronSrc": "user",
+      "trans": "뒤처리** 명령",
+      "transSrc": "user"
+    },
+    {
+      "t": 137.43,
+      "orig": "おしりグロいね",
+      "pron": "오시리구로이네",
+      "pronSrc": "user",
+      "trans": "엉덩이 징그럽네",
+      "transSrc": "user"
+    },
+    {
+      "t": 139.36,
+      "orig": "「ああ！まだ清掃中」",
+      "pron": "아아 마다 세에소오추우",
+      "pronSrc": "user",
+      "trans": "' 아아! 아직 청소중 '",
+      "transSrc": "user"
+    },
+    {
+      "t": 141.29,
+      "orig": "見当たらない",
+      "pron": "미아타라나이",
+      "pronSrc": "user",
+      "trans": "보이지 않네",
+      "transSrc": "user"
+    },
+    {
+      "t": 142.94,
+      "orig": "底の最低",
+      "pron": "소코노 사이테",
+      "pronSrc": "user",
+      "trans": "밑바닥 지하",
+      "transSrc": "user"
+    },
+    {
+      "t": 144.05,
+      "orig": "数が合わんね",
+      "pron": "카즈가 아완네",
+      "pronSrc": "user",
+      "trans": "갯수가 안맞네",
+      "transSrc": "user"
+    },
+    {
+      "t": 145.7,
+      "orig": "「ああ」",
+      "pron": "",
+      "trans": "' 아아 아아 '",
+      "transSrc": "user"
+    },
+    {
+      "t": 146.25,
+      "orig": "間に合わんね",
+      "pron": "마니아완네",
+      "pronSrc": "user",
+      "trans": "늦어버렸네",
+      "transSrc": "user"
+    },
+    {
+      "t": 147.91,
+      "orig": "民衆のサイレン",
+      "pron": "민슈우노 사이렌",
+      "pronSrc": "user",
+      "trans": "민중의 사이렌",
+      "transSrc": "user"
+    },
+    {
+      "t": 149.84,
+      "orig": "その合図で",
+      "pron": "소노아이즈데",
+      "pronSrc": "user",
+      "trans": "그 소리에ㅡ",
+      "transSrc": "user"
+    },
+    {
+      "t": 151.22,
+      "orig": "僕らは向かうNEO JAPAN",
+      "pron": "보쿠라와무카우 NEO JAPAN",
+      "pronSrc": "user",
+      "trans": "우리는 향해 새로운 일본",
+      "transSrc": "user"
+    },
+    {
+      "t": 155.08,
+      "orig": "霧がかりの",
+      "pron": "키리가카리노",
+      "pronSrc": "user",
+      "trans": "안개 낀",
+      "transSrc": "user"
+    },
+    {
+      "t": 157.03,
+      "orig": "薔薇でも大丈夫さ",
+      "pron": "바라데모 다이조부사",
+      "pronSrc": "user",
+      "trans": "장미라도 괜찮아",
+      "transSrc": "user"
+    },
+    {
+      "t": 160.14,
+      "orig": "ふらりふらり",
+      "pron": "후라리후라리",
+      "pronSrc": "user",
+      "trans": "휘청 휘청",
+      "transSrc": "user"
+    },
+    {
+      "t": 161.99,
+      "orig": "僕らは集うNEO JAPAN",
+      "pron": "보쿠라와 츠도우 NEO JAPAN",
+      "pronSrc": "user",
+      "trans": "우리는 모여들어 새로운 일본",
+      "transSrc": "user"
+    },
+    {
+      "t": 165.99,
+      "orig": "言いがかりも",
+      "pron": "이이가카리모",
+      "pronSrc": "user",
+      "trans": "트집쟁이도",
+      "transSrc": "user"
+    },
+    {
+      "t": 167.83,
+      "orig": "ここなら大丈夫さ",
+      "pron": "코코나라 다이조부사",
+      "pronSrc": "user",
+      "trans": "여기라면 괜찮아",
+      "transSrc": "user"
+    },
+    {
+      "t": 170.29,
+      "orig": "彼の拝んだ未来は",
+      "pron": "카레노 오간다 미라이와",
+      "pronSrc": "user",
+      "trans": "그가 바라던 미래는",
+      "transSrc": "user"
+    },
+    {
+      "t": 172.76,
+      "orig": "霧がかってないか",
+      "pron": "키리가 캇테나이카",
+      "pronSrc": "user",
+      "trans": "안개가 끼지 않았어?",
+      "transSrc": "user"
+    },
+    {
+      "t": 175.22,
+      "orig": "ちりも積もらないな",
+      "pron": "치리모 츠모라나이나",
+      "pronSrc": "user",
+      "trans": "조금도 그렇질 않네.",
+      "transSrc": "user"
+    },
+    {
+      "t": 177.99,
+      "orig": "気持ちよくなって",
+      "pron": "키모치요쿠 낫테",
+      "pronSrc": "user",
+      "trans": "기분이 좋아져서",
+      "transSrc": "user"
+    },
+    {
+      "t": 180.45,
+      "orig": "前が見えてないな",
+      "pron": "마에가 미에테 나이나",
+      "pronSrc": "user",
+      "trans": "앞이 보이질 않네",
+      "transSrc": "user"
+    },
+    {
+      "t": 182.91,
+      "orig": "世紀末までのらりくらり",
+      "pron": "세에키마츠마데 노라리 쿠라리",
+      "pronSrc": "user",
+      "trans": "세기말까지 빈둥 빈둥",
+      "transSrc": "user"
+    },
+    {
+      "t": 186.29,
+      "orig": "きっと彼はアキラが好きなだけ",
+      "pron": "킷토 카레와 아키라가 스키나다케",
+      "pronSrc": "user",
+      "trans": "분명 그는 아키라를 좋아하는 것일 뿐",
+      "transSrc": "user"
+    },
+    {
+      "t": 190.6,
+      "orig": "僕らは向かうNEO JAPAN",
+      "pron": "보쿠라와무카우 NEO JAPAN",
+      "pronSrc": "user",
+      "trans": "우리는 향해 새로운 일본",
+      "transSrc": "user"
+    },
+    {
+      "t": 194.91,
+      "orig": "霧がかりの",
+      "pron": "키리가카리노",
+      "pronSrc": "user",
+      "trans": "안개 낀",
+      "transSrc": "user"
+    },
+    {
+      "t": 196.45,
+      "orig": "薔薇でも大丈夫さ",
+      "pron": "바라데모 다이조부사",
+      "pronSrc": "user",
+      "trans": "장미라도 괜찮아",
+      "transSrc": "user"
+    },
+    {
+      "t": 198.91,
+      "orig": "ふらりふらり",
+      "pron": "후라리후라리",
+      "pronSrc": "user",
+      "trans": "휘청 휘청",
+      "transSrc": "user"
+    },
+    {
+      "t": 200.76,
+      "orig": "僕らは集うNEO JAPAN",
+      "pron": "보쿠라와 츠도우 NEO JAPAN",
+      "pronSrc": "user",
+      "trans": "우리는 모여들어 새로운 일본",
+      "transSrc": "user"
+    },
+    {
+      "t": 204.76,
+      "orig": "言いがかりも",
+      "pron": "이이가카리모",
+      "pronSrc": "user",
+      "trans": "트집쟁이도",
+      "transSrc": "user"
+    },
+    {
+      "t": 206.6,
+      "orig": "ここなら大丈夫さ",
+      "pron": "코코나라 다이조부사",
+      "pronSrc": "user",
+      "trans": "여기라면 괜찮아",
+      "transSrc": "user"
+    },
+    {
+      "t": 209.06,
+      "orig": "ディストピア、 ディストピア、 ディストピア",
+      "pron": "",
+      "trans": "디스토피아 디스토피아 디스토피아",
+      "transSrc": "user"
+    },
+    {
+      "t": 214.6,
+      "orig": "ディストピア、 ディストピア、 ディストピア",
+      "pron": "",
+      "trans": "디스토피아 디스토피아 디스토피아",
+      "transSrc": "user"
+    }
+  ]
+}

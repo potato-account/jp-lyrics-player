@@ -1,0 +1,475 @@
+{
+  "title": "replica",
+  "artist": "Vaundy",
+  "youtubeId": "Zt7ZXRxhoT4",
+  "bundleId": "vaundy-replica",
+  "offset": 0,
+  "lines": [
+    {
+      "t": 20.27,
+      "orig": "描き溜めた",
+      "pron": "에가키타메타",
+      "pronSrc": "user",
+      "trans": "그려 모아뒀어",
+      "transSrc": "user"
+    },
+    {
+      "t": 21.27,
+      "orig": "but something refused",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 25.05,
+      "orig": "これは前にも使った言葉",
+      "pron": "코레와 마에니모 츠캇타 코토바",
+      "pronSrc": "user",
+      "trans": "이건 예전에도 썼던 말",
+      "transSrc": "user"
+    },
+    {
+      "t": 30.56,
+      "orig": "嘘を綴った言葉だらけ",
+      "pron": "우소오 츠즛타 코토바다라케",
+      "pronSrc": "user",
+      "trans": "거짓을 엮어낸 말투성이야",
+      "transSrc": "user"
+    },
+    {
+      "t": 37.71,
+      "orig": "Oh no",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 39.68,
+      "orig": "もう冷めた",
+      "pron": "모- 사메타",
+      "pronSrc": "user",
+      "trans": "이젠 식어버렸어",
+      "transSrc": "user"
+    },
+    {
+      "t": 40.97,
+      "orig": "と誰かが言う I think so but that's all",
+      "pron": "토 다레카가 이우 I think so but that's all",
+      "pronSrc": "user",
+      "trans": "라고 누군가 말해, I think so but that's all",
+      "transSrc": "user"
+    },
+    {
+      "t": 47.66,
+      "orig": "煮詰まる",
+      "pron": "니츠마루",
+      "pronSrc": "user",
+      "trans": "졸아든",
+      "transSrc": "user"
+    },
+    {
+      "t": 48.69,
+      "orig": "言葉",
+      "pron": "코토바",
+      "pronSrc": "user",
+      "trans": "말들이",
+      "transSrc": "user"
+    },
+    {
+      "t": 49.2,
+      "orig": "それを作っただけだ",
+      "pron": "소레오 츠쿳타 다케다",
+      "pronSrc": "user",
+      "trans": "그걸 만들어 냈을 뿐이야",
+      "transSrc": "user"
+    },
+    {
+      "t": 52.1,
+      "orig": "My every try",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 55.33,
+      "orig": "every time",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 58.23,
+      "orig": "What a terrible news",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 63.71,
+      "orig": "“That's a replica.”",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 68.87,
+      "orig": "けれども",
+      "pron": "케레도모",
+      "pronSrc": "user",
+      "trans": "그렇지만",
+      "transSrc": "user"
+    },
+    {
+      "t": 70.16,
+      "orig": "「嘘じゃない」と言う",
+      "pron": "“우소쟈나이” 토 이우",
+      "pronSrc": "user",
+      "trans": "‘거짓이 아니야’라고 말해",
+      "transSrc": "user"
+    },
+    {
+      "t": 72.74,
+      "orig": "彼の目に宿る I はtrue",
+      "pron": "카레노 메니 야도루 I 와 true",
+      "pronSrc": "user",
+      "trans": "그의 눈에 깃든 I는 true",
+      "transSrc": "user"
+    },
+    {
+      "t": 76.61,
+      "orig": "“That's the replica.”",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 82.41,
+      "orig": "僕もそう",
+      "pron": "보쿠모 소-",
+      "pronSrc": "user",
+      "trans": "나도 그래",
+      "transSrc": "user"
+    },
+    {
+      "t": 83.7,
+      "orig": "「嘘じゃない」と思う",
+      "pron": "“우소쟈나이” 토 오모우",
+      "pronSrc": "user",
+      "trans": "‘거짓이 아니야’라고 생각해",
+      "transSrc": "user"
+    },
+    {
+      "t": 86.28,
+      "orig": "彼の背に宿る 羽根は",
+      "pron": "카레노 세니 야도루 하네와",
+      "pronSrc": "user",
+      "trans": "그의 등 뒤에 깃든 날개는",
+      "transSrc": "user"
+    },
+    {
+      "t": 89.18,
+      "orig": "I を語っている",
+      "pron": "아이 오 카탓테이루",
+      "pronSrc": "user",
+      "trans": "I를 이야기하고 있어",
+      "transSrc": "user"
+    },
+    {
+      "t": 91.44,
+      "orig": "何もかもがまだ",
+      "pron": "나니모 카모가 마다",
+      "pronSrc": "user",
+      "trans": "모든 것이 아직",
+      "transSrc": "user"
+    },
+    {
+      "t": 93.7,
+      "orig": "積木という",
+      "pron": "츠미키 토 이우",
+      "pronSrc": "user",
+      "trans": "‘쌓기’라는",
+      "transSrc": "user"
+    },
+    {
+      "t": 95.31,
+      "orig": "果ての無い繰り返しの殴打",
+      "pron": "하테노 나이 쿠리카에시노 오-다",
+      "pronSrc": "user",
+      "trans": "끝이 없는 반복의 난타",
+      "transSrc": "user"
+    },
+    {
+      "t": 99.18,
+      "orig": "What should I have done",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 105.31,
+      "orig": "I tried everything",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 110.46,
+      "orig": "every night",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 113.69,
+      "orig": "oh",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 114.33,
+      "orig": "ここは",
+      "pron": "코코와",
+      "pronSrc": "user",
+      "trans": "여긴",
+      "transSrc": "user"
+    },
+    {
+      "t": 115.3,
+      "orig": "何もかもその",
+      "pron": "나니모 카모 소노",
+      "pronSrc": "user",
+      "trans": "모든 것이 바로 그",
+      "transSrc": "user"
+    },
+    {
+      "t": 117.24,
+      "orig": "理屈という",
+      "pron": "리쿠츠 토 이우",
+      "pronSrc": "user",
+      "trans": "‘이치’라는",
+      "transSrc": "user"
+    },
+    {
+      "t": 118.85,
+      "orig": "果ての無い繰り返しの球だ",
+      "pron": "하테노 나이 쿠리카에시노 큐-다",
+      "pronSrc": "user",
+      "trans": "끝없는 반복의 구야",
+      "transSrc": "user"
+    },
+    {
+      "t": 122.72,
+      "orig": "So I board this spaceship",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 129.49,
+      "orig": "but still doesn't work",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 135.62,
+      "orig": "蛇足ばかりが",
+      "pron": "다소쿠 바카리가",
+      "pronSrc": "user",
+      "trans": "군더더기만이",
+      "transSrc": "user"
+    },
+    {
+      "t": 137.55,
+      "orig": "Hey Space Oddity.",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 142.06,
+      "orig": "Hey answer me.",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 145.61,
+      "orig": "Why ignore me.",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 149.16,
+      "orig": "Oh… Look at that.",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 153.03,
+      "orig": "What a terrible news",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 158.51,
+      "orig": "“That's a replica.”",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 163.67,
+      "orig": "けれども",
+      "pron": "케레도모",
+      "pronSrc": "user",
+      "trans": "그렇지만",
+      "transSrc": "user"
+    },
+    {
+      "t": 164.96,
+      "orig": "「嘘じゃない」と言う",
+      "pron": "“우소쟈나이” 토 이우",
+      "pronSrc": "user",
+      "trans": "‘거짓이 아니야’라고 말해",
+      "transSrc": "user"
+    },
+    {
+      "t": 167.54,
+      "orig": "彼の目に宿る I はtrue",
+      "pron": "카레노 메니 야도루 아이 와 true",
+      "pronSrc": "user",
+      "trans": "그의 눈에 깃든 I는 true",
+      "transSrc": "user"
+    },
+    {
+      "t": 171.41,
+      "orig": "“That's the replica.”",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 177.21,
+      "orig": "僕もそう",
+      "pron": "보쿠모 소-",
+      "pronSrc": "user",
+      "trans": "나도 그래",
+      "transSrc": "user"
+    },
+    {
+      "t": 178.5,
+      "orig": "「嘘じゃない」と思う",
+      "pron": "“우소쟈나이” 토 오모-",
+      "pronSrc": "user",
+      "trans": "‘거짓이 아니야’라고 생각해",
+      "transSrc": "user"
+    },
+    {
+      "t": 181.08,
+      "orig": "彼の背に宿る 羽根は",
+      "pron": "카레노 세니 야도루 하네와",
+      "pronSrc": "user",
+      "trans": "그의 등 뒤에 깃든 날개는",
+      "transSrc": "user"
+    },
+    {
+      "t": 184.14,
+      "orig": "I を語っている",
+      "pron": "아이 오 카탓테이루",
+      "pronSrc": "user",
+      "trans": "I를 이야기하고 있어",
+      "transSrc": "user"
+    },
+    {
+      "t": 186.53,
+      "orig": "原点はまた",
+      "pron": "겐텐와 마타",
+      "pronSrc": "user",
+      "trans": "원점은 또다시",
+      "transSrc": "user"
+    },
+    {
+      "t": 188.23,
+      "orig": "その身に重ね",
+      "pron": "소노 미니 카사네",
+      "pronSrc": "user",
+      "trans": "그 몸에 포개어",
+      "transSrc": "user"
+    },
+    {
+      "t": 190.27,
+      "orig": "導くように僕らを廻す",
+      "pron": "미치비쿠 요-니 보쿠라오 마와스",
+      "pronSrc": "user",
+      "trans": "이끌 듯 우리를 돌려",
+      "transSrc": "user"
+    },
+    {
+      "t": 193.68,
+      "orig": "そして彼は、模倣を称した。",
+      "pron": "소시테 카레와, 모호-오 쇼-시타",
+      "pronSrc": "user",
+      "trans": "그리고 그는, 그것을 ‘모방’이라 일컬었지.",
+      "transSrc": "user"
+    },
+    {
+      "t": 197.42,
+      "orig": "What a terrible news",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 203.21,
+      "orig": "“I am replica.”",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 207.29,
+      "orig": "けれども",
+      "pron": "케레도모",
+      "pronSrc": "user",
+      "trans": "그렇지만",
+      "transSrc": "user"
+    },
+    {
+      "t": 208.65,
+      "orig": "「嘘じゃない」と言う",
+      "pron": "“우소쟈나이” 토 이우",
+      "pronSrc": "user",
+      "trans": "‘거짓이 아니야’라고 말해",
+      "transSrc": "user"
+    },
+    {
+      "t": 211.38,
+      "orig": "彼の目に宿る I はtrue",
+      "pron": "카레노 메니 야도루 아이 와 true",
+      "pronSrc": "user",
+      "trans": "그의 눈에 깃든 I는 true",
+      "transSrc": "user"
+    },
+    {
+      "t": 215.46,
+      "orig": "“I am replica.”",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 219.55,
+      "orig": "僕もそう",
+      "pron": "보쿠모 소-",
+      "pronSrc": "user",
+      "trans": "나도 그래",
+      "transSrc": "user"
+    },
+    {
+      "t": 220.91,
+      "orig": "「嘘じゃない」と思う",
+      "pron": "“우소쟈나이” 토 오모-",
+      "pronSrc": "user",
+      "trans": "‘거짓이 아니야’라고 생각해",
+      "transSrc": "user"
+    },
+    {
+      "t": 223.63,
+      "orig": "彼の背に宿る 羽根は",
+      "pron": "카레노 세니 야도루 하네와",
+      "pronSrc": "user",
+      "trans": "그의 등 뒤에 깃든 날개는",
+      "transSrc": "user"
+    },
+    {
+      "t": 226.7,
+      "orig": "I を語っている",
+      "pron": "아이 오 카탓테이루",
+      "pronSrc": "user",
+      "trans": "I를 이야기하고 있어",
+      "transSrc": "user"
+    }
+  ]
+}

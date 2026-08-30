@@ -1,0 +1,381 @@
+{
+  "title": "ZERO",
+  "artist": "Vaundy",
+  "youtubeId": "Xr0RRdBNNUg",
+  "bundleId": "vaundy-zero",
+  "offset": 0,
+  "lines": [
+    {
+      "t": 23.42,
+      "orig": "Hate",
+      "pron": "",
+      "trans": "증오",
+      "transSrc": "user"
+    },
+    {
+      "t": 26.15,
+      "orig": "His fire picks are hailing down",
+      "pron": "",
+      "trans": "그의 불꽃이 쏟아져내리고 있어",
+      "transSrc": "user"
+    },
+    {
+      "t": 30.65,
+      "orig": "Ain't been caught in night",
+      "pron": "",
+      "trans": "밤이 되어도 잡을 수 없어",
+      "transSrc": "user"
+    },
+    {
+      "t": 34.98,
+      "orig": "But when we caught then blow them down",
+      "pron": "",
+      "trans": "하지만 우리가 잡힌다면 녀석들을 날려버릴 거야",
+      "transSrc": "user"
+    },
+    {
+      "t": 38.67,
+      "orig": "Oh, yeah",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 39.54,
+      "orig": "You're ready now",
+      "pron": "",
+      "trans": "준비됐어?",
+      "transSrc": "user"
+    },
+    {
+      "t": 41.56,
+      "orig": "It's gonna rot in the cells",
+      "pron": "",
+      "trans": "세포 속에서 썩어갈 준비",
+      "transSrc": "user"
+    },
+    {
+      "t": 43.97,
+      "orig": "It's gonna rot in your brain now",
+      "pron": "",
+      "trans": "지금 너의 뇌도 썩어가고 있어",
+      "transSrc": "user"
+    },
+    {
+      "t": 47.86,
+      "orig": "Na, na, na, na-na-na-na",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 51.02,
+      "orig": "Saw them talking about",
+      "pron": "",
+      "trans": "그들이 이야기하는 것을 봤어",
+      "transSrc": "user"
+    },
+    {
+      "t": 53.11,
+      "orig": "It's gonna rock and then rain down",
+      "pron": "",
+      "trans": "흔들리다 비가 내릴 거야",
+      "transSrc": "user"
+    },
+    {
+      "t": 57.05,
+      "orig": "Na, na, na, na-na-na-na",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 59.44,
+      "orig": "Hey, now",
+      "pron": "",
+      "trans": "자, 지금",
+      "transSrc": "user"
+    },
+    {
+      "t": 62.18,
+      "orig": "Put out a hand to dance now?",
+      "pron": "",
+      "trans": "손 내밀고 춤 춰보지 않을래?",
+      "transSrc": "user"
+    },
+    {
+      "t": 66.55,
+      "orig": "Who want? Na-na-na",
+      "pron": "",
+      "trans": "어때? Na, na, na",
+      "transSrc": "user"
+    },
+    {
+      "t": 68.49,
+      "orig": "Hey, now",
+      "pron": "",
+      "trans": "자, 지금",
+      "transSrc": "user"
+    },
+    {
+      "t": 71.12,
+      "orig": "Put out a hand to dance now?",
+      "pron": "",
+      "trans": "손 내밀고 춤 춰보지 않을래?",
+      "transSrc": "user"
+    },
+    {
+      "t": 75.89,
+      "orig": "The world drags you down",
+      "pron": "",
+      "trans": "세상은 널 끌어내릴 거야",
+      "transSrc": "user"
+    },
+    {
+      "t": 96.73,
+      "orig": "Hate",
+      "pron": "",
+      "trans": "증오",
+      "transSrc": "user"
+    },
+    {
+      "t": 98.98,
+      "orig": "I've drawn him about a thousand times",
+      "pron": "",
+      "trans": "그걸 1000번 정도 그려봤어",
+      "transSrc": "user"
+    },
+    {
+      "t": 103.75,
+      "orig": "Let me call them \"mana\"",
+      "pron": "",
+      "trans": "그걸 '마나'라고 부를게",
+      "transSrc": "user"
+    },
+    {
+      "t": 108.03,
+      "orig": "I'm broken and they don't fall down",
+      "pron": "",
+      "trans": "난 끝났지만 그들은 쓰러지지 않았어",
+      "transSrc": "user"
+    },
+    {
+      "t": 111.87,
+      "orig": "Oh, you'll tell me inside",
+      "pron": "",
+      "trans": "오, 넌 마음속으로 알려주었겠지",
+      "transSrc": "user"
+    },
+    {
+      "t": 114.77,
+      "orig": "You got it rocking around",
+      "pron": "",
+      "trans": "넌 그걸 이리저리 흔들고 있어",
+      "transSrc": "user"
+    },
+    {
+      "t": 117.15,
+      "orig": "It's gonna rot in your brain now",
+      "pron": "",
+      "trans": "지금 너의 뇌도 썩어가고 있어",
+      "transSrc": "user"
+    },
+    {
+      "t": 121.06,
+      "orig": "Na, na, na, na-na-na-na",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 124.16,
+      "orig": "Saw them walking around",
+      "pron": "",
+      "trans": "그들이 돌아다니는 것을 봤어",
+      "transSrc": "user"
+    },
+    {
+      "t": 126.25,
+      "orig": "It's gonna rock and then rain down",
+      "pron": "",
+      "trans": "흔들리다 비가 내릴 거야",
+      "transSrc": "user"
+    },
+    {
+      "t": 130.26,
+      "orig": "Na, na, na, na-na-na-na",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 132.82,
+      "orig": "Hey, now",
+      "pron": "",
+      "trans": "자, 지금",
+      "transSrc": "user"
+    },
+    {
+      "t": 135.29,
+      "orig": "Put out a hand to dance now?",
+      "pron": "",
+      "trans": "손 내밀고 춤 춰보지 않을래?",
+      "transSrc": "user"
+    },
+    {
+      "t": 139.73,
+      "orig": "Who want? Na-na-na",
+      "pron": "",
+      "trans": "어때? Na, na, na",
+      "transSrc": "user"
+    },
+    {
+      "t": 141.65,
+      "orig": "Hey, now",
+      "pron": "",
+      "trans": "자, 지금",
+      "transSrc": "user"
+    },
+    {
+      "t": 144.24,
+      "orig": "Put out a hand to dance now?",
+      "pron": "",
+      "trans": "손 내밀고 춤 춰보지 않을래?",
+      "transSrc": "user"
+    },
+    {
+      "t": 149.08,
+      "orig": "The world drags you down",
+      "pron": "",
+      "trans": "세상은 널 끌어내릴 거야",
+      "transSrc": "user"
+    },
+    {
+      "t": 151.43,
+      "orig": "Oh, baby",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 152.72,
+      "orig": "There's so many around",
+      "pron": "",
+      "trans": "주위에 많은 사람들이 있어",
+      "transSrc": "user"
+    },
+    {
+      "t": 155.34,
+      "orig": "So it's been taxing",
+      "pron": "",
+      "trans": "그러니 지치게 되는 거야",
+      "transSrc": "user"
+    },
+    {
+      "t": 157.4,
+      "orig": "You loving something new",
+      "pron": "",
+      "trans": "넌 새로운 무언갈 사랑하고 있어",
+      "transSrc": "user"
+    },
+    {
+      "t": 160.38,
+      "orig": "Hold me badly to be buddy",
+      "pron": "",
+      "trans": "친구가 되려면 날 세게 안아줘",
+      "transSrc": "user"
+    },
+    {
+      "t": 164.07,
+      "orig": "You want me? Hey, rock with me",
+      "pron": "",
+      "trans": "날 원해? 나와 함께 록을 하자",
+      "transSrc": "user"
+    },
+    {
+      "t": 166.72,
+      "orig": "You, give me na, na-na-na",
+      "pron": "",
+      "trans": "넌, 나에게, na, na, na, na",
+      "transSrc": "user"
+    },
+    {
+      "t": 169.13,
+      "orig": "Hey, now",
+      "pron": "",
+      "trans": "자, 지금",
+      "transSrc": "user"
+    },
+    {
+      "t": 171.72,
+      "orig": "Put out a hand to dance now?",
+      "pron": "",
+      "trans": "손 내밀고 춤 춰보지 않을래?",
+      "transSrc": "user"
+    },
+    {
+      "t": 176.31,
+      "orig": "Who want? Na-na-na",
+      "pron": "",
+      "trans": "어때? Na, na, na",
+      "transSrc": "user"
+    },
+    {
+      "t": 178.19,
+      "orig": "Hey, now",
+      "pron": "",
+      "trans": "자, 지금",
+      "transSrc": "user"
+    },
+    {
+      "t": 181.01,
+      "orig": "Put out a hand to dance now?",
+      "pron": "",
+      "trans": "손 내밀고 춤 춰보지 않을래?",
+      "transSrc": "user"
+    },
+    {
+      "t": 185.53,
+      "orig": "The world drags...(na, na, na)",
+      "pron": "",
+      "trans": "세상은 널...",
+      "transSrc": "user"
+    },
+    {
+      "t": 189.29,
+      "orig": "Hey, now",
+      "pron": "",
+      "trans": "자, 지금",
+      "transSrc": "user"
+    },
+    {
+      "t": 190.48,
+      "orig": "Put out a hand to dance now?",
+      "pron": "",
+      "trans": "손 내밀고 춤 춰보지 않을래?",
+      "transSrc": "user"
+    },
+    {
+      "t": 194.64,
+      "orig": "Who want? Na, na, na",
+      "pron": "",
+      "trans": "어때? Na, na, na",
+      "transSrc": "user"
+    },
+    {
+      "t": 197.22,
+      "orig": "Hey, now",
+      "pron": "",
+      "trans": "자, 지금",
+      "transSrc": "user"
+    },
+    {
+      "t": 198.41,
+      "orig": "Put out a hand to dance now?",
+      "pron": "",
+      "trans": "손 내밀고 춤 춰보지 않을래?",
+      "transSrc": "user"
+    },
+    {
+      "t": 202.57,
+      "orig": "The world drags you down",
+      "pron": "",
+      "trans": "세상은 널 끌어내릴 거야",
+      "transSrc": "user"
+    }
+  ]
+}

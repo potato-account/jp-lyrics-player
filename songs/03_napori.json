@@ -1,0 +1,409 @@
+{
+  "title": "napori",
+  "artist": "Vaundy",
+  "youtubeId": "ZeIGVnkYX04",
+  "bundleId": "vaundy-napori",
+  "offset": 0,
+  "lines": [
+    {
+      "t": 14.99,
+      "orig": "ろくな音楽もなくて",
+      "pron": "로쿠나 온가쿠모 나쿠테",
+      "pronSrc": "user",
+      "trans": "제대로 된 음악도 없어서",
+      "transSrc": "user"
+    },
+    {
+      "t": 18.58,
+      "orig": "そんなひびをまた2人で",
+      "pron": "손나 히비오 마타 후타리데",
+      "pronSrc": "user",
+      "trans": "그런 나날을 또 둘이서",
+      "transSrc": "user"
+    },
+    {
+      "t": 22.32,
+      "orig": "僕ら指にラブソングで",
+      "pron": "보쿠라 유비니 라부송그데",
+      "pronSrc": "user",
+      "trans": "우리 손끝에 러브송으로",
+      "transSrc": "user"
+    },
+    {
+      "t": 25.92,
+      "orig": "今夜も二人で歩いてこ",
+      "pron": "콘야모 후타리데 아루이테코",
+      "pronSrc": "user",
+      "trans": "오늘 밤도 둘이서 걸어오자",
+      "transSrc": "user"
+    },
+    {
+      "t": 29.75,
+      "orig": "2人になって",
+      "pron": "후타리니 낫테",
+      "pronSrc": "user",
+      "trans": "둘이 되고",
+      "transSrc": "user"
+    },
+    {
+      "t": 31.7,
+      "orig": "君を待って",
+      "pron": "키미오 맛테",
+      "pronSrc": "user",
+      "trans": "너를 기다리며",
+      "transSrc": "user"
+    },
+    {
+      "t": 33.33,
+      "orig": "思い出したんだ",
+      "pron": "오모이다시탄다",
+      "pronSrc": "user",
+      "trans": "떠올렸어",
+      "transSrc": "user"
+    },
+    {
+      "t": 36.2,
+      "orig": "僕が",
+      "pron": "보쿠가",
+      "pronSrc": "user",
+      "trans": "내가",
+      "transSrc": "user"
+    },
+    {
+      "t": 36.82,
+      "orig": "大人になって",
+      "pron": "오토나니 낫테",
+      "pronSrc": "user",
+      "trans": "어른이 되고",
+      "transSrc": "user"
+    },
+    {
+      "t": 38.67,
+      "orig": "思い出すのは君じゃないかな",
+      "pron": "오모이다스노와 키미쟈 나이 카나",
+      "pronSrc": "user",
+      "trans": "떠올리는 건 네가 아닐까",
+      "transSrc": "user"
+    },
+    {
+      "t": 43.1,
+      "orig": "あれは",
+      "pron": "아레와",
+      "pronSrc": "user",
+      "trans": "그건",
+      "transSrc": "user"
+    },
+    {
+      "t": 44.12,
+      "orig": "縁そっと flight",
+      "pron": "엔 솟토 후라이토",
+      "pronSrc": "user",
+      "trans": "인연, 살며시 flight",
+      "transSrc": "user"
+    },
+    {
+      "t": 46.87,
+      "orig": "僕ら互いの指を絡めあってもう",
+      "pron": "보쿠라 타가이노 유비오 카라메앗테 모-",
+      "pronSrc": "user",
+      "trans": "우리 서로의 손가락을 얽어 맞잡고, 벌써",
+      "transSrc": "user"
+    },
+    {
+      "t": 51.63,
+      "orig": "Napori ずっといたいよ",
+      "pron": "나포리 즛또 이타이요",
+      "pronSrc": "user",
+      "trans": "나폴리에 계속 있고 싶어",
+      "transSrc": "user"
+    },
+    {
+      "t": 54.29,
+      "orig": "ここで見つめあって互いに安堵する",
+      "pron": "코코데 미츠메앗테 타가이니 안도 스루",
+      "pronSrc": "user",
+      "trans": "여기서 서로 바라보며 함께 안도해",
+      "transSrc": "user"
+    },
+    {
+      "t": 59.13,
+      "orig": "Oh right, oh right, oh right",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 64.5,
+      "orig": "絡めあっていく",
+      "pron": "카라메앗테 이쿠",
+      "pronSrc": "user",
+      "trans": "얽혀 가",
+      "transSrc": "user"
+    },
+    {
+      "t": 66.55,
+      "orig": "Oh right, oh right, oh right",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 72.81,
+      "orig": "当然こんな夜にはコーヒーがいいだろ",
+      "pron": "토-젠 콘나 요루니와 코-히-가 이-다로",
+      "pronSrc": "user",
+      "trans": "당연히 이런 밤엔 커피가 좋겠지",
+      "transSrc": "user"
+    },
+    {
+      "t": 76.91,
+      "orig": "そんな僕の横でハイボールを1口",
+      "pron": "손나 보쿠노 요코데 하이보-루오 히토쿠치",
+      "pronSrc": "user",
+      "trans": "그런 내 옆에서 하이볼을 한 모금",
+      "transSrc": "user"
+    },
+    {
+      "t": 80.45,
+      "orig": "もう",
+      "pron": "모-",
+      "pronSrc": "user",
+      "trans": "이젠",
+      "transSrc": "user"
+    },
+    {
+      "t": 80.86,
+      "orig": "なんて言うんだろ",
+      "pron": "난테 이운다로",
+      "pronSrc": "user",
+      "trans": "뭐라고 해야 할까",
+      "transSrc": "user"
+    },
+    {
+      "t": 82.5,
+      "orig": "そう君見てると",
+      "pron": "소- 키미 미테루토",
+      "pronSrc": "user",
+      "trans": "그래, 너를 보고 있으면",
+      "transSrc": "user"
+    },
+    {
+      "t": 84.14,
+      "orig": "酒入ってなくても",
+      "pron": "사케 하잇테 나쿠테모",
+      "pronSrc": "user",
+      "trans": "술이 안 들어가도",
+      "transSrc": "user"
+    },
+    {
+      "t": 86.08,
+      "orig": "酔いが回るんだな",
+      "pron": "요이가 마와룬다나",
+      "pronSrc": "user",
+      "trans": "취기가 도네",
+      "transSrc": "user"
+    },
+    {
+      "t": 88.41,
+      "orig": "音になって",
+      "pron": "오토니 낫테",
+      "pronSrc": "user",
+      "trans": "소리가 되어",
+      "transSrc": "user"
+    },
+    {
+      "t": 90.04,
+      "orig": "大人になって",
+      "pron": "오토나니 낫테",
+      "pronSrc": "user",
+      "trans": "어른이 되고",
+      "transSrc": "user"
+    },
+    {
+      "t": 92,
+      "orig": "思い出したんだ",
+      "pron": "오모이다시탄다",
+      "pronSrc": "user",
+      "trans": "떠올렸어",
+      "transSrc": "user"
+    },
+    {
+      "t": 94.85,
+      "orig": "君が",
+      "pron": "키미가",
+      "pronSrc": "user",
+      "trans": "네가",
+      "transSrc": "user"
+    },
+    {
+      "t": 95.49,
+      "orig": "大人になって",
+      "pron": "오토나니 낫테",
+      "pronSrc": "user",
+      "trans": "어른이 되고",
+      "transSrc": "user"
+    },
+    {
+      "t": 97.42,
+      "orig": "思い出すのは",
+      "pron": "오모이다스노와",
+      "pronSrc": "user",
+      "trans": "떠올리는 건",
+      "transSrc": "user"
+    },
+    {
+      "t": 99.47,
+      "orig": "ぼくじゃないかな",
+      "pron": "보쿠쟈 나이 카나",
+      "pronSrc": "user",
+      "trans": "내가 아닐까",
+      "transSrc": "user"
+    },
+    {
+      "t": 102.21,
+      "orig": "いずれ",
+      "pron": "이즈레",
+      "pronSrc": "user",
+      "trans": "언젠가는",
+      "transSrc": "user"
+    },
+    {
+      "t": 103.17,
+      "orig": "縁そっと flight",
+      "pron": "엔 솟토 후라이토",
+      "pronSrc": "user",
+      "trans": "인연을 살며시 띄워, flight",
+      "transSrc": "user"
+    },
+    {
+      "t": 105.69,
+      "orig": "僕ら互いの指を絡めあってもう",
+      "pron": "보쿠라 타가이노 유비오 카라메앗테 모-",
+      "pronSrc": "user",
+      "trans": "우리 서로의 손가락을 얽어 맞잡고, 벌써",
+      "transSrc": "user"
+    },
+    {
+      "t": 110.32,
+      "orig": "Napori ずっといたいよ",
+      "pron": "나포리 즛또 이타이요",
+      "pronSrc": "user",
+      "trans": "나폴리에 계속 있고 싶어",
+      "transSrc": "user"
+    },
+    {
+      "t": 113.05,
+      "orig": "ここで見つめあって互いに安堵する",
+      "pron": "코코데 미츠메앗테 타가이니 안도 스루",
+      "pronSrc": "user",
+      "trans": "여기서 서로를 바라보며 서로 안도해",
+      "transSrc": "user"
+    },
+    {
+      "t": 117.96,
+      "orig": "Oh right, oh right, oh right",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 123.33,
+      "orig": "絡めあっていく",
+      "pron": "카라메앗테 이쿠",
+      "pronSrc": "user",
+      "trans": "얽혀 가",
+      "transSrc": "user"
+    },
+    {
+      "t": 125.66,
+      "orig": "Oh right, oh right, oh right",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 148.39,
+      "orig": "君と",
+      "pron": "키미토",
+      "pronSrc": "user",
+      "trans": "너와",
+      "transSrc": "user"
+    },
+    {
+      "t": 148.96,
+      "orig": "縁そっとflight",
+      "pron": "엔 솟토 후라이토",
+      "pronSrc": "user",
+      "trans": "인연을 살며시 띄워, flight",
+      "transSrc": "user"
+    },
+    {
+      "t": 151.84,
+      "orig": "僕ら互いの指を絡めあってもう",
+      "pron": "보쿠라 타가이노 유비오 카라메앗테 모-",
+      "pronSrc": "user",
+      "trans": "우리 서로의 손가락을 얽어 맞잡고, 벌써",
+      "transSrc": "user"
+    },
+    {
+      "t": 156.33,
+      "orig": "Napori ずっといたいよ",
+      "pron": "나포리 즛또 이타이요",
+      "pronSrc": "user",
+      "trans": "나폴리에 계속 있고 싶어",
+      "transSrc": "user"
+    },
+    {
+      "t": 159.17,
+      "orig": "ここで見つめあって互いに安堵する",
+      "pron": "코코데 미츠메앗테 타가이니 안도 스루",
+      "pronSrc": "user",
+      "trans": "여기서 서로를 바라보며 서로 안도해",
+      "transSrc": "user"
+    },
+    {
+      "t": 164.03,
+      "orig": "Oh right, oh right, oh right",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 169.5,
+      "orig": "絡めあっていく",
+      "pron": "카라메앗테 이쿠",
+      "pronSrc": "user",
+      "trans": "얽혀 가",
+      "transSrc": "user"
+    },
+    {
+      "t": 171.71,
+      "orig": "Oh right, oh right, oh right",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 176.94,
+      "orig": "二人はキスをする",
+      "pron": "후타리와 키스오 스루",
+      "pronSrc": "user",
+      "trans": "둘은 키스를 해",
+      "transSrc": "user"
+    },
+    {
+      "t": 179.03,
+      "orig": "Oh right, oh right, oh right",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 184.26,
+      "orig": "絡めあっていく",
+      "pron": "카라메앗테 이쿠",
+      "pronSrc": "user",
+      "trans": "얽혀 가",
+      "transSrc": "user"
+    },
+    {
+      "t": 186.55,
+      "orig": "Oh right, oh right, oh right",
+      "pron": "",
+      "trans": ""
+    }
+  ]
+}

@@ -1,0 +1,346 @@
+{
+  "title": "融解sink",
+  "artist": "Vaundy",
+  "youtubeId": "n13ULXp5--I",
+  "bundleId": "vaundy-yuukai-sink",
+  "offset": 0,
+  "lines": [
+    {
+      "t": 26.01,
+      "orig": "ふらっとさ何か通り過ぎたような",
+      "pron": "후랏토사 나니카 토-리 스기타 요-나",
+      "pronSrc": "user",
+      "trans": "불쑥 무언가 지나쳐 간 것 같은",
+      "transSrc": "user"
+    },
+    {
+      "t": 30.98,
+      "orig": "ぶらっとさ僕が外を見た時",
+      "pron": "부랏토사 보쿠가 소토오 미타 토키",
+      "pronSrc": "user",
+      "trans": "불현듯 내가 밖을 본 순간",
+      "transSrc": "user"
+    },
+    {
+      "t": 34.95,
+      "orig": "他人の不幸や不安に立ち止まって",
+      "pron": "타닌노 후코-야 후안니 타치도맛테",
+      "pronSrc": "user",
+      "trans": "타인의 불행이나 불안에 멈춰 서서",
+      "transSrc": "user"
+    },
+    {
+      "t": 39.92,
+      "orig": "幸福と安堵を吸い取って生きている",
+      "pron": "코-후쿠토 안도-오 스이톳테 이키테이루",
+      "pronSrc": "user",
+      "trans": "행복과 안도를 흡수하며 살아가고 있어",
+      "transSrc": "user"
+    },
+    {
+      "t": 45.22,
+      "orig": "ほらほら透明だ",
+      "pron": "호라 호라 토-메이다",
+      "pronSrc": "user",
+      "trans": "봐 봐 투명해",
+      "transSrc": "user"
+    },
+    {
+      "t": 47.54,
+      "orig": "ほらほら鮮明だ",
+      "pron": "호라 호라 센메이다",
+      "pronSrc": "user",
+      "trans": "봐 봐 선명해",
+      "transSrc": "user"
+    },
+    {
+      "t": 49.86,
+      "orig": "ほらほら深海に溶けていく sink, ah",
+      "pron": "호라 호라 신카이니 토케테이쿠 sink, ah",
+      "pronSrc": "user",
+      "trans": "봐 봐 심해에 녹아가는 sink, ah",
+      "transSrc": "user"
+    },
+    {
+      "t": 55.82,
+      "orig": "悲しみが消えるこの夢の中で",
+      "pron": "카나시미가 키에루 코노 유메노나카데",
+      "pronSrc": "user",
+      "trans": "슬픔이 사라지는 이 꿈 속에서",
+      "transSrc": "user"
+    },
+    {
+      "t": 60.13,
+      "orig": "今も Ah 探して歌っているんだ",
+      "pron": "이마모 Ah 사가시테 우탓테이룬다",
+      "pronSrc": "user",
+      "trans": "지금도 Ah 찾으며 노래하고 있어",
+      "transSrc": "user"
+    },
+    {
+      "t": 64.77,
+      "orig": "悲しみが増えるこの日々の中で",
+      "pron": "카나시미가 후에루 코노 히비노 나카데",
+      "pronSrc": "user",
+      "trans": "슬픔이 늘어가는 이 날들 속에서",
+      "transSrc": "user"
+    },
+    {
+      "t": 69.4,
+      "orig": "今も Ah 探して歌っているんだ",
+      "pron": "이마모 Ah 사가시테 우탓테이룬다",
+      "pronSrc": "user",
+      "trans": "지금도 Ah 찾으며 노래하고 있어",
+      "transSrc": "user"
+    },
+    {
+      "t": 74.04,
+      "orig": "da-la-da-da",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 76.69,
+      "orig": "(La-da) da-la-da-da",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 80.67,
+      "orig": "(La-da) da-la-da-da",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 84.64,
+      "orig": "Ra-ri-ra, ra-ri-ra",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 88.62,
+      "orig": "(La-da) da-la-da-da",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 92.59,
+      "orig": "(La-da) da-la-da-da",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 96.57,
+      "orig": "(La-da) da-la-da-da",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 100.54,
+      "orig": "Ra-ri-ra, ra-ri-ra",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 104.52,
+      "orig": "プシュッとさ開けたジュースの缶の様に",
+      "pron": "프슛토사 아케타 쥬-스노 칸노 요-니",
+      "pronSrc": "user",
+      "trans": "푸슉 하고 열리는 쥬스 캔 처럼",
+      "transSrc": "user"
+    },
+    {
+      "t": 110.15,
+      "orig": "プシュッとさ心の気が抜けていく",
+      "pron": "프슛토사 코코로노 키가 누케테이쿠",
+      "pronSrc": "user",
+      "trans": "푸슉 하고 마음의 기가 빠져 가",
+      "transSrc": "user"
+    },
+    {
+      "t": 115.12,
+      "orig": "他人の不幸や不安にあやかって",
+      "pron": "타닌노 후코-야 후안니 아야캇테",
+      "pronSrc": "user",
+      "trans": "타인의 불행이나 불안에 옮아",
+      "transSrc": "user"
+    },
+    {
+      "t": 119.75,
+      "orig": "幸福と安堵を提供している",
+      "pron": "코-후쿠토 안도-오 테이쿄-시테이루",
+      "pronSrc": "user",
+      "trans": "행복과 안도를 제공하고 있어",
+      "transSrc": "user"
+    },
+    {
+      "t": 123.73,
+      "orig": "ほらほら透明だ",
+      "pron": "호라 호라 토-메이다",
+      "pronSrc": "user",
+      "trans": "봐 봐 투명해",
+      "transSrc": "user"
+    },
+    {
+      "t": 126.05,
+      "orig": "ほらほら鮮明だ",
+      "pron": "호라 호라 센메이다",
+      "pronSrc": "user",
+      "trans": "봐 봐 선명해",
+      "transSrc": "user"
+    },
+    {
+      "t": 128.37,
+      "orig": "ほらほら深海に溶けていく sink, ah",
+      "pron": "호라 호라 신카이니 토케테이쿠 sink, ah",
+      "pronSrc": "user",
+      "trans": "봐 봐 심해에 녹아가는 sink, ah",
+      "transSrc": "user"
+    },
+    {
+      "t": 134.33,
+      "orig": "悲しみが消えるこの夢の中で",
+      "pron": "카나시미가 키에루 코노 유메노나카데",
+      "pronSrc": "user",
+      "trans": "슬픔이 사라지는 이 꿈 속에서",
+      "transSrc": "user"
+    },
+    {
+      "t": 138.64,
+      "orig": "今も Ah 探して歌っているんだ",
+      "pron": "이마모 Ah 사가시테 우탓테이룬다",
+      "pronSrc": "user",
+      "trans": "지금도 Ah 찾으며 노래하고 있어",
+      "transSrc": "user"
+    },
+    {
+      "t": 143.27,
+      "orig": "悲しみが増えるこの日々の中で",
+      "pron": "카나시미가 후에루 코노 히비노 나카데",
+      "pronSrc": "user",
+      "trans": "슬픔이 늘어가는 이 날들 속에서",
+      "transSrc": "user"
+    },
+    {
+      "t": 147.91,
+      "orig": "今も Ah 探して歌っているんだ",
+      "pron": "이마모 Ah 사가시테 우탓테이룬다",
+      "pronSrc": "user",
+      "trans": "지금도 Ah 찾으며 노래하고 있어",
+      "transSrc": "user"
+    },
+    {
+      "t": 152.55,
+      "orig": "ゆらいだ ゆらいだ ゆらいだ 水の中",
+      "pron": "유라이다 유라이다 유라이다 미즈노 나카",
+      "pronSrc": "user",
+      "trans": "흔들리고 흔들리며 흔들리는 물 속에서",
+      "transSrc": "user"
+    },
+    {
+      "t": 157.52,
+      "orig": "不快な不快な息をしている",
+      "pron": "후카이나 후카이나 이키오 시테이루",
+      "pronSrc": "user",
+      "trans": "불쾌하고 불쾌하게 숨을 쉬고 있어",
+      "transSrc": "user"
+    },
+    {
+      "t": 161.49,
+      "orig": "ゆらいだ ゆらいだ ゆらいだ 水の中",
+      "pron": "유라이다 유라이다 유라이다 미즈노 나카",
+      "pronSrc": "user",
+      "trans": "흔들리고 흔들리며 흔들리는 물 속에서",
+      "transSrc": "user"
+    },
+    {
+      "t": 166.46,
+      "orig": "深いな 深いな 沈んでく Ah",
+      "pron": "후카이나 후카이나 시즌데쿠 Ah",
+      "pronSrc": "user",
+      "trans": "깊고 깊게 잠겨들어가 Ah",
+      "transSrc": "user"
+    },
+    {
+      "t": 170.44,
+      "orig": "悲しみが消えるこの夢の中で",
+      "pron": "카나시미가 키에루 코노 유메노나카데",
+      "pronSrc": "user",
+      "trans": "슬픔이 사라지는 이 꿈 속에서",
+      "transSrc": "user"
+    },
+    {
+      "t": 174.74,
+      "orig": "今も Ah 探して歌っているんだ",
+      "pron": "이마모 Ah 사가시테 우탓테이룬다",
+      "pronSrc": "user",
+      "trans": "지금도 Ah 찾으며 노래하고 있어",
+      "transSrc": "user"
+    },
+    {
+      "t": 179.38,
+      "orig": "悲しみが増えるこの日々の中で",
+      "pron": "카나시미가 후에루 코노 히비노 나카데",
+      "pronSrc": "user",
+      "trans": "슬픔이 늘어가는 이 날들 속에서",
+      "transSrc": "user"
+    },
+    {
+      "t": 184.02,
+      "orig": "今も Ah 探して歌っているんだ",
+      "pron": "이마모 Ah 사가시테 우탓테이룬다",
+      "pronSrc": "user",
+      "trans": "지금도 Ah 찾으며 노래하고 있어",
+      "transSrc": "user"
+    },
+    {
+      "t": 188.65,
+      "orig": "da-la-da-da",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 191.3,
+      "orig": "(La-da) da-la-da-da",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 195.28,
+      "orig": "(La-da) da-la-da-da",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 199.25,
+      "orig": "Ra-ri-ra, ra-ri-ra",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 203.23,
+      "orig": "(La-da) da-la-da-da",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 207.2,
+      "orig": "(La-da) da-la-da-da",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 211.18,
+      "orig": "(La-da) da-la-da-da",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 215.15,
+      "orig": "Ra-ri-ra, ra-ri-ra",
+      "pron": "",
+      "trans": ""
+    }
+  ],
+  "approxTiming": true
+}

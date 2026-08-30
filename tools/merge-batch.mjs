@@ -13,6 +13,10 @@ const DRY = args.includes("--dry");
 const oi = args.indexOf("--only");
 const ONLY = oi >= 0 ? new Set(args[oi + 1].split(",")) : null;
 
+// 정렬이 깨지는 곡: 성호님 파일 구조 그대로 + 타임은 글자수 비례로 대충 배분.
+// (성호님이 노래 들으며 편집/탭싱크로 고칠 예정)
+const LOOSE = new Set(["11", "14", "19", "20", "26", "29", "32", "34", "35", "44", "48"]);
+
 const META = {
   1: { yt: "3UbBjzFDkd4", slug: "hanauranai", title: "花占い" },
   2: { yt: "6aP_zJ21Jmw", slug: "koikaze-ni-nosete", title: "恋風邪にのせて" },
@@ -79,19 +83,30 @@ function norm(s) {
   return s.normalize("NFKC").replace(/[\s「」『』（）()、。，．・！？!?~〜\-–—ー…‥♪、,.]/g, "").toLowerCase();
 }
 
+const JUNK = /^(\[출처\]|출처\s*[:：]|https?:\/\/|작성자|blog\.|tistory)/i;
+const HAS_KR = (s) => /[가-힣]/.test(s || "");
+
+// 조각(cell) 단위로 읽고, "원문으로 보이는 조각"이 나올 때마다 새 블록 시작.
+//  - 원문 조각 = 한글이 아님 (일본어거나 영어). 한글 조각은 앞 블록의 발음/번역으로 붙음.
+//  - 블록당 최대 3조각: 원문 / 발음 / 번역. 한글 조각이 1개뿐이면 번역으로 취급.
 function parseHand(text) {
-  let c = text.split(/\r?\n/).map(clean).filter((l) => l !== "" && !PUNCT_ONLY.test(l));
-  const jp = c.filter(HAS_JP).length;
-  const ratio = jp / Math.max(1, c.length);
-  // 3줄(원문/발음/번역): JP 비율 ~1/3.  2줄(원문/번역): ~1/2 또는 ~0(영어곡)
-  const step = ratio >= 0.24 && ratio <= 0.42 ? 3 : 2;
-  const lines = [];
-  for (let i = 0; i < c.length; i += step) {
-    if (c[i] == null) break;
-    if (step === 3) lines.push({ orig: c[i], pron: c[i + 1] || "", trans: c[i + 2] || "" });
-    else lines.push({ orig: c[i], pron: "", trans: c[i + 1] || "" });
+  const cells = text
+    .replace(/[​‌‍﻿]/g, "").split(/\r?\n/)
+    .map((l) => l.replace(/　/g, " ").trim())
+    .filter((l) => l !== "" && !PUNCT_ONLY.test(l) && !JUNK.test(l));
+
+  const blocks = [];
+  for (const cell of cells) {
+    if (!HAS_KR(cell) || blocks.length === 0) blocks.push([cell]);       // 원문(비한글) → 새 블록
+    else blocks[blocks.length - 1].push(cell);                           // 한글 → 현재 블록 (발음/번역, 넘치면 번역에 합침)
   }
-  return { lines, step, ratio: +ratio.toFixed(3) };
+  const lines = blocks.map((b) => {
+    if (b.length === 1) return { orig: b[0], pron: "", trans: "" };
+    if (b.length === 2) return { orig: b[0], pron: "", trans: b[1] };
+    return { orig: b[0], pron: b[1], trans: b.slice(2).join(" ") };
+  });
+  const jp = lines.filter((l) => HAS_JP(l.orig)).length;
+  return { lines, step: 0, ratio: +(jp / Math.max(1, lines.length)).toFixed(3) };
 }
 
 async function getLrc(title) {
@@ -170,18 +185,33 @@ for (const f of files) {
   if (!lrc) { rep.push(`${num} ${meta.title}  ⚠ LRCLIB 싱크 가사 없음`); continue; }
   await new Promise((r) => setTimeout(r, 350));
 
-  const { out, mismatches, leftover } = merge(hand, lrc.lines);
-  // orig 에 한글이 섞였으면 정렬이 깨진 것 (번역 줄을 원문으로 먹음)
-  const corrupt = out.filter((l) => /[가-힣]/.test(l.orig)).length;
+  let { out, mismatches, leftover } = merge(hand, lrc.lines);
+  let corrupt = out.filter((l) => /[가-힣]/.test(l.orig)).length;
+  let loose = false;
+
+  // 정렬 실패 + LOOSE 지정곡 → 파일 구조 그대로, 타임 대충 배분
+  if ((corrupt > 0 || leftover.length > 5) && LOOSE.has(num)) {
+    const t0 = lrc.lines[0].t, t1 = lrc.lines[lrc.lines.length - 1].t;
+    const total = hand.reduce((s, g) => s + Math.max(1, norm(g.orig).length), 0);
+    let acc = 0;
+    out = hand.map((g) => {
+      const t = +(t0 + (t1 - t0) * (acc / Math.max(1, total))).toFixed(2);
+      acc += Math.max(1, norm(g.orig).length);
+      return { t, orig: g.orig, pron: g.pron, pronSrc: g.pron ? "user" : undefined, trans: g.trans, transSrc: g.trans ? "user" : undefined };
+    });
+    corrupt = 0; mismatches = []; leftover = [];
+    loose = true;
+  }
   const num2 = num.padStart(2, "0");
   const file = `${num2}_${meta.slug}.json`;
   const bundleId = `vaundy-${meta.slug}`;
-  const song = { title: meta.title, artist: "Vaundy", youtubeId: meta.yt, bundleId, offset: 0, lines: out };
 
   const bad = mismatches.length + leftover.length + corrupt;
-  const skip = corrupt > 0 || leftover.length > 5;
+  const skip = (corrupt > 0 || leftover.length > 5) && !loose;
+  const song = { title: meta.title, artist: "Vaundy", youtubeId: meta.yt, bundleId, offset: 0, lines: out };
+  if (loose) song.approxTiming = true;
   let line = `${num} ${meta.title}  ${step}줄(jp ${ratio}) 수작업 ${hand.length}·LRC ${lrc.lines.length}${lrc.jp ? "" : "⚠로마자"}→${out.length}줄  ` +
-    (bad === 0 ? "✓ 깨끗" : `${skip ? "✗ 스킵 " : "△ "}불일치 ${mismatches.length}, 남은줄 ${leftover.length}, 원문에한글 ${corrupt}`);
+    (loose ? "◆ LOOSE(타임 근사)" : bad === 0 ? "✓ 깨끗" : `${skip ? "✗ 스킵 " : "△ "}불일치 ${mismatches.length}, 남은줄 ${leftover.length}, 원문에한글 ${corrupt}`);
   if (bad) {
     for (const m of mismatches.slice(0, 4)) line += `\n     ≠ LRC「${m.lrc}」  수작업「${m.got}」`;
     if (mismatches.length > 4) line += `\n     … 외 ${mismatches.length - 4}`;

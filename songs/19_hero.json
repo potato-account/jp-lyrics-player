@@ -1,0 +1,467 @@
+{
+  "title": "HERO",
+  "artist": "Vaundy",
+  "youtubeId": "1o1rKSsYaGY",
+  "bundleId": "vaundy-hero",
+  "offset": 0,
+  "lines": [
+    {
+      "t": 9.6,
+      "orig": "1000年経っても",
+      "pron": "센넨 탓떼모",
+      "pronSrc": "user",
+      "trans": "천 년이 지나도",
+      "transSrc": "user"
+    },
+    {
+      "t": 12.71,
+      "orig": "夢の中で僕はいつもと変わらないまま",
+      "pron": "유메노 나카데 보쿠와 이츠모토 카와라나이 마마",
+      "pronSrc": "user",
+      "trans": "꿈속에서 나는 여전히 변하지 않은 채",
+      "transSrc": "user"
+    },
+    {
+      "t": 18.59,
+      "orig": "何年経ったか",
+      "pron": "난넨 탓타카",
+      "pronSrc": "user",
+      "trans": "몇 년이 흘렀는지",
+      "transSrc": "user"
+    },
+    {
+      "t": 20.64,
+      "orig": "わからないまま咲いた希望を数えてるから",
+      "pron": "와카라나이 마마 사이타 키보-오 카조에테루카라",
+      "pronSrc": "user",
+      "trans": "모른 채 피어난 희망을 헤아리고 있으니까",
+      "transSrc": "user"
+    },
+    {
+      "t": 27.12,
+      "orig": "チクタクチクタクそうだね",
+      "pron": "치쿠타쿠 치쿠타쿠 소-다네",
+      "pronSrc": "user",
+      "trans": "째깍째깍 째깍째깍, 그렇지",
+      "transSrc": "user"
+    },
+    {
+      "t": 28.8,
+      "orig": "こんな言葉に泣いても損だね",
+      "pron": "콘나 코토바니 나이테모 손다네",
+      "pronSrc": "user",
+      "trans": "이런 말에 울어봤자 손해겠지",
+      "transSrc": "user"
+    },
+    {
+      "t": 31.03,
+      "orig": "そんなことはわかるよ",
+      "pron": "손나 코토와 와카루요",
+      "pronSrc": "user",
+      "trans": "그런 건 알고있어",
+      "transSrc": "user"
+    },
+    {
+      "t": 33.05,
+      "orig": "もう",
+      "pron": "모-",
+      "pronSrc": "user",
+      "trans": "이제",
+      "transSrc": "user"
+    },
+    {
+      "t": 33.47,
+      "orig": "何もないんでしょ？",
+      "pron": "나니모 나인데쇼?",
+      "pronSrc": "user",
+      "trans": "아무것도 없지?",
+      "transSrc": "user"
+    },
+    {
+      "t": 35.17,
+      "orig": "ねぇ",
+      "pron": "네-",
+      "pronSrc": "user",
+      "trans": "있잖아",
+      "transSrc": "user"
+    },
+    {
+      "t": 35.6,
+      "orig": "チクタクチクタクそうだね",
+      "pron": "치쿠타쿠 치쿠타쿠 소-다네",
+      "pronSrc": "user",
+      "trans": "째깍째깍 째깍째깍, 그렇지",
+      "transSrc": "user"
+    },
+    {
+      "t": 37.63,
+      "orig": "こんな言葉を聞いても「そうだね」",
+      "pron": "콘나 코토바오 키-테모 “소-다네”",
+      "pronSrc": "user",
+      "trans": "이런 말을 들어도 “그렇지”라고만 해",
+      "transSrc": "user"
+    },
+    {
+      "t": 39.72,
+      "orig": "もう",
+      "pron": "모-",
+      "pronSrc": "user",
+      "trans": "이제",
+      "transSrc": "user"
+    },
+    {
+      "t": 40.14,
+      "orig": "何もないんでしょ？",
+      "pron": "나니모 나인데쇼?",
+      "pronSrc": "user",
+      "trans": "아무것도 없지?",
+      "transSrc": "user"
+    },
+    {
+      "t": 41.83,
+      "orig": "ねぇ",
+      "pron": "네-",
+      "pronSrc": "user",
+      "trans": "있잖아",
+      "transSrc": "user"
+    },
+    {
+      "t": 42.25,
+      "orig": "そんなことも損だ わかるよ",
+      "pron": "손나 코토모 손다 와카루요",
+      "pronSrc": "user",
+      "trans": "그런 것도 손해라는 거, 알고 있어",
+      "transSrc": "user"
+    },
+    {
+      "t": 46.82,
+      "orig": "何回聞いてたんだ",
+      "pron": "난카이 키-테탄다",
+      "pronSrc": "user",
+      "trans": "몇 번 들었던 거야",
+      "transSrc": "user"
+    },
+    {
+      "t": 50.13,
+      "orig": "ねぇ",
+      "pron": "네-",
+      "pronSrc": "user",
+      "trans": "있잖아",
+      "transSrc": "user"
+    },
+    {
+      "t": 50.96,
+      "orig": "何回言わせたいんだ",
+      "pron": "난카이 이와세타인다",
+      "pronSrc": "user",
+      "trans": "몇 번이나 말하게 만들고 싶은 거야",
+      "transSrc": "user"
+    },
+    {
+      "t": 54.51,
+      "orig": "ねぇ",
+      "pron": "네-",
+      "pronSrc": "user",
+      "trans": "있잖아",
+      "transSrc": "user"
+    },
+    {
+      "t": 55.3,
+      "orig": "何回回してくんだ",
+      "pron": "난카이 마와시테쿤다",
+      "pronSrc": "user",
+      "trans": "몇 번이나 되풀이하려는 거야",
+      "transSrc": "user"
+    },
+    {
+      "t": 59.05,
+      "orig": "ねぇ",
+      "pron": "네-",
+      "pronSrc": "user",
+      "trans": "있잖아",
+      "transSrc": "user"
+    },
+    {
+      "t": 59.99,
+      "orig": "もう何も言わないで",
+      "pron": "모- 나니모 이와나이데",
+      "pronSrc": "user",
+      "trans": "이제 아무 말도 하지 마",
+      "transSrc": "user"
+    },
+    {
+      "t": 69.03,
+      "orig": "HERO",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 73.05,
+      "orig": "何年経っても",
+      "pron": "난넨 탓떼모",
+      "pronSrc": "user",
+      "trans": "몇 년이 지나도",
+      "transSrc": "user"
+    },
+    {
+      "t": 75.28,
+      "orig": "夢の中で僕はいつもと変わらないまま",
+      "pron": "유메노 나카데 보쿠와 이츠모토 카와라나이 마마",
+      "pronSrc": "user",
+      "trans": "꿈속에서 나는 여전히 변하지 않은 채",
+      "transSrc": "user"
+    },
+    {
+      "t": 81.59,
+      "orig": "残念だったな",
+      "pron": "잔넨 닷타나",
+      "pronSrc": "user",
+      "trans": "유감이었네",
+      "transSrc": "user"
+    },
+    {
+      "t": 83.61,
+      "orig": "変わらないから咲いた希望も枯れていくから",
+      "pron": "카와라나이카라 사이타 키보-모 카레테이쿠카라",
+      "pronSrc": "user",
+      "trans": "변하지 않으니까 피었던 희망도 시들어가거든",
+      "transSrc": "user"
+    },
+    {
+      "t": 90.34,
+      "orig": "チクタクチクタクそうだね",
+      "pron": "치쿠타쿠 치쿠타쿠 소-다네",
+      "pronSrc": "user",
+      "trans": "째깍째깍 째깍째깍, 그렇지",
+      "transSrc": "user"
+    },
+    {
+      "t": 92.04,
+      "orig": "こんな言葉に泣いても損だね",
+      "pron": "콘나 코토바니 나이테모 손다네",
+      "pronSrc": "user",
+      "trans": "이런 말에 울어봤자 손해겠지",
+      "transSrc": "user"
+    },
+    {
+      "t": 94.24,
+      "orig": "そんなことはわかるよ",
+      "pron": "손나 코토와 와카루요",
+      "pronSrc": "user",
+      "trans": "그런 건 나도 알아",
+      "transSrc": "user"
+    },
+    {
+      "t": 96.44,
+      "orig": "もう",
+      "pron": "모-",
+      "pronSrc": "user",
+      "trans": "이제",
+      "transSrc": "user"
+    },
+    {
+      "t": 96.9,
+      "orig": "何もないんでしょ？",
+      "pron": "나니모 나인데쇼?",
+      "pronSrc": "user",
+      "trans": "아무것도 없지?",
+      "transSrc": "user"
+    },
+    {
+      "t": 98.72,
+      "orig": "ねぇ",
+      "pron": "네-",
+      "pronSrc": "user",
+      "trans": "있잖아",
+      "transSrc": "user"
+    },
+    {
+      "t": 99.18,
+      "orig": "チクタクチクタクそうだね",
+      "pron": "치쿠타쿠 치쿠타쿠 소-다네",
+      "pronSrc": "user",
+      "trans": "째깍째깍 째깍째깍, 그렇지",
+      "transSrc": "user"
+    },
+    {
+      "t": 100.94,
+      "orig": "こんな言葉を聞いても「そうだね」",
+      "pron": "콘나 코토바오 키-테모 “소-다네”",
+      "pronSrc": "user",
+      "trans": "이런 말을 들어도 “그렇지”라고만 해",
+      "transSrc": "user"
+    },
+    {
+      "t": 103.21,
+      "orig": "もう",
+      "pron": "모-",
+      "pronSrc": "user",
+      "trans": "이제",
+      "transSrc": "user"
+    },
+    {
+      "t": 103.6,
+      "orig": "何もないんでしょ？",
+      "pron": "나니모 나인데쇼?",
+      "pronSrc": "user",
+      "trans": "아무것도 없지?",
+      "transSrc": "user"
+    },
+    {
+      "t": 105.18,
+      "orig": "ねぇ",
+      "pron": "네-",
+      "pronSrc": "user",
+      "trans": "있잖아",
+      "transSrc": "user"
+    },
+    {
+      "t": 105.57,
+      "orig": "そんなことも損だ わかるよ",
+      "pron": "손나 코토모 손다 와카루요",
+      "pronSrc": "user",
+      "trans": "그런 것조차 손해라는 거, 알고 있어",
+      "transSrc": "user"
+    },
+    {
+      "t": 109.82,
+      "orig": "何回聞いてたんだ",
+      "pron": "난카이 키-테탄다",
+      "pronSrc": "user",
+      "trans": "몇 번이나 듣고 있었던 거야",
+      "transSrc": "user"
+    },
+    {
+      "t": 113.42,
+      "orig": "ねぇ",
+      "pron": "네-",
+      "pronSrc": "user",
+      "trans": "있잖아",
+      "transSrc": "user"
+    },
+    {
+      "t": 114.32,
+      "orig": "何回言わせたいんだ",
+      "pron": "난카이 이와세타인다",
+      "pronSrc": "user",
+      "trans": "몇 번이나 말하게 만들고 싶은 거야",
+      "transSrc": "user"
+    },
+    {
+      "t": 117.85,
+      "orig": "ねぇ",
+      "pron": "네-",
+      "pronSrc": "user",
+      "trans": "있잖아",
+      "transSrc": "user"
+    },
+    {
+      "t": 118.64,
+      "orig": "何回回してくんだ",
+      "pron": "난카이 마와시테쿤다",
+      "pronSrc": "user",
+      "trans": "몇 번이나 되풀이하려는 거야",
+      "transSrc": "user"
+    },
+    {
+      "t": 122.1,
+      "orig": "ねぇ",
+      "pron": "네-",
+      "pronSrc": "user",
+      "trans": "있잖아",
+      "transSrc": "user"
+    },
+    {
+      "t": 122.96,
+      "orig": "もう何も言わないで",
+      "pron": "모- 나니모 이와나이데",
+      "pronSrc": "user",
+      "trans": "이제 아무 말도 하지 마",
+      "transSrc": "user"
+    },
+    {
+      "t": 136.74,
+      "orig": "HERO",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 142.87,
+      "orig": "何回ついたかな",
+      "pron": "난카이 츠이타카나",
+      "pronSrc": "user",
+      "trans": "몇 번이나 했을까",
+      "transSrc": "user"
+    },
+    {
+      "t": 147,
+      "orig": "何回嘘をついたかな",
+      "pron": "난카이 우소오 츠이타카나",
+      "pronSrc": "user",
+      "trans": "몇 번이나 거짓말을 했을까",
+      "transSrc": "user"
+    },
+    {
+      "t": 151.48,
+      "orig": "何回もがいたかな",
+      "pron": "난카이 모가이타카나",
+      "pronSrc": "user",
+      "trans": "몇 번이나 발버둥 쳤을까",
+      "transSrc": "user"
+    },
+    {
+      "t": 155.52,
+      "orig": "行き止まっていたってもう",
+      "pron": "이키도맛테 이탓떼 모-",
+      "pronSrc": "user",
+      "trans": "막다른 길에 있다고 해도, 이젠",
+      "transSrc": "user"
+    },
+    {
+      "t": 160.12,
+      "orig": "何回ついたかな",
+      "pron": "난카이 츠이타카나",
+      "pronSrc": "user",
+      "trans": "몇 번이나 했을까",
+      "transSrc": "user"
+    },
+    {
+      "t": 164.58,
+      "orig": "何回嘘をついたかな",
+      "pron": "난카이 우소오 츠이타카나",
+      "pronSrc": "user",
+      "trans": "몇 번이나 거짓말을 했을까",
+      "transSrc": "user"
+    },
+    {
+      "t": 168.98,
+      "orig": "何回転んだかな",
+      "pron": "난카이 코론다카나",
+      "pronSrc": "user",
+      "trans": "몇 번이나 넘어졌을까",
+      "transSrc": "user"
+    },
+    {
+      "t": 173,
+      "orig": "もうわかったって",
+      "pron": "모- 와캇탓테",
+      "pronSrc": "user",
+      "trans": "이제 알겠다고 해도",
+      "transSrc": "user"
+    },
+    {
+      "t": 177.5,
+      "orig": "忘れてよ",
+      "pron": "와스레테요",
+      "pronSrc": "user",
+      "trans": "잊어줘",
+      "transSrc": "user"
+    },
+    {
+      "t": 179.75,
+      "orig": "HERO",
+      "pron": "",
+      "trans": ""
+    }
+  ]
+}

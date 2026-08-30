@@ -8,446 +8,386 @@
     {
       "t": 15.1,
       "orig": "急ぐ雑踏も軽くcrackな視点",
-      "pron": "이소구 잣토-모 카루쿠 crack나 시텐",
-      "trans": "서두르는 인파도 가볍게 crack한 시점"
+      "pron": "이소구 잣토-모 카루쿠 쿠락쿠나 시텐",
+      "pronSrc": "user",
+      "trans": "서두르는 군중조차 가볍게 crack인 시점",
+      "transSrc": "user"
     },
     {
       "t": 18.58,
       "orig": "居ても泣いても立てぬflatな視点",
-      "pron": "이테모 나이테모 타테누 flat나 시텐",
-      "trans": "있어도 울어도 설 수 없는 flat한 시점"
+      "pron": "이테모 나이테모 타테누 후랏토나 시텐",
+      "pronSrc": "user",
+      "trans": "있어도 울어도 일어설 수 없는, flat한 시선",
+      "transSrc": "user"
     },
     {
       "t": 21.64,
       "orig": "弾む鼓動は刻むclap無しで",
-      "pron": "하즈무 코도-와 키자무 clap 나시데",
-      "trans": "튀는 고동은 새기는 clap도 없이"
+      "pron": "하즈무 고도-와 키자무 쿠랏푸 나시데",
+      "pronSrc": "user",
+      "trans": "튀어 오르는 고동은 clap 없이",
+      "transSrc": "user"
     },
     {
       "t": 24.89,
       "orig": "忘れたいほど怒るchain回して",
-      "pron": "와스레타이 호도 오코루 chain 마와시테",
-      "trans": "잊고 싶을 만큼 화내며 chain을 돌려"
-    },
-    {
-      "t": 28.23,
-      "orig": "(Hu-hu-hu-hu, hu-hu)",
-      "pron": "(후-후-후-후, 후-후)",
-      "trans": "(Hu-hu-hu-hu, hu-hu)"
+      "pron": "와스레타이 호도 이카루 체-인 마와시테",
+      "pronSrc": "user",
+      "trans": "잊고 싶을 만큼 격노한 채, chain을 돌려",
+      "transSrc": "user"
     },
     {
       "t": 31.38,
       "orig": "全てをかき消してengine音",
-      "pron": "스베테오 카키케시테 engine 오토",
-      "trans": "모든 걸 지워버리는 engine 소리"
-    },
-    {
-      "t": 34.81,
-      "orig": "(Hu-hu-hu-hu)",
-      "pron": "(후-후-후-후)",
-      "trans": "(Hu-hu-hu-hu)"
+      "pron": "스베테오 카키케시테 엔진 오토",
+      "pronSrc": "user",
+      "trans": "모든 걸 지워버리는 엔진음",
+      "transSrc": "user"
     },
     {
       "t": 36.26,
       "orig": "舌鳴らし今",
-      "pron": "시타 나라시 이마",
-      "trans": "혀를 차며 지금"
+      "pron": "시타나라시 이마",
+      "pronSrc": "user",
+      "trans": "혀를 차고, 지금",
+      "transSrc": "user"
     },
     {
       "t": 37.95,
       "orig": "錆び付け黒く",
       "pron": "사비츠케 쿠로쿠",
-      "trans": "검게 녹슬어라"
+      "pronSrc": "user",
+      "trans": "녹슬게 해, 새카맣게",
+      "transSrc": "user"
     },
     {
       "t": 39.46,
       "orig": "CHAINSAW BLOOD",
-      "pron": "CHAINSAW BLOOD",
-      "trans": "CHAINSAW BLOOD"
+      "pron": "",
+      "trans": ""
     },
     {
       "t": 41.12,
       "orig": "血がたぎってもう煮立ってもう",
       "pron": "치가 타깃테 모- 니탓테 모-",
-      "trans": "피가 끓어올라 이제 부글부글 이제"
+      "pronSrc": "user",
+      "trans": "피가 끓고, 들끓어도",
+      "transSrc": "user"
     },
     {
       "t": 43.45,
       "orig": "やめれない",
       "pron": "야메레나이",
-      "trans": "멈출 수 없어"
+      "pronSrc": "user",
+      "trans": "멈출 수 없어",
+      "transSrc": "user"
     },
     {
       "t": 44.53,
       "orig": "砕ききっても穿っても止まぬ",
       "pron": "쿠다키킷테모 우갓테모 토마누",
-      "trans": "다 부수어도 뚫어도 멈추지 않아"
+      "pronSrc": "user",
+      "trans": "완전히 부숴도, 꿰뚫어도 멈추지 않아",
+      "transSrc": "user"
     },
     {
       "t": 47.62,
       "orig": "(Hu, hu, hu, hu)",
-      "pron": "(후, 후, 후, 후)",
-      "trans": "(Hu, hu, hu, hu)"
+      "pron": "",
+      "trans": ""
     },
     {
       "t": 50.54,
       "orig": "Tell me why cry?",
-      "pron": "텔 미 와이 크라이?",
-      "trans": "Tell me why cry?"
+      "pron": "",
+      "trans": ""
     },
     {
       "t": 52.2,
       "orig": "Tell me why",
-      "pron": "텔 미 와이",
-      "trans": "Tell me why"
+      "pron": "",
+      "trans": ""
     },
     {
       "t": 53,
       "orig": "CHAINSAW BLOOD",
-      "pron": "CHAINSAW BLOOD",
-      "trans": "CHAINSAW BLOOD"
+      "pron": "",
+      "trans": ""
     },
     {
       "t": 54.21,
       "orig": "血がたぎってもう煮立ってもう",
       "pron": "치가 타깃테 모- 니탓테 모-",
-      "trans": "피가 끓어올라 이제 부글부글 이제"
+      "pronSrc": "user",
+      "trans": "피가 끓고, 들끓어도",
+      "transSrc": "user"
     },
     {
       "t": 56.32,
       "orig": "止まれない",
       "pron": "토마레나이",
-      "trans": "멈출 수 없어"
+      "pronSrc": "user",
+      "trans": "멈추지 못해",
+      "transSrc": "user"
     },
     {
       "t": 57.43,
       "orig": "血を喰らうたび悪夢また",
-      "pron": "치오 쿠라우 타비 아쿠무 마타",
-      "trans": "피를 삼킬 때마다 악몽이 또"
+      "pron": "치오 쿠라우타비 아쿠무 마타",
+      "pronSrc": "user",
+      "trans": "피를 삼킬 때마다 악몽이 또",
+      "transSrc": "user"
     },
     {
       "t": 59.69,
       "orig": "よぎる",
       "pron": "요기루",
-      "trans": "스쳐 가"
+      "pronSrc": "user",
+      "trans": "스쳐 지나가",
+      "transSrc": "user"
     },
     {
       "t": 60.58,
       "orig": "(Hu, hu, hu, hu)",
-      "pron": "(후, 후, 후, 후)",
-      "trans": "(Hu, hu, hu, hu)"
+      "pron": "",
+      "trans": ""
     },
     {
       "t": 63.67,
       "orig": "Tell me why cry?",
-      "pron": "텔 미 와이 크라이?",
-      "trans": "Tell me why cry?"
+      "pron": "",
+      "trans": ""
     },
     {
       "t": 65.25,
       "orig": "Tell me why you grinning?",
-      "pron": "텔 미 와이 유 그리닝?",
-      "trans": "Tell me why you grinning?"
+      "pron": "",
+      "trans": ""
     },
     {
       "t": 80,
       "orig": "妄想に侵された",
       "pron": "모-소-니 오카사레타",
-      "trans": "망상에 침식당한"
+      "pronSrc": "user",
+      "trans": "망상에 침식되어",
+      "transSrc": "user"
     },
     {
       "t": 81.53,
       "orig": "右脳操作不能機能の相殺法に",
-      "pron": "우노- 소-사 후노- 키노-노 소-사이호-니",
-      "trans": "우뇌 조작 불능 기능의 상쇄법에"
+      "pron": "우노- 소-사 후노- 키노- 노 소-사이호- 니",
+      "pronSrc": "user",
+      "trans": "우뇌 조작 불능의 기능을 상쇄하는 법에",
+      "transSrc": "user"
     },
     {
       "t": 84.24,
       "orig": "使った愛の手！",
-      "pron": "츠캇타 아이노 테!",
-      "trans": "써먹은 사랑의 손길!"
+      "pron": "츠캇타 아이노테!",
+      "pronSrc": "user",
+      "trans": "써 버렸지 사랑의 손길!",
+      "transSrc": "user"
     },
     {
       "t": 85.26,
       "orig": "ハイッ ハイッ",
       "pron": "하잇 하잇",
-      "trans": "하잇 하잇"
+      "pronSrc": "user",
+      "trans": "하잇! 하잇!",
+      "transSrc": "user"
     },
     {
       "t": 86.09,
       "orig": "笑かしたbadなschemeを食ってしまう紳士",
-      "pron": "와라카시타 bad나 scheme오 쿳테 시마우 신시",
-      "trans": "웃겨댄 bad한 scheme을 먹어치우는 신사"
+      "pron": "와라카시타 밧도나 스키-무오 쿳테 시마우 신시",
+      "pronSrc": "user",
+      "trans": "우스운 bad한 scheme까지 집어삼켜 버리는 신사",
+      "transSrc": "user"
     },
     {
       "t": 88.28,
       "orig": "フワァと立ちくらみ言葉を有し",
-      "pron": "후와-토 타치쿠라미 코토바오 유-시",
-      "trans": "아찔하게 현기증 나며 말을 지니고"
+      "pron": "후와-토 타치구라미 코토바오 유-시",
+      "pronSrc": "user",
+      "trans": "어질어질 휘청이며, 말을 지닌 채",
+      "transSrc": "user"
     },
     {
       "t": 89.9,
       "orig": "「CHAINSAW is 使える愛の手」",
-      "pron": "「CHAINSAW is 츠카에루 아이노 테」",
-      "trans": "「CHAINSAW is 쓸 만한 사랑의 손길」"
+      "pron": "체-인소- 이즈 츠카에루 아이노테",
+      "pronSrc": "user",
+      "trans": "“CHAINSAW는 쓸 수 있는 사랑의 손길”",
+      "transSrc": "user"
     },
     {
       "t": 92.39,
       "orig": "『あ？なんだって？』",
-      "pron": "『아? 난닷테?』",
-      "trans": "『어? 뭐라고?』"
+      "pron": "아? 난닷떼?",
+      "pronSrc": "user",
+      "trans": "어? 뭐라고?",
+      "transSrc": "user"
     },
     {
       "t": 93.36,
       "orig": "見える雑踏は軽くcrackな始点",
-      "pron": "미에루 잣토-와 카루쿠 crack나 시텐",
-      "trans": "보이는 인파는 가볍게 crack한 시작점"
+      "pron": "미에루 잣토-와 카루쿠 쿠락쿠나 시텐",
+      "pronSrc": "user",
+      "trans": "보이는 혼잡은 가볍게 crack한 시작점",
+      "transSrc": "user"
     },
     {
       "t": 96.54,
       "orig": "居ても泣いても立てぬflatな始点",
-      "pron": "이테모 나이테모 타테누 flat나 시텐",
-      "trans": "있어도 울어도 설 수 없는 flat한 시작점"
+      "pron": "이테모 나이테모 타테누 후랏토나 시텐",
+      "pronSrc": "user",
+      "trans": "있어도 울어도 일어서지 못하는, flat한 시작점",
+      "transSrc": "user"
     },
     {
       "t": 99.89,
       "orig": "弾む鼓動は歪むclean toneで",
-      "pron": "하즈무 코도-와 유가무 clean tone데",
-      "trans": "튀는 고동은 일그러지는 clean tone으로"
+      "pron": "하즈무 고도-와 유가무 쿠리-ㄴ 토-ㄴ데",
+      "pronSrc": "user",
+      "trans": "튀는 고동은 일그러진 clean tone으로",
+      "transSrc": "user"
     },
     {
       "t": 103.09,
       "orig": "忘れたいから早くchain回して",
-      "pron": "와스레타이 카라 하야쿠 chain 마와시테",
-      "trans": "잊고 싶으니까 빨리 chain을 돌려"
-    },
-    {
-      "t": 106.53,
-      "orig": "(Hu-hu-hu-hu, hu-hu)",
-      "pron": "(후-후-후-후, 후-후)",
-      "trans": "(Hu-hu-hu-hu, hu-hu)"
+      "pron": "와스레타이카라 하야쿠 체-인 마와시테",
+      "pronSrc": "user",
+      "trans": "잊고 싶으니까, 빨리 체인을 돌려",
+      "transSrc": "user"
     },
     {
       "t": 109.5,
       "orig": "全てをかき消してengine音",
-      "pron": "스베테오 카키케시테 engine 오토",
-      "trans": "모든 걸 지워버리는 engine 소리"
-    },
-    {
-      "t": 113.06,
-      "orig": "(Hu-hu-hu-hu)",
-      "pron": "(후-후-후-후)",
-      "trans": "(Hu-hu-hu-hu)"
+      "pron": "스베테오 카키케시테 엔진 오토",
+      "pronSrc": "user",
+      "trans": "모든 걸 지워버리는 엔진음",
+      "transSrc": "user"
     },
     {
       "t": 114.59,
       "orig": "歯軋りで、ほら",
       "pron": "하기시리데, 호라",
-      "trans": "이를 갈며, 자"
+      "pronSrc": "user",
+      "trans": "이를 갈며, 봐",
+      "transSrc": "user"
     },
     {
       "t": 116.37,
       "orig": "焼き付く赤く",
       "pron": "야키츠쿠 아카쿠",
-      "trans": "붉게 새겨져라"
+      "pronSrc": "user",
+      "trans": "불타 새겨져, 붉게",
+      "transSrc": "user"
     },
     {
       "t": 117.69,
       "orig": "CHAINSAW BLOOD",
-      "pron": "CHAINSAW BLOOD",
-      "trans": "CHAINSAW BLOOD"
+      "pron": "",
+      "trans": ""
     },
     {
       "t": 119.54,
       "orig": "血がたぎってもう煮立ってもう",
       "pron": "치가 타깃테 모- 니탓테 모-",
-      "trans": "피가 끓어올라 이제 부글부글 이제"
+      "pronSrc": "user",
+      "trans": "피가 끓고, 들끓어도",
+      "transSrc": "user"
     },
     {
       "t": 121.8,
       "orig": "やめれない",
       "pron": "야메레나이",
-      "trans": "멈출 수 없어"
+      "pronSrc": "user",
+      "trans": "멈출 수 없어",
+      "transSrc": "user"
     },
     {
       "t": 122.81,
       "orig": "砕ききっても穿っても止まぬ",
       "pron": "쿠다키킷테모 우갓테모 토마누",
-      "trans": "다 부수어도 뚫어도 멈추지 않아"
+      "pronSrc": "user",
+      "trans": "완전히 부숴도, 꿰뚫어도 멈추지 않아",
+      "transSrc": "user"
     },
     {
       "t": 125.79,
       "orig": "(Hu, hu, hu, hu)",
-      "pron": "(후, 후, 후, 후)",
-      "trans": "(Hu, hu, hu, hu)"
+      "pron": "",
+      "trans": ""
     },
     {
       "t": 128.81,
       "orig": "Tell me why cry?",
-      "pron": "텔 미 와이 크라이?",
-      "trans": "Tell me why cry?"
+      "pron": "",
+      "trans": ""
     },
     {
       "t": 130.52,
       "orig": "Tell me why",
-      "pron": "텔 미 와이",
-      "trans": "Tell me why"
+      "pron": "",
+      "trans": ""
     },
     {
       "t": 131.5,
       "orig": "CHAINSAW BLOOD",
-      "pron": "CHAINSAW BLOOD",
-      "trans": "CHAINSAW BLOOD"
+      "pron": "",
+      "trans": ""
     },
     {
       "t": 132.53,
       "orig": "血がたぎってもう煮立ってもう",
       "pron": "치가 타깃테 모- 니탓테 모-",
-      "trans": "피가 끓어올라 이제 부글부글 이제"
+      "pronSrc": "user",
+      "trans": "피가 끓고, 들끓어도",
+      "transSrc": "user"
     },
     {
       "t": 134.75,
       "orig": "止まれない",
       "pron": "토마레나이",
-      "trans": "멈출 수 없어"
+      "pronSrc": "user",
+      "trans": "멈추지 못해",
+      "transSrc": "user"
     },
     {
       "t": 135.7,
       "orig": "血を喰らうたび悪夢また",
-      "pron": "치오 쿠라우 타비 아쿠무 마타",
-      "trans": "피를 삼킬 때마다 악몽이 또"
+      "pron": "치오 쿠라우타비 아쿠무 마타",
+      "pronSrc": "user",
+      "trans": "피를 삼킬 때마다 악몽이 또",
+      "transSrc": "user"
     },
     {
       "t": 138.02,
       "orig": "よぎる",
       "pron": "요기루",
-      "trans": "스쳐 가"
+      "pronSrc": "user",
+      "trans": "스쳐가",
+      "transSrc": "user"
     },
     {
       "t": 138.72,
       "orig": "(Hu, hu, hu, hu)",
-      "pron": "(후, 후, 후, 후)",
-      "trans": "(Hu, hu, hu, hu)"
+      "pron": "",
+      "trans": ""
     },
     {
       "t": 142.05,
       "orig": "Tell me why cry?",
-      "pron": "텔 미 와이 크라이?",
-      "trans": "Tell me why cry?"
+      "pron": "",
+      "trans": ""
     },
     {
       "t": 143.62,
-      "orig": "Tell me why",
-      "pron": "텔 미 와이",
-      "trans": "Tell me why"
-    },
-    {
-      "t": 145.67,
-      "orig": "轟いたbad news",
-      "pron": "토도로이타 bad news",
-      "trans": "울려 퍼진 bad news"
-    },
-    {
-      "t": 148.8,
-      "orig": "平和目論む悪魔のpartyで",
-      "pron": "헤이와 모쿠로무 아쿠마노 party데",
-      "trans": "평화를 꾀하는 악마의 party에서"
-    },
-    {
-      "t": 152.39,
-      "orig": "須くengineかき鳴らした",
-      "pron": "스베카라쿠 engine 카키나라시타",
-      "trans": "마땅히 engine을 울려댔어"
-    },
-    {
-      "t": 158.55,
-      "orig": "CHAINSAW BLOOD",
-      "pron": "CHAINSAW BLOOD",
-      "trans": "CHAINSAW BLOOD"
-    },
-    {
-      "t": 160.38,
-      "orig": "血がたぎってもう煮立ってもう",
-      "pron": "치가 타깃테 모- 니탓테 모-",
-      "trans": "피가 끓어올라 이제 부글부글 이제"
-    },
-    {
-      "t": 162.59,
-      "orig": "やめれない",
-      "pron": "야메레나이",
-      "trans": "멈출 수 없어"
-    },
-    {
-      "t": 163.75,
-      "orig": "砕ききっても穿っても止まぬ",
-      "pron": "쿠다키킷테모 우갓테모 토마누",
-      "trans": "다 부수어도 뚫어도 멈추지 않아"
-    },
-    {
-      "t": 166.54,
-      "orig": "(Hu, hu, hu, hu)",
-      "pron": "(후, 후, 후, 후)",
-      "trans": "(Hu, hu, hu, hu)"
-    },
-    {
-      "t": 169.74,
-      "orig": "Tell me why cry?",
-      "pron": "텔 미 와이 크라이?",
-      "trans": "Tell me why cry?"
-    },
-    {
-      "t": 171.24,
-      "orig": "Tell me why",
-      "pron": "텔 미 와이",
-      "trans": "Tell me why"
-    },
-    {
-      "t": 172.24,
-      "orig": "CHAINSAW BLOOD",
-      "pron": "CHAINSAW BLOOD",
-      "trans": "CHAINSAW BLOOD"
-    },
-    {
-      "t": 173.28,
-      "orig": "血がたぎってもう煮立ってもう",
-      "pron": "치가 타깃테 모- 니탓테 모-",
-      "trans": "피가 끓어올라 이제 부글부글 이제"
-    },
-    {
-      "t": 175.64,
-      "orig": "止まれない",
-      "pron": "토마레나이",
-      "trans": "멈출 수 없어"
-    },
-    {
-      "t": 176.51,
-      "orig": "血を喰らうたび悪夢また",
-      "pron": "치오 쿠라우 타비 아쿠무 마타",
-      "trans": "피를 삼킬 때마다 악몽이 또"
-    },
-    {
-      "t": 178.87,
-      "orig": "よぎる",
-      "pron": "요기루",
-      "trans": "스쳐 가"
-    },
-    {
-      "t": 179.52,
-      "orig": "(Hu, hu, hu, hu)",
-      "pron": "(후, 후, 후, 후)",
-      "trans": "(Hu, hu, hu, hu)"
-    },
-    {
-      "t": 182.82,
-      "orig": "Tell me why cry?",
-      "pron": "텔 미 와이 크라이?",
-      "trans": "Tell me why cry?"
-    },
-    {
-      "t": 184.54,
-      "orig": "Tell me why you grinning?",
-      "pron": "텔 미 와이 유 그리닝?",
-      "trans": "Tell me why you grinning?"
+      "orig": "Tell me why... you grinning？",
+      "pron": "",
+      "trans": ""
     }
   ]
 }

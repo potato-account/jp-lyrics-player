@@ -1,0 +1,373 @@
+{
+  "title": "Gift",
+  "artist": "Vaundy",
+  "youtubeId": "ymHi_JaDEmQ",
+  "bundleId": "vaundy-gift",
+  "offset": 0,
+  "lines": [
+    {
+      "t": 1.05,
+      "orig": "その光の",
+      "pron": "소노 히카리노",
+      "pronSrc": "user",
+      "trans": "그 빛의",
+      "transSrc": "user"
+    },
+    {
+      "t": 3.15,
+      "orig": "渦は人々引き連れて 引き連れていった。",
+      "pron": "우즈와 히토비토 히키츠레테 히키츠레테잇타",
+      "pronSrc": "user",
+      "trans": "소용돌이는 사람들을 데리고, 데리고 갔어",
+      "transSrc": "user"
+    },
+    {
+      "t": 12.06,
+      "orig": "ふと出した言葉が",
+      "pron": "후토다시타 코토바가",
+      "pronSrc": "user",
+      "trans": "문득 꺼낸 말이",
+      "transSrc": "user"
+    },
+    {
+      "t": 16.25,
+      "orig": "そう、血を連れて 血を連れてきた。",
+      "pron": "소- 치오츠레테 치오츠레테키타",
+      "pronSrc": "user",
+      "trans": "그래, 피를 데리고, 피를 데리고 왔어",
+      "transSrc": "user"
+    },
+    {
+      "t": 23.59,
+      "orig": "いつか誰かが",
+      "pron": "이츠카 다레카가",
+      "pronSrc": "user",
+      "trans": "언젠가 누군가가",
+      "transSrc": "user"
+    },
+    {
+      "t": 26.74,
+      "orig": "僕と痛みを分け合えたら",
+      "pron": "보쿠토 이타미오 와케아에타라",
+      "pronSrc": "user",
+      "trans": "나와 아픔을 나눈다면",
+      "transSrc": "user"
+    },
+    {
+      "t": 32.51,
+      "orig": "日々人の頬を触れ続けた。",
+      "pron": "히비 히토노 호-오 후레츠즈케타",
+      "pronSrc": "user",
+      "trans": "늘 다른 이의 뺨을 어루만져왔어",
+      "transSrc": "user"
+    },
+    {
+      "t": 38.27,
+      "orig": "it’s a gift",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 42.99,
+      "orig": "from the love",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 48.76,
+      "orig": "酸いも甘いも",
+      "pron": "스이모 아마이모",
+      "pronSrc": "user",
+      "trans": "산미도 달콤함도",
+      "transSrc": "user"
+    },
+    {
+      "t": 51.9,
+      "orig": "always kissing",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 58.72,
+      "orig": "ah ah ah",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 61.86,
+      "orig": "今も",
+      "pron": "이마모",
+      "pronSrc": "user",
+      "trans": "지금도",
+      "transSrc": "user"
+    },
+    {
+      "t": 62.91,
+      "orig": "君の日々の",
+      "pron": "키미노 히비노",
+      "pronSrc": "user",
+      "trans": "너의 날들의",
+      "transSrc": "user"
+    },
+    {
+      "t": 65.53,
+      "orig": "心に溜った言霊",
+      "pron": "코코로니 타맛타 코토다마",
+      "pronSrc": "user",
+      "trans": "마음에 쌓인 이야기들",
+      "transSrc": "user"
+    },
+    {
+      "t": 69.2,
+      "orig": "いつか",
+      "pron": "이츠카",
+      "pronSrc": "user",
+      "trans": "언젠가",
+      "transSrc": "user"
+    },
+    {
+      "t": 70.78,
+      "orig": "君のヒビの",
+      "pron": "키미노 히비노",
+      "pronSrc": "user",
+      "trans": "너의 상처의",
+      "transSrc": "user"
+    },
+    {
+      "t": 73.4,
+      "orig": "隙すこしずつ gift for you, the love",
+      "pron": "스키스코시즈츠 gift for you, the love",
+      "pronSrc": "user",
+      "trans": "틈새에 조금씩, gift for you, the love",
+      "transSrc": "user"
+    },
+    {
+      "t": 85.46,
+      "orig": "少年の光る心",
+      "pron": "쇼-넨노 히카루 코코로",
+      "pronSrc": "user",
+      "trans": "소년의 빛나는 마음",
+      "transSrc": "user"
+    },
+    {
+      "t": 88.6,
+      "orig": "皆を連れて 皆連れて行った。",
+      "pron": "미나오 츠레테 미나 츠레테잇타",
+      "pronSrc": "user",
+      "trans": "모두를 데리고, 모두 데리고 갔어",
+      "transSrc": "user"
+    },
+    {
+      "t": 94.89,
+      "orig": "そして少年は母の光を",
+      "pron": "소시테 쇼-넨와 하하노 히카리오",
+      "pronSrc": "user",
+      "trans": "그리고 소년은 어머니의 빛을",
+      "transSrc": "user"
+    },
+    {
+      "t": 100.13,
+      "orig": "胸に受けている 胸に受けていることを知った。",
+      "pron": "무네니 우케테이루 무네니 우케테이루 코토오싯타",
+      "pronSrc": "user",
+      "trans": "가슴 속에 받았다는 걸, 가슴 속에 받았다는 걸 알았어",
+      "transSrc": "user"
+    },
+    {
+      "t": 110.62,
+      "orig": "いつも誰かが",
+      "pron": "이츠모 다레카가",
+      "pronSrc": "user",
+      "trans": "언제나 누군가가",
+      "transSrc": "user"
+    },
+    {
+      "t": 113.77,
+      "orig": "僕の幸の分を請け負っていると知った。",
+      "pron": "보쿠노 사치노 분오 우케옷테이루토 싯타",
+      "pronSrc": "user",
+      "trans": "내 몫의 행복을 책임지고 있다는 걸 알았어",
+      "transSrc": "user"
+    },
+    {
+      "t": 122.68,
+      "orig": "だから人の頬を触れ続けた。",
+      "pron": "다카라 히토노 호-오 후레츠즈케타",
+      "pronSrc": "user",
+      "trans": "그래서 다른 이의 뺨을 어루만져왔어",
+      "transSrc": "user"
+    },
+    {
+      "t": 128.97,
+      "orig": "it’s a gift",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 133.69,
+      "orig": "from the pain",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 139.45,
+      "orig": "They call it “rain”",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 147.84,
+      "orig": "they are soaked",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 154.66,
+      "orig": "いつも",
+      "pron": "이츠모",
+      "pronSrc": "user",
+      "trans": "언제나",
+      "transSrc": "user"
+    },
+    {
+      "t": 156.23,
+      "orig": "Feeling mad…",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 161.47,
+      "orig": "Oh, that’s a rainbow",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 169.86,
+      "orig": "いつも誰かが",
+      "pron": "이츠모 다레카가",
+      "pronSrc": "user",
+      "trans": "언제나 누군가가",
+      "transSrc": "user"
+    },
+    {
+      "t": 173.01,
+      "orig": "僕の心を埋めていることを知った",
+      "pron": "보쿠노 코코로오 우메테이루 코토오 싯타",
+      "pronSrc": "user",
+      "trans": "내 마음을 채워주고 있다는 걸 알았어",
+      "transSrc": "user"
+    },
+    {
+      "t": 180.87,
+      "orig": "故に、人の頬を触れ続けた",
+      "pron": "유에니 히토노 호-오 후레츠즈케타",
+      "pronSrc": "user",
+      "trans": "그래서 다른이의 뺨을 어루만져왔어",
+      "transSrc": "user"
+    },
+    {
+      "t": 185.56,
+      "orig": "it’s a gift",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 188.52,
+      "orig": "from the love",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 192.13,
+      "orig": "酸いも甘いも",
+      "pron": "스이모 아마이모",
+      "pronSrc": "user",
+      "trans": "산미도 달콤함도",
+      "transSrc": "user"
+    },
+    {
+      "t": 194.1,
+      "orig": "always kissing",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 198.37,
+      "orig": "ah ah ah",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 200.34,
+      "orig": "今も",
+      "pron": "이마모",
+      "pronSrc": "user",
+      "trans": "지금도",
+      "transSrc": "user"
+    },
+    {
+      "t": 201,
+      "orig": "君の日々の",
+      "pron": "키미노 히비노",
+      "pronSrc": "user",
+      "trans": "너의 날들의",
+      "transSrc": "user"
+    },
+    {
+      "t": 202.64,
+      "orig": "心に溜った言霊",
+      "pron": "코코로니 타맛타 코토다마",
+      "pronSrc": "user",
+      "trans": "마음에 쌓인 이야기들",
+      "transSrc": "user"
+    },
+    {
+      "t": 204.94,
+      "orig": "いつか",
+      "pron": "이츠카",
+      "pronSrc": "user",
+      "trans": "언젠가",
+      "transSrc": "user"
+    },
+    {
+      "t": 205.92,
+      "orig": "君のヒビの",
+      "pron": "키미노 히비노",
+      "pronSrc": "user",
+      "trans": "너의 상처의",
+      "transSrc": "user"
+    },
+    {
+      "t": 207.57,
+      "orig": "隙すこしずつ",
+      "pron": "스키스코시즈츠",
+      "pronSrc": "user",
+      "trans": "틈새에 조금씩",
+      "transSrc": "user"
+    },
+    {
+      "t": 209.54,
+      "orig": "Gift from the rain",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 214.47,
+      "orig": "Just hold it all",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 218.74,
+      "orig": "Mummy told me “That’s all”",
+      "pron": "",
+      "trans": ""
+    },
+    {
+      "t": 225.96,
+      "orig": "Filled with love…",
+      "pron": "",
+      "trans": ""
+    }
+  ]
+}
