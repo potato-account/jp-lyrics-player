@@ -1,0 +1,19 @@
+{
+  "name": "jp-lyrics-player-tools",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Helper CLI that fills missing pron (Japanese -> Korean hangul reading) and trans (Japanese -> Korean) in song JSON files.",
+  "bin": {
+    "fill": "./fill.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node fill.mjs"
+  },
+  "dependencies": {
+    "kuromoji": "0.1.2"
+  }
+}
