@@ -1,0 +1,17 @@
+{
+  "name": "가사 싱크 플레이어",
+  "short_name": "가사싱크",
+  "description": "일본어 노래를 원문/발음/번역 3단으로 싱크해서 보는 개인용 플레이어",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0b0b0f",
+  "theme_color": "#0b0b0f",
+  "lang": "ko",
+  "icons": [
+    { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

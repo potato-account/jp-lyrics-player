@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1" />
+  <meta name="theme-color" content="#0b0b0f" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <title>가사 싱크 플레이어</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- ===== 상단: YouTube 영상 (접기 가능) ===== -->
+    <header id="video-area" class="video-expanded">
+      <div id="player-wrap">
+        <div id="player"></div>
+      </div>
+      <button id="toggle-video" type="button" aria-label="영상 접기/펴기" title="영상 접기/펴기">▲</button>
+    </header>
+
+    <!-- ===== 가운데: 3단 가사 ===== -->
+    <main id="lyrics">
+      <div id="lyrics-empty" class="hint">
+        <p>재생할 곡이 없습니다.</p>
+        <p>아래 <b>곡 열기</b>로 곡 파일(JSON)을 불러오거나<br />새 곡을 만들어 <b>싱크 편집</b>하세요.</p>
+      </div>
+      <ol id="lyrics-list"></ol>
+    </main>
+
+    <!-- ===== 하단: 재생 컨트롤 ===== -->
+    <footer id="controls">
+      <input id="seekbar" type="range" min="0" max="1000" value="0" step="1" aria-label="재생 위치" />
+      <div class="row time-row">
+        <span id="time-cur">0:00</span>
+        <div class="btns">
+          <button id="back5" type="button">−5s</button>
+          <button id="playpause" type="button" aria-label="재생/일시정지">▶</button>
+          <button id="fwd5" type="button">+5s</button>
+        </div>
+        <span id="time-dur">0:00</span>
+      </div>
+      <div class="row menu-row">
+        <button id="open-song" type="button">곡 열기</button>
+        <button id="new-song" type="button">새 곡</button>
+        <button id="edit-mode" type="button">싱크 편집</button>
+      </div>
+    </footer>
+  </div>
+
+  <!-- 곡 열기 / 새 곡 만들기 다이얼로그 -->
+  <dialog id="song-dialog">
+    <form method="dialog" id="song-form">
+      <h2 id="song-dialog-title">새 곡 만들기</h2>
+
+      <label>제목
+        <input name="title" type="text" autocomplete="off" />
+      </label>
+      <label>아티스트
+        <input name="artist" type="text" autocomplete="off" />
+      </label>
+      <label>YouTube 링크 또는 ID
+        <input name="youtube" type="text" autocomplete="off" placeholder="https://youtu.be/xxxx 또는 xxxx" />
+      </label>
+
+      <details id="paste-block">
+        <summary>가사 붙여넣기 (원문 / 발음 / 번역)</summary>
+        <p class="hint small">한 줄에 한 소절씩. 세 칸이 다 있으면 <code>원문 | 발음 | 번역</code> 처럼 <code>|</code> 로 구분해도 되고, 원문만 붙여넣어도 됩니다. 빈 줄은 무시됩니다.</p>
+        <textarea name="paste" rows="8" placeholder="夜に駆ける | 요루니 카케루 | 밤을 향해 달리다&#10;沈むように溶けてゆくように&#10;..."></textarea>
+      </details>
+
+      <menu>
+        <button value="cancel" type="submit">취소</button>
+        <button value="ok" id="song-ok" type="submit">확인</button>
+      </menu>
+    </form>
+  </dialog>
+
+  <input id="file-input" type="file" accept="application/json,.json" hidden />
+
+  <!-- YouTube IFrame Player API (온라인 필요) -->
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
