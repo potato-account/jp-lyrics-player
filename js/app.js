@@ -1,6 +1,7 @@
 import { Player, parseVideoId } from "./player.js";
 import { LyricsView, parsePaste } from "./lyrics.js";
 import { allSongs, getSong, putSong, deleteSong, getLastId, setLastId, migrateLegacy } from "./store.js";
+import { autofillSong, hasFillable } from "./autofill.js";
 
 const $ = (s) => document.querySelector(s);
 const appEl = $("#app");
@@ -38,10 +39,28 @@ async function loadSong(next, { autoplay = false } = {}) {
   appEl.classList.toggle("has-song", song.lines.length > 0);
   view.setSong(song);
   view.setEditable(appEl.classList.contains("edit-on"));
+  updateAutofillBanner();
   $("#time-dur").textContent = "0:00";
   $("#time-cur").textContent = "0:00";
   $("#seekbar").value = "0";
   if (song.youtubeId) await player.load(song.youtubeId, { autoplay });
+}
+
+// 발음·번역이 비어 있으면 상단에 "자동 채우기" 배너 표시
+function updateAutofillBanner() {
+  appEl.classList.toggle("needs-autofill", hasFillable(song));
+}
+
+// 파일/붙여넣기로 들어온 줄에 출처 태그 부여.
+// 파일이 pronSrc/transSrc 를 이미 갖고 있으면 존중, 아니면 값이 있으면 "user".
+function tagImportedLines(lines) {
+  for (const l of lines) {
+    for (const f of ["pron", "trans"]) {
+      if (l[f + "Src"]) continue;
+      l[f + "Src"] = l[f] ? "user" : undefined;
+    }
+  }
+  return lines;
 }
 
 // ---------- 메인 루프 ----------
@@ -113,6 +132,8 @@ function setLineTime(i) {
 function editLine(i, field, value) {
   if (!song) return;
   song.lines[i][field] = value;
+  song.lines[i][field + "Src"] = value ? "user" : undefined; // 내가 직접 = 최우선
+  updateAutofillBanner();
   persist();
 }
 
@@ -225,6 +246,7 @@ function wireAddDialog() {
       const data = JSON.parse(await file.text());
       if (!Array.isArray(data.lines)) throw new Error("lines 없음");
       delete data.id; // 새 레코드로
+      tagImportedLines(data.lines);
       const saved = await putSong(data);
       await loadSong(saved);
       dlg.close();
@@ -235,7 +257,7 @@ function wireAddDialog() {
 
   // --- 직접 붙여넣기 ---
   $("#d-add").addEventListener("click", async () => {
-    const lines = parsePaste($("#d-paste").value);
+    const lines = tagImportedLines(parsePaste($("#d-paste").value));
     if (!lines.length) { alert("가사를 붙여넣어 주세요."); return; }
     const saved = await putSong({
       title: $("#d-title").value.trim() || "제목 없음",
@@ -321,11 +343,45 @@ function wireBulk() {
     if (parts.length !== song.lines.length &&
         !confirm(`줄 수가 다릅니다 (입력 ${parts.length} / 가사 ${song.lines.length}). 앞에서부터 맞춰 적용할까요?`)) return;
     const n = Math.min(parts.length, song.lines.length);
-    for (let i = 0; i < n; i++) song.lines[i][bulkMode] = parts[i].trim();
+    for (let i = 0; i < n; i++) {
+      const v = parts[i].trim();
+      song.lines[i][bulkMode] = v;
+      song.lines[i][bulkMode + "Src"] = v ? "user" : undefined; // 붙여넣기도 내가 직접
+    }
     await persist();
     view.setSong(song);
     view.setEditable(appEl.classList.contains("edit-on"));
+    updateAutofillBanner();
     dlg.close();
+  });
+}
+
+// ---------- 자동 채우기 ----------
+function wireAutofill() {
+  const btn = $("#autofill-run");
+  const msg = $("#autofill-msg");
+  btn.addEventListener("click", async () => {
+    if (!song) return;
+    const target = song; // 실행 중 곡이 바뀌어도 안전하게
+    btn.disabled = true;
+    try {
+      const r = await autofillSong(target, {
+        onProgress: (done, total, phase) => { msg.textContent = `${phase} ${done}/${total}`; },
+      });
+      if (song === target) {
+        await persist();
+        view.setSong(song);
+        view.setEditable(appEl.classList.contains("edit-on"));
+      } else {
+        await putSong(target);
+      }
+      msg.textContent = `발음 ${r.pron} · 번역 ${r.trans} 채움` + (r.failed ? ` (실패 ${r.failed})` : "");
+      setTimeout(() => { msg.textContent = "발음·번역이 비어 있어요"; updateAutofillBanner(); }, 1800);
+    } catch (e) {
+      msg.textContent = "자동 채우기 실패: " + (e.message || e);
+    } finally {
+      btn.disabled = false;
+    }
   });
 }
 
@@ -386,7 +442,27 @@ async function syncBundledSongsInner() {
 
     data.bundleId = entry.bundleId;
     data.bundleVersion = entry.version;
-    if (existing) data.id = existing.id; // 같은 레코드로 덮어쓰기(마지막 곡 포인터 유지)
+
+    // 번들 파일의 발음·번역은 "hand"(Claude 손 품질)로 표시.
+    // 단, 기존 레코드에서 내가 직접 고친("user") 칸은 그대로 보존한다.
+    for (let i = 0; i < data.lines.length; i++) {
+      const nl = data.lines[i];
+      const ol = existing && existing.lines[i];
+      for (const f of ["pron", "trans"]) {
+        if (ol && ol[f + "Src"] === "user") {
+          nl[f] = ol[f];
+          nl[f + "Src"] = "user";
+        } else {
+          nl[f + "Src"] = nl[f] ? "hand" : undefined;
+        }
+      }
+    }
+
+    if (existing) {
+      data.id = existing.id;                              // 같은 레코드로 덮어쓰기
+      if (!data.youtubeId && existing.youtubeId) data.youtubeId = existing.youtubeId; // 내가 넣은 링크 보존
+      if (!data.offset && existing.offset) data.offset = existing.offset;
+    }
     await putSong(data);
   }
 }
@@ -407,6 +483,7 @@ async function main() {
   wireAddDialog();
   wireMetaDialog();
   wireBulk();
+  wireAutofill();
   $("#open-list").addEventListener("click", openSheet);
   $("#close-list").addEventListener("click", closeSheet);
   $("#song-list").addEventListener("click", (e) => { if (e.target.id === "song-list") closeSheet(); });

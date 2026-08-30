@@ -232,6 +232,17 @@ code { background: var(--bg); padding: 1px 5px; border-radius: 4px; font-size: 0
 #app.edit-on.has-song #edit-bar { display: flex; }
 #edit-bar button { flex: 1; font-size: 0.85rem; padding: 9px 6px; }
 
+/* --- 자동 채우기 배너 --- */
+#autofill-banner { display: none; align-items: center; gap: 10px;
+  position: sticky; top: 0; z-index: 3;
+  margin-bottom: 8px; padding: 10px 12px;
+  background: #14243a; border: 1px solid #29456e; border-radius: 12px;
+  font-size: 0.85rem; }
+#app.needs-autofill.has-song #autofill-banner { display: flex; }
+#autofill-msg { flex: 1; color: var(--fg-dim); }
+#autofill-run { flex: 0 0 auto; background: var(--lyric-orig); border-color: var(--lyric-orig); color: #06263a; font-weight: 700; }
+#autofill-run:disabled { opacity: 0.6; }
+
 /* 편집 모드에서 발음/번역 칸을 편집 가능하게 표시 */
 #app.edit-on .lyric-line .pron,
 #app.edit-on .lyric-line .trans {

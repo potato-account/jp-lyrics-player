@@ -1,6 +1,6 @@
 {
   "_comment": "번들 곡 목록. 앱은 시작할 때 이걸 읽어서, 아직 없는 곡은 추가하고 version 이 올라간 곡은 덮어쓴다. 사용자가 직접 만든 곡(bundleId 없음)은 건드리지 않는다.",
   "songs": [
-    { "file": "napori.json", "bundleId": "vaundy-napori", "version": 1, "title": "napori", "artist": "Vaundy" }
+    { "file": "napori.json", "bundleId": "vaundy-napori", "version": 2, "title": "napori", "artist": "Vaundy" }
   ]
 }

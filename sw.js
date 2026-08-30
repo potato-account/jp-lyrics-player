@@ -1,6 +1,6 @@
 // 오프라인 대비 캐시. 전략: 네트워크 우선(온라인이면 항상 최신 코드), 실패 시 캐시.
 // 개인용이라 최신 코드가 중요하고, 오프라인일 때만 캐시로 버틴다.
-const CACHE = "jlp-v5";
+const CACHE = "jlp-v6";
 const SHELL = [
   "./",
   "./index.html",
@@ -9,6 +9,8 @@ const SHELL = [
   "./js/player.js",
   "./js/lyrics.js",
   "./js/store.js",
+  "./js/kana2ko.js",
+  "./js/autofill.js",
   "./songs/index.json",
   "./songs/napori.json",
   "./manifest.webmanifest",
@@ -16,6 +18,8 @@ const SHELL = [
   "./icons/icon-192.png",
   "./icons/icon-512.png",
 ];
+// vendor/kuromoji.js 와 vendor/dict/* (~17MB) 는 SHELL 에 넣지 않는다.
+// 자동 채우기를 처음 쓸 때 network-first 로 받아 캐시된다.
 
 self.addEventListener("install", (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(SHELL)).then(() => self.skipWaiting()));
