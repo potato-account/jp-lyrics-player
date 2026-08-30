@@ -81,12 +81,25 @@ function wireControls() {
     v.classList.toggle("video-expanded", !collapsed);
   });
 
+  // 영상 전체화면 → 여기서 홈 버튼을 누르면 안드로이드가 작은 창(PiP)으로 재생을 이어감
+  $("#go-fullscreen").addEventListener("click", async () => {
+    const f = player.iframeEl;
+    if (!f) return;
+    try {
+      await (f.requestFullscreen ? f.requestFullscreen() : f.webkitRequestFullscreen && f.webkitRequestFullscreen());
+      if (!localStorage.getItem("jlp:pipHint")) {
+        localStorage.setItem("jlp:pipHint", "1");
+        setTimeout(() => alert("전체화면 상태에서 홈 버튼을 누르면 작은 창으로 재생이 이어집니다 (안드로이드).\n화면을 끄면 멈춥니다."), 400);
+      }
+    } catch {}
+  });
+
   $("#edit-mode").addEventListener("click", () => {
     const on = appEl.classList.toggle("edit-on");
     $("#edit-mode").textContent = on ? "편집 끝" : "편집";
     view.setEditable(on);
-    if (on) requestWakeLock();
-    else persist();
+    if (on) acquireWakeLock();
+    else { persist(); if (!player.isPlaying) releaseWakeLock(); }
   });
 }
 
@@ -316,13 +329,67 @@ function wireBulk() {
   });
 }
 
-// ---------- Wake Lock ----------
-async function requestWakeLock() {
-  try { if ("wakeLock" in navigator) wakeLock = await navigator.wakeLock.request("screen"); } catch {}
+// ---------- Wake Lock (재생·편집 중 화면 꺼짐 방지) ----------
+async function acquireWakeLock() {
+  try {
+    if ("wakeLock" in navigator && !wakeLock) {
+      wakeLock = await navigator.wakeLock.request("screen");
+      wakeLock.addEventListener("release", () => { wakeLock = null; });
+    }
+  } catch {}
 }
+function releaseWakeLock() {
+  try { wakeLock && wakeLock.release(); } catch {}
+  wakeLock = null;
+}
+function wakeLockShouldHold() {
+  return player.isPlaying || appEl.classList.contains("edit-on");
+}
+// Wake Lock 은 탭이 가려지면 자동 해제되므로, 돌아왔을 때 필요하면 다시 확보
 document.addEventListener("visibilitychange", () => {
-  if (document.visibilityState === "visible" && appEl.classList.contains("edit-on")) requestWakeLock();
+  if (document.visibilityState === "visible" && wakeLockShouldHold()) acquireWakeLock();
 });
+
+// ---------- 번들 곡 동기화 ----------
+// songs/index.json 에 적힌 곡 중, 라이브러리에 없는 건 추가하고
+// version 이 올라간 건 덮어쓴다. 사용자가 직접 만든 곡(bundleId 없음)은 안 건드림.
+async function syncBundledSongs() {
+  try {
+    await syncBundledSongsInner();
+  } catch (e) {
+    console.warn("bundled song sync skipped:", e);
+  }
+}
+async function syncBundledSongsInner() {
+  let manifest;
+  try {
+    const res = await fetch("songs/index.json", { cache: "no-cache" });
+    if (!res.ok) return;
+    manifest = await res.json();
+  } catch { return; }
+
+  const lib = await allSongs();
+  for (const entry of manifest.songs || []) {
+    const existing =
+      lib.find((s) => s.bundleId === entry.bundleId) ||
+      // bundleId 없던 예전 곡(예: 첫 배포 때 받은 napori)을 같은 곡으로 흡수
+      lib.find((s) => !s.bundleId && s.title === entry.title && (!entry.artist || s.artist === entry.artist));
+
+    if (existing && (existing.bundleVersion || 0) >= entry.version) continue;
+
+    let data;
+    try {
+      const r = await fetch("songs/" + entry.file, { cache: "no-cache" });
+      if (!r.ok) continue;
+      data = await r.json();
+    } catch { continue; }
+
+    data.bundleId = entry.bundleId;
+    data.bundleVersion = entry.version;
+    if (existing) data.id = existing.id; // 같은 레코드로 덮어쓰기(마지막 곡 포인터 유지)
+    await putSong(data);
+  }
+}
 
 // ---------- 서비스 워커 ----------
 if ("serviceWorker" in navigator) {
@@ -344,7 +411,14 @@ async function main() {
   $("#close-list").addEventListener("click", closeSheet);
   $("#song-list").addEventListener("click", (e) => { if (e.target.id === "song-list") closeSheet(); });
 
+  // 재생 상태에 따라 Wake Lock 확보/해제
+  player.onStateChange((state) => {
+    if (state === 1) acquireWakeLock();                 // 재생
+    else if ((state === 2 || state === 0) && !appEl.classList.contains("edit-on")) releaseWakeLock(); // 일시정지/종료
+  });
+
   await migrateLegacy();
+  await syncBundledSongs();
 
   let start = null;
   const lastId = getLastId();
@@ -352,12 +426,6 @@ async function main() {
   if (!start) {
     const list = await allSongs();
     if (list.length) start = await getSong(list[0].id);
-  }
-  if (!start) {
-    try {
-      const res = await fetch("songs/napori.json");
-      if (res.ok) start = await putSong(await res.json());
-    } catch {}
   }
   if (start) await loadSong(start);
 

@@ -3,7 +3,7 @@
 
 const DB_NAME = "jlp";
 const STORE = "songs";
-const VERSION = 1;
+const VERSION = 2;
 
 let _db = null;
 function db() {

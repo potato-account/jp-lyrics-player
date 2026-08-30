@@ -82,7 +82,7 @@ button:active { transform: scale(0.97); }
   color: var(--fg-dim);
 }
 
-#toggle-video {
+#toggle-video, #go-fullscreen {
   position: absolute;
   right: 8px;
   bottom: 8px;
@@ -94,11 +94,13 @@ button:active { transform: scale(0.97); }
   background: #000000aa;
   backdrop-filter: blur(4px);
 }
+#go-fullscreen { right: 56px; font-size: 1.1rem; }
 #video-area.video-collapsed #toggle-video {
   top: 2px;
   bottom: auto;
   transform: rotate(180deg);
 }
+#video-area.video-collapsed #go-fullscreen { display: none; }
 
 /* --- 가운데 가사 --- */
 #lyrics {

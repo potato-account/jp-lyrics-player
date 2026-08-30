@@ -2,7 +2,8 @@
   "title": "napori",
   "artist": "Vaundy",
   "youtubeId": "ZeIGVnkYX04",
-  "source": "lyrics+timing: LRCLIB (lrclib.net) / pron+trans: draft",
+  "bundleId": "vaundy-napori",
+  "source": "lyrics+timing: LRCLIB (lrclib.net) / pron+trans: hand",
   "offset": 0,
   "lines": [
     { "t": 14.99, "orig": "ろくな音楽もなくて", "pron": "로쿠나 옹가쿠모 나쿠테", "trans": "변변한 음악도 없이" },

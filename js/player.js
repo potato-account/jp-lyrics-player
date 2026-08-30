@@ -61,6 +61,7 @@ export class Player {
   get currentTime() { return this.yt ? this.yt.getCurrentTime() : 0; }
   get duration()    { return this.yt ? this.yt.getDuration() : 0; }
   get isPlaying()   { return this.yt ? this.yt.getPlayerState() === window.YT.PlayerState.PLAYING : false; }
+  get iframeEl()    { return this.yt && this.yt.getIframe ? this.yt.getIframe() : null; }
 }
 
 // "https://youtu.be/ID", "https://www.youtube.com/watch?v=ID", 혹은 그냥 "ID" 에서 11자리 ID 추출.
