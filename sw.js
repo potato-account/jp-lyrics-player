@@ -1,6 +1,6 @@
-// 아주 단순한 오프라인 셸 캐시.
-// 앱 껍데기(HTML/CSS/JS)만 캐시한다. YouTube 재생과 LRCLIB 조회는 온라인이 필요하다.
-const CACHE = "jlp-v2";
+// 오프라인 대비 캐시. 전략: 네트워크 우선(온라인이면 항상 최신 코드), 실패 시 캐시.
+// 개인용이라 최신 코드가 중요하고, 오프라인일 때만 캐시로 버틴다.
+const CACHE = "jlp-v4";
 const SHELL = [
   "./",
   "./index.html",
@@ -8,6 +8,7 @@ const SHELL = [
   "./js/app.js",
   "./js/player.js",
   "./js/lyrics.js",
+  "./js/store.js",
   "./manifest.webmanifest",
   "./icons/icon.svg",
   "./icons/icon-192.png",
@@ -20,17 +21,26 @@ self.addEventListener("install", (e) => {
 
 self.addEventListener("activate", (e) => {
   e.waitUntil(
-    caches.keys().then((keys) =>
-      Promise.all(keys.filter((k) => k !== CACHE).map((k) => caches.delete(k)))
-    ).then(() => self.clients.claim())
+    caches.keys()
+      .then((keys) => Promise.all(keys.filter((k) => k !== CACHE).map((k) => caches.delete(k))))
+      .then(() => self.clients.claim())
   );
 });
 
 self.addEventListener("fetch", (e) => {
+  if (e.request.method !== "GET") return;
   const url = new URL(e.request.url);
-  // 같은 출처(앱 파일)만 처리. 외부 요청은 그대로 통과.
-  if (url.origin !== location.origin) return;
+  if (url.origin !== location.origin) return; // YouTube, LRCLIB 등은 그대로 통과
+
   e.respondWith(
-    caches.match(e.request).then((hit) => hit || fetch(e.request))
+    fetch(e.request)
+      .then((res) => {
+        const copy = res.clone();
+        caches.open(CACHE).then((c) => c.put(e.request, copy)).catch(() => {});
+        return res;
+      })
+      .catch(() =>
+        caches.match(e.request).then((hit) => hit || caches.match("./index.html"))
+      )
   );
 });

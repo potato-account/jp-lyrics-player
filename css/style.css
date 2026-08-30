@@ -8,6 +8,8 @@
   --accent: #ff5a76;
   --accent-soft: #ff5a7622;
   --line-active-bg: #ffffff0a;
+  --lyric-orig: #5cc8ff;   /* 현재 줄 원문: 하늘색 */
+  --lyric-trans: #4cd97f;  /* 현재 줄 번역: 초록색 */
   --border: #26262f;
   --control-h: 132px;
   font-size: 16px;
@@ -41,7 +43,9 @@ button:active { transform: scale(0.97); }
 #app {
   display: flex;
   flex-direction: column;
-  height: 100dvh;
+  /* --app-h 는 app.js 가 window.innerHeight 로 채운다(가장 신뢰 가능). 없으면 svh 로 폴백 */
+  height: var(--app-h, 100svh);
+  overflow: hidden;
 }
 
 /* --- 상단 영상 --- */
@@ -98,18 +102,21 @@ button:active { transform: scale(0.97); }
 
 /* --- 가운데 가사 --- */
 #lyrics {
-  flex: 1 1 auto;
+  flex: 1 1 0;                 /* basis 0 + grow: 남는 공간을 정확히 채움 */
+  min-height: 0;               /* flex 자식이 내용보다 작게 줄어들 수 있게 (스크롤 컨테이너 필수) */
   overflow-y: auto;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  padding: 40dvh 20px 40dvh;   /* 위아래 여백으로 현재 줄을 화면 중앙 근처에 고정 */
+  padding: 0 20px;
   -webkit-overflow-scrolling: touch;
 }
 
 #lyrics-list {
   list-style: none;
   margin: 0;
-  padding: 0;
+  /* 위아래 큰 여백은 스크롤 내용(자식)에 준다. #lyrics 자체에 주면 padding 이
+     flex 축소의 하한이 되어 레이아웃이 깨진다. */
+  padding: 40dvh 0;
 }
 
 .lyric-line {
@@ -130,9 +137,9 @@ button:active { transform: scale(0.97); }
   opacity: 1;
   background: var(--line-active-bg);
 }
-.lyric-line.is-active .orig  { color: var(--accent); }
-.lyric-line.is-active .pron,
-.lyric-line.is-active .trans { color: var(--fg); }
+.lyric-line.is-active .orig  { color: var(--lyric-orig); }
+.lyric-line.is-active .pron  { color: var(--fg); }
+.lyric-line.is-active .trans { color: var(--lyric-trans); }
 
 .lyric-line.is-past { opacity: 0.28; }
 
@@ -207,7 +214,74 @@ dialog textarea {
 }
 dialog textarea { resize: vertical; font-size: 0.9rem; }
 dialog summary { cursor: pointer; font-size: 0.85rem; color: var(--fg); margin: 6px 0; }
-dialog menu { display: flex; gap: 8px; justify-content: flex-end; margin: 14px 0 0; padding: 0; }
+dialog menu { display: flex; gap: 8px; justify-content: flex-end; margin: 14px 0 0; padding: 0; flex-wrap: wrap; }
 dialog menu button { flex: 0 0 auto; }
-#song-ok { background: var(--accent); border-color: var(--accent); color: #fff; }
+#m-save, #d-add, #q-run, #bulk-apply { background: var(--accent); border-color: var(--accent); color: #fff; }
+.danger { background: #3a1620; border-color: #7a2740; color: #ff9db0; }
 code { background: var(--bg); padding: 1px 5px; border-radius: 4px; font-size: 0.85em; }
+
+.dlg-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+.dlg-head h2 { margin: 0; font-size: 1.1rem; }
+.dlg-x { padding: 4px 10px; }
+
+/* --- 편집 바 (발음/번역 일괄) --- */
+#edit-bar { display: none; gap: 8px; position: sticky; top: 0; z-index: 3;
+  padding: 8px 0 10px; background: var(--bg); }
+#app.edit-on.has-song #edit-bar { display: flex; }
+#edit-bar button { flex: 1; font-size: 0.85rem; padding: 9px 6px; }
+
+/* 편집 모드에서 발음/번역 칸을 편집 가능하게 표시 */
+#app.edit-on .lyric-line .pron,
+#app.edit-on .lyric-line .trans {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 4px 6px;
+  margin-top: 4px;
+  min-height: 1.4em;
+}
+#app.edit-on .lyric-line .pron:empty::before { content: "발음"; color: var(--fg-dimmer); }
+#app.edit-on .lyric-line .trans:empty::before { content: "번역"; color: var(--fg-dimmer); }
+.lyric-line .pron:focus, .lyric-line .trans:focus { outline: 2px solid var(--lyric-orig); }
+
+/* --- 곡 목록 시트 --- */
+#song-list {
+  position: fixed; inset: 0; z-index: 20;
+  background: #000000aa;
+  display: flex; align-items: flex-end;
+}
+#song-list[hidden] { display: none; }
+#song-list .sheet {
+  width: 100%; max-height: 78dvh;
+  background: var(--bg-soft);
+  border-top-left-radius: 18px; border-top-right-radius: 18px;
+  border-top: 1px solid var(--border);
+  padding: 14px 14px calc(14px + env(safe-area-inset-bottom));
+  overflow-y: auto;
+}
+.sheet-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+.sheet-head h2 { margin: 0; font-size: 1.05rem; }
+#close-list { padding: 4px 12px; }
+#song-list-items { list-style: none; margin: 0; padding: 0; }
+.song-row { display: flex; align-items: stretch; gap: 8px; margin-bottom: 8px; }
+.song-row.current .song-pick { border-color: var(--lyric-orig); }
+.song-pick {
+  flex: 1; text-align: left; display: flex; flex-direction: column; gap: 2px;
+  padding: 11px 12px;
+}
+.song-pick .s-title { font-weight: 700; }
+.song-pick .s-artist { font-size: 0.8rem; color: var(--fg-dim); }
+.song-del { flex: 0 0 auto; }
+
+/* --- 곡 추가 다이얼로그 --- */
+.add-sec { border-top: 1px solid var(--border); padding-top: 12px; margin-top: 12px; }
+.add-sec:first-of-type { border-top: 0; padding-top: 0; margin-top: 0; }
+.add-sec h3 { margin: 0 0 8px; font-size: 0.9rem; color: var(--fg-dim); }
+.add-sec > input, .add-sec > textarea, .add-sec > button { width: 100%; margin-top: 6px; }
+.add-sec .two { display: flex; gap: 8px; }
+.add-sec .two input { flex: 1; margin-top: 0; }
+#q-results { list-style: none; margin: 8px 0 0; padding: 0; max-height: 34dvh; overflow-y: auto; }
+.q-row { padding: 9px 10px; border: 1px solid var(--border); border-radius: 8px; margin-bottom: 6px; cursor: pointer; }
+.q-row.synced { border-color: #2c6b45; }
+.q-row b { display: block; font-size: 0.9rem; }
+.q-row small { color: var(--fg-dim); font-size: 0.78rem; }
+#bulk-text { width: 100%; font-family: ui-monospace, monospace; }

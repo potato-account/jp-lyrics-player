@@ -27,8 +27,14 @@
     <main id="lyrics">
       <div id="lyrics-empty" class="hint">
         <p>재생할 곡이 없습니다.</p>
-        <p>아래 <b>곡 열기</b>로 곡 파일(JSON)을 불러오거나<br />새 곡을 만들어 <b>싱크 편집</b>하세요.</p>
+        <p><b>추가</b>로 곡을 등록하세요.<br />(LRCLIB 검색 · 파일 열기 · 직접 붙여넣기)</p>
       </div>
+
+      <div id="edit-bar">
+        <button id="paste-pron" type="button">발음 일괄 붙여넣기</button>
+        <button id="paste-trans" type="button">번역 일괄 붙여넣기</button>
+      </div>
+
       <ol id="lyrics-list"></ol>
     </main>
 
@@ -45,44 +51,94 @@
         <span id="time-dur">0:00</span>
       </div>
       <div class="row menu-row">
-        <button id="open-song" type="button">곡 열기</button>
-        <button id="new-song" type="button">새 곡</button>
-        <button id="edit-mode" type="button">싱크 편집</button>
+        <button id="open-list" type="button">목록</button>
+        <button id="open-add" type="button">추가</button>
+        <button id="edit-mode" type="button">편집</button>
+        <button id="open-meta" type="button">정보</button>
       </div>
     </footer>
   </div>
 
-  <!-- 곡 열기 / 새 곡 만들기 다이얼로그 -->
-  <dialog id="song-dialog">
-    <form method="dialog" id="song-form">
-      <h2 id="song-dialog-title">새 곡 만들기</h2>
+  <!-- ===== 곡 목록 시트 ===== -->
+  <div id="song-list" hidden>
+    <div class="sheet">
+      <div class="sheet-head">
+        <h2>저장된 곡</h2>
+        <button id="close-list" type="button" aria-label="닫기">✕</button>
+      </div>
+      <ul id="song-list-items"></ul>
+      <p id="song-list-empty" class="hint small">아직 저장된 곡이 없습니다.</p>
+    </div>
+  </div>
 
-      <label>제목
-        <input name="title" type="text" autocomplete="off" />
-      </label>
-      <label>아티스트
-        <input name="artist" type="text" autocomplete="off" />
-      </label>
-      <label>YouTube 링크 또는 ID
-        <input name="youtube" type="text" autocomplete="off" placeholder="https://youtu.be/xxxx 또는 xxxx" />
-      </label>
+  <!-- ===== 곡 추가 다이얼로그 ===== -->
+  <dialog id="add-dialog">
+    <div class="dlg-head">
+      <h2>곡 추가</h2>
+      <button class="dlg-x" data-close="add-dialog" type="button" aria-label="닫기">✕</button>
+    </div>
 
-      <details id="paste-block">
-        <summary>가사 붙여넣기 (원문 / 발음 / 번역)</summary>
-        <p class="hint small">한 줄에 한 소절씩. 세 칸이 다 있으면 <code>원문 | 발음 | 번역</code> 처럼 <code>|</code> 로 구분해도 되고, 원문만 붙여넣어도 됩니다. 빈 줄은 무시됩니다.</p>
-        <textarea name="paste" rows="8" placeholder="夜に駆ける | 요루니 카케루 | 밤을 향해 달리다&#10;沈むように溶けてゆくように&#10;..."></textarea>
-      </details>
+    <section class="add-sec">
+      <h3>LRCLIB 검색</h3>
+      <div class="two">
+        <input id="q-artist" type="text" placeholder="아티스트 (예: Vaundy)" autocomplete="off" />
+        <input id="q-title" type="text" placeholder="제목 (예: napori)" autocomplete="off" />
+      </div>
+      <button id="q-run" type="button">검색</button>
+      <ul id="q-results"></ul>
+      <p id="q-status" class="hint small"></p>
+    </section>
 
-      <menu>
-        <button value="cancel" type="submit">취소</button>
-        <button value="ok" id="song-ok" type="submit">확인</button>
-      </menu>
-    </form>
+    <section class="add-sec">
+      <h3>파일에서 열기</h3>
+      <button id="pick-file" type="button">JSON 파일 선택</button>
+    </section>
+
+    <section class="add-sec">
+      <h3>직접 붙여넣기</h3>
+      <p class="hint small"><code>[00:14.99] 가사</code> (LRCLIB 원문), 또는 <code>원문 | 발음 | 번역</code>, 또는 원문만. 빈 줄 무시.</p>
+      <input id="d-title" type="text" placeholder="제목" autocomplete="off" />
+      <input id="d-youtube" type="text" placeholder="YouTube 링크 또는 ID" autocomplete="off" />
+      <textarea id="d-paste" rows="6" placeholder="夜に駆ける | 요루니 카케루 | 밤을 향해 달리다"></textarea>
+      <button id="d-add" type="button">추가</button>
+    </section>
+  </dialog>
+
+  <!-- ===== 곡 정보 다이얼로그 ===== -->
+  <dialog id="meta-dialog">
+    <div class="dlg-head">
+      <h2>곡 정보</h2>
+      <button class="dlg-x" data-close="meta-dialog" type="button" aria-label="닫기">✕</button>
+    </div>
+    <label>제목 <input id="m-title" type="text" autocomplete="off" /></label>
+    <label>아티스트 <input id="m-artist" type="text" autocomplete="off" /></label>
+    <label>YouTube 링크 또는 ID <input id="m-youtube" type="text" autocomplete="off" /></label>
+    <label>싱크 보정 (초, 양수 = 가사를 늦게)
+      <input id="m-offset" type="number" step="0.1" />
+    </label>
+    <menu>
+      <button id="m-delete" type="button" class="danger">이 곡 삭제</button>
+      <button id="m-export" type="button">JSON 내보내기</button>
+      <button id="m-save" type="button">저장</button>
+    </menu>
+  </dialog>
+
+  <!-- ===== 일괄 붙여넣기 다이얼로그 ===== -->
+  <dialog id="bulk-dialog">
+    <div class="dlg-head">
+      <h2 id="bulk-title">일괄 붙여넣기</h2>
+      <button class="dlg-x" data-close="bulk-dialog" type="button" aria-label="닫기">✕</button>
+    </div>
+    <p class="hint small">한 줄에 한 소절씩. 현재 가사 줄 수와 같아야 정확히 맞습니다. 빈 줄도 한 줄로 셉니다(줄 맞춤용).</p>
+    <p id="bulk-count" class="hint small"></p>
+    <textarea id="bulk-text" rows="10"></textarea>
+    <menu>
+      <button id="bulk-apply" type="button">적용</button>
+    </menu>
   </dialog>
 
   <input id="file-input" type="file" accept="application/json,.json" hidden />
 
-  <!-- YouTube IFrame Player API (온라인 필요) -->
   <script src="https://www.youtube.com/iframe_api"></script>
   <script type="module" src="js/app.js"></script>
 </body>
