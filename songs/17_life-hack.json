@@ -6,7 +6,7 @@
   "offset": 0,
   "lines": [
     {
-      "t": 20.98,
+      "t": 21.13,
       "orig": "その態度が不安だな",
       "pron": "소노 타이도 가 후안 다나",
       "pronSrc": "user",
@@ -14,7 +14,7 @@
       "transSrc": "user"
     },
     {
-      "t": 23.34,
+      "t": 23.72,
       "orig": "「気にしない」彩度はそのまま",
       "pron": "\"키니 시나이\" 사이도와 소노마마",
       "pronSrc": "user",
@@ -22,7 +22,7 @@
       "transSrc": "user"
     },
     {
-      "t": 25.9,
+      "t": 26.14,
       "orig": "何気に初めてで不安だな",
       "pron": "나니게니 하지메테데 후안 다나",
       "pronSrc": "user",
@@ -30,7 +30,7 @@
       "transSrc": "user"
     },
     {
-      "t": 28.41,
+      "t": 28.9,
       "orig": "「気にしない」感度はそのまま",
       "pron": "\"키니 시나이\" 칸도와 소노마마",
       "pronSrc": "user",
@@ -38,7 +38,7 @@
       "transSrc": "user"
     },
     {
-      "t": 31.21,
+      "t": 31.48,
       "orig": "踊るキス香ばしく",
       "pron": "오도루 키스 코-바시쿠",
       "pronSrc": "user",
@@ -46,15 +46,15 @@
       "transSrc": "user"
     },
     {
-      "t": 32.87,
-      "orig": "不 lie 阿 way",
+      "t": 32.83,
+      "orig": "不lie阿way",
       "pron": "후라이 아웨이",
       "pronSrc": "user",
       "trans": "플라이 어웨이",
       "transSrc": "user"
     },
     {
-      "t": 33.83,
+      "t": 34.17,
       "orig": "このまま騒がしく",
       "pron": "코노 마마 사와가시쿠",
       "pronSrc": "user",
@@ -62,31 +62,31 @@
       "transSrc": "user"
     },
     {
-      "t": 35.49,
-      "orig": "暗 y 方 e",
+      "t": 35.87,
+      "orig": "暗y方e",
       "pron": "쿠라이 호-에",
       "pronSrc": "user",
       "trans": "어두운 쪽으로",
       "transSrc": "user"
     },
     {
-      "t": 36.55,
-      "orig": "ちょっとした夜明けの swingも",
+      "t": 36.72,
+      "orig": "ちょっとした夜明けの swing も",
       "pron": "춋토 시타 요아케노 스윙 모",
       "pronSrc": "user",
       "trans": "사소한 새벽의 스윙도",
       "transSrc": "user"
     },
     {
-      "t": 39.22,
-      "orig": "身の丈以上の fakeだろ",
+      "t": 39.63,
+      "orig": "身の丈以上の fake だろ",
       "pron": "미노 타케 이조-노 페이크 다로",
       "pronSrc": "user",
       "trans": "분수 넘는 페이크겠지",
       "transSrc": "user"
     },
     {
-      "t": 42.78,
+      "t": 53.22,
       "orig": "挙げ足はないんじゃない？",
       "pron": "아게아시와 나인쟈나이?",
       "pronSrc": "user",
@@ -94,7 +94,7 @@
       "transSrc": "user"
     },
     {
-      "t": 45.55,
+      "t": 55.31,
       "orig": "作ったもん勝ちでいんじゃない？",
       "pron": "츠쿳타몬가치데 인쟈나이?",
       "pronSrc": "user",
@@ -102,7 +102,7 @@
       "transSrc": "user"
     },
     {
-      "t": 49.07,
+      "t": 57.99,
       "orig": "フカイ眠りについた君を",
       "pron": "후카이 네무리니 츠이타 키미오",
       "pronSrc": "user",
@@ -110,7 +110,7 @@
       "transSrc": "user"
     },
     {
-      "t": 51.83,
+      "t": 60.41,
       "orig": "前世から探してもいんじゃない？",
       "pron": "젠세카라 사가시테모 인쟈나이?",
       "pronSrc": "user",
@@ -118,15 +118,15 @@
       "transSrc": "user"
     },
     {
-      "t": 55.36,
-      "orig": "作りたい気持ちは Imagination",
+      "t": 63.23,
+      "orig": "作りたい気持ちは imagination",
       "pron": "츠쿠리타이 키모치와 이매지네이션",
       "pronSrc": "user",
       "trans": "만들고 싶은 마음은 Imagination",
       "transSrc": "user"
     },
     {
-      "t": 60.14,
+      "t": 65.97,
       "orig": "守りたい気持ちは no reaction",
       "pron": "마모리타이 키모치와 노 리액션",
       "pronSrc": "user",
@@ -134,7 +134,7 @@
       "transSrc": "user"
     },
     {
-      "t": 64.66,
+      "t": 68.55,
       "orig": "自問自答でも不安な回答",
       "pron": "지몬 지토- 데모 후안나 카이토-",
       "pronSrc": "user",
@@ -142,7 +142,7 @@
       "transSrc": "user"
     },
     {
-      "t": 67.43,
+      "t": 71.22,
       "orig": "未来の地図は無地でいいよ",
       "pron": "미라이노 치즈와 무지데 이-요",
       "pronSrc": "user",
@@ -150,7 +150,7 @@
       "transSrc": "user"
     },
     {
-      "t": 70.45,
+      "t": 74.22,
       "orig": "愛とかノンフィクション",
       "pron": "아이 토카 논픽숀",
       "pronSrc": "user",
@@ -158,7 +158,7 @@
       "transSrc": "user"
     },
     {
-      "t": 73.21,
+      "t": 77.28,
       "orig": "止まれないくらいがいいの",
       "pron": "토마레나이 쿠라이가 이-노",
       "pronSrc": "user",
@@ -166,7 +166,7 @@
       "transSrc": "user"
     },
     {
-      "t": 76.23,
+      "t": 79.5,
       "orig": "愛とかノンフィクション",
       "pron": "아이 토카 논픽숀",
       "pronSrc": "user",
@@ -174,7 +174,7 @@
       "transSrc": "user"
     },
     {
-      "t": 79,
+      "t": 82.3,
       "orig": "ひたひたの愛の海のような",
       "pron": "히타히타노 아이노 우미노 요-나",
       "pronSrc": "user",
@@ -182,7 +182,7 @@
       "transSrc": "user"
     },
     {
-      "t": 82.02,
+      "t": 84.53,
       "orig": "夢の中をMELLOWで泳いでこう",
       "pron": "유메노 나카오 멜로-데 오요이데 코-",
       "pronSrc": "user",
@@ -190,7 +190,7 @@
       "transSrc": "user"
     },
     {
-      "t": 86.04,
+      "t": 89.19,
       "orig": "沖まで",
       "pron": "오키마데",
       "pronSrc": "user",
@@ -198,7 +198,7 @@
       "transSrc": "user"
     },
     {
-      "t": 86.8,
+      "t": 90.06,
       "orig": "そしたらどんどん好きになってく",
       "pron": "소시타라 돈돈 스키니 낫테쿠",
       "pronSrc": "user",
@@ -206,7 +206,7 @@
       "transSrc": "user"
     },
     {
-      "t": 90.57,
+      "t": 93.86,
       "orig": "自分のことを",
       "pron": "지분노 코토오",
       "pronSrc": "user",
@@ -214,7 +214,7 @@
       "transSrc": "user"
     },
     {
-      "t": 92.08,
+      "t": 116.39,
       "orig": "足りないならいいじゃない",
       "pron": "타리나이 나라 이-자나이",
       "pronSrc": "user",
@@ -222,7 +222,7 @@
       "transSrc": "user"
     },
     {
-      "t": 95.1,
+      "t": 118.62,
       "orig": "むしろ足りないくらいがいいじゃない？",
       "pron": "무시로 타리나이 쿠라이가 이-자나이?",
       "pronSrc": "user",
@@ -230,7 +230,7 @@
       "transSrc": "user"
     },
     {
-      "t": 99.37,
+      "t": 121.28,
       "orig": "走り出して止まらない君と",
       "pron": "하시리다시테 토마라나이 키미토",
       "pronSrc": "user",
@@ -238,7 +238,7 @@
       "transSrc": "user"
     },
     {
-      "t": 102.39,
+      "t": 123.98,
       "orig": "午前二時にここで星を見よう",
       "pron": "고젠 니지니 코코데 호시오 미요-",
       "pronSrc": "user",
@@ -246,15 +246,15 @@
       "transSrc": "user"
     },
     {
-      "t": 105.66,
-      "orig": "作りたい気持ちは Imagination",
+      "t": 126.36,
+      "orig": "作りたい気持ちは imagination",
       "pron": "츠쿠리타이 키모치와 이매지네이션",
       "pronSrc": "user",
       "trans": "만들고 싶은 마음은 Imagination",
       "transSrc": "user"
     },
     {
-      "t": 110.44,
+      "t": 129.14,
       "orig": "守りたい気持ちは no reaction",
       "pron": "마모리타이 키모치와 노 리액션",
       "pronSrc": "user",
@@ -262,7 +262,7 @@
       "transSrc": "user"
     },
     {
-      "t": 114.97,
+      "t": 131.83,
       "orig": "自問自答でも不安な回答",
       "pron": "지몬 지토- 데모 후안나 카이토-",
       "pronSrc": "user",
@@ -270,7 +270,7 @@
       "transSrc": "user"
     },
     {
-      "t": 117.73,
+      "t": 134.44,
       "orig": "未来の地図は無地でいいよ",
       "pron": "미라이노 치즈와 무지데 이-요",
       "pronSrc": "user",
@@ -278,7 +278,7 @@
       "transSrc": "user"
     },
     {
-      "t": 120.75,
+      "t": 137.67,
       "orig": "愛とかノンフィクション",
       "pron": "아이 토카 논픽숀",
       "pronSrc": "user",
@@ -286,7 +286,7 @@
       "transSrc": "user"
     },
     {
-      "t": 123.52,
+      "t": 140.45,
       "orig": "止まれないくらいがいいの",
       "pron": "토마레나이 쿠라이가 이-노",
       "pronSrc": "user",
@@ -294,7 +294,7 @@
       "transSrc": "user"
     },
     {
-      "t": 126.54,
+      "t": 142.89,
       "orig": "愛とかノンフィクション",
       "pron": "아이 토카 논픽숀",
       "pronSrc": "user",
@@ -302,7 +302,7 @@
       "transSrc": "user"
     },
     {
-      "t": 129.3,
+      "t": 145.58,
       "orig": "ひたひたの愛の海のような",
       "pron": "히타히타노 아이노 우미노 요-나",
       "pronSrc": "user",
@@ -310,7 +310,7 @@
       "transSrc": "user"
     },
     {
-      "t": 132.32,
+      "t": 147.63,
       "orig": "夢の中をMELLOWで泳いでこう",
       "pron": "유메노 나카오 멜로-데 오요이데 코-",
       "pronSrc": "user",
@@ -318,7 +318,7 @@
       "transSrc": "user"
     },
     {
-      "t": 136.35,
+      "t": 152.46,
       "orig": "沖まで",
       "pron": "오키마데",
       "pronSrc": "user",
@@ -326,7 +326,7 @@
       "transSrc": "user"
     },
     {
-      "t": 137.1,
+      "t": 153.36,
       "orig": "そしたらどんどん好きになってく",
       "pron": "소시타라 돈돈 스키니 낫테쿠",
       "pronSrc": "user",
@@ -334,7 +334,7 @@
       "transSrc": "user"
     },
     {
-      "t": 140.87,
+      "t": 157.1,
       "orig": "自分のことを",
       "pron": "지분노 코토오",
       "pronSrc": "user",
@@ -342,7 +342,7 @@
       "transSrc": "user"
     },
     {
-      "t": 142.38,
+      "t": 168.07,
       "orig": "愛とかノンフィクション",
       "pron": "아이 토카 논픽숀",
       "pronSrc": "user",
@@ -350,7 +350,7 @@
       "transSrc": "user"
     },
     {
-      "t": 145.15,
+      "t": 171.14,
       "orig": "止まれないくらいがいいの",
       "pron": "토마레나이 쿠라이가 이-노",
       "pronSrc": "user",
@@ -358,7 +358,7 @@
       "transSrc": "user"
     },
     {
-      "t": 148.51,
+      "t": 174.49,
       "orig": "愛とかノンフィクション",
       "pron": "아이 토카 논픽숀",
       "pronSrc": "user",
@@ -366,7 +366,7 @@
       "transSrc": "user"
     },
     {
-      "t": 151.59,
+      "t": 177.56,
       "orig": "ひたひたの愛の海のような",
       "pron": "히타히타노 아이노 우미노 요-나",
       "pronSrc": "user",
@@ -374,7 +374,7 @@
       "transSrc": "user"
     },
     {
-      "t": 154.95,
+      "t": 180.91,
       "orig": "夢の中をMELLOWで泳いでこう",
       "pron": "유메노 나카오 멜로-데 오요이데 코-",
       "pronSrc": "user",
@@ -382,7 +382,7 @@
       "transSrc": "user"
     },
     {
-      "t": 159.43,
+      "t": 185.37,
       "orig": "沖まで",
       "pron": "오키마데",
       "pronSrc": "user",
@@ -390,7 +390,7 @@
       "transSrc": "user"
     },
     {
-      "t": 160.27,
+      "t": 186.21,
       "orig": "そしたらどんどん好きになってく",
       "pron": "소시타라 돈돈 스키니 낫테쿠",
       "pronSrc": "user",
@@ -398,7 +398,7 @@
       "transSrc": "user"
     },
     {
-      "t": 164.47,
+      "t": 190.4,
       "orig": "自分のことを",
       "pron": "지분노 코토오",
       "pronSrc": "user",

@@ -109,14 +109,22 @@ function parseHand(text) {
   return { lines, step: 0, ratio: +(jp / Math.max(1, lines.length)).toFixed(3) };
 }
 
-async function getLrc(title) {
+// 유튜브 영상 길이 (id -> 초). LRCLIB 여러 항목 중 이 길이에 가장 가까운 걸 고른다.
+const YTDUR = new Map(
+  fs.readFileSync(path.resolve("./yt-durations.txt"), "utf-8")
+    .split(/\r?\n/).filter(Boolean).map((l) => { const [id, d] = l.split("|"); return [id, +d]; })
+);
+
+async function getLrc(title, ytDur) {
   const url = `https://lrclib.net/api/search?track_name=${encodeURIComponent(title)}&artist_name=Vaundy`;
   const data = await (await fetch(url)).json();
   const synced = data.filter((x) => x.syncedLyrics);
   if (!synced.length) return null;
   const jp = synced.filter((x) => HAS_JP(x.syncedLyrics));
   const pool = jp.length ? jp : synced;
-  pool.sort((a, b) => (b.duration || 0) - (a.duration || 0));
+  // 유튜브 길이에 가장 가까운 항목. 없으면 가장 긴 것.
+  if (ytDur) pool.sort((a, b) => Math.abs((a.duration || 0) - ytDur) - Math.abs((b.duration || 0) - ytDur));
+  else pool.sort((a, b) => (b.duration || 0) - (a.duration || 0));
   const best = pool[0];
   const lines = [];
   for (const raw of best.syncedLyrics.split(/\r?\n/)) {
@@ -181,7 +189,7 @@ for (const f of files) {
   if (!meta) { rep.push(`${num} ${f}  ⚠ META 없음`); continue; }
 
   const { lines: hand, step, ratio } = parseHand(fs.readFileSync(path.join(HAND_DIR, f), "utf-8"));
-  const lrc = await getLrc(meta.title);
+  const lrc = await getLrc(meta.title, YTDUR.get(meta.yt));
   if (!lrc) { rep.push(`${num} ${meta.title}  ⚠ LRCLIB 싱크 가사 없음`); continue; }
   await new Promise((r) => setTimeout(r, 350));
 
