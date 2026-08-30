@@ -289,6 +289,16 @@ function wireMetaDialog() {
   $("#open-meta").addEventListener("click", openMeta);
   dlg.querySelectorAll("[data-close]").forEach((b) => b.addEventListener("click", () => dlg.close()));
 
+  // 싱크 보정 −/+ (모바일 키보드에서 음수 입력이 어려워서 버튼으로)
+  const bumpOffset = (d) => {
+    const v = (parseFloat($("#m-offset").value) || 0) + d;
+    $("#m-offset").value = String(Math.round(v * 10) / 10);
+  };
+  $("#m-offset-mm").addEventListener("click", () => bumpOffset(-0.5));
+  $("#m-offset-m").addEventListener("click", () => bumpOffset(-0.1));
+  $("#m-offset-p").addEventListener("click", () => bumpOffset(0.1));
+  $("#m-offset-pp").addEventListener("click", () => bumpOffset(0.5));
+
   $("#m-save").addEventListener("click", async () => {
     if (!song) return;
     const newId = parseVideoId($("#m-youtube").value);

@@ -222,6 +222,10 @@ dialog menu button { flex: 0 0 auto; }
 .danger { background: #3a1620; border-color: #7a2740; color: #ff9db0; }
 code { background: var(--bg); padding: 1px 5px; border-radius: 4px; font-size: 0.85em; }
 
+.offset-row { display: flex; gap: 6px; margin-top: 4px; align-items: stretch; }
+.offset-row .offset-btn { flex: 0 0 auto; padding: 8px 8px; font-size: 0.8rem; font-variant-numeric: tabular-nums; }
+.offset-row #m-offset { flex: 1 1 auto; margin-top: 0; text-align: center; font-variant-numeric: tabular-nums; }
+
 .dlg-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
 .dlg-head h2 { margin: 0; font-size: 1.1rem; }
 .dlg-x { padding: 4px 10px; }

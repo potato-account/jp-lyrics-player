@@ -119,8 +119,14 @@
     <label>제목 <input id="m-title" type="text" autocomplete="off" /></label>
     <label>아티스트 <input id="m-artist" type="text" autocomplete="off" /></label>
     <label>YouTube 링크 또는 ID <input id="m-youtube" type="text" autocomplete="off" /></label>
-    <label>싱크 보정 (초, 양수 = 가사를 늦게)
-      <input id="m-offset" type="number" step="0.1" />
+    <label>싱크 보정 (초) — 양수: 가사 늦게 / 음수: 가사 빨리
+      <span class="offset-row">
+        <button type="button" id="m-offset-mm" class="offset-btn">−0.5</button>
+        <button type="button" id="m-offset-m" class="offset-btn">−0.1</button>
+        <input id="m-offset" type="text" inputmode="decimal" />
+        <button type="button" id="m-offset-p" class="offset-btn">+0.1</button>
+        <button type="button" id="m-offset-pp" class="offset-btn">+0.5</button>
+      </span>
     </label>
     <menu>
       <button id="m-delete" type="button" class="danger">이 곡 삭제</button>
