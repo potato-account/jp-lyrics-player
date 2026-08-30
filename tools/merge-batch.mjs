@@ -105,18 +105,24 @@ async function getLrc(title) {
   return { best, lines, jp: jp.length > 0 };
 }
 
+// LRCLIB 의 추임새 줄 (성호님 파일엔 대개 없음): 스킵 대상
+const FILLER = /^[\s(){}\[\]「」（）,.!?~ー-]*((na|la|da|oh|ah|wo?w|hu|hey|yeah|uh|mm|whoa|ooh|nan?a|lala|dada|ラ|ナ|ダ|ドゥ|ん)[\s,.\-~ー()！？]*)+[\s(){}\[\]「」（）,.!?~ー-]*$/i;
+
 // 양방향 누적 정렬
 function merge(hand, lrc) {
   const out = [];
   const mismatches = [];
   let hi = 0, li = 0;
   while (li < lrc.length && hi < hand.length) {
+    // LRCLIB 추임새 줄인데 성호님 현재 줄과 안 맞으면 건너뜀
+    if (FILLER.test(lrc[li].orig) && norm(lrc[li].orig) !== norm(hand[hi].orig)) { li++; continue; }
     const ug = [hand[hi++]];
     const lg = [lrc[li++]];
     let ua = norm(ug[0].orig), la = norm(lg[0].orig), guard = 0;
     while (ua !== la && guard++ < 60) {
       if (ua.length <= la.length && hi < hand.length) { ug.push(hand[hi]); ua += norm(hand[hi].orig); hi++; }
-      else if (li < lrc.length) { lg.push(lrc[li]); la += norm(lrc[li].orig); li++; }
+      else if (li < lrc.length && !FILLER.test(lrc[li].orig)) { lg.push(lrc[li]); la += norm(lrc[li].orig); li++; }
+      else if (li < lrc.length && FILLER.test(lrc[li].orig)) { li++; }
       else break;
     }
     if (ua !== la) mismatches.push({ lrc: lg.map((x) => x.orig).join(" ").slice(0, 60), got: ug.map((x) => x.orig).join(" / ").slice(0, 70) });

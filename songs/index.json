@@ -67,189 +67,189 @@
     {
       "file": "12_soumatou.json",
       "bundleId": "vaundy-soumatou",
-      "version": 2,
+      "version": 3,
       "title": "走馬灯",
       "artist": "Vaundy"
     },
     {
       "file": "13_yobigoe.json",
       "bundleId": "vaundy-yobigoe",
-      "version": 2,
+      "version": 3,
       "title": "呼び声",
       "artist": "Vaundy"
     },
     {
       "file": "15_sonna-bitter-na-hanashi.json",
       "bundleId": "vaundy-sonna-bitter-na-hanashi",
-      "version": 3,
+      "version": 4,
       "title": "そんなbitterな話",
       "artist": "Vaundy"
     },
     {
       "file": "16_carnival.json",
       "bundleId": "vaundy-carnival",
-      "version": 5,
+      "version": 6,
       "title": "カーニバル",
       "artist": "Vaundy"
     },
     {
       "file": "17_life-hack.json",
       "bundleId": "vaundy-life-hack",
-      "version": 4,
+      "version": 5,
       "title": "life hack",
       "artist": "Vaundy"
     },
     {
       "file": "18_sekai-no-himitsu.json",
       "bundleId": "vaundy-sekai-no-himitsu",
-      "version": 4,
+      "version": 5,
       "title": "世界の秘密",
       "artist": "Vaundy"
     },
     {
       "file": "21_gyakkou.json",
       "bundleId": "vaundy-gyakkou",
-      "version": 4,
+      "version": 5,
       "title": "逆光",
       "artist": "Vaundy"
     },
     {
       "file": "22_nakijizou.json",
       "bundleId": "vaundy-nakijizou",
-      "version": 4,
+      "version": 5,
       "title": "泣き地蔵",
       "artist": "Vaundy"
     },
     {
       "file": "24_boku-ni-wa-doushite.json",
       "bundleId": "vaundy-boku-ni-wa-doushite",
-      "version": 4,
+      "version": 5,
       "title": "僕にはどうしてわかるんだろう",
       "artist": "Vaundy"
     },
     {
       "file": "25_bye-by-me.json",
       "bundleId": "vaundy-bye-by-me",
-      "version": 5,
+      "version": 6,
       "title": "Bye by me",
       "artist": "Vaundy"
     },
     {
       "file": "27_iseijin.json",
       "bundleId": "vaundy-iseijin",
-      "version": 4,
+      "version": 5,
       "title": "偉生人",
       "artist": "Vaundy"
     },
     {
       "file": "28_zenzenzense.json",
       "bundleId": "vaundy-zenzenzense",
-      "version": 4,
+      "version": 5,
       "title": "前前前世",
       "artist": "Vaundy"
     },
     {
       "file": "30_hadaka-no-yuusha.json",
       "bundleId": "vaundy-hadaka-no-yuusha",
-      "version": 4,
+      "version": 5,
       "title": "裸の勇者",
       "artist": "Vaundy"
     },
     {
       "file": "31_idea-ga-afurete.json",
       "bundleId": "vaundy-idea-ga-afurete",
-      "version": 4,
+      "version": 5,
       "title": "イデアが溢れて眠れない",
       "artist": "Vaundy"
     },
     {
       "file": "33_shiawase.json",
       "bundleId": "vaundy-shiawase",
-      "version": 4,
+      "version": 5,
       "title": "しわあわせ",
       "artist": "Vaundy"
     },
     {
       "file": "36_pained.json",
       "bundleId": "vaundy-pained",
-      "version": 4,
+      "version": 5,
       "title": "pained",
       "artist": "Vaundy"
     },
     {
       "file": "37_wasureru-mae-ni.json",
       "bundleId": "vaundy-wasureru-mae-ni",
-      "version": 6,
+      "version": 7,
       "title": "忘れる前に",
       "artist": "Vaundy"
     },
     {
       "file": "39_jounetsu.json",
       "bundleId": "vaundy-jounetsu",
-      "version": 4,
+      "version": 5,
       "title": "常熱",
       "artist": "Vaundy"
     },
     {
       "file": "40_bidenkyuu.json",
       "bundleId": "vaundy-bidenkyuu",
-      "version": 4,
+      "version": 5,
       "title": "美電球",
       "artist": "Vaundy"
     },
     {
       "file": "41_kagerou.json",
       "bundleId": "vaundy-kagerou",
-      "version": 4,
+      "version": 5,
       "title": "かげろう",
       "artist": "Vaundy"
     },
     {
       "file": "42_tobu-toki.json",
       "bundleId": "vaundy-tobu-toki",
-      "version": 4,
+      "version": 5,
       "title": "飛ぶ時",
       "artist": "Vaundy"
     },
     {
       "file": "43_hitomibore.json",
       "bundleId": "vaundy-hitomibore",
-      "version": 4,
+      "version": 5,
       "title": "瞳惚れ",
       "artist": "Vaundy"
     },
     {
       "file": "46_fuujin.json",
       "bundleId": "vaundy-fuujin",
-      "version": 4,
+      "version": 5,
       "title": "風神",
       "artist": "Vaundy"
     },
     {
       "file": "47_gorilla-shibai.json",
       "bundleId": "vaundy-gorilla-shibai",
-      "version": 4,
+      "version": 5,
       "title": "GORILLA芝居",
       "artist": "Vaundy"
     },
     {
       "file": "49_singularity.json",
       "bundleId": "vaundy-singularity",
-      "version": 5,
+      "version": 6,
       "title": "シンギュラリティ",
       "artist": "Vaundy"
     },
     {
       "file": "50_odoriko.json",
       "bundleId": "vaundy-odoriko",
-      "version": 5,
+      "version": 6,
       "title": "踊り子",
       "artist": "Vaundy"
     },
     {
       "file": "51_wasuremono.json",
       "bundleId": "vaundy-wasuremono",
-      "version": 5,
+      "version": 6,
       "title": "忘れ物",
       "artist": "Vaundy"
     },
