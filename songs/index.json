@@ -37,6 +37,34 @@
       "artist": "Vaundy"
     },
     {
+      "file": "07_chainsaw-blood.json",
+      "bundleId": "vaundy-chainsaw-blood",
+      "version": 1,
+      "title": "CHAINSAW BLOOD",
+      "artist": "Vaundy"
+    },
+    {
+      "file": "08_tokyo-flash.json",
+      "bundleId": "vaundy-tokyo-flash",
+      "version": 1,
+      "title": "東京フラッシュ",
+      "artist": "Vaundy"
+    },
+    {
+      "file": "09_kaijuu-no-hanauta.json",
+      "bundleId": "vaundy-kaijuu-no-hanauta",
+      "version": 1,
+      "title": "怪獣の花唄",
+      "artist": "Vaundy"
+    },
+    {
+      "file": "10_fukakouryoku.json",
+      "bundleId": "vaundy-fukakouryoku",
+      "version": 1,
+      "title": "不可幸力",
+      "artist": "Vaundy"
+    },
+    {
       "file": "37_wasureru-mae-ni.json",
       "bundleId": "vaundy-wasureru-mae-ni",
       "version": 1,

@@ -29,7 +29,8 @@ const lrcLines = [];
 for (const raw of fs.readFileSync(path.resolve(o.lrc), "utf-8").split(/\r?\n/)) {
   const m = raw.match(/^\[(\d+):(\d+)(?:[.:](\d+))?\]\s*(.*)$/);
   if (!m) continue;
-  const text = m[4].trim();
+  // 일부 LRCLIB 항목은 "원문^영어번역" 형태 → ^ 뒤 잘라냄
+  const text = m[4].split("^")[0].trim();
   if (!text) continue; // 빈 타임라인 스킵
   lrcLines.push({ t: +m[1] * 60 + +m[2] + (m[3] ? +("0." + m[3]) : 0), orig: text });
 }
