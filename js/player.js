@@ -23,10 +23,13 @@ export class Player {
   }
 
   // videoId 로 플레이어를 만들거나, 이미 있으면 곡만 교체한다.
-  async load(videoId) {
+  // autoplay=true 면 바로 재생(사용자가 목록에서 곡을 고른 경우),
+  // false 면 준비만 하고 대기(앱 시작 시).
+  async load(videoId, { autoplay = false } = {}) {
     await waitForApi();
     if (this.yt) {
-      this.yt.cueVideoById(videoId);
+      if (autoplay) this.yt.loadVideoById(videoId);
+      else this.yt.cueVideoById(videoId);
       return;
     }
     await new Promise((resolve) => {

@@ -31,7 +31,7 @@ async function persist() {
 }
 
 // ---------- 곡 적용 ----------
-async function loadSong(next, { reloadVideo = true } = {}) {
+async function loadSong(next, { autoplay = false } = {}) {
   song = next;
   if (song.offset == null) song.offset = 0;
   if (song.id) setLastId(song.id);
@@ -41,9 +41,7 @@ async function loadSong(next, { reloadVideo = true } = {}) {
   $("#time-dur").textContent = "0:00";
   $("#time-cur").textContent = "0:00";
   $("#seekbar").value = "0";
-  if (reloadVideo) {
-    if (song.youtubeId) await player.load(song.youtubeId);
-  }
+  if (song.youtubeId) await player.load(song.youtubeId, { autoplay });
 }
 
 // ---------- 메인 루프 ----------
@@ -122,8 +120,9 @@ async function renderList() {
     info.querySelector(".s-artist").textContent = [s.artist, `${s.lines.length}줄`].filter(Boolean).join(" · ");
     info.addEventListener("click", async () => {
       const full = await getSong(s.id);
-      await loadSong(full);
+      await loadSong(full, { autoplay: true });
       closeSheet();
+      if (!full.youtubeId) openMeta(); // 영상 링크 없는 곡이면 바로 입력창
     });
     const del = document.createElement("button");
     del.type = "button";
@@ -193,7 +192,8 @@ function wireAddDialog() {
           });
           await loadSong(saved);
           dlg.close();
-          alert("추가됨. 영상은 아직 없으니 하단 '정보'에서 YouTube 링크를 넣어주세요.");
+          // LRCLIB 에는 영상 정보가 없다 → 링크 입력 창을 바로 띄운다
+          openMeta();
         });
         $("#q-results").appendChild(li);
       }
@@ -234,20 +234,24 @@ function wireAddDialog() {
     await loadSong(saved);
     $("#d-paste").value = ""; $("#d-title").value = ""; $("#d-youtube").value = "";
     dlg.close();
+    if (!saved.youtubeId) openMeta();
   });
 }
 
 // ---------- 곡 정보 다이얼로그 ----------
+// 곡을 추가했는데 YouTube 링크가 없을 때도 이 창을 자동으로 띄운다.
+function openMeta() {
+  if (!song) { alert("먼저 곡을 열어주세요."); return; }
+  $("#m-title").value = song.title || "";
+  $("#m-artist").value = song.artist || "";
+  $("#m-youtube").value = song.youtubeId || "";
+  $("#m-offset").value = song.offset || 0;
+  $("#meta-dialog").showModal();
+}
+
 function wireMetaDialog() {
   const dlg = $("#meta-dialog");
-  $("#open-meta").addEventListener("click", () => {
-    if (!song) { alert("먼저 곡을 열어주세요."); return; }
-    $("#m-title").value = song.title || "";
-    $("#m-artist").value = song.artist || "";
-    $("#m-youtube").value = song.youtubeId || "";
-    $("#m-offset").value = song.offset || 0;
-    dlg.showModal();
-  });
+  $("#open-meta").addEventListener("click", openMeta);
   dlg.querySelectorAll("[data-close]").forEach((b) => b.addEventListener("click", () => dlg.close()));
 
   $("#m-save").addEventListener("click", async () => {
@@ -259,7 +263,7 @@ function wireMetaDialog() {
     song.youtubeId = newId;
     song.offset = parseFloat($("#m-offset").value) || 0;
     await persist();
-    if (videoChanged && newId) await player.load(newId);
+    if (videoChanged && newId) await player.load(newId, { autoplay: true });
     dlg.close();
   });
 
