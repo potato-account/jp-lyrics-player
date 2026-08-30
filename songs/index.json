@@ -16,6 +16,27 @@
       "artist": "Vaundy"
     },
     {
+      "file": "04_mabataki.json",
+      "bundleId": "vaundy-mabataki",
+      "version": 1,
+      "title": "mabataki",
+      "artist": "Vaundy"
+    },
+    {
+      "file": "05_missing.json",
+      "bundleId": "vaundy-missing",
+      "version": 1,
+      "title": "Missing",
+      "artist": "Vaundy"
+    },
+    {
+      "file": "06_tomoshibi.json",
+      "bundleId": "vaundy-tomoshibi",
+      "version": 1,
+      "title": "灯火",
+      "artist": "Vaundy"
+    },
+    {
       "file": "37_wasureru-mae-ni.json",
       "bundleId": "vaundy-wasureru-mae-ni",
       "version": 1,
