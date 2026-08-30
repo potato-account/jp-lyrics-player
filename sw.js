@@ -1,6 +1,6 @@
 // 아주 단순한 오프라인 셸 캐시.
 // 앱 껍데기(HTML/CSS/JS)만 캐시한다. YouTube 재생과 LRCLIB 조회는 온라인이 필요하다.
-const CACHE = "jlp-v1";
+const CACHE = "jlp-v2";
 const SHELL = [
   "./",
   "./index.html",
@@ -10,6 +10,8 @@ const SHELL = [
   "./js/lyrics.js",
   "./manifest.webmanifest",
   "./icons/icon.svg",
+  "./icons/icon-192.png",
+  "./icons/icon-512.png",
 ];
 
 self.addEventListener("install", (e) => {
