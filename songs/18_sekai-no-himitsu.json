@@ -1,0 +1,513 @@
+{
+  "title": "世界の秘密",
+  "artist": "Vaundy",
+  "youtubeId": "amQZKaeEyv0",
+  "bundleId": "vaundy-sekai-no-himitsu",
+  "offset": 0,
+  "lines": [
+    {
+      "t": 14.31,
+      "orig": "きっと僕ら何かに追われてる",
+      "pron": "킷토 보쿠라 나니카니 오와레테루",
+      "pronSrc": "user",
+      "trans": "분명 우린 무언가에 쫓기고 있어",
+      "transSrc": "user"
+    },
+    {
+      "t": 17.86,
+      "orig": "漠然としてるけど",
+      "pron": "바쿠젠토 시테루 케도",
+      "pronSrc": "user",
+      "trans": "막연하긴 하지만",
+      "transSrc": "user"
+    },
+    {
+      "t": 19.78,
+      "orig": "四六時中グダグダと",
+      "pron": "시로쿠지츄- 구다구다토",
+      "pronSrc": "user",
+      "trans": "온종일 구질구질하게",
+      "transSrc": "user"
+    },
+    {
+      "t": 21.76,
+      "orig": "チクチクが流れる",
+      "pron": "치쿠치쿠가 나가레루",
+      "pronSrc": "user",
+      "trans": "찌릿찌릿함이 흘러가",
+      "transSrc": "user"
+    },
+    {
+      "t": 23.59,
+      "orig": "波に乗せて",
+      "pron": "나미니 노세테",
+      "pronSrc": "user",
+      "trans": "파도에 실려",
+      "transSrc": "user"
+    },
+    {
+      "t": 25.47,
+      "orig": "ネットサーフィン",
+      "pron": "넷토 사-핀",
+      "pronSrc": "user",
+      "trans": "넷 서핑",
+      "transSrc": "user"
+    },
+    {
+      "t": 26.45,
+      "orig": "何か、これはあーだこーだ言って",
+      "pron": "나니카, 코레와 아-다 코-다 잇테",
+      "pronSrc": "user",
+      "trans": "뭐랄까, 이건 이렇다저렇다 왈가왈부하고",
+      "transSrc": "user"
+    },
+    {
+      "t": 28.28,
+      "orig": "古臭いな",
+      "pron": "후루쿠사이나",
+      "pronSrc": "user",
+      "trans": "구식이네",
+      "transSrc": "user"
+    },
+    {
+      "t": 29.44,
+      "orig": "それはそれで、なんだかんだ言って",
+      "pron": "소레와 소레데, 난다칸다 잇테",
+      "pronSrc": "user",
+      "trans": "그건 그거대로 또 뭐라뭐라 말하고",
+      "transSrc": "user"
+    },
+    {
+      "t": 31.42,
+      "orig": "新しいな",
+      "pron": "아타라시이나",
+      "pronSrc": "user",
+      "trans": "또 새롭네",
+      "transSrc": "user"
+    },
+    {
+      "t": 32.52,
+      "orig": "そんな無駄な繰り返しを、また繰り返して",
+      "pron": "손나 무다나 쿠리카에시오, 마타 쿠리카에시테",
+      "pronSrc": "user",
+      "trans": "그런 쓸데없는 반복을 또 반복하면서",
+      "transSrc": "user"
+    },
+    {
+      "t": 35.48,
+      "orig": "僕ら、生きていくうちに",
+      "pron": "보쿠라, 이키테 이쿠 우치니",
+      "pronSrc": "user",
+      "trans": "우린, 살아가다 보면",
+      "transSrc": "user"
+    },
+    {
+      "t": 38.57,
+      "orig": "アイムソーリー",
+      "pron": "아이무 소-리-",
+      "pronSrc": "user",
+      "trans": "아임 쏘리",
+      "transSrc": "user"
+    },
+    {
+      "t": 40.34,
+      "orig": "気づいちゃったよ",
+      "pron": "키즈이챳타요",
+      "pronSrc": "user",
+      "trans": "깨닫고 말았어",
+      "transSrc": "user"
+    },
+    {
+      "t": 44.76,
+      "orig": "アイムソーリー",
+      "pron": "아이무 소-리-",
+      "pronSrc": "user",
+      "trans": "아임 쏘리",
+      "transSrc": "user"
+    },
+    {
+      "t": 46.35,
+      "orig": "気づいちゃったよ",
+      "pron": "키즈이챳타요",
+      "pronSrc": "user",
+      "trans": "깨닫고 말았어",
+      "transSrc": "user"
+    },
+    {
+      "t": 49.04,
+      "orig": "世界のこと",
+      "pron": "세카이노 코토",
+      "pronSrc": "user",
+      "trans": "세상에 대해",
+      "transSrc": "user"
+    },
+    {
+      "t": 50.9,
+      "orig": "ステップだけ、置いてきちゃってよ",
+      "pron": "스텟푸 다케, 오이테 키챳테요",
+      "pronSrc": "user",
+      "trans": "스텝만, 두고 와",
+      "transSrc": "user"
+    },
+    {
+      "t": 55.31,
+      "orig": "僕ら、涙に合わせて",
+      "pron": "보쿠라, 나미다니 아와세테",
+      "pronSrc": "user",
+      "trans": "우린, 눈물에 맞춰",
+      "transSrc": "user"
+    },
+    {
+      "t": 57.66,
+      "orig": "リズムに乗っている",
+      "pron": "리즈무니 놋테이루",
+      "pronSrc": "user",
+      "trans": "리듬을 타고 있을",
+      "transSrc": "user"
+    },
+    {
+      "t": 60.3,
+      "orig": "はず",
+      "pron": "하즈",
+      "pronSrc": "user",
+      "trans": "텐데",
+      "transSrc": "user"
+    },
+    {
+      "t": 60.89,
+      "orig": "ステップだけ、置いてきちゃっても",
+      "pron": "스텟푸 다케, 오이테 키챳테모",
+      "pronSrc": "user",
+      "trans": "스텝만, 두고 와",
+      "transSrc": "user"
+    },
+    {
+      "t": 65.3,
+      "orig": "僕ら、笑顔の数だけ",
+      "pron": "보쿠라, 에가오노 카즈다케",
+      "pronSrc": "user",
+      "trans": "우린, 미소의 수만큼",
+      "transSrc": "user"
+    },
+    {
+      "t": 67.65,
+      "orig": "ブレイクできるはず",
+      "pron": "부레이쿠 데키루 하즈",
+      "pronSrc": "user",
+      "trans": "터뜨릴 수 있을텐데",
+      "transSrc": "user"
+    },
+    {
+      "t": 70.29,
+      "orig": "だから",
+      "pron": "다카라",
+      "pronSrc": "user",
+      "trans": "그러니까",
+      "transSrc": "user"
+    },
+    {
+      "t": 71.17,
+      "orig": "アイムソーリー",
+      "pron": "아이무 소-리-",
+      "pronSrc": "user",
+      "trans": "아임 쏘리",
+      "transSrc": "user"
+    },
+    {
+      "t": 72.64,
+      "orig": "気づいちゃっても",
+      "pron": "키즈이챳테모",
+      "pronSrc": "user",
+      "trans": "깨닫게 되어도",
+      "transSrc": "user"
+    },
+    {
+      "t": 74.99,
+      "orig": "アイムソーリー",
+      "pron": "아이무 소-리-",
+      "pronSrc": "user",
+      "trans": "아임 쏘리",
+      "transSrc": "user"
+    },
+    {
+      "t": 76.46,
+      "orig": "忘れといてよ",
+      "pron": "와스레토이테요",
+      "pronSrc": "user",
+      "trans": "그냥 잊어둬 줘",
+      "transSrc": "user"
+    },
+    {
+      "t": 78.22,
+      "orig": "今日どっかで悪者が死んだらしい",
+      "pron": "쿄- 돗카데 와루모노가 신다라시",
+      "pronSrc": "user",
+      "trans": "오늘 어딘가에서 악당이 죽었대",
+      "transSrc": "user"
+    },
+    {
+      "t": 82.63,
+      "orig": "でもたくさんの命が救われたらしい",
+      "pron": "데모 타쿠산노 이노치가 스쿠와레타라시",
+      "pronSrc": "user",
+      "trans": "하지만 많은 목숨이 구원받았대",
+      "transSrc": "user"
+    },
+    {
+      "t": 87.33,
+      "orig": "正義と倫理と命を天秤にかけて",
+      "pron": "세-기토 린리토 이노치오 텐빈니 카케테",
+      "pronSrc": "user",
+      "trans": "정의와 윤리와 목숨을 저울질해",
+      "transSrc": "user"
+    },
+    {
+      "t": 91.44,
+      "orig": "量った声明で",
+      "pron": "하캇타 세-메-데",
+      "pronSrc": "user",
+      "trans": "가늠해 내린 성명으로",
+      "transSrc": "user"
+    },
+    {
+      "t": 93.2,
+      "orig": "難しいことはもう分からない",
+      "pron": "무즈카시- 코토와 모- 와카라나이",
+      "pronSrc": "user",
+      "trans": "어려운 건 이젠 잘 모르겠어",
+      "transSrc": "user"
+    },
+    {
+      "t": 97.02,
+      "orig": "けれど",
+      "pron": "케레도",
+      "pronSrc": "user",
+      "trans": "그래도",
+      "transSrc": "user"
+    },
+    {
+      "t": 97.9,
+      "orig": "実は僕らが悪者だったかもしれない",
+      "pron": "지츠와 보쿠라가 와루모노닷타 카모 시레나이",
+      "pronSrc": "user",
+      "trans": "사실은 우리가 악당이었을지도 몰라",
+      "transSrc": "user"
+    },
+    {
+      "t": 102.6,
+      "orig": "なんて考えると",
+      "pron": "난테 칸가에루토",
+      "pronSrc": "user",
+      "trans": "라고 생각해 보면",
+      "transSrc": "user"
+    },
+    {
+      "t": 104.66,
+      "orig": "彼の気持ちが分かるかもしれない",
+      "pron": "카레노 키모치가 와카루 카모 시레나이",
+      "pronSrc": "user",
+      "trans": "그의 심정이 조금은 이해될지도 몰라",
+      "transSrc": "user"
+    },
+    {
+      "t": 109.07,
+      "orig": "アイムソーリー",
+      "pron": "아이무 소-리-",
+      "pronSrc": "user",
+      "trans": "아임 쏘리",
+      "transSrc": "user"
+    },
+    {
+      "t": 110.54,
+      "orig": "気づいちゃったよ",
+      "pron": "키즈이챳타요",
+      "pronSrc": "user",
+      "trans": "깨닫고 말았어",
+      "transSrc": "user"
+    },
+    {
+      "t": 112.89,
+      "orig": "アイムソーリー",
+      "pron": "아이무 소-리-",
+      "pronSrc": "user",
+      "trans": "아임 쏘리",
+      "transSrc": "user"
+    },
+    {
+      "t": 114.36,
+      "orig": "気づいちゃったよ",
+      "pron": "키즈이챳타요",
+      "pronSrc": "user",
+      "trans": "깨닫고 말았어",
+      "transSrc": "user"
+    },
+    {
+      "t": 116.71,
+      "orig": "自分のこと",
+      "pron": "지분노 코토",
+      "pronSrc": "user",
+      "trans": "나 자신에 대해",
+      "transSrc": "user"
+    },
+    {
+      "t": 118.17,
+      "orig": "ステップだけ、置いてきちゃってよ",
+      "pron": "스텟푸 다케, 오이테 키챳테요",
+      "pronSrc": "user",
+      "trans": "스텝만, 두고 와",
+      "transSrc": "user"
+    },
+    {
+      "t": 122.58,
+      "orig": "僕ら、涙に合わせて",
+      "pron": "보쿠라, 나미다니 아와세테",
+      "pronSrc": "user",
+      "trans": "우린, 눈물에 맞춰",
+      "transSrc": "user"
+    },
+    {
+      "t": 124.93,
+      "orig": "リズムに乗っている",
+      "pron": "리즈무니 놋테이루",
+      "pronSrc": "user",
+      "trans": "리듬을 타고 있을",
+      "transSrc": "user"
+    },
+    {
+      "t": 127.58,
+      "orig": "はず",
+      "pron": "하즈",
+      "pronSrc": "user",
+      "trans": "텐데",
+      "transSrc": "user"
+    },
+    {
+      "t": 128.16,
+      "orig": "ステップだけ、置いてきちゃっても",
+      "pron": "스텟푸 다케, 오이테 키챳테모",
+      "pronSrc": "user",
+      "trans": "스텝만, 두고 와",
+      "transSrc": "user"
+    },
+    {
+      "t": 132.57,
+      "orig": "僕ら、笑顔の数だけ",
+      "pron": "보쿠라, 에가오노 카즈다케",
+      "pronSrc": "user",
+      "trans": "우린, 미소의 수만큼",
+      "transSrc": "user"
+    },
+    {
+      "t": 134.92,
+      "orig": "ブレイクできるはず",
+      "pron": "부레이쿠 데키루 하즈",
+      "pronSrc": "user",
+      "trans": "터뜨릴 수 있을 텐데",
+      "transSrc": "user"
+    },
+    {
+      "t": 137.81,
+      "orig": "そうだろ？",
+      "pron": "소-다로?",
+      "pronSrc": "user",
+      "trans": "그렇지?",
+      "transSrc": "user"
+    },
+    {
+      "t": 139.09,
+      "orig": "探してた未来に追いついて",
+      "pron": "사가시테타 미라이니 오이츠이테",
+      "pronSrc": "user",
+      "trans": "찾아 헤매던 미래를 따라잡고",
+      "transSrc": "user"
+    },
+    {
+      "t": 142.94,
+      "orig": "その時初めて気づいたんだ",
+      "pron": "소노 토키 하지메테 키즈이탄다",
+      "pronSrc": "user",
+      "trans": "그때서야 처음 깨달았어",
+      "transSrc": "user"
+    },
+    {
+      "t": 146.78,
+      "orig": "これが良い事か悪い事か",
+      "pron": "코레가 이- 코토카 와루이 코토카",
+      "pronSrc": "user",
+      "trans": "이게 좋은 일인지 나쁜 일인지",
+      "transSrc": "user"
+    },
+    {
+      "t": 150.31,
+      "orig": "これが「世界の秘密」ってやつか",
+      "pron": "코레가 ‘세카이노 히미츠’ 떼 야츠카",
+      "pronSrc": "user",
+      "trans": "이게 그 ‘세상의 비밀’이란 건가",
+      "transSrc": "user"
+    },
+    {
+      "t": 154.48,
+      "orig": "ステップだけ、置いてきちゃってよ",
+      "pron": "스텟푸 다케, 오이테 키챳테요",
+      "pronSrc": "user",
+      "trans": "스텝만, 두고 와",
+      "transSrc": "user"
+    },
+    {
+      "t": 159.29,
+      "orig": "僕ら、涙に合わせて",
+      "pron": "보쿠라, 나미다니 아와세테",
+      "pronSrc": "user",
+      "trans": "우린, 눈물에 맞춰",
+      "transSrc": "user"
+    },
+    {
+      "t": 161.85,
+      "orig": "リズムに乗っている",
+      "pron": "리즈무니 놋테이루",
+      "pronSrc": "user",
+      "trans": "리듬을 타고 있을",
+      "transSrc": "user"
+    },
+    {
+      "t": 164.74,
+      "orig": "はず",
+      "pron": "하즈",
+      "pronSrc": "user",
+      "trans": "텐데",
+      "transSrc": "user"
+    },
+    {
+      "t": 165.38,
+      "orig": "ステップだけ、置いてきちゃっても",
+      "pron": "스텟푸 다케, 오이테 키챳테모",
+      "pronSrc": "user",
+      "trans": "스텝만, 두고 와버려도",
+      "transSrc": "user"
+    },
+    {
+      "t": 170.19,
+      "orig": "僕ら、笑顔の数だけ",
+      "pron": "보쿠라, 에가오노 카즈다케",
+      "pronSrc": "user",
+      "trans": "우린, 미소의 수만큼",
+      "transSrc": "user"
+    },
+    {
+      "t": 172.75,
+      "orig": "ブレイクできるはず",
+      "pron": "부레이쿠 데키루 하즈",
+      "pronSrc": "user",
+      "trans": "터뜨릴 수 있을 거야",
+      "transSrc": "user"
+    },
+    {
+      "t": 175.64,
+      "orig": "そうだろ？",
+      "pron": "소-다로?",
+      "pronSrc": "user",
+      "trans": "그렇지?",
+      "transSrc": "user"
+    }
+  ]
+}

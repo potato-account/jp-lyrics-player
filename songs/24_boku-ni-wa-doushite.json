@@ -1,0 +1,457 @@
+{
+  "title": "僕にはどうしてわかるんだろう",
+  "artist": "Vaundy",
+  "youtubeId": "rS2G7W8qeHs",
+  "bundleId": "vaundy-boku-ni-wa-doushite",
+  "offset": 0,
+  "lines": [
+    {
+      "t": 27.87,
+      "orig": "今晩は降りる駅を変え",
+      "pron": "콘반와 오리루 에키오 카에",
+      "pronSrc": "user",
+      "trans": "오늘 밤은 내리던 역을 바꿔서",
+      "transSrc": "user"
+    },
+    {
+      "t": 30.93,
+      "orig": "僕の心に咲いていた",
+      "pron": "보쿠노 코코로니 사이테이타",
+      "pronSrc": "user",
+      "trans": "내 마음속에 피어 있었던",
+      "transSrc": "user"
+    },
+    {
+      "t": 33.8,
+      "orig": "小さなプライドの行方を探した",
+      "pron": "치이사나 프라이도노 유쿠에오 사가시타",
+      "pronSrc": "user",
+      "trans": "작은 프라이드의 행방을 찾아 헤맸어",
+      "transSrc": "user"
+    },
+    {
+      "t": 39.73,
+      "orig": "ずっと 気づけなかったんだ",
+      "pron": "즛토 키즈케나캇탄다",
+      "pronSrc": "user",
+      "trans": "줄곧 알아차리지 못했어",
+      "transSrc": "user"
+    },
+    {
+      "t": 42.7,
+      "orig": "僕の心がどうにも",
+      "pron": "보쿠노 코코로가 도-니모",
+      "pronSrc": "user",
+      "trans": "내 마음이 어째서인지",
+      "transSrc": "user"
+    },
+    {
+      "t": 45.52,
+      "orig": "あの聴きなれたリリックで",
+      "pron": "아노 키키나레타 리릿쿠데",
+      "pronSrc": "user",
+      "trans": "어느 익숙하게 듣던 노랫말에",
+      "transSrc": "user"
+    },
+    {
+      "t": 47.83,
+      "orig": "涙を流し出すまで",
+      "pron": "나미다오 나가시다스마데",
+      "pronSrc": "user",
+      "trans": "눈물을 흘리기 시작할 때까지",
+      "transSrc": "user"
+    },
+    {
+      "t": 52.74,
+      "orig": "今どうにか言い訳探して",
+      "pron": "이마 도-니카 이이와케 사가시테",
+      "pronSrc": "user",
+      "trans": "지금 어떻게든 변명거리를 찾아서",
+      "transSrc": "user"
+    },
+    {
+      "t": 58.54,
+      "orig": "目をそらしてみようが",
+      "pron": "메오 소라시테미요-가",
+      "pronSrc": "user",
+      "trans": "눈을 돌리려 해 봐도",
+      "transSrc": "user"
+    },
+    {
+      "t": 61.61,
+      "orig": "きっと",
+      "pron": "킷토",
+      "pronSrc": "user",
+      "trans": "분명",
+      "transSrc": "user"
+    },
+    {
+      "t": 62.78,
+      "orig": "僕以上に、僕以前に、僕よりも",
+      "pron": "보쿠 이죠-니 보쿠 이젠니 보쿠요리모",
+      "pronSrc": "user",
+      "trans": "나 이상으로、나보다 앞서、나보다 더",
+      "transSrc": "user"
+    },
+    {
+      "t": 67.46,
+      "orig": "僕のことつくってる",
+      "pron": "보쿠노 코토 츠쿳테루",
+      "pronSrc": "user",
+      "trans": "나를 만들어 가고 있어",
+      "transSrc": "user"
+    },
+    {
+      "t": 74.98,
+      "orig": "僕にはどうしてわかるんだろう",
+      "pron": "보쿠니와 도-시테 와카룬다로-",
+      "pronSrc": "user",
+      "trans": "나는 어째서 아는 걸까",
+      "transSrc": "user"
+    },
+    {
+      "t": 79.97,
+      "orig": "迷える日々が",
+      "pron": "마요에루 히비가",
+      "pronSrc": "user",
+      "trans": "길을 잃고 헤맨 날들이",
+      "transSrc": "user"
+    },
+    {
+      "t": 82.41,
+      "orig": "これとない味のエッセイ",
+      "pron": "코레토 나이 아지노 엣세이",
+      "pronSrc": "user",
+      "trans": "다시는 없을 맛의 에세이라는 걸",
+      "transSrc": "user"
+    },
+    {
+      "t": 86.89,
+      "orig": "僕にはどうしてわかるんだろう",
+      "pron": "보쿠니와 도-시테 와카룬다로-",
+      "pronSrc": "user",
+      "trans": "나는 어째서 아는 걸까",
+      "transSrc": "user"
+    },
+    {
+      "t": 91.67,
+      "orig": "挫折の日々は色づくため",
+      "pron": "자세츠노 히비와 이로즈쿠 타메",
+      "pronSrc": "user",
+      "trans": "좌절의 나날은 색을 얻기 위해",
+      "transSrc": "user"
+    },
+    {
+      "t": 98.39,
+      "orig": "全部モノクロ",
+      "pron": "젠부 모노크로",
+      "pronSrc": "user",
+      "trans": "전부 흑백이라는 걸",
+      "transSrc": "user"
+    },
+    {
+      "t": 102.05,
+      "orig": "今晩は歩く道を変え",
+      "pron": "콘반와 아루쿠 미치오 카에",
+      "pronSrc": "user",
+      "trans": "오늘 밤은 걷던 길을 바꿔서",
+      "transSrc": "user"
+    },
+    {
+      "t": 104.98,
+      "orig": "僕の心に撒いていた",
+      "pron": "보쿠노 코코로니 마이테이타",
+      "pronSrc": "user",
+      "trans": "내 마음속에 뿌려 두었던",
+      "transSrc": "user"
+    },
+    {
+      "t": 107.94,
+      "orig": "小さなプライドの香りを辿ったが",
+      "pron": "치이사나 프라이도노 카오리오 타돗타가",
+      "pronSrc": "user",
+      "trans": "작은 프라이드의 향기를 따라가 보았지만",
+      "transSrc": "user"
+    },
+    {
+      "t": 113.62,
+      "orig": "時は真夏",
+      "pron": "토키와 마나츠",
+      "pronSrc": "user",
+      "trans": "시간은 한여름",
+      "transSrc": "user"
+    },
+    {
+      "t": 114.78,
+      "orig": "荒天と海神",
+      "pron": "코-텐토 와다츠미",
+      "pronSrc": "user",
+      "trans": "거센 비바람과 바다의 신",
+      "transSrc": "user"
+    },
+    {
+      "t": 116.22,
+      "orig": "蒼炎際立つ",
+      "pron": "소-엔 키와다츠",
+      "pronSrc": "user",
+      "trans": "푸른 불꽃은 선명해지며",
+      "transSrc": "user"
+    },
+    {
+      "t": 117.88,
+      "orig": "骨相青に溶け",
+      "pron": "콧소- 아오니 토케",
+      "pronSrc": "user",
+      "trans": "뼈마저 푸르게 녹아들고",
+      "transSrc": "user"
+    },
+    {
+      "t": 119.88,
+      "orig": "モノクロは焦シアン蒼白へ",
+      "pron": "모노크로와 쇼-시안 소-하쿠케",
+      "pronSrc": "user",
+      "trans": "흑백은 그슬린 시안빛으로 창백하게 변해 가",
+      "transSrc": "user"
+    },
+    {
+      "t": 122.67,
+      "orig": "言葉足らずでいつも見失うの",
+      "pron": "코토바 타라즈데 이츠모 미우시나우노",
+      "pronSrc": "user",
+      "trans": "끝내 말을 다 전하지 못해 매번 놓치고 말아",
+      "transSrc": "user"
+    },
+    {
+      "t": 126.74,
+      "orig": "悲しみは言い訳の数で",
+      "pron": "카나시미와 이이와케노 카즈데",
+      "pronSrc": "user",
+      "trans": "슬픔은 변명의 수만큼 커져서",
+      "transSrc": "user"
+    },
+    {
+      "t": 132.66,
+      "orig": "目を閉ざしてみようが",
+      "pron": "메오 토자시테미요-가",
+      "pronSrc": "user",
+      "trans": "눈을 감으려 해 봐도",
+      "transSrc": "user"
+    },
+    {
+      "t": 135.65,
+      "orig": "ずっと",
+      "pron": "즛토",
+      "pronSrc": "user",
+      "trans": "줄곧",
+      "transSrc": "user"
+    },
+    {
+      "t": 136.81,
+      "orig": "僕以上に、僕以前に、僕よりも",
+      "pron": "보쿠 이죠-니 보쿠 이젠니 보쿠요리모",
+      "pronSrc": "user",
+      "trans": "나 이상으로、나보다 앞서、나보다 더",
+      "transSrc": "user"
+    },
+    {
+      "t": 141.45,
+      "orig": "僕のことつくってる",
+      "pron": "보쿠노 코토 츠쿳테루",
+      "pronSrc": "user",
+      "trans": "나를 만들어 가고 있어",
+      "transSrc": "user"
+    },
+    {
+      "t": 145.9,
+      "orig": "まぶたに映った映画",
+      "pron": "마부타니 우츳타 에이가",
+      "pronSrc": "user",
+      "trans": "눈꺼풀에 비친 한 편의 영화",
+      "transSrc": "user"
+    },
+    {
+      "t": 148.96,
+      "orig": "僕にはどうしてわかるんだろう",
+      "pron": "보쿠니와 도-시테 와카룬다로-",
+      "pronSrc": "user",
+      "trans": "나는 어째서 아는 걸까",
+      "transSrc": "user"
+    },
+    {
+      "t": 154.01,
+      "orig": "全てのことが",
+      "pron": "스베테노 코토가",
+      "pronSrc": "user",
+      "trans": "모든 것들이",
+      "transSrc": "user"
+    },
+    {
+      "t": 156.62,
+      "orig": "走馬灯、胸に残っている",
+      "pron": "소-마토- 무네니 노콧테이루",
+      "pronSrc": "user",
+      "trans": "주마등처럼、가슴에 새겨져 있다는 걸",
+      "transSrc": "user"
+    },
+    {
+      "t": 160.97,
+      "orig": "僕にはどうしてわかるんだろう",
+      "pron": "보쿠니와 도-시테 와카룬다로-",
+      "pronSrc": "user",
+      "trans": "나는 어째서 아는 걸까",
+      "transSrc": "user"
+    },
+    {
+      "t": 165.83,
+      "orig": "全てのことが",
+      "pron": "스베테노 코토가",
+      "pronSrc": "user",
+      "trans": "모든 일들이",
+      "transSrc": "user"
+    },
+    {
+      "t": 172.87,
+      "orig": "色で満ちていたモノクロ",
+      "pron": "이로데 미치테이타 모노크로",
+      "pronSrc": "user",
+      "trans": "색으로 가득 차 있는 흑백이었다는 걸",
+      "transSrc": "user"
+    },
+    {
+      "t": 185.78,
+      "orig": "あの港から光を手繰って",
+      "pron": "아노 미나토카라 히카리오 타굿테",
+      "pronSrc": "user",
+      "trans": "저 항구로부터 빛을 잡으며 나아가듯",
+      "transSrc": "user"
+    },
+    {
+      "t": 191.81,
+      "orig": "ここまで来たんだ",
+      "pron": "코코마데 키탄다",
+      "pronSrc": "user",
+      "trans": "여기까지 온 거야",
+      "transSrc": "user"
+    },
+    {
+      "t": 194.84,
+      "orig": "じっと",
+      "pron": "짓토",
+      "pronSrc": "user",
+      "trans": "가만히",
+      "transSrc": "user"
+    },
+    {
+      "t": 196.06,
+      "orig": "鼓動を聞いていた",
+      "pron": "코도-오 키이테이타",
+      "pronSrc": "user",
+      "trans": "고동을 듣고 있었어",
+      "transSrc": "user"
+    },
+    {
+      "t": 199.32,
+      "orig": "「僕たちは、翡翠の軌跡を生きている」",
+      "pron": "보쿠타치와 히스이노 키세키오 이키테이루",
+      "pronSrc": "user",
+      "trans": "「우리는、비취색의 궤적을 따라 살아가고 있어」",
+      "transSrc": "user"
+    },
+    {
+      "t": 208.21,
+      "orig": "僕にはどうしてわかるんだろう",
+      "pron": "보쿠니와 도-시테 와카룬다로-",
+      "pronSrc": "user",
+      "trans": "나는 어째서 아는 걸까",
+      "transSrc": "user"
+    },
+    {
+      "t": 213.36,
+      "orig": "全てのことが",
+      "pron": "스베테노 코토가",
+      "pronSrc": "user",
+      "trans": "모든 것들이",
+      "transSrc": "user"
+    },
+    {
+      "t": 215.95,
+      "orig": "走馬灯、胸に残っている",
+      "pron": "소-마토- 무네니 노콧테이루",
+      "pronSrc": "user",
+      "trans": "주마등처럼、가슴에 새겨져 있다는 걸",
+      "transSrc": "user"
+    },
+    {
+      "t": 220.26,
+      "orig": "僕にはどうしてわかるんだろう",
+      "pron": "보쿠니와 도-시테 와카룬다로-",
+      "pronSrc": "user",
+      "trans": "나는 어째서 아는 걸까",
+      "transSrc": "user"
+    },
+    {
+      "t": 225.15,
+      "orig": "全てのことが",
+      "pron": "스베테노 코토가",
+      "pronSrc": "user",
+      "trans": "모든 일들이",
+      "transSrc": "user"
+    },
+    {
+      "t": 227.72,
+      "orig": "まるで明くる前のよう",
+      "pron": "마루데 아쿠루 마에노요-",
+      "pronSrc": "user",
+      "trans": "마치 새벽이 밝기 직전 같다는 걸",
+      "transSrc": "user"
+    },
+    {
+      "t": 232.01,
+      "orig": "僕にはどうしてわかるんだろう",
+      "pron": "보쿠니와 도-시테 와카룬다로-",
+      "pronSrc": "user",
+      "trans": "나는 어째서 아는 걸까",
+      "transSrc": "user"
+    },
+    {
+      "t": 236.97,
+      "orig": "全ての日々が",
+      "pron": "스베테노 히비가",
+      "pronSrc": "user",
+      "trans": "모든 날들이",
+      "transSrc": "user"
+    },
+    {
+      "t": 239.39,
+      "orig": "これとない味のエッセイ",
+      "pron": "코레토 나이 아지노 엣세이",
+      "pronSrc": "user",
+      "trans": "다시는 없을 맛의 에세이라는 걸",
+      "transSrc": "user"
+    },
+    {
+      "t": 243.82,
+      "orig": "僕にはどうしてわかるんだろう",
+      "pron": "보쿠니와 도-시테 와카룬다로-",
+      "pronSrc": "user",
+      "trans": "나는 어째서 아는 걸까",
+      "transSrc": "user"
+    },
+    {
+      "t": 248.89,
+      "orig": "全ての景色が",
+      "pron": "스베테노 케시키가",
+      "pronSrc": "user",
+      "trans": "모든 풍경이",
+      "transSrc": "user"
+    },
+    {
+      "t": 251.01,
+      "orig": "思い出すためのモノクロ",
+      "pron": "오모이다스 타메노 모노크로",
+      "pronSrc": "user",
+      "trans": "추억하기 위한 흑백이라는 걸",
+      "transSrc": "user"
+    }
+  ]
+}

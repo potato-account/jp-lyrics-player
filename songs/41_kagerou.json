@@ -1,0 +1,361 @@
+{
+  "title": "かげろう",
+  "artist": "Vaundy",
+  "youtubeId": "_vEM0ebafeU",
+  "bundleId": "vaundy-kagerou",
+  "offset": 0,
+  "lines": [
+    {
+      "t": 10.02,
+      "orig": "焼かれて逃げ水追いかけては 追いつけない",
+      "pron": "야카레테 니게미즈 오 오이카케테와 오이츠케나이",
+      "pronSrc": "user",
+      "trans": "타오르는 아지랑이를 쫓아가 봐도 끝내 닿을 수 없어",
+      "transSrc": "user"
+    },
+    {
+      "t": 16.95,
+      "orig": "おどけた魂が俺に魅せる幻",
+      "pron": "오도케타 타마시이가 오레니 미세루 마보로시",
+      "pronSrc": "user",
+      "trans": "익살스러운 영혼이 내게 보여주는 환상",
+      "transSrc": "user"
+    },
+    {
+      "t": 31.78,
+      "orig": "肩透かしで避けてた矢尻じゃ 突き抜けない",
+      "pron": "카타스카시데 오케테타 야지리쟈 츠키누케나이",
+      "pronSrc": "user",
+      "trans": "허탕 치듯 피해왔던 화살촉으로는 꿰뚫을 수 없어",
+      "transSrc": "user"
+    },
+    {
+      "t": 38.64,
+      "orig": "おどけた魂がどれも",
+      "pron": "오도케타 타마시이가 도레모",
+      "pronSrc": "user",
+      "trans": "익살스러운 영혼은 어느 것이든",
+      "transSrc": "user"
+    },
+    {
+      "t": 42.26,
+      "orig": "揺れる言葉 揺れる影や 揺れる心を",
+      "pron": "유레루 코토바 유레루 카게야 유레루 코코로오",
+      "pronSrc": "user",
+      "trans": "흔들리는 말과 흔들리는 그림자, 흔들리는 마음을",
+      "transSrc": "user"
+    },
+    {
+      "t": 50.02,
+      "orig": "許すのならば",
+      "pron": "유루스노나라바",
+      "pronSrc": "user",
+      "trans": "그것들을 용서할 수 있다면",
+      "transSrc": "user"
+    },
+    {
+      "t": 53.36,
+      "orig": "この涙 誰のために流せばいい",
+      "pron": "코노 나미다 다레노 타메니 나가세바 이이",
+      "pronSrc": "user",
+      "trans": "이 눈물은 누구를 위해 흘리면 되는 걸까",
+      "transSrc": "user"
+    },
+    {
+      "t": 60.77,
+      "orig": "ベランダに落ちた鳥か",
+      "pron": "베란다니 오치타 토리카",
+      "pronSrc": "user",
+      "trans": "베란다에 떨어진 새를 위해서일까",
+      "transSrc": "user"
+    },
+    {
+      "t": 64.55,
+      "orig": "芽吹いた花か",
+      "pron": "메부이타 하나카",
+      "pronSrc": "user",
+      "trans": "새롭게 싹튼 꽃을 위해서일까",
+      "transSrc": "user"
+    },
+    {
+      "t": 66.86,
+      "orig": "忘れてたあの日憧れた僕か",
+      "pron": "와스레테타 아노 히 아코가레타 보쿠카",
+      "pronSrc": "user",
+      "trans": "잊고 있었던, 그날 동경했던 나를 위해서일까",
+      "transSrc": "user"
+    },
+    {
+      "t": 72.5,
+      "orig": "この涙 何のために流せばいい",
+      "pron": "코노 나미다 난노 타메니 나가세바 이이",
+      "pronSrc": "user",
+      "trans": "이 눈물은 무엇을 위해 흘리면 되는 걸까",
+      "transSrc": "user"
+    },
+    {
+      "t": 79.97,
+      "orig": "目にかかる砂煙が",
+      "pron": "메니 카카루 스나케무리가",
+      "pronSrc": "user",
+      "trans": "눈앞을 뒤덮는 모래먼지가",
+      "transSrc": "user"
+    },
+    {
+      "t": 83.63,
+      "orig": "魅せてった熱か",
+      "pron": "미세텟타 네츠카",
+      "pronSrc": "user",
+      "trans": "내게 보여준 그 열기일까",
+      "transSrc": "user"
+    },
+    {
+      "t": 86.1,
+      "orig": "今こそ啸いてくれ",
+      "pron": "이마 코소 우소부이테 쿠레",
+      "pronSrc": "user",
+      "trans": "지금이야말로 포효해 줘",
+      "transSrc": "user"
+    },
+    {
+      "t": 88.65,
+      "orig": "かげろう",
+      "pron": "카게로우",
+      "pronSrc": "user",
+      "trans": "아지랑이",
+      "transSrc": "user"
+    },
+    {
+      "t": 89.92,
+      "orig": "焚き付け織火光る童は 追いつけない。",
+      "pron": "타키츠케 오리비 히카루 와라베와 오이츠케나이",
+      "pronSrc": "user",
+      "trans": "타오르는 불꽃에 비치는 아이는 끝내 따라잡을 수 없어",
+      "transSrc": "user"
+    },
+    {
+      "t": 95.02,
+      "orig": "おどけた魂が俺を帰せる幻。",
+      "pron": "오도케타 타마시이가 오레오 카에세루 마보로시",
+      "pronSrc": "user",
+      "trans": "익살스러운 영혼이 나를 되돌려 보내는 환상",
+      "transSrc": "user"
+    },
+    {
+      "t": 98.84,
+      "orig": "膨張し、呼吸止まる肩から 鳴り止まない。",
+      "pron": "보우초우시 코큐우 토마루 카타카라 나리야마나이",
+      "pronSrc": "user",
+      "trans": "부풀어 올라 숨이 멎을 듯한 어깨에서 그 소리는 멈추지 않아",
+      "transSrc": "user"
+    },
+    {
+      "t": 104.25,
+      "orig": "おどけた魂の 声が",
+      "pron": "오도케타 타마시이노 코에가",
+      "pronSrc": "user",
+      "trans": "익살스러운 영혼의 목소리가",
+      "transSrc": "user"
+    },
+    {
+      "t": 106.8,
+      "orig": "揺れる言葉 揺れる影や 揺れる心が",
+      "pron": "유레루 코토바 유레루 카게야 유레루 코코로가",
+      "pronSrc": "user",
+      "trans": "흔들리는 말과 흔들리는 그림자, 흔들리는 마음이",
+      "transSrc": "user"
+    },
+    {
+      "t": 111.58,
+      "orig": "呼び声ならば",
+      "pron": "요비고에나라바",
+      "pronSrc": "user",
+      "trans": "그것이 나를 부르는 목소리라면",
+      "transSrc": "user"
+    },
+    {
+      "t": 113.49,
+      "orig": "この涙誰のために流せばいい",
+      "pron": "코노 나미다 다레노 타메니 나가세바 이이",
+      "pronSrc": "user",
+      "trans": "이 눈물은 누구를 위해 흘리면 되는 걸까",
+      "transSrc": "user"
+    },
+    {
+      "t": 117.63,
+      "orig": "ベランダに落ちた鳥か",
+      "pron": "베란다니 오치타 토리카",
+      "pronSrc": "user",
+      "trans": "베란다에 떨어진 새를 위해서일까",
+      "transSrc": "user"
+    },
+    {
+      "t": 120.82,
+      "orig": "芽吹いた花か",
+      "pron": "메부이타 하나카",
+      "pronSrc": "user",
+      "trans": "새롭게 싹튼 꽃을 위해서일까",
+      "transSrc": "user"
+    },
+    {
+      "t": 122.73,
+      "orig": "忘れてたあの日憧れた僕か",
+      "pron": "와스레테타 아노 히 아코가레타 보쿠카",
+      "pronSrc": "user",
+      "trans": "잊고 있었던, 그날 동경했던 나를 위해서일까",
+      "transSrc": "user"
+    },
+    {
+      "t": 126.55,
+      "orig": "この涙何のために流せばいい",
+      "pron": "코노 나미다 난노 타메니 나가세바 이이",
+      "pronSrc": "user",
+      "trans": "이 눈물은 무엇을 위해 흘리면 되는 걸까",
+      "transSrc": "user"
+    },
+    {
+      "t": 130.69,
+      "orig": "目にかかる砂煙か",
+      "pron": "메니 카카루 스나케무리카",
+      "pronSrc": "user",
+      "trans": "눈앞을 뒤덮는 모래먼지일까",
+      "transSrc": "user"
+    },
+    {
+      "t": 133.24,
+      "orig": "魅せてった熱か",
+      "pron": "미세텟타 네츠카",
+      "pronSrc": "user",
+      "trans": "내게 보여준 그 뜨거움일까",
+      "transSrc": "user"
+    },
+    {
+      "t": 135.47,
+      "orig": "今こそ啸いてくれ",
+      "pron": "이마 코소 우소부이테 쿠레",
+      "pronSrc": "user",
+      "trans": "지금이야말로 포효해 줘",
+      "transSrc": "user"
+    },
+    {
+      "t": 138.01,
+      "orig": "かげろう",
+      "pron": "카게로우",
+      "pronSrc": "user",
+      "trans": "아지랑이",
+      "transSrc": "user"
+    },
+    {
+      "t": 139.29,
+      "orig": "進めばいつか この先でまた",
+      "pron": "스스메바 이츠카 코노 사키데 마타",
+      "pronSrc": "user",
+      "trans": "앞으로 나아가다 보면 언젠가 이 길 끝에서 다시",
+      "transSrc": "user"
+    },
+    {
+      "t": 143.11,
+      "orig": "奇跡を待つのだろう",
+      "pron": "키세키오 마츠노다로우",
+      "pronSrc": "user",
+      "trans": "기적을 기다리게 되겠지",
+      "transSrc": "user"
+    },
+    {
+      "t": 145.98,
+      "orig": "ただ この熱がまた",
+      "pron": "타다 코노 네츠가 마타",
+      "pronSrc": "user",
+      "trans": "그저 이 뜨거움이 다시",
+      "transSrc": "user"
+    },
+    {
+      "t": 148.52,
+      "orig": "向かい風を抜けて",
+      "pron": "무카이카제오 누케테",
+      "pronSrc": "user",
+      "trans": "맞바람을 뚫고 나아가",
+      "transSrc": "user"
+    },
+    {
+      "t": 151.07,
+      "orig": "笑う魂ならば",
+      "pron": "와라우 타마시이나라바",
+      "pronSrc": "user",
+      "trans": "웃는 영혼이라면",
+      "transSrc": "user"
+    },
+    {
+      "t": 152.98,
+      "orig": "この涙誰のために流せばいい",
+      "pron": "코노 나미다 다레노 타메니 나가세바 이이",
+      "pronSrc": "user",
+      "trans": "이 눈물은 누구를 위해 흘리면 되는 걸까",
+      "transSrc": "user"
+    },
+    {
+      "t": 157.12,
+      "orig": "ベランダに落ちた烏が",
+      "pron": "베란다니 오치타 카라스가",
+      "pronSrc": "user",
+      "trans": "베란다에 떨어진 까마귀가",
+      "transSrc": "user"
+    },
+    {
+      "t": 160.31,
+      "orig": "咲かせた花か",
+      "pron": "사카세타 하나카",
+      "pronSrc": "user",
+      "trans": "피워 낸 꽃을 위해서일까",
+      "transSrc": "user"
+    },
+    {
+      "t": 162.22,
+      "orig": "湧き上がるこれまでの僕達か",
+      "pron": "와키아가루 코레마데노 보쿠타치카",
+      "pronSrc": "user",
+      "trans": "지금껏 쌓여 온 우리 자신을 위해서일까",
+      "transSrc": "user"
+    },
+    {
+      "t": 166.36,
+      "orig": "この涙何のために流せばいい",
+      "pron": "코노 나미다 난노 타메니 나가세바 이이",
+      "pronSrc": "user",
+      "trans": "이 눈물은 무엇을 위해 흘리면 되는 걸까",
+      "transSrc": "user"
+    },
+    {
+      "t": 170.5,
+      "orig": "目にかかる砂煙が",
+      "pron": "메니 카카루 스나케무리가",
+      "pronSrc": "user",
+      "trans": "눈앞을 뒤덮는 모래먼지가",
+      "transSrc": "user"
+    },
+    {
+      "t": 173.05,
+      "orig": "魅せてった熱よ",
+      "pron": "미세텟타 네츠요",
+      "pronSrc": "user",
+      "trans": "내게 보여준 이 뜨거움이여",
+      "transSrc": "user"
+    },
+    {
+      "t": 175.28,
+      "orig": "今こそ啸いてくれ",
+      "pron": "이마 코소 우소부이테 쿠레",
+      "pronSrc": "user",
+      "trans": "지금이야말로 포효해 줘",
+      "transSrc": "user"
+    },
+    {
+      "t": 177.83,
+      "orig": "かげろう",
+      "pron": "카게로우",
+      "pronSrc": "user",
+      "trans": "아지랑이",
+      "transSrc": "user"
+    }
+  ]
+}

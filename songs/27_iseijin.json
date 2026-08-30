@@ -1,0 +1,385 @@
+{
+  "title": "偉生人",
+  "artist": "Vaundy",
+  "youtubeId": "JPZo1PJIArQ",
+  "bundleId": "vaundy-iseijin",
+  "offset": 0,
+  "lines": [
+    {
+      "t": 1,
+      "orig": "理想郷探した",
+      "pron": "리소-쿄- 사가시타",
+      "pronSrc": "user",
+      "trans": "이상향을 찾았어",
+      "transSrc": "user"
+    },
+    {
+      "t": 4.1,
+      "orig": "誰より早く",
+      "pron": "다레요리 하야쿠",
+      "pronSrc": "user",
+      "trans": "누구보다 빠르게",
+      "transSrc": "user"
+    },
+    {
+      "t": 6.86,
+      "orig": "間違いなく辿り着くために",
+      "pron": "마치가이 나쿠 타도리츠쿠 타메니",
+      "pronSrc": "user",
+      "trans": "틀림없이 그곳에 닿으려고",
+      "transSrc": "user"
+    },
+    {
+      "t": 23.14,
+      "orig": "僕ら昔は灯台の下を探す子供のまま生きてた",
+      "pron": "보쿠라 무카시와 토-다이노 모토오 사가스 코도모노 마마 이키테타",
+      "pronSrc": "user",
+      "trans": "우리 예전엔 등대 아래를 뒤적이는 애들로 살아왔고",
+      "transSrc": "user"
+    },
+    {
+      "t": 28.89,
+      "orig": "今もそんなに変わってないみたいだ",
+      "pron": "이마모 손나니 카왓테나이미타이다",
+      "pronSrc": "user",
+      "trans": "지금도 그다지 변하진 않은 것 같네",
+      "transSrc": "user"
+    },
+    {
+      "t": 33.3,
+      "orig": "ふふふ",
+      "pron": "후후후",
+      "pronSrc": "user",
+      "trans": "후후후",
+      "transSrc": "user"
+    },
+    {
+      "t": 34.44,
+      "orig": "そんな僕らは何千と違う心に穴を開けて生きてた",
+      "pron": "손나 보쿠라와 난젠토 타가우 코코로니 아나오 아케테 이키테타",
+      "pronSrc": "user",
+      "trans": "그런 우리는 수천 가지의 다른 마음에 구멍을 내며 살아왔는데",
+      "transSrc": "user"
+    },
+    {
+      "t": 40.11,
+      "orig": "実はそんなに変わってないんだって",
+      "pron": "지츠와 손나니 카왓테나인닷테",
+      "pronSrc": "user",
+      "trans": "사실은 그다지 변하지 않았대",
+      "transSrc": "user"
+    },
+    {
+      "t": 44.67,
+      "orig": "ああそうだ",
+      "pron": "아아 소-다",
+      "pronSrc": "user",
+      "trans": "아아 맞아",
+      "transSrc": "user"
+    },
+    {
+      "t": 45.69,
+      "orig": "先生ここにあるものじゃ",
+      "pron": "센세- 코코니 아루 모노쟈",
+      "pronSrc": "user",
+      "trans": "선생님 여기 있는 것들만으론",
+      "transSrc": "user"
+    },
+    {
+      "t": 48.47,
+      "orig": "全然足りなかったような",
+      "pron": "젠젠 타리나캇타요-나",
+      "pronSrc": "user",
+      "trans": "도무지 채워지지 않았던",
+      "transSrc": "user"
+    },
+    {
+      "t": 51.29,
+      "orig": "悲しみが未来を",
+      "pron": "카나시미가 미라이오",
+      "pronSrc": "user",
+      "trans": "슬픔이 미래를",
+      "transSrc": "user"
+    },
+    {
+      "t": 54.74,
+      "orig": "そう、作っているって",
+      "pron": "소- 츠쿳테이룻테",
+      "pronSrc": "user",
+      "trans": "그래、만들고 있대",
+      "transSrc": "user"
+    },
+    {
+      "t": 56.8,
+      "orig": "先生ここにあるものじゃ",
+      "pron": "센세- 코코니 아루 모노쟈",
+      "pronSrc": "user",
+      "trans": "선생님 여기 있는 것들만으론",
+      "transSrc": "user"
+    },
+    {
+      "t": 59.72,
+      "orig": "全然足りなかったような",
+      "pron": "젠젠 타리나캇타요-나",
+      "pronSrc": "user",
+      "trans": "끝내 채워지지 않았던",
+      "transSrc": "user"
+    },
+    {
+      "t": 62.59,
+      "orig": "愛しさと未来を",
+      "pron": "이토시사토 미라이오",
+      "pronSrc": "user",
+      "trans": "애틋함과 미래를",
+      "transSrc": "user"
+    },
+    {
+      "t": 66.12,
+      "orig": "もう、笑っていこうぜ",
+      "pron": "모- 와랏테이코-제",
+      "pronSrc": "user",
+      "trans": "이젠、웃으며 걸으려고",
+      "transSrc": "user"
+    },
+    {
+      "t": 68.92,
+      "orig": "子供の頃は世界を守って精一杯",
+      "pron": "코도모노 코로와 세카이오 마못테 세-잇파이",
+      "pronSrc": "user",
+      "trans": "어릴 때는 세상을 지키는 데 힘을 다 썼고",
+      "transSrc": "user"
+    },
+    {
+      "t": 75.91,
+      "orig": "ただ、めいっぱいだった",
+      "pron": "타다 메잇파이닷타",
+      "pronSrc": "user",
+      "trans": "그저、한껏 버텼어",
+      "transSrc": "user"
+    },
+    {
+      "t": 80.23,
+      "orig": "でっかくなったが変わることが苦しいなら",
+      "pron": "뎃카쿠 낫타가 카와루 코토가 쿠루시이나라",
+      "pronSrc": "user",
+      "trans": "어른이 되고서 변하는 게 그리 힘들다면",
+      "transSrc": "user"
+    },
+    {
+      "t": 88.75,
+      "orig": "やめてたのに",
+      "pron": "야메테타노니",
+      "pronSrc": "user",
+      "trans": "진작 그만뒀겠지",
+      "transSrc": "user"
+    },
+    {
+      "t": 90.91,
+      "orig": "「胸にいっぱいの葛藤と愛しさでまだ",
+      "pron": "무네니 잇파이노 캇토-토 이토시사데 마다",
+      "pronSrc": "user",
+      "trans": "「가슴 가득한 갈등과 애틋함으로 아직",
+      "transSrc": "user"
+    },
+    {
+      "t": 94.83,
+      "orig": "変わることができてた」",
+      "pron": "카와루 코토가 데키테타",
+      "pronSrc": "user",
+      "trans": "우리는 변할 수 있었어」",
+      "transSrc": "user"
+    },
+    {
+      "t": 96.52,
+      "orig": "ずっとそんなに苦しまなくたって",
+      "pron": "즛토 손나니 쿠루시마나쿠탓테",
+      "pronSrc": "user",
+      "trans": "줄곧 그렇게 괴로워하지 않아도 됐는데",
+      "transSrc": "user"
+    },
+    {
+      "t": 100.95,
+      "orig": "もういいよ、先生ここにあるものじゃ",
+      "pron": "모- 이이요 센세- 코코니 아루 모노쟈",
+      "pronSrc": "user",
+      "trans": "이제 됐어、선생님 여기 있는 것들만으론",
+      "transSrc": "user"
+    },
+    {
+      "t": 104.82,
+      "orig": "全然足りなかったような",
+      "pron": "젠젠 타리나캇타요-나",
+      "pronSrc": "user",
+      "trans": "도무지 채워지지 않았던",
+      "transSrc": "user"
+    },
+    {
+      "t": 107.77,
+      "orig": "愛しさと未来を",
+      "pron": "이토시사토 미라이오",
+      "pronSrc": "user",
+      "trans": "애틋함과 미래를",
+      "transSrc": "user"
+    },
+    {
+      "t": 111.21,
+      "orig": "もう、笑っていこうぜ",
+      "pron": "모- 와랏테이코-제",
+      "pronSrc": "user",
+      "trans": "이젠、웃으며 걸으려고",
+      "transSrc": "user"
+    },
+    {
+      "t": 136.6,
+      "orig": "理想郷目指した",
+      "pron": "리소-쿄- 메자시타",
+      "pronSrc": "user",
+      "trans": "이상향을 향했어",
+      "transSrc": "user"
+    },
+    {
+      "t": 139.46,
+      "orig": "誰より早く",
+      "pron": "다레요리 하야쿠",
+      "pronSrc": "user",
+      "trans": "누구보다 빠르게",
+      "transSrc": "user"
+    },
+    {
+      "t": 142.39,
+      "orig": "間違いなく",
+      "pron": "마치가이 나쿠",
+      "pronSrc": "user",
+      "trans": "틀림없이",
+      "transSrc": "user"
+    },
+    {
+      "t": 144.99,
+      "orig": "自分のために",
+      "pron": "지분노 타메니",
+      "pronSrc": "user",
+      "trans": "나 자신을 위해",
+      "transSrc": "user"
+    },
+    {
+      "t": 147.85,
+      "orig": "そこから根差した",
+      "pron": "소코카라 네자시타",
+      "pronSrc": "user",
+      "trans": "그곳에서 뿌리내려",
+      "transSrc": "user"
+    },
+    {
+      "t": 150.84,
+      "orig": "誰より高く",
+      "pron": "다레요리 타카쿠",
+      "pronSrc": "user",
+      "trans": "누구보다 높게",
+      "transSrc": "user"
+    },
+    {
+      "t": 153.44,
+      "orig": "幸せ目指した",
+      "pron": "시아와세 메자시타",
+      "pronSrc": "user",
+      "trans": "행복을 목표했어",
+      "transSrc": "user"
+    },
+    {
+      "t": 156.14,
+      "orig": "だからさ",
+      "pron": "다카라사",
+      "pronSrc": "user",
+      "trans": "그니까 말이야",
+      "transSrc": "user"
+    },
+    {
+      "t": 157.55,
+      "orig": "ねぇどうだい",
+      "pron": "네- 도-다이",
+      "pronSrc": "user",
+      "trans": "있잖아 어때",
+      "transSrc": "user"
+    },
+    {
+      "t": 158.59,
+      "orig": "先生ここにあるものじゃ",
+      "pron": "센세- 코코니 아루 모노쟈",
+      "pronSrc": "user",
+      "trans": "선생님 여기 있는 것들만으론",
+      "transSrc": "user"
+    },
+    {
+      "t": 161.34,
+      "orig": "全然足りなかったような",
+      "pron": "젠젠 타리나캇타요-나",
+      "pronSrc": "user",
+      "trans": "도무지 채워지지 않았던",
+      "transSrc": "user"
+    },
+    {
+      "t": 164.21,
+      "orig": "悲しみが未来を",
+      "pron": "카나시미가 미라이오",
+      "pronSrc": "user",
+      "trans": "슬픔이 미래를",
+      "transSrc": "user"
+    },
+    {
+      "t": 167.77,
+      "orig": "そう、作っているって",
+      "pron": "소- 츠쿳테이룻테",
+      "pronSrc": "user",
+      "trans": "그래、만들고 있대",
+      "transSrc": "user"
+    },
+    {
+      "t": 169.82,
+      "orig": "先生ここにあるものじゃ",
+      "pron": "센세- 코코니 아루 모노쟈",
+      "pronSrc": "user",
+      "trans": "선생님 여기 있는 것들만으론",
+      "transSrc": "user"
+    },
+    {
+      "t": 172.63,
+      "orig": "全然足りなかったような",
+      "pron": "젠젠 타리나캇타요-나",
+      "pronSrc": "user",
+      "trans": "끝내 채워지지 않았던",
+      "transSrc": "user"
+    },
+    {
+      "t": 175.54,
+      "orig": "愛しさと未来を",
+      "pron": "이토시사토 미라이오",
+      "pronSrc": "user",
+      "trans": "애틋함과 미래를",
+      "transSrc": "user"
+    },
+    {
+      "t": 179.07,
+      "orig": "もう、笑っていようぜ",
+      "pron": "모- 와랏테이요-제",
+      "pronSrc": "user",
+      "trans": "이젠、그냥 웃으려고",
+      "transSrc": "user"
+    },
+    {
+      "t": 189.97,
+      "orig": "ああもうつかれちまったろ",
+      "pron": "아아 모- 츠카레치맛타로",
+      "pronSrc": "user",
+      "trans": "아아 이젠 많이 지쳤잖아",
+      "transSrc": "user"
+    },
+    {
+      "t": 196.39,
+      "orig": "もう、笑っていこうぜ",
+      "pron": "모- 와랏테이코-제",
+      "pronSrc": "user",
+      "trans": "그냥、웃으며 가 보자",
+      "transSrc": "user"
+    }
+  ]
+}

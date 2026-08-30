@@ -1,0 +1,721 @@
+{
+  "title": "シンギュラリティ",
+  "artist": "Vaundy",
+  "youtubeId": "stss6w2io68",
+  "bundleId": "vaundy-singularity",
+  "offset": 0,
+  "lines": [
+    {
+      "t": 20.33,
+      "orig": "ちょっとまって",
+      "pron": "춋토 맛테",
+      "pronSrc": "user",
+      "trans": "잠깐 기다려",
+      "transSrc": "user"
+    },
+    {
+      "t": 20.8,
+      "orig": "視線と視線が繋いだ",
+      "pron": "시센토 시센가 츠나이다",
+      "pronSrc": "user",
+      "trans": "시선과 시선이 이어졌어",
+      "transSrc": "user"
+    },
+    {
+      "t": 23.07,
+      "orig": "そう",
+      "pron": "소오",
+      "pronSrc": "user",
+      "trans": "그래",
+      "transSrc": "user"
+    },
+    {
+      "t": 23.59,
+      "orig": "ダンスホールでおもちゃみたいな",
+      "pron": "단스홀데 오모챠 미타이나",
+      "pronSrc": "user",
+      "trans": "댄스홀에서 장난감 같은",
+      "transSrc": "user"
+    },
+    {
+      "t": 27.25,
+      "orig": "女神の踏んだ稀有なステップで",
+      "pron": "가미훈다 케우나 스텟푸데",
+      "pronSrc": "user",
+      "trans": "여신이 밟은 희귀한 스텝으로",
+      "transSrc": "user"
+    },
+    {
+      "t": 29.72,
+      "orig": "わからんが",
+      "pron": "와카란가",
+      "pronSrc": "user",
+      "trans": "잘 모르겠지만",
+      "transSrc": "user"
+    },
+    {
+      "t": 30.65,
+      "orig": "点と点がプレイバック",
+      "pron": "텐토 텐가 후레이밧쿠",
+      "pronSrc": "user",
+      "trans": "점과 점이 플레이백",
+      "transSrc": "user"
+    },
+    {
+      "t": 32.5,
+      "orig": "もう",
+      "pron": "모오",
+      "pronSrc": "user",
+      "trans": "정말",
+      "transSrc": "user"
+    },
+    {
+      "t": 33.14,
+      "orig": "動悸",
+      "pron": "도키",
+      "pronSrc": "user",
+      "trans": "두근거리는",
+      "transSrc": "user"
+    },
+    {
+      "t": 33.78,
+      "orig": "ビートが止められない",
+      "pron": "비토 가 메라레나 하이",
+      "pronSrc": "user",
+      "trans": "비트를 멈출 수 없어",
+      "transSrc": "user"
+    },
+    {
+      "t": 36.65,
+      "orig": "図らずも耳を澄ました",
+      "pron": "하카라즈모 미-오 스마시타",
+      "pronSrc": "user",
+      "trans": "우연히 귀를 기울였어",
+      "transSrc": "user"
+    },
+    {
+      "t": 39.01,
+      "orig": "するとこう言う",
+      "pron": "스루토 코오 유우",
+      "pronSrc": "user",
+      "trans": "그러자 이렇게 말해",
+      "transSrc": "user"
+    },
+    {
+      "t": 42.47,
+      "orig": "「あのダンスで死にたい」",
+      "pron": "아노 탄 스데시니타 하이",
+      "pronSrc": "user",
+      "trans": "\" 저 댄스로 죽고 싶어 \"",
+      "transSrc": "user"
+    },
+    {
+      "t": 45.91,
+      "orig": "絡まったニューロンたちが",
+      "pron": "카라맛타 뉴-론다치가",
+      "pronSrc": "user",
+      "trans": "얽힌 뉴런들이",
+      "transSrc": "user"
+    },
+    {
+      "t": 48.26,
+      "orig": "君で漏電しそう",
+      "pron": "키미데 로오 덴 시소오",
+      "pronSrc": "user",
+      "trans": "너로 인해 누전될 것 같아",
+      "transSrc": "user"
+    },
+    {
+      "t": 51.78,
+      "orig": "まさか！？",
+      "pron": "마사카",
+      "pronSrc": "user",
+      "trans": "설마?!",
+      "transSrc": "user"
+    },
+    {
+      "t": 52.89,
+      "orig": "シンギュラリティ！",
+      "pron": "싱규라리티",
+      "pronSrc": "user",
+      "trans": "싱귤래리티!",
+      "transSrc": "user"
+    },
+    {
+      "t": 55.57,
+      "orig": "どこか遠くへ連れ出して",
+      "pron": "돗카 토오쿠에 츠레다- 시테",
+      "pronSrc": "user",
+      "trans": "어딘가 멀리 데려가 줘",
+      "transSrc": "user"
+    },
+    {
+      "t": 57.8,
+      "orig": "君の中に",
+      "pron": "키미노 나카니",
+      "pronSrc": "user",
+      "trans": "네 안에",
+      "transSrc": "user"
+    },
+    {
+      "t": 60.53,
+      "orig": "Oh! まさにstuck in hole！",
+      "pron": "Oh 마사니 stuck in hole",
+      "pronSrc": "user",
+      "trans": "Oh! 그야말로 stuck in hole!",
+      "transSrc": "user"
+    },
+    {
+      "t": 62.21,
+      "orig": "まるで",
+      "pron": "마루데",
+      "pronSrc": "user",
+      "trans": "마치",
+      "transSrc": "user"
+    },
+    {
+      "t": 63.41,
+      "orig": "宇宙の采配",
+      "pron": "우츄우노 사이하이",
+      "pronSrc": "user",
+      "trans": "우주의 지시",
+      "transSrc": "user"
+    },
+    {
+      "t": 65.41,
+      "orig": "運命の再会",
+      "pron": "운메이노 사이카이",
+      "pronSrc": "user",
+      "trans": "운명의 재회",
+      "transSrc": "user"
+    },
+    {
+      "t": 67.41,
+      "orig": "これが、グラビティ",
+      "pron": "코레가 구라비티",
+      "pronSrc": "user",
+      "trans": "이것이, 그래비티",
+      "transSrc": "user"
+    },
+    {
+      "t": 69.78,
+      "orig": "Oh! これが",
+      "pron": "Oh 코레가",
+      "pronSrc": "user",
+      "trans": "Oh! 이것이",
+      "transSrc": "user"
+    },
+    {
+      "t": 71.41,
+      "orig": "そうさ、グラビティ！",
+      "pron": "소오사 구라비티",
+      "pronSrc": "user",
+      "trans": "그래, 그래비티!",
+      "transSrc": "user"
+    },
+    {
+      "t": 74.15,
+      "orig": "なんかたどり着いて",
+      "pron": "난카 타도리츠-이테",
+      "pronSrc": "user",
+      "trans": "어쩐지 다다라서",
+      "transSrc": "user"
+    },
+    {
+      "t": 76.46,
+      "orig": "君の中に",
+      "pron": "키미노 나카니",
+      "pronSrc": "user",
+      "trans": "네 안에",
+      "transSrc": "user"
+    },
+    {
+      "t": 79.15,
+      "orig": "Oh! まさにstuck and hold！",
+      "pron": "Oh 마사니 stuck and hold",
+      "pronSrc": "user",
+      "trans": "Oh! 그야말로 stuck and hold!",
+      "transSrc": "user"
+    },
+    {
+      "t": 80.85,
+      "orig": "枯れた",
+      "pron": "카레타",
+      "pronSrc": "user",
+      "trans": "메마른",
+      "transSrc": "user"
+    },
+    {
+      "t": 81.65,
+      "orig": "心のトワイライト",
+      "pron": "코코로노 토와이라잇",
+      "pronSrc": "user",
+      "trans": "마음의 트와일라잇*",
+      "transSrc": "user"
+    },
+    {
+      "t": 83.78,
+      "orig": "惹かれていくよ",
+      "pron": "히카레 테쿠요",
+      "pronSrc": "user",
+      "trans": "끌려가게 돼",
+      "transSrc": "user"
+    },
+    {
+      "t": 85.52,
+      "orig": "君とグラビティ",
+      "pron": "키미토 구라비티",
+      "pronSrc": "user",
+      "trans": "너와 그래비티",
+      "transSrc": "user"
+    },
+    {
+      "t": 88.42,
+      "orig": "まだまだ加速するよ",
+      "pron": "마다마다 카소쿠 스루 요",
+      "pronSrc": "user",
+      "trans": "점점 더 빨라질거야",
+      "transSrc": "user"
+    },
+    {
+      "t": 99.93,
+      "orig": "Yo ヒップホップステップで",
+      "pron": "요 힙 홉 스텝데",
+      "pronSrc": "user",
+      "trans": "YO 힙-합-스텝으로",
+      "transSrc": "user"
+    },
+    {
+      "t": 101.28,
+      "orig": "繋ぐホットなグルーヴ",
+      "pron": "츠나구 핫 앤 그룹",
+      "pronSrc": "user",
+      "trans": "이어지는 핫한 그루브",
+      "transSrc": "user"
+    },
+    {
+      "t": 102.33,
+      "orig": "そこにフラッシュ",
+      "pron": "소코니 후랏슈",
+      "pronSrc": "user",
+      "trans": "거기에 휙!",
+      "transSrc": "user"
+    },
+    {
+      "t": 103.3,
+      "orig": "目玉もギブアップ",
+      "pron": "메다마모 기브압",
+      "pronSrc": "user",
+      "trans": "눈알도 기브업",
+      "transSrc": "user"
+    },
+    {
+      "t": 104.42,
+      "orig": "デッドスペース&ブラックアウト",
+      "pron": "뎃도 스페이스 앤도 브랏카웃",
+      "pronSrc": "user",
+      "trans": "데드 스페이스 & 블랙아웃",
+      "transSrc": "user"
+    },
+    {
+      "t": 106.23,
+      "orig": "バッドなホープ",
+      "pron": "밧나 홉",
+      "pronSrc": "user",
+      "trans": "bad 한 hope",
+      "transSrc": "user"
+    },
+    {
+      "t": 106.98,
+      "orig": "見えなくても感じるよ 君のソウル",
+      "pron": "미에낫 테모 칸 지루요 키미노 소오",
+      "pronSrc": "user",
+      "trans": "보이지 않아도 느껴져 너의 소울",
+      "transSrc": "user"
+    },
+    {
+      "t": 109.57,
+      "orig": "一体、何言ってんだ？",
+      "pron": "잇타이 나니 잇텐다",
+      "pronSrc": "user",
+      "trans": "도대체, 무슨 말을 하는 거야?",
+      "transSrc": "user"
+    },
+    {
+      "t": 111.65,
+      "orig": "ああ",
+      "pron": "아우",
+      "pronSrc": "user",
+      "trans": "아아",
+      "transSrc": "user"
+    },
+    {
+      "t": 112.29,
+      "orig": "動く口が止められない",
+      "pron": "곳코우가 ㅌ메라레나 하이",
+      "pronSrc": "user",
+      "trans": "움직이는 입을 멈출 수 없어",
+      "transSrc": "user"
+    },
+    {
+      "t": 115.83,
+      "orig": "図らずも耳を澄ました",
+      "pron": "하카라즈모 미-오 스마시타",
+      "pronSrc": "user",
+      "trans": "생각지도 않게 귀를 기울였어",
+      "transSrc": "user"
+    },
+    {
+      "t": 118.07,
+      "orig": "するとこう言う",
+      "pron": "스루토 코오 유우",
+      "pronSrc": "user",
+      "trans": "그러자 이렇게 말해",
+      "transSrc": "user"
+    },
+    {
+      "t": 121.86,
+      "orig": "「デジャヴみたい」",
+      "pron": "oh, 데쟈-부 미타 하이",
+      "pronSrc": "user",
+      "trans": "\" 데자뷰 같아 \"",
+      "transSrc": "user"
+    },
+    {
+      "t": 125.15,
+      "orig": "絡まったニューロンたちが",
+      "pron": "카라맛타 뉴-론타치가",
+      "pronSrc": "user",
+      "trans": "얽힌 뉴런들이",
+      "transSrc": "user"
+    },
+    {
+      "t": 127.33,
+      "orig": "僕の解を肯定しそう",
+      "pron": "보쿠노카이오 코오 테이 소오",
+      "pronSrc": "user",
+      "trans": "내 해답을 긍정할 것 같아",
+      "transSrc": "user"
+    },
+    {
+      "t": 131.05,
+      "orig": "君が",
+      "pron": "키미가",
+      "pronSrc": "user",
+      "trans": "네가",
+      "transSrc": "user"
+    },
+    {
+      "t": 132.04,
+      "orig": "シンギュラリティ！",
+      "pron": "싱규라리티",
+      "pronSrc": "user",
+      "trans": "싱귤래리티!",
+      "transSrc": "user"
+    },
+    {
+      "t": 134.8,
+      "orig": "どこか遠くへ連れ出して",
+      "pron": "돗카 토오쿠에 츠레다- 시테",
+      "pronSrc": "user",
+      "trans": "어딘가 멀리 데려가 줘",
+      "transSrc": "user"
+    },
+    {
+      "t": 136.87,
+      "orig": "君の中に",
+      "pron": "키미노 나카니",
+      "pronSrc": "user",
+      "trans": "네 안에",
+      "transSrc": "user"
+    },
+    {
+      "t": 139.67,
+      "orig": "Oh! まさにstuck in hole！",
+      "pron": "Oh 마사니 stuck in hole",
+      "pronSrc": "user",
+      "trans": "Oh! 그야말로 stuck in hole!",
+      "transSrc": "user"
+    },
+    {
+      "t": 141.31,
+      "orig": "まるで",
+      "pron": "마루데",
+      "pronSrc": "user",
+      "trans": "마치",
+      "transSrc": "user"
+    },
+    {
+      "t": 142.53,
+      "orig": "宇宙の采配",
+      "pron": "우츄우노 사이하이",
+      "pronSrc": "user",
+      "trans": "우주의 지시",
+      "transSrc": "user"
+    },
+    {
+      "t": 144.55,
+      "orig": "運命の再会",
+      "pron": "운메이노 사이카이",
+      "pronSrc": "user",
+      "trans": "운명의 재회",
+      "transSrc": "user"
+    },
+    {
+      "t": 146.58,
+      "orig": "これが、グラビティ",
+      "pron": "코레가 구라비티",
+      "pronSrc": "user",
+      "trans": "이것이, 그래비티",
+      "transSrc": "user"
+    },
+    {
+      "t": 149.05,
+      "orig": "Oh! これが",
+      "pron": "오오 코레가",
+      "pronSrc": "user",
+      "trans": "Oh! 이것이",
+      "transSrc": "user"
+    },
+    {
+      "t": 150.61,
+      "orig": "シンギュラリティ",
+      "pron": "싱규라리티",
+      "pronSrc": "user",
+      "trans": "싱귤래리티",
+      "transSrc": "user"
+    },
+    {
+      "t": 151.44,
+      "orig": "グラビティ グラビティ",
+      "pron": "구라비티 구라비티 (후우 후)",
+      "pronSrc": "user",
+      "trans": "그래비티 그래비티",
+      "transSrc": "user"
+    },
+    {
+      "t": 155.41,
+      "orig": "グラビティ グラビティ",
+      "pron": "구라비티 구라비티 (후우 후)",
+      "pronSrc": "user",
+      "trans": "그래비티 그래비티",
+      "transSrc": "user"
+    },
+    {
+      "t": 159.39,
+      "orig": "グラビティ グラビティ",
+      "pron": "구라비티 구라비티 (후우 후)",
+      "pronSrc": "user",
+      "trans": "그래비티 그래비티",
+      "transSrc": "user"
+    },
+    {
+      "t": 163.36,
+      "orig": "僕もこう言う",
+      "pron": "보쿠가 코오 유우",
+      "pronSrc": "user",
+      "trans": "나도 이렇게 말해",
+      "transSrc": "user"
+    },
+    {
+      "t": 165.74,
+      "orig": "「あなたを見た」",
+      "pron": "아나 타오 미타 하",
+      "pronSrc": "user",
+      "trans": "\" 당신을 봤어 \"",
+      "transSrc": "user"
+    },
+    {
+      "t": 168.12,
+      "orig": "まだ微かな感触と",
+      "pron": "마다 카스카나 칸쇼쿠토",
+      "pronSrc": "user",
+      "trans": "아직 희미한 감촉과",
+      "transSrc": "user"
+    },
+    {
+      "t": 171.3,
+      "orig": "絡まったニューロンたちが",
+      "pron": "카라맛타 뉴-론타치가",
+      "pronSrc": "user",
+      "trans": "얽힌 뉴런들이",
+      "transSrc": "user"
+    },
+    {
+      "t": 175.67,
+      "orig": "思い出したずっと",
+      "pron": "오모이다시타 즛토",
+      "pronSrc": "user",
+      "trans": "떠올렸어 계속",
+      "transSrc": "user"
+    },
+    {
+      "t": 178.85,
+      "orig": "探していたよ",
+      "pron": "사가- 시테이타요",
+      "pronSrc": "user",
+      "trans": "찾고 있었어",
+      "transSrc": "user"
+    },
+    {
+      "t": 181.23,
+      "orig": "君は",
+      "pron": "키미와",
+      "pronSrc": "user",
+      "trans": "너는",
+      "transSrc": "user"
+    },
+    {
+      "t": 182.03,
+      "orig": "シンギュラリティ！",
+      "pron": "싱규라리티",
+      "pronSrc": "user",
+      "trans": "싱귤래리티!",
+      "transSrc": "user"
+    },
+    {
+      "t": 185.21,
+      "orig": "どこか遠くへ連れ出して",
+      "pron": "도코카 토오쿠에 츠레다- 시테",
+      "pronSrc": "user",
+      "trans": "어딘가 멀리 데려가 줘",
+      "transSrc": "user"
+    },
+    {
+      "t": 189.58,
+      "orig": "君の中に",
+      "pron": "키미노 나카니",
+      "pronSrc": "user",
+      "trans": "네 안에",
+      "transSrc": "user"
+    },
+    {
+      "t": 191.17,
+      "orig": "Oh! まさに stuck in hole!",
+      "pron": "oh 마사니 stuck in hole",
+      "pronSrc": "user",
+      "trans": "Oh! 그야말로 stuck in hole!",
+      "transSrc": "user"
+    },
+    {
+      "t": 197.52,
+      "orig": "まるで",
+      "pron": "마루데",
+      "pronSrc": "user",
+      "trans": "마치",
+      "transSrc": "user"
+    },
+    {
+      "t": 198.71,
+      "orig": "宇宙の采配",
+      "pron": "우츄우노 사이하이",
+      "pronSrc": "user",
+      "trans": "우주의 지시",
+      "transSrc": "user"
+    },
+    {
+      "t": 200.7,
+      "orig": "運命の再会",
+      "pron": "운메이노 사이카이",
+      "pronSrc": "user",
+      "trans": "운명의 재회",
+      "transSrc": "user"
+    },
+    {
+      "t": 202.69,
+      "orig": "これが、グラビティ",
+      "pron": "코레가 구라비티",
+      "pronSrc": "user",
+      "trans": "이것이, 그래비티",
+      "transSrc": "user"
+    },
+    {
+      "t": 205.86,
+      "orig": "Oh! これが",
+      "pron": "oh 코레가",
+      "pronSrc": "user",
+      "trans": "Oh! 이것이",
+      "transSrc": "user"
+    },
+    {
+      "t": 207.85,
+      "orig": "そうさ、グラビティ！",
+      "pron": "소오사 구라비티",
+      "pronSrc": "user",
+      "trans": "그래, 그래비티!",
+      "transSrc": "user"
+    },
+    {
+      "t": 211.03,
+      "orig": "なんかたどり着いて",
+      "pron": "난카 타-도리츠-이테",
+      "pronSrc": "user",
+      "trans": "어쩐지 다다라서",
+      "transSrc": "user"
+    },
+    {
+      "t": 214.6,
+      "orig": "君の中に",
+      "pron": "키미노 나카니",
+      "pronSrc": "user",
+      "trans": "네 안에",
+      "transSrc": "user"
+    },
+    {
+      "t": 216.19,
+      "orig": "Oh! まさに stuck and hold!",
+      "pron": "oh 마사니 stuck and hold",
+      "pronSrc": "user",
+      "trans": "Oh! 그야말로 stuck and hold!",
+      "transSrc": "user"
+    },
+    {
+      "t": 222.95,
+      "orig": "枯れた",
+      "pron": "카레타",
+      "pronSrc": "user",
+      "trans": "메마른",
+      "transSrc": "user"
+    },
+    {
+      "t": 224.14,
+      "orig": "心のトワイライト",
+      "pron": "코코로노 토와이라잇",
+      "pronSrc": "user",
+      "trans": "마음의 트와일라잇",
+      "transSrc": "user"
+    },
+    {
+      "t": 227.32,
+      "orig": "惹かれていくよ",
+      "pron": "히카레테쿠요",
+      "pronSrc": "user",
+      "trans": "끌려가",
+      "transSrc": "user"
+    },
+    {
+      "t": 230.1,
+      "orig": "君とグラビティ",
+      "pron": "키미토 구라비티",
+      "pronSrc": "user",
+      "trans": "너와 그래비티",
+      "transSrc": "user"
+    },
+    {
+      "t": 232.88,
+      "orig": "まだまだ加速するよ",
+      "pron": "마다마다 카소쿠스루요",
+      "pronSrc": "user",
+      "trans": "점점 더 빨라질거야",
+      "transSrc": "user"
+    },
+    {
+      "t": 236.45,
+      "orig": "グラビティ",
+      "pron": "구라비티 (구라비티 후우 후)",
+      "pronSrc": "user",
+      "trans": "그래비티",
+      "transSrc": "user"
+    }
+  ]
+}

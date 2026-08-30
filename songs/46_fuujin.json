@@ -1,0 +1,497 @@
+{
+  "title": "風神",
+  "artist": "Vaundy",
+  "youtubeId": "IdQILQ6n1sk",
+  "bundleId": "vaundy-fuujin",
+  "offset": 0,
+  "lines": [
+    {
+      "t": 4.46,
+      "orig": "誰よりも",
+      "pron": "다레 요리모",
+      "pronSrc": "user",
+      "trans": "누구보다도",
+      "transSrc": "user"
+    },
+    {
+      "t": 7.71,
+      "orig": "「救いたい」 と悲劇を気取ってた",
+      "pron": "스쿠이타이토 히게키오 키돗테타",
+      "pronSrc": "user",
+      "trans": "'구하고 싶다' 며 비극을 자처했어",
+      "transSrc": "user"
+    },
+    {
+      "t": 14.07,
+      "orig": "面倒よりも",
+      "pron": "멘도- 요리모",
+      "pronSrc": "user",
+      "trans": "귀찮기보단",
+      "transSrc": "user"
+    },
+    {
+      "t": 17.63,
+      "orig": "それが砕いても、煮込んでも",
+      "pron": "소레가 쿠다이테모 니콘데모",
+      "pronSrc": "user",
+      "trans": "그게 끊어내도, 끓여도",
+      "transSrc": "user"
+    },
+    {
+      "t": 21.28,
+      "orig": "食べれない 故に",
+      "pron": "타베레나이 유에니",
+      "pronSrc": "user",
+      "trans": "먹을 수 없었기 때문에",
+      "transSrc": "user"
+    },
+    {
+      "t": 23.71,
+      "orig": "大脳の意思では",
+      "pron": "다이노-노 이시데와",
+      "pronSrc": "user",
+      "trans": "대뇌의 의지는",
+      "transSrc": "user"
+    },
+    {
+      "t": 27.54,
+      "orig": "静観がキメの一手なんだって",
+      "pron": "세이칸가 키메노 잇테난닷테",
+      "pronSrc": "user",
+      "trans": "정교한 관찰이 성공의 방법이래",
+      "transSrc": "user"
+    },
+    {
+      "t": 33.22,
+      "orig": "だが、心臓が言うには",
+      "pron": "다가 신조-가 유우니와",
+      "pronSrc": "user",
+      "trans": "하지만 심장이 말하길",
+      "transSrc": "user"
+    },
+    {
+      "t": 37.51,
+      "orig": "芽吹けば栄養さ",
+      "pron": "메부케바 에이요-사",
+      "pronSrc": "user",
+      "trans": "싹이 트면 바로 영양분을 줘야지",
+      "transSrc": "user"
+    },
+    {
+      "t": 41.86,
+      "orig": "この先も誰かを想うたび",
+      "pron": "코노 사키모 다레카오 오모우타비",
+      "pronSrc": "user",
+      "trans": "앞으로 누군가를 생각할 때 마다",
+      "transSrc": "user"
+    },
+    {
+      "t": 46.86,
+      "orig": "風纏い 擦り傷が絶えないだろう",
+      "pron": "카제마토이 스리키즈가 타에나이다로-",
+      "pronSrc": "user",
+      "trans": "바람에 휘감겨 상처가 끊이질 않겟지",
+      "transSrc": "user"
+    },
+    {
+      "t": 51.75,
+      "orig": "だがやがてこの風、受けるたびに",
+      "pron": "다가 야가테 코노 카제 우케루 타비니",
+      "pronSrc": "user",
+      "trans": "하지만 머지않아 이 바람, 맞을 때마다",
+      "transSrc": "user"
+    },
+    {
+      "t": 57.01,
+      "orig": "その、変え難い",
+      "pron": "소노 카에가타이",
+      "pronSrc": "user",
+      "trans": "그 변치않을",
+      "transSrc": "user"
+    },
+    {
+      "t": 59.3,
+      "orig": "ぬくい痛みに",
+      "pron": "누쿠이 이타미니",
+      "pronSrc": "user",
+      "trans": "따스한 아픔에",
+      "transSrc": "user"
+    },
+    {
+      "t": 61.58,
+      "orig": "報われていたい",
+      "pron": "무쿠와레테 이타이",
+      "pronSrc": "user",
+      "trans": "보답 받고 싶을",
+      "transSrc": "user"
+    },
+    {
+      "t": 66.2,
+      "orig": "はず",
+      "pron": "하즈",
+      "pronSrc": "user",
+      "trans": "거야",
+      "transSrc": "user"
+    },
+    {
+      "t": 67.52,
+      "orig": "はず",
+      "pron": "하즈",
+      "pronSrc": "user",
+      "trans": "거야",
+      "transSrc": "user"
+    },
+    {
+      "t": 70.09,
+      "orig": "はず",
+      "pron": "하즈",
+      "pronSrc": "user",
+      "trans": "거야",
+      "transSrc": "user"
+    },
+    {
+      "t": 82.94,
+      "orig": "ジリジリ",
+      "pron": "지리지리",
+      "pronSrc": "user",
+      "trans": "쨍쨍",
+      "transSrc": "user"
+    },
+    {
+      "t": 84.37,
+      "orig": "頬つたって痛いよ",
+      "pron": "호호 츠탓테 이타이요",
+      "pronSrc": "user",
+      "trans": "뺨을 타서 아파",
+      "transSrc": "user"
+    },
+    {
+      "t": 87.22,
+      "orig": "芽吹いた",
+      "pron": "메부이타",
+      "pronSrc": "user",
+      "trans": "싹이 텄어",
+      "transSrc": "user"
+    },
+    {
+      "t": 88.83,
+      "orig": "ヒラヒラ",
+      "pron": "히라히라",
+      "pronSrc": "user",
+      "trans": "팔랑팔랑",
+      "transSrc": "user"
+    },
+    {
+      "t": 90.45,
+      "orig": "喉元つたって",
+      "pron": "노도 모토 츠탓테",
+      "pronSrc": "user",
+      "trans": "목구멍을 타고",
+      "transSrc": "user"
+    },
+    {
+      "t": 92.87,
+      "orig": "吸い込み",
+      "pron": "스이 코미",
+      "pronSrc": "user",
+      "trans": "들이마셔",
+      "transSrc": "user"
+    },
+    {
+      "t": 94.79,
+      "orig": "肺が痛いよ",
+      "pron": "하이가 이타이요",
+      "pronSrc": "user",
+      "trans": "폐가 아파",
+      "transSrc": "user"
+    },
+    {
+      "t": 97.19,
+      "orig": "でもね",
+      "pron": "데모네",
+      "pronSrc": "user",
+      "trans": "하지만",
+      "transSrc": "user"
+    },
+    {
+      "t": 98.3,
+      "orig": "トクトク",
+      "pron": "토쿠토쿠",
+      "pronSrc": "user",
+      "trans": "쪼록쪼록",
+      "transSrc": "user"
+    },
+    {
+      "t": 99.78,
+      "orig": "あたたかいね",
+      "pron": "아타타카이네",
+      "pronSrc": "user",
+      "trans": "따뜻하네",
+      "transSrc": "user"
+    },
+    {
+      "t": 102,
+      "orig": "それが",
+      "pron": "소레가",
+      "pronSrc": "user",
+      "trans": "그것이",
+      "transSrc": "user"
+    },
+    {
+      "t": 102.81,
+      "orig": "大脳の意思では",
+      "pron": "다이노-노 이시데와",
+      "pronSrc": "user",
+      "trans": "대뇌의 의지는",
+      "transSrc": "user"
+    },
+    {
+      "t": 107.02,
+      "orig": "食わず嫌いがキメの一手だったって",
+      "pron": "쿠와즈 키라이가 키메노 잇테닷탓테",
+      "pronSrc": "user",
+      "trans": "덮어놓고 싫다고 하는게 성공의 방법이래",
+      "transSrc": "user"
+    },
+    {
+      "t": 112.32,
+      "orig": "また、心臓が言うには",
+      "pron": "마타 신조-가 유우니와",
+      "pronSrc": "user",
+      "trans": "또, 심장이 말하길",
+      "transSrc": "user"
+    },
+    {
+      "t": 116.7,
+      "orig": "君もそう、風神さ",
+      "pron": "키미모 소- 후-진사",
+      "pronSrc": "user",
+      "trans": "너도 그래, 풍신이야",
+      "transSrc": "user"
+    },
+    {
+      "t": 121.09,
+      "orig": "この先も誰かを想うたび",
+      "pron": "코노 사키모 다레카오 오모우타비",
+      "pronSrc": "user",
+      "trans": "앞으로 누군가를 생각할 때마다",
+      "transSrc": "user"
+    },
+    {
+      "t": 125.96,
+      "orig": "風纏い 擦り傷が絶えないだろう",
+      "pron": "카제마토이 스리키즈가 타에나이다로-",
+      "pronSrc": "user",
+      "trans": "바람에 휘감겨 상처가 끊이질 않겟지",
+      "transSrc": "user"
+    },
+    {
+      "t": 130.96,
+      "orig": "だがやがてこの風、受けるたびに",
+      "pron": "다가 야가테 코노 카제 우케루 타비니",
+      "pronSrc": "user",
+      "trans": "하지만 머지않아 이 바람, 맞을 때마다",
+      "transSrc": "user"
+    },
+    {
+      "t": 136.14,
+      "orig": "その、変え難い",
+      "pron": "소노 카에가타이",
+      "pronSrc": "user",
+      "trans": "그 변치않을",
+      "transSrc": "user"
+    },
+    {
+      "t": 138.43,
+      "orig": "ぬくい痛みに",
+      "pron": "누쿠이 이타미니",
+      "pronSrc": "user",
+      "trans": "따스한 아픔에",
+      "transSrc": "user"
+    },
+    {
+      "t": 140.71,
+      "orig": "報われていたい",
+      "pron": "무쿠와레테이타이",
+      "pronSrc": "user",
+      "trans": "보답 받고 싶을",
+      "transSrc": "user"
+    },
+    {
+      "t": 145.42,
+      "orig": "はず",
+      "pron": "하즈",
+      "pronSrc": "user",
+      "trans": "거야",
+      "transSrc": "user"
+    },
+    {
+      "t": 146.77,
+      "orig": "はず",
+      "pron": "하즈",
+      "pronSrc": "user",
+      "trans": "거야",
+      "transSrc": "user"
+    },
+    {
+      "t": 149.11,
+      "orig": "はず",
+      "pron": "하즈",
+      "pronSrc": "user",
+      "trans": "거야",
+      "transSrc": "user"
+    },
+    {
+      "t": 151.62,
+      "orig": "もしもこの世の隙間に",
+      "pron": "모시모 코노 요노 스키마니",
+      "pronSrc": "user",
+      "trans": "만약 이 세상의 틈에",
+      "transSrc": "user"
+    },
+    {
+      "t": 156.64,
+      "orig": "愛を少し分けられたなら",
+      "pron": "아이오 스코시 와케라레타나라",
+      "pronSrc": "user",
+      "trans": "사랑을 조금 나누어줄 수 있었다면",
+      "transSrc": "user"
+    },
+    {
+      "t": 160.71,
+      "orig": "それでこのぬくもりに",
+      "pron": "소레데 코노 누쿠모리니",
+      "pronSrc": "user",
+      "trans": "그걸로 이 온기에",
+      "transSrc": "user"
+    },
+    {
+      "t": 164.41,
+      "orig": "隙間風も",
+      "pron": "스키마카제모",
+      "pronSrc": "user",
+      "trans": "틈새로 불어오는 바람도",
+      "transSrc": "user"
+    },
+    {
+      "t": 165.89,
+      "orig": "凪ぐだろうか",
+      "pron": "나구다로-카",
+      "pronSrc": "user",
+      "trans": "고요해질 수 있을까",
+      "transSrc": "user"
+    },
+    {
+      "t": 168.11,
+      "orig": "僕が、誰かを想うたび",
+      "pron": "보쿠가 다레카오 오모우 타비",
+      "pronSrc": "user",
+      "trans": "내가, 누군가를 생각할 때마다",
+      "transSrc": "user"
+    },
+    {
+      "t": 171.43,
+      "orig": "風纏い擦り傷が絶えないだろう",
+      "pron": "카제마토이 스리키즈가 타에나이다로-",
+      "pronSrc": "user",
+      "trans": "바람에 휘감겨 상처가 끊이질 않겟지",
+      "transSrc": "user"
+    },
+    {
+      "t": 176.61,
+      "orig": "だがやがてこの風、受けるたびに",
+      "pron": "다가 야가테 코노 카제 우케루 타비니",
+      "pronSrc": "user",
+      "trans": "하지만 머지않아 이 바람, 맞을 때마다",
+      "transSrc": "user"
+    },
+    {
+      "t": 181.79,
+      "orig": "その、変え難い",
+      "pron": "소노 카에가타이",
+      "pronSrc": "user",
+      "trans": "그 변치않을",
+      "transSrc": "user"
+    },
+    {
+      "t": 184.01,
+      "orig": "ぬくい痛みに",
+      "pron": "누쿠이 이타미니",
+      "pronSrc": "user",
+      "trans": "따스한 아픔에",
+      "transSrc": "user"
+    },
+    {
+      "t": 186.23,
+      "orig": "拭われて",
+      "pron": "누구와레테",
+      "pronSrc": "user",
+      "trans": "지워져",
+      "transSrc": "user"
+    },
+    {
+      "t": 187.71,
+      "orig": "あなたを想うたびに",
+      "pron": "아나타오 오모우 타비니",
+      "pronSrc": "user",
+      "trans": "당신을 생각할 때마다",
+      "transSrc": "user"
+    },
+    {
+      "t": 191.04,
+      "orig": "風纏い擦り傷が絶えないだろう",
+      "pron": "카제마토이 스리키즈가 타에나이다로-",
+      "pronSrc": "user",
+      "trans": "바람에 휘감겨 상처가 끊이질 않겟지",
+      "transSrc": "user"
+    },
+    {
+      "t": 196.22,
+      "orig": "だがやがてこの風、受けるたびに",
+      "pron": "다가 야가테 코노 카제 우케루 타비니",
+      "pronSrc": "user",
+      "trans": "하지만 머지않아 이 바람, 맞을 때마다",
+      "transSrc": "user"
+    },
+    {
+      "t": 201.39,
+      "orig": "その、変え難い",
+      "pron": "소노 카에가타이",
+      "pronSrc": "user",
+      "trans": "그 변치않을",
+      "transSrc": "user"
+    },
+    {
+      "t": 203.61,
+      "orig": "ぬくい痛みに",
+      "pron": "누쿠이 이타미니",
+      "pronSrc": "user",
+      "trans": "따스한 아픔에",
+      "transSrc": "user"
+    },
+    {
+      "t": 205.83,
+      "orig": "救われていた",
+      "pron": "스쿠와레테이타",
+      "pronSrc": "user",
+      "trans": "구해졌을",
+      "transSrc": "user"
+    },
+    {
+      "t": 208.05,
+      "orig": "はず",
+      "pron": "하즈",
+      "pronSrc": "user",
+      "trans": "거야",
+      "transSrc": "user"
+    },
+    {
+      "t": 208.79,
+      "orig": "はずだから",
+      "pron": "하즈다카라",
+      "pronSrc": "user",
+      "trans": "거야, 그러니까",
+      "transSrc": "user"
+    }
+  ]
+}

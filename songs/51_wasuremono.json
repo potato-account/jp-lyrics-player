@@ -1,0 +1,337 @@
+{
+  "title": "忘れ物",
+  "artist": "Vaundy",
+  "youtubeId": "0ahTUQn7Oho",
+  "bundleId": "vaundy-wasuremono",
+  "offset": 0,
+  "lines": [
+    {
+      "t": 13.45,
+      "orig": "僕らはきっと",
+      "pron": "보쿠라와 킷토",
+      "pronSrc": "user",
+      "trans": "우리는 분명",
+      "transSrc": "user"
+    },
+    {
+      "t": 15.86,
+      "orig": "そこらにある物じゃ",
+      "pron": "소코라니 아루 모노쟈",
+      "pronSrc": "user",
+      "trans": "그곳에 있는 것들로는",
+      "transSrc": "user"
+    },
+    {
+      "t": 19.97,
+      "orig": "足りなかった",
+      "pron": "타리나캇타",
+      "pronSrc": "user",
+      "trans": "부족했던 거야",
+      "transSrc": "user"
+    },
+    {
+      "t": 22.71,
+      "orig": "僕らはずっと",
+      "pron": "보쿠라와 즛토",
+      "pronSrc": "user",
+      "trans": "우리는 지금까지",
+      "transSrc": "user"
+    },
+    {
+      "t": 25.05,
+      "orig": "近くの愛をそっと",
+      "pron": "치카쿠노 아이오 솟토",
+      "pronSrc": "user",
+      "trans": "근처의 사랑을 살짝",
+      "transSrc": "user"
+    },
+    {
+      "t": 27.96,
+      "orig": "拾いあってた",
+      "pron": "히로이앗테타",
+      "pronSrc": "user",
+      "trans": "줍고 있었던 거야",
+      "transSrc": "user"
+    },
+    {
+      "t": 30.15,
+      "orig": "凛として何もないアルバムを覗いた",
+      "pron": "린토시테 나니모 나이 아루바무오 노조이타",
+      "pronSrc": "user",
+      "trans": "조촐하고 아무것도 없는 앨범을 들여다 봤어",
+      "transSrc": "user"
+    },
+    {
+      "t": 37.24,
+      "orig": "笑ったふりして",
+      "pron": "와랏타 후리시테",
+      "pronSrc": "user",
+      "trans": "웃는 척을 하며",
+      "transSrc": "user"
+    },
+    {
+      "t": 39.88,
+      "orig": "帰ろうか",
+      "pron": "카에로카",
+      "pronSrc": "user",
+      "trans": "돌아갈까",
+      "transSrc": "user"
+    },
+    {
+      "t": 43.04,
+      "orig": "思い出も全部ここに置いて",
+      "pron": "오모이데모 젠부 코코니 오이테",
+      "pronSrc": "user",
+      "trans": "추억까지도 전부 이곳에 두고",
+      "transSrc": "user"
+    },
+    {
+      "t": 47.35,
+      "orig": "ここで泣けるシーンが来た数だけ",
+      "pron": "코코데 나케루 신가 키타 카즈다케",
+      "pronSrc": "user",
+      "trans": "여기서 우는 장면이 나온 수만큼",
+      "transSrc": "user"
+    },
+    {
+      "t": 52.39,
+      "orig": "ほら",
+      "pron": "호라",
+      "pronSrc": "user",
+      "trans": "봐,",
+      "transSrc": "user"
+    },
+    {
+      "t": 53.11,
+      "orig": "忘れ物してんだって",
+      "pron": "와스레모노 시텐닷테",
+      "pronSrc": "user",
+      "trans": "두고 온 물건이 있다니까",
+      "transSrc": "user"
+    },
+    {
+      "t": 56.34,
+      "orig": "僕らはきっと",
+      "pron": "보쿠라와 킷토",
+      "pronSrc": "user",
+      "trans": "우리는 분명",
+      "transSrc": "user"
+    },
+    {
+      "t": 58.5,
+      "orig": "涙をそっと拾う、余暇はなかった",
+      "pron": "나미다오 솟토 히로우 요카와 나캇타",
+      "pronSrc": "user",
+      "trans": "눈물을 살짝 주워담을 여유는 없었어",
+      "transSrc": "user"
+    },
+    {
+      "t": 63.53,
+      "orig": "だから",
+      "pron": "다카라",
+      "pronSrc": "user",
+      "trans": "그러니",
+      "transSrc": "user"
+    },
+    {
+      "t": 64.61,
+      "orig": "僕らはずっと",
+      "pron": "보쿠라와 즛토",
+      "pronSrc": "user",
+      "trans": "우리는 지금까지",
+      "transSrc": "user"
+    },
+    {
+      "t": 66.77,
+      "orig": "互いの幸福を、睨みあっている",
+      "pron": "타가이노 코후쿠오 니라미앗테이루",
+      "pronSrc": "user",
+      "trans": "서로의 행복을, 바라보고 있었어",
+      "transSrc": "user"
+    },
+    {
+      "t": 71.44,
+      "orig": "凛として凍りつき",
+      "pron": "린토시테 코오리츠키",
+      "pronSrc": "user",
+      "trans": "차갑게 얼어붙어",
+      "transSrc": "user"
+    },
+    {
+      "t": 74.32,
+      "orig": "痛み出した心が放った",
+      "pron": "이타미다시타 코코로가 하낫타",
+      "pronSrc": "user",
+      "trans": "아파오는 마음이 뱉어냈어",
+      "transSrc": "user"
+    },
+    {
+      "t": 77.92,
+      "orig": "「『時として、許しあうこと』がそもそもの罪だ」",
+      "pron": "토키토시테 유루시아우 코토가 소모소모노 츠미다",
+      "pronSrc": "user",
+      "trans": "「『가끔은, 서로를 용서하는 것』 자체가 죄야」",
+      "transSrc": "user"
+    },
+    {
+      "t": 84.39,
+      "orig": "諦めもついた",
+      "pron": "아키라메모 츠이타",
+      "pronSrc": "user",
+      "trans": "포기하기도 했어",
+      "transSrc": "user"
+    },
+    {
+      "t": 86.55,
+      "orig": "帰ろうか",
+      "pron": "카에로카",
+      "pronSrc": "user",
+      "trans": "돌아갈까",
+      "transSrc": "user"
+    },
+    {
+      "t": 87.98,
+      "orig": "思い出も全部ここに置いて",
+      "pron": "오모이데모 젠부 코코니 오이테",
+      "pronSrc": "user",
+      "trans": "추억까지도 전부 이곳에 두고",
+      "transSrc": "user"
+    },
+    {
+      "t": 92.3,
+      "orig": "ここで泣けるシーンが来た数だけ",
+      "pron": "코코데 나케루 신가 키타 카즈다케",
+      "pronSrc": "user",
+      "trans": "여기서 우는 장면이 나온 수만큼",
+      "transSrc": "user"
+    },
+    {
+      "t": 97.33,
+      "orig": "ほら",
+      "pron": "호라",
+      "pronSrc": "user",
+      "trans": "봐,",
+      "transSrc": "user"
+    },
+    {
+      "t": 98.05,
+      "orig": "忘れ物してんだって",
+      "pron": "와스레모노 시텐닷테",
+      "pronSrc": "user",
+      "trans": "두고 온 물건이 있다니까",
+      "transSrc": "user"
+    },
+    {
+      "t": 101.29,
+      "orig": "時が過ぎとも",
+      "pron": "토키가 스기토모",
+      "pronSrc": "user",
+      "trans": "시간이 지나도",
+      "transSrc": "user"
+    },
+    {
+      "t": 103.44,
+      "orig": "「それ」は切れぬ、碇となる",
+      "pron": "소레와 키레누 이카리토 나루",
+      "pronSrc": "user",
+      "trans": "「그것」은 끊이지 않는, 닻이 돼",
+      "transSrc": "user"
+    },
+    {
+      "t": 107.04,
+      "orig": "忘れていいよ",
+      "pron": "와스레테 이이요",
+      "pronSrc": "user",
+      "trans": "잊어도 돼",
+      "transSrc": "user"
+    },
+    {
+      "t": 109.2,
+      "orig": "忘れていいよ",
+      "pron": "와스레테 이이요",
+      "pronSrc": "user",
+      "trans": "잊어도 돼",
+      "transSrc": "user"
+    },
+    {
+      "t": 111.35,
+      "orig": "でもね、そう",
+      "pron": "데모네 소",
+      "pronSrc": "user",
+      "trans": "그래도,",
+      "transSrc": "user"
+    },
+    {
+      "t": 113.15,
+      "orig": "辛い時は",
+      "pron": "츠라이 토키와",
+      "pronSrc": "user",
+      "trans": "괴로운 때에는",
+      "transSrc": "user"
+    },
+    {
+      "t": 114.59,
+      "orig": "立ち止まって",
+      "pron": "타치토맛테",
+      "pronSrc": "user",
+      "trans": "멈춰 서서",
+      "transSrc": "user"
+    },
+    {
+      "t": 116.75,
+      "orig": "泣いてもいいぜ",
+      "pron": "나이테모 이이제",
+      "pronSrc": "user",
+      "trans": "울어도 돼",
+      "transSrc": "user"
+    },
+    {
+      "t": 119.26,
+      "orig": "帰ろうか",
+      "pron": "카에로카",
+      "pronSrc": "user",
+      "trans": "돌아갈까",
+      "transSrc": "user"
+    },
+    {
+      "t": 120.7,
+      "orig": "思い出も全部ここに置いて",
+      "pron": "오모이데모 젠부 코코니 오이테",
+      "pronSrc": "user",
+      "trans": "추억까지도 전부 이곳에 두고",
+      "transSrc": "user"
+    },
+    {
+      "t": 125.02,
+      "orig": "ここで泣けるシーンが来た数だけ",
+      "pron": "코코데 나케루 신가 키타 카즈다케",
+      "pronSrc": "user",
+      "trans": "여기서 우는 장면이 나온 수만큼",
+      "transSrc": "user"
+    },
+    {
+      "t": 130.05,
+      "orig": "まぁ、拾っても最後に笑えんなら",
+      "pron": "마 히롯테모 사이고니 와라엔나라",
+      "pronSrc": "user",
+      "trans": "뭐, 줍는다 해도 마지막에 웃을 수 있다면",
+      "transSrc": "user"
+    },
+    {
+      "t": 135.08,
+      "orig": "ほら",
+      "pron": "호라",
+      "pronSrc": "user",
+      "trans": "자,",
+      "transSrc": "user"
+    },
+    {
+      "t": 135.8,
+      "orig": "ぎゅっと掴め忘れ物",
+      "pron": "귯토 츠카메 와스레모노",
+      "pronSrc": "user",
+      "trans": "꽉 잡아, 두고 온 것을",
+      "transSrc": "user"
+    }
+  ]
+}

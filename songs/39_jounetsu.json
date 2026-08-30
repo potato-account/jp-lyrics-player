@@ -1,0 +1,393 @@
+{
+  "title": "常熱",
+  "artist": "Vaundy",
+  "youtubeId": "fxtQ4Dsmqo0",
+  "bundleId": "vaundy-jounetsu",
+  "offset": 0,
+  "lines": [
+    {
+      "t": 29.15,
+      "orig": "太陽系をちょうど抜けたあたりで",
+      "pron": "타이요오케이오 쵸오도 누케타 아타리데",
+      "pronSrc": "user",
+      "trans": "태양계를 막 빠져나갈 즈음에",
+      "transSrc": "user"
+    },
+    {
+      "t": 36.64,
+      "orig": "思い出した",
+      "pron": "오모이다시타",
+      "pronSrc": "user",
+      "trans": "알아챘어",
+      "transSrc": "user"
+    },
+    {
+      "t": 41.59,
+      "orig": "何億年もループを抜けない旅を",
+      "pron": "난오쿠넨모 루우푸오 누케나이 타비오",
+      "pronSrc": "user",
+      "trans": "몇억년이나 루프에서 벗어나지 않는 여행을",
+      "transSrc": "user"
+    },
+    {
+      "t": 49.04,
+      "orig": "してたような",
+      "pron": "시테타 요오나",
+      "pronSrc": "user",
+      "trans": "한 것 같다는 걸",
+      "transSrc": "user"
+    },
+    {
+      "t": 52.51,
+      "orig": "動悸に気づき出した",
+      "pron": "도오키니 키즈키다시타",
+      "pronSrc": "user",
+      "trans": "두근거림을 눈치챘을-",
+      "transSrc": "user"
+    },
+    {
+      "t": 56.59,
+      "orig": "そのころには 視界にはもう靄がかかっていく",
+      "pron": "소노코로니-와 시카이니-와 모오 모야가 카캇테이쿠",
+      "pronSrc": "user",
+      "trans": "-무렵에는 아직 눈앞이 뿌옇게 흐린 채",
+      "transSrc": "user"
+    },
+    {
+      "t": 64.25,
+      "orig": "正気を取り戻した",
+      "pron": "(oh oh) 쇼우 키오 토리모도시타",
+      "pronSrc": "user",
+      "trans": "제정신을 차렸을-",
+      "transSrc": "user"
+    },
+    {
+      "t": 67.38,
+      "orig": "そのころには、その機体はすでに止まっている",
+      "pron": "소노코로니-와 소노키타이-와 스데니 토맛 테이루",
+      "pronSrc": "user",
+      "trans": "-무렵엔 이미 그 흐림은 사라져 있어",
+      "transSrc": "user"
+    },
+    {
+      "t": 75.2,
+      "orig": "「いつだって君のことは",
+      "pron": "(ah,) 이츠닷테 키미노 코토와",
+      "pronSrc": "user",
+      "trans": "\" 언제라도 너에겐",
+      "transSrc": "user"
+    },
+    {
+      "t": 79.11,
+      "orig": "底なしで触れてたいな",
+      "pron": "소코나시데 후레테타이나",
+      "pronSrc": "user",
+      "trans": "한없이 닿아있고 싶어",
+      "transSrc": "user"
+    },
+    {
+      "t": 83.01,
+      "orig": "平熱も上がるような毎日をあげるから",
+      "pron": "헤이네츠모 아가루요오나 마이니치오 아게루카라",
+      "pronSrc": "user",
+      "trans": "체온도 달아오를듯한 나날을 줄 테니까.",
+      "transSrc": "user"
+    },
+    {
+      "t": 89.66,
+      "orig": "もう",
+      "pron": "모오",
+      "pronSrc": "user",
+      "trans": "더는-",
+      "transSrc": "user"
+    },
+    {
+      "t": 90.44,
+      "orig": "どうしたって君の心が",
+      "pron": "도오시탓테 키미노 코(코)로가",
+      "pronSrc": "user",
+      "trans": "-어찌 할 수 없이,  너의 마음이",
+      "transSrc": "user"
+    },
+    {
+      "t": 94.35,
+      "orig": "溶け出して、焦るほどの",
+      "pron": "토케다시테 아세루호도노",
+      "pronSrc": "user",
+      "trans": "녹아내려서, 안달이 날 정도의",
+      "transSrc": "user"
+    },
+    {
+      "t": 98.26,
+      "orig": "常熱を",
+      "pron": "죠오네츠오",
+      "pronSrc": "user",
+      "trans": "상열을",
+      "transSrc": "user"
+    },
+    {
+      "t": 99.43,
+      "orig": "その鼓動に毎日あげるから」",
+      "pron": "소노 코도오니 마이니치 아게루카라",
+      "pronSrc": "user",
+      "trans": "너의 그 고동에 매일 줄 거니까 \"",
+      "transSrc": "user"
+    },
+    {
+      "t": 104.12,
+      "orig": "海底圏がちょうど見えたあたりで",
+      "pron": "카이테에켄가 초오도미에타 아타리데",
+      "pronSrc": "user",
+      "trans": "해저면이 막 보일때 즈음에",
+      "transSrc": "user"
+    },
+    {
+      "t": 109.99,
+      "orig": "思い出した",
+      "pron": "오모이다시타",
+      "pronSrc": "user",
+      "trans": "알아챘어",
+      "transSrc": "user"
+    },
+    {
+      "t": 111.94,
+      "orig": "何重圧も肌に溶ける",
+      "pron": "난주우아츠모 하다니토케루",
+      "pronSrc": "user",
+      "trans": "강한 압력으로, 피부에 녹아든",
+      "transSrc": "user"
+    },
+    {
+      "t": 115.46,
+      "orig": "血圧が上がるような",
+      "pron": "케츠아츠가 아가루요오나",
+      "pronSrc": "user",
+      "trans": "혈압이 오를듯 하다는 걸",
+      "transSrc": "user"
+    },
+    {
+      "t": 118.98,
+      "orig": "ぁ〜あ",
+      "pron": "아-아",
+      "pronSrc": "user",
+      "trans": "아~아",
+      "transSrc": "user"
+    },
+    {
+      "t": 119.76,
+      "orig": "言葉が溶け出していくぅ",
+      "pron": "코토바가 토케다시테이쿠----",
+      "pronSrc": "user",
+      "trans": "말이 녹아내려가~",
+      "transSrc": "user"
+    },
+    {
+      "t": 124.06,
+      "orig": "血圧乱して",
+      "pron": "케츠아츠미다시테",
+      "pronSrc": "user",
+      "trans": "혈압이 흩뜨려져",
+      "transSrc": "user"
+    },
+    {
+      "t": 126.02,
+      "orig": "またもう指先痺れだし",
+      "pron": "마타모오 유비사키시비레다시",
+      "pronSrc": "user",
+      "trans": "거기에 손끝도 저리기 시작해",
+      "transSrc": "user"
+    },
+    {
+      "t": 129.93,
+      "orig": "この動悸に気づき出した",
+      "pron": "코노도오키니 키즈키다시타",
+      "pronSrc": "user",
+      "trans": "이 두근거림을 눈치챘을-",
+      "transSrc": "user"
+    },
+    {
+      "t": 134.23,
+      "orig": "そのころには、 視界にはもう靄がかかっていく",
+      "pron": "소노코로니-와 시카이니-와 모오 모야가 카캇테이쿠",
+      "pronSrc": "user",
+      "trans": "-무렵엔 아직 눈앞이 뿌옇게 흐린 채",
+      "transSrc": "user"
+    },
+    {
+      "t": 142.04,
+      "orig": "正気を取り戻した",
+      "pron": "(oh oh) 쇼우 키오 토리모도시타",
+      "pronSrc": "user",
+      "trans": "제정신을 차렸을-",
+      "transSrc": "user"
+    },
+    {
+      "t": 145.17,
+      "orig": "そのころには その液体はすでに上がっている",
+      "pron": "소노코로니-와 소노에키타이-와 스데니 아갓 데이루",
+      "pronSrc": "user",
+      "trans": "-무렵엔 이미 그 흐림은 사라져 있어",
+      "transSrc": "user"
+    },
+    {
+      "t": 152.99,
+      "orig": "「いつだって君のことは",
+      "pron": "(ah,) 이츠닷테 키미노 코토와",
+      "pronSrc": "user",
+      "trans": "\" 언제라도 너에겐",
+      "transSrc": "user"
+    },
+    {
+      "t": 156.9,
+      "orig": "底なしで触れてたいな",
+      "pron": "소코나시데 후레테타이나",
+      "pronSrc": "user",
+      "trans": "한없이 닿아있고 싶어",
+      "transSrc": "user"
+    },
+    {
+      "t": 160.81,
+      "orig": "平熱も上がるような毎日をあげるから",
+      "pron": "헤이네츠모 아가루요오나 마이니치오 아게루카라",
+      "pronSrc": "user",
+      "trans": "체온도 달아오를듯한 나날을 줄 테니까.",
+      "transSrc": "user"
+    },
+    {
+      "t": 167.46,
+      "orig": "もう",
+      "pron": "모오",
+      "pronSrc": "user",
+      "trans": "더는-",
+      "transSrc": "user"
+    },
+    {
+      "t": 168.24,
+      "orig": "どうしたって君の心が",
+      "pron": "도오시탓테 키미노 코(코)로가",
+      "pronSrc": "user",
+      "trans": "-어찌 할 수 없이,  너의 마음이",
+      "transSrc": "user"
+    },
+    {
+      "t": 172.15,
+      "orig": "溶け出して、焦るほどの",
+      "pron": "토케다시테 아세루호도노",
+      "pronSrc": "user",
+      "trans": "녹아내려서, 안달이 날 정도의",
+      "transSrc": "user"
+    },
+    {
+      "t": 176.06,
+      "orig": "常熱を",
+      "pron": "죠오네츠오",
+      "pronSrc": "user",
+      "trans": "상열을",
+      "transSrc": "user"
+    },
+    {
+      "t": 177.23,
+      "orig": "その鼓動に毎日あげるから」",
+      "pron": "소노 코도오니 마이니치 아게루카라",
+      "pronSrc": "user",
+      "trans": "너의 그 고동에 매일 줄 거니까 \"",
+      "transSrc": "user"
+    },
+    {
+      "t": 181.92,
+      "orig": "ぁ〜あ",
+      "pron": "아-아",
+      "pronSrc": "user",
+      "trans": "아~아",
+      "transSrc": "user"
+    },
+    {
+      "t": 182.7,
+      "orig": "言葉が溶け出していくぅ",
+      "pron": "코토바가 토케다시테이쿠----",
+      "pronSrc": "user",
+      "trans": "말이 녹아내려가~",
+      "transSrc": "user"
+    },
+    {
+      "t": 187,
+      "orig": "脳圧満たして",
+      "pron": "노오아츠 미타시테",
+      "pronSrc": "user",
+      "trans": "머리가 멍해져",
+      "transSrc": "user"
+    },
+    {
+      "t": 189.35,
+      "orig": "またもう夢見心地さ",
+      "pron": "마타 모오 유메미-코코치-사",
+      "pronSrc": "user",
+      "trans": "또다시 꿈을 꾸는듯한 기분이야",
+      "transSrc": "user"
+    },
+    {
+      "t": 192.87,
+      "orig": "「いつだって君のことは",
+      "pron": "(oh~) 이츠닷테 키미노 코토와",
+      "pronSrc": "user",
+      "trans": "\" 언제라도 너에겐",
+      "transSrc": "user"
+    },
+    {
+      "t": 196.77,
+      "orig": "底なしで触れてたいな",
+      "pron": "소코나시데 후레테타이나",
+      "pronSrc": "user",
+      "trans": "한없이 닿아있고 싶어",
+      "transSrc": "user"
+    },
+    {
+      "t": 200.68,
+      "orig": "平熱も上がるような毎日をあげるから",
+      "pron": "헤이네츠모 아가루요오나 마이니치오 아게루카라",
+      "pronSrc": "user",
+      "trans": "체온도 달아오를듯한 나날을 줄 테니까.",
+      "transSrc": "user"
+    },
+    {
+      "t": 207.33,
+      "orig": "もう",
+      "pron": "모오",
+      "pronSrc": "user",
+      "trans": "더는-",
+      "transSrc": "user"
+    },
+    {
+      "t": 208.14,
+      "orig": "どうしたって君の心が",
+      "pron": "도오시탓테 키미노 코(코)로가",
+      "pronSrc": "user",
+      "trans": "-어찌 할 수 없이,  너의 마음이",
+      "transSrc": "user"
+    },
+    {
+      "t": 212.19,
+      "orig": "溶け出して、焦るほどの",
+      "pron": "토케다시테 아세루호도노",
+      "pronSrc": "user",
+      "trans": "녹아내려서, 안달이 날 정도의",
+      "transSrc": "user"
+    },
+    {
+      "t": 216.25,
+      "orig": "常熱を",
+      "pron": "죠오네츠오",
+      "pronSrc": "user",
+      "trans": "상열을",
+      "transSrc": "user"
+    },
+    {
+      "t": 217.47,
+      "orig": "その鼓動に毎日あげるから」",
+      "pron": "소노 코도오니 마이니치 아게루카라",
+      "pronSrc": "user",
+      "trans": "너의 그 고동에 매일 줄 거니까 \"",
+      "transSrc": "user"
+    }
+  ]
+}

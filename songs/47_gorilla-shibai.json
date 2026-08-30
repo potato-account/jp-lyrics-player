@@ -1,0 +1,505 @@
+{
+  "title": "GORILLA芝居",
+  "artist": "Vaundy",
+  "youtubeId": "RFVHj-vmJIw",
+  "bundleId": "vaundy-gorilla-shibai",
+  "offset": 0,
+  "lines": [
+    {
+      "t": 13.2,
+      "orig": "耳鳴りと熱",
+      "pron": "미 미 나 리토네츠",
+      "pronSrc": "user",
+      "trans": "이명과 열기",
+      "transSrc": "user"
+    },
+    {
+      "t": 19.55,
+      "orig": "止め方も忘れていて",
+      "pron": "토 메 카 타모 와스 레테이테",
+      "pronSrc": "user",
+      "trans": "멈추는 방법도 잊어버린 채",
+      "transSrc": "user"
+    },
+    {
+      "t": 25.24,
+      "orig": "鼓膜越し、 数センチで",
+      "pron": "코 마 쿠 고시 스우 센치데",
+      "pronSrc": "user",
+      "trans": "고막 너머, 수 센치로",
+      "transSrc": "user"
+    },
+    {
+      "t": 31.35,
+      "orig": "言葉が詰まってる",
+      "pron": "코토바가 츠맛테루",
+      "pronSrc": "user",
+      "trans": "말이 막혀 쌓여있는-",
+      "transSrc": "user"
+    },
+    {
+      "t": 34.48,
+      "orig": "みたい",
+      "pron": "미타이",
+      "pronSrc": "user",
+      "trans": "-것 같아",
+      "transSrc": "user"
+    },
+    {
+      "t": 35.87,
+      "orig": "目が覚めたあなたの声で",
+      "pron": "메가 사메타 아나타노 코에데",
+      "pronSrc": "user",
+      "trans": "눈을 뜬 당신의 목소리로",
+      "transSrc": "user"
+    },
+    {
+      "t": 41.64,
+      "orig": "「人肌が恋しすぎて仕方ないんでしょ?」",
+      "pron": "히토 하다가 코이시 스기테 시카타나인데쇼",
+      "pronSrc": "user",
+      "trans": "'사람의 피부가 너무 그리워 견딜 수 없지?'",
+      "transSrc": "user"
+    },
+    {
+      "t": 46.27,
+      "orig": "まって、 心痛い",
+      "pron": "맛테, 코코로 이타이",
+      "pronSrc": "user",
+      "trans": "잠깐, 마음이 아파",
+      "transSrc": "user"
+    },
+    {
+      "t": 48.97,
+      "orig": "一枚皮で",
+      "pron": "이치마이 카와데",
+      "pronSrc": "user",
+      "trans": "한 장 너머로",
+      "transSrc": "user"
+    },
+    {
+      "t": 52.28,
+      "orig": "漂っていたいよ",
+      "pron": "토돗테이타이요",
+      "pronSrc": "user",
+      "trans": "방황하고 싶어",
+      "transSrc": "user"
+    },
+    {
+      "t": 54.03,
+      "orig": "間抜けな声しか",
+      "pron": "맛케나 코에시카",
+      "pronSrc": "user",
+      "trans": "얼빠진 목소리 밖엔-",
+      "transSrc": "user"
+    },
+    {
+      "t": 55.53,
+      "orig": "喉を通らない",
+      "pron": "노도오 토오라나이",
+      "pronSrc": "user",
+      "trans": "-나오질 않아",
+      "transSrc": "user"
+    },
+    {
+      "t": 58.28,
+      "orig": "まって、 喉も痛い",
+      "pron": "맛테, 노도모 이타이",
+      "pronSrc": "user",
+      "trans": "잠깐, 목도 아파",
+      "transSrc": "user"
+    },
+    {
+      "t": 60.76,
+      "orig": "二枚弁で",
+      "pron": "니마이 비라데",
+      "pronSrc": "user",
+      "trans": "두 장 너머로",
+      "transSrc": "user"
+    },
+    {
+      "t": 63.82,
+      "orig": "文句垂らして",
+      "pron": "못타라시테",
+      "pronSrc": "user",
+      "trans": "불평을 늘어놓으며",
+      "transSrc": "user"
+    },
+    {
+      "t": 65.37,
+      "orig": "独り言しか",
+      "pron": "히토리 고토시카",
+      "pronSrc": "user",
+      "trans": "혼잣말 밖엔",
+      "transSrc": "user"
+    },
+    {
+      "t": 67.12,
+      "orig": "喉を通らない",
+      "pron": "노도오 토오라나이",
+      "pronSrc": "user",
+      "trans": "나오질 않아",
+      "transSrc": "user"
+    },
+    {
+      "t": 69.06,
+      "orig": "帳尻合わせて",
+      "pron": "초오지리 아와세테",
+      "pronSrc": "user",
+      "trans": "이치(理致)에 맞게",
+      "transSrc": "user"
+    },
+    {
+      "t": 71.7,
+      "orig": "一束、 二束三文とんで四文",
+      "pron": "잇소쿠 니소쿠 산몬 톤데 욘몬",
+      "pronSrc": "user",
+      "trans": "한 다발, 두 다발 세 푼* 넘어 네 푼",
+      "transSrc": "user"
+    },
+    {
+      "t": 74.17,
+      "orig": "それくらいがフェアじゃない?",
+      "pron": "소레쿠라이가 훼아쟈나이",
+      "pronSrc": "user",
+      "trans": "그정도가 공평하지 않아?",
+      "transSrc": "user"
+    },
+    {
+      "t": 76.33,
+      "orig": "合わせて",
+      "pron": "아와세테",
+      "pronSrc": "user",
+      "trans": "합해서",
+      "transSrc": "user"
+    },
+    {
+      "t": 77.56,
+      "orig": "一束、 二束三文とんで四文",
+      "pron": "잇소쿠 니소쿠 산몬 톤데 욘몬",
+      "pronSrc": "user",
+      "trans": "한 다발, 두 다발 세 푼 넘어 네 푼",
+      "transSrc": "user"
+    },
+    {
+      "t": 80.06,
+      "orig": "俺らずっと",
+      "pron": "오레라즛토",
+      "pronSrc": "user",
+      "trans": "우리는 계속",
+      "transSrc": "user"
+    },
+    {
+      "t": 80.91,
+      "orig": "Gorilla 芝居",
+      "pron": "고리라시바이",
+      "pronSrc": "user",
+      "trans": "고릴라 연극",
+      "transSrc": "user"
+    },
+    {
+      "t": 83.09,
+      "orig": "そこに 突き立てられた",
+      "pron": "소코니 츠키타테라레타",
+      "pronSrc": "user",
+      "trans": "그곳에 찔려 세워진",
+      "transSrc": "user"
+    },
+    {
+      "t": 84.33,
+      "orig": "聖剣と",
+      "pron": "세이켄토",
+      "pronSrc": "user",
+      "trans": "세간의 기준과**",
+      "transSrc": "user"
+    },
+    {
+      "t": 85.52,
+      "orig": "俺が積み上げてきた",
+      "pron": "오레가 츠미아게테키타",
+      "pronSrc": "user",
+      "trans": "내가 쌓아올려온",
+      "transSrc": "user"
+    },
+    {
+      "t": 87.27,
+      "orig": "世間体と",
+      "pron": "세켄테이토",
+      "pronSrc": "user",
+      "trans": "세간에의 체면이",
+      "transSrc": "user"
+    },
+    {
+      "t": 88.92,
+      "orig": "何が違ったのか",
+      "pron": "나니가 치갓타 노카",
+      "pronSrc": "user",
+      "trans": "뭐가 달랏던 걸까",
+      "transSrc": "user"
+    },
+    {
+      "t": 92.63,
+      "orig": "わからないが",
+      "pron": "와카라나이가",
+      "pronSrc": "user",
+      "trans": "모르겠지만",
+      "transSrc": "user"
+    },
+    {
+      "t": 95.74,
+      "orig": "耳の奥から",
+      "pron": "미 미 노 오쿠카라",
+      "pronSrc": "user",
+      "trans": "귓속에서",
+      "transSrc": "user"
+    },
+    {
+      "t": 100.83,
+      "orig": "共鳴りも聞こえてきて",
+      "pron": "토 모 나 리모 키코에테키테",
+      "pronSrc": "user",
+      "trans": "공명도 들려오기 시작해",
+      "transSrc": "user"
+    },
+    {
+      "t": 106.39,
+      "orig": "痛い",
+      "pron": "이타이",
+      "pronSrc": "user",
+      "trans": "아파",
+      "transSrc": "user"
+    },
+    {
+      "t": 107.99,
+      "orig": "一枚皮で",
+      "pron": "이치마이 카와데",
+      "pronSrc": "user",
+      "trans": "한 장 너머로",
+      "transSrc": "user"
+    },
+    {
+      "t": 110.69,
+      "orig": "漂っていたいよ",
+      "pron": "(타)욧테이타이요",
+      "pronSrc": "user",
+      "trans": "방황하고 싶어",
+      "transSrc": "user"
+    },
+    {
+      "t": 112.46,
+      "orig": "間抜けな声しか",
+      "pron": "맛케나 코에시카",
+      "pronSrc": "user",
+      "trans": "얼빠진 목소리 밖엔-",
+      "transSrc": "user"
+    },
+    {
+      "t": 114.06,
+      "orig": "喉を通らない",
+      "pron": "노도오 토오라나이",
+      "pronSrc": "user",
+      "trans": "-나오질 않아",
+      "transSrc": "user"
+    },
+    {
+      "t": 116.43,
+      "orig": "まって、 喉も痛い",
+      "pron": "맛테, 노도모 이타이",
+      "pronSrc": "user",
+      "trans": "잠깐, 목도 아파",
+      "transSrc": "user"
+    },
+    {
+      "t": 119.44,
+      "orig": "二枚弁で",
+      "pron": "니마이 비라데",
+      "pronSrc": "user",
+      "trans": "두 장 너머로",
+      "transSrc": "user"
+    },
+    {
+      "t": 122.44,
+      "orig": "文句垂らして",
+      "pron": "못타라시테",
+      "pronSrc": "user",
+      "trans": "불평을 늘어놓으며",
+      "transSrc": "user"
+    },
+    {
+      "t": 124.22,
+      "orig": "独り言しか",
+      "pron": "히토리 고토시카",
+      "pronSrc": "user",
+      "trans": "혼잣말 밖엔",
+      "transSrc": "user"
+    },
+    {
+      "t": 125.67,
+      "orig": "喉を通らない",
+      "pron": "노도오토오라 나이",
+      "pronSrc": "user",
+      "trans": "나오질 않아",
+      "transSrc": "user"
+    },
+    {
+      "t": 141.38,
+      "orig": "ぜんぶ",
+      "pron": "젠부",
+      "pronSrc": "user",
+      "trans": "전부",
+      "transSrc": "user"
+    },
+    {
+      "t": 142.6,
+      "orig": "Gorilla 芝居",
+      "pron": "고리라시바이",
+      "pronSrc": "user",
+      "trans": "고릴라 연극-",
+      "transSrc": "user"
+    },
+    {
+      "t": 144.24,
+      "orig": "で見ないふりで",
+      "pron": "(데)미나이 후리데",
+      "pronSrc": "user",
+      "trans": "-이라고 못 본 척.",
+      "transSrc": "user"
+    },
+    {
+      "t": 147.3,
+      "orig": "漂っていたいよ",
+      "pron": "(타)욧테이타이요",
+      "pronSrc": "user",
+      "trans": "방황하고싶어",
+      "transSrc": "user"
+    },
+    {
+      "t": 149.07,
+      "orig": "間抜けな声しか",
+      "pron": "맛케나 코에시카",
+      "pronSrc": "user",
+      "trans": "얼빠진 목소리 밖엔-",
+      "transSrc": "user"
+    },
+    {
+      "t": 150.36,
+      "orig": "喉を通らない",
+      "pron": "노도오 토오라나이",
+      "pronSrc": "user",
+      "trans": "-나오질 않아",
+      "transSrc": "user"
+    },
+    {
+      "t": 153.17,
+      "orig": "だって",
+      "pron": "닷테",
+      "pronSrc": "user",
+      "trans": "그야",
+      "transSrc": "user"
+    },
+    {
+      "t": 154.57,
+      "orig": "Gorilla 芝居",
+      "pron": "고리라시바이",
+      "pronSrc": "user",
+      "trans": "고릴라 연극",
+      "transSrc": "user"
+    },
+    {
+      "t": 155.73,
+      "orig": "二枚弁で",
+      "pron": "니마이 비라데",
+      "pronSrc": "user",
+      "trans": "두 장 너머로",
+      "transSrc": "user"
+    },
+    {
+      "t": 159.1,
+      "orig": "文句垂らして",
+      "pron": "못타라시테",
+      "pronSrc": "user",
+      "trans": "불평을 늘어놓으며",
+      "transSrc": "user"
+    },
+    {
+      "t": 160.64,
+      "orig": "独り言しか",
+      "pron": "히토리 고토시카",
+      "pronSrc": "user",
+      "trans": "혼잣말 밖엔",
+      "transSrc": "user"
+    },
+    {
+      "t": 162.41,
+      "orig": "喉を通さない",
+      "pron": "노도오 토오사나이",
+      "pronSrc": "user",
+      "trans": "하질 않아",
+      "transSrc": "user"
+    },
+    {
+      "t": 164.92,
+      "orig": "帳尻合わせて",
+      "pron": "초오지리 아와세테",
+      "pronSrc": "user",
+      "trans": "이치(理致)에 맞게",
+      "transSrc": "user"
+    },
+    {
+      "t": 166.93,
+      "orig": "一束、 二束三文とんで四文",
+      "pron": "잇소쿠 니소쿠 산몬 톤데 욘몬",
+      "pronSrc": "user",
+      "trans": "한 다발, 두 다발 세 푼 넘어 네 푼",
+      "transSrc": "user"
+    },
+    {
+      "t": 169.64,
+      "orig": "それくらいがフェアじゃない?",
+      "pron": "소레쿠라이가 훼아쟈나이",
+      "pronSrc": "user",
+      "trans": "그정도가 공평하지 않아?",
+      "transSrc": "user"
+    },
+    {
+      "t": 171.74,
+      "orig": "合わせて",
+      "pron": "아와세테",
+      "pronSrc": "user",
+      "trans": "합해서",
+      "transSrc": "user"
+    },
+    {
+      "t": 172.71,
+      "orig": "一束、 二束三文とんで四文",
+      "pron": "잇소쿠 니소쿠 산몬 톤데 욘몬",
+      "pronSrc": "user",
+      "trans": "한 다발, 두 다발 세 푼 넘어 네 푼",
+      "transSrc": "user"
+    },
+    {
+      "t": 174.96,
+      "orig": "俺らずっと",
+      "pron": "오레라즛토",
+      "pronSrc": "user",
+      "trans": "우리는 계속",
+      "transSrc": "user"
+    },
+    {
+      "t": 176.08,
+      "orig": "Gorilla 芝居",
+      "pron": "고리라시바이",
+      "pronSrc": "user",
+      "trans": "고릴라 연극",
+      "transSrc": "user"
+    },
+    {
+      "t": 177.36,
+      "orig": "やってんだって",
+      "pron": "얏텐닷테",
+      "pronSrc": "user",
+      "trans": "하고 있다니까.",
+      "transSrc": "user"
+    }
+  ]
+}

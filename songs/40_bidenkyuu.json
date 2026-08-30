@@ -1,0 +1,425 @@
+{
+  "title": "美電球",
+  "artist": "Vaundy",
+  "youtubeId": "bS6RCQZoErg",
+  "bundleId": "vaundy-bidenkyuu",
+  "offset": 0,
+  "lines": [
+    {
+      "t": 0.87,
+      "orig": "モヤモヤするほど",
+      "pron": "모야모야 스루 호도",
+      "pronSrc": "user",
+      "trans": "답답해질수록",
+      "transSrc": "user"
+    },
+    {
+      "t": 5.25,
+      "orig": "事は単純で",
+      "pron": "코토와 탄쥰데",
+      "pronSrc": "user",
+      "trans": "일은 단순해서",
+      "transSrc": "user"
+    },
+    {
+      "t": 7.99,
+      "orig": "言葉足らずだったみたい",
+      "pron": "코토바 타라즈닷타 미타이",
+      "pronSrc": "user",
+      "trans": "말이 모자랐던 것 같아",
+      "transSrc": "user"
+    },
+    {
+      "t": 10.19,
+      "orig": "ゆらゆら揺れてる",
+      "pron": "유라유라 유레테루",
+      "pronSrc": "user",
+      "trans": "흔들흔들 흔들리고 있어",
+      "transSrc": "user"
+    },
+    {
+      "t": 14.88,
+      "orig": "それは臆病で",
+      "pron": "소레와 오쿠뵤-데",
+      "pronSrc": "user",
+      "trans": "그건 겁이 많아서",
+      "transSrc": "user"
+    },
+    {
+      "t": 18.39,
+      "orig": "ことさらまごうことなく",
+      "pron": "코토사라 마고- 코토나쿠",
+      "pronSrc": "user",
+      "trans": "유별나게 헷갈릴 것 하나 없이",
+      "transSrc": "user"
+    },
+    {
+      "t": 22.02,
+      "orig": "それは",
+      "pron": "소레와",
+      "pronSrc": "user",
+      "trans": "그건",
+      "transSrc": "user"
+    },
+    {
+      "t": 23.38,
+      "orig": "口火を切ったみたいに",
+      "pron": "쿠치비오 킷타 미타이니",
+      "pronSrc": "user",
+      "trans": "신호탄을 쏜 듯이",
+      "transSrc": "user"
+    },
+    {
+      "t": 27.93,
+      "orig": "「マジタリナイ」",
+      "pron": "마지타리나이",
+      "pronSrc": "user",
+      "trans": "진짜 모자라",
+      "transSrc": "user"
+    },
+    {
+      "t": 29.55,
+      "orig": "そりゃへたった呪文みたい",
+      "pron": "소랴 헤탓타 주몬 미타이",
+      "pronSrc": "user",
+      "trans": "그건 맥빠진 주문 같아",
+      "transSrc": "user"
+    },
+    {
+      "t": 32.78,
+      "orig": "まだ足りない",
+      "pron": "마다 타리나이",
+      "pronSrc": "user",
+      "trans": "아직도 모자라",
+      "transSrc": "user"
+    },
+    {
+      "t": 34.57,
+      "orig": "穴あきの呪文みたい",
+      "pron": "아나아키노 주몬 미타이",
+      "pronSrc": "user",
+      "trans": "구멍 난 주문 같아",
+      "transSrc": "user"
+    },
+    {
+      "t": 37.25,
+      "orig": "その欠けた未来の",
+      "pron": "소노 카케타 미라이노",
+      "pronSrc": "user",
+      "trans": "그 깨진 미래의",
+      "transSrc": "user"
+    },
+    {
+      "t": 39.8,
+      "orig": "先埋める常夜灯",
+      "pron": "사키 우메루 죠-야토-",
+      "pronSrc": "user",
+      "trans": "앞을 채워주는 상야등",
+      "transSrc": "user"
+    },
+    {
+      "t": 42.04,
+      "orig": "「マジタリナイ」",
+      "pron": "마지타리나이",
+      "pronSrc": "user",
+      "trans": "진짜 모자라",
+      "transSrc": "user"
+    },
+    {
+      "t": 44.34,
+      "orig": "かぼそく灯せ美電球",
+      "pron": "카보소쿠 토모세 비덴큐-",
+      "pronSrc": "user",
+      "trans": "가늘게 밝혀라, 미전구",
+      "transSrc": "user"
+    },
+    {
+      "t": 47.8,
+      "orig": "この微熱の訳",
+      "pron": "코노 비네츠노 와케",
+      "pronSrc": "user",
+      "trans": "이 미열의 이유는",
+      "transSrc": "user"
+    },
+    {
+      "t": 51.34,
+      "orig": "それは単純で",
+      "pron": "소레와 탄쥰데",
+      "pronSrc": "user",
+      "trans": "그건 단순해서",
+      "transSrc": "user"
+    },
+    {
+      "t": 54.89,
+      "orig": "考えすぎちゃったみたい",
+      "pron": "칸가에 스기찻타 미타이",
+      "pronSrc": "user",
+      "trans": "너무 생각해 버린 것 같아",
+      "transSrc": "user"
+    },
+    {
+      "t": 57.32,
+      "orig": "ほろほろ崩れる",
+      "pron": "호로호로 쿠즈레루",
+      "pronSrc": "user",
+      "trans": "와르르 무너져 내리고",
+      "transSrc": "user"
+    },
+    {
+      "t": 61.07,
+      "orig": "そこは冥界で",
+      "pron": "소코와 메-카이데",
+      "pronSrc": "user",
+      "trans": "그곳은 명계라서",
+      "transSrc": "user"
+    },
+    {
+      "t": 64.28,
+      "orig": "ことさら",
+      "pron": "코토사라",
+      "pronSrc": "user",
+      "trans": "유별나게",
+      "transSrc": "user"
+    },
+    {
+      "t": 65.87,
+      "orig": "遊に迷うことなく",
+      "pron": "유-니 마요- 코토나쿠",
+      "pronSrc": "user",
+      "trans": "거뜬히 헤매지도 않고",
+      "transSrc": "user"
+    },
+    {
+      "t": 69.06,
+      "orig": "そこは",
+      "pron": "소코와",
+      "pronSrc": "user",
+      "trans": "그곳은",
+      "transSrc": "user"
+    },
+    {
+      "t": 70.69,
+      "orig": "一度訪れたみたい",
+      "pron": "이치도 오토즈레타 미타이",
+      "pronSrc": "user",
+      "trans": "한번 다녀온 곳 같아",
+      "transSrc": "user"
+    },
+    {
+      "t": 75.03,
+      "orig": "「マジタリナイ」",
+      "pron": "마지타리나이",
+      "pronSrc": "user",
+      "trans": "진짜 모자라",
+      "transSrc": "user"
+    },
+    {
+      "t": 76.56,
+      "orig": "そりゃへたった呪文みたい",
+      "pron": "소랴 헤탓타 주몬 미타이",
+      "pronSrc": "user",
+      "trans": "그건 맥빠진 주문 같아",
+      "transSrc": "user"
+    },
+    {
+      "t": 79.61,
+      "orig": "まだ足りない",
+      "pron": "마다 타리나이",
+      "pronSrc": "user",
+      "trans": "아직도 모자라",
+      "transSrc": "user"
+    },
+    {
+      "t": 81.41,
+      "orig": "穴あきの呪文みたい",
+      "pron": "아나아키노 주몬 미타이",
+      "pronSrc": "user",
+      "trans": "구멍 난 주문 같아",
+      "transSrc": "user"
+    },
+    {
+      "t": 84.12,
+      "orig": "その欠けた未来の",
+      "pron": "소노 카케타 미라이노",
+      "pronSrc": "user",
+      "trans": "그 깨진 미래의",
+      "transSrc": "user"
+    },
+    {
+      "t": 86.88,
+      "orig": "先埋める常夜灯",
+      "pron": "사키 우메루 죠-야토-",
+      "pronSrc": "user",
+      "trans": "앞을 채워주는 상야등",
+      "transSrc": "user"
+    },
+    {
+      "t": 89.29,
+      "orig": "「マジタリナイ」",
+      "pron": "마지타리나이",
+      "pronSrc": "user",
+      "trans": "진짜 모자라",
+      "transSrc": "user"
+    },
+    {
+      "t": 92.88,
+      "orig": "かぼそく灯せ美電球",
+      "pron": "카보소쿠 토모세 비덴큐-",
+      "pronSrc": "user",
+      "trans": "가늘게 밝혀라, 미전구",
+      "transSrc": "user"
+    },
+    {
+      "t": 98.27,
+      "orig": "美電球 美電球 美電球",
+      "pron": "비덴큐- 비덴큐- 비덴큐-",
+      "pronSrc": "user",
+      "trans": "미전구, 미전구, 미전구",
+      "transSrc": "user"
+    },
+    {
+      "t": 114.31,
+      "orig": "待ち侘びた言葉は",
+      "pron": "마치와비타 코토바와",
+      "pronSrc": "user",
+      "trans": "기다리고 또 기다렸던 그 말은",
+      "transSrc": "user"
+    },
+    {
+      "t": 119.35,
+      "orig": "僕を煮詰まらせ",
+      "pron": "보쿠오 니츠마라세",
+      "pronSrc": "user",
+      "trans": "나를 막다른 데로 몰아넣고",
+      "transSrc": "user"
+    },
+    {
+      "t": 125.5,
+      "orig": "わけもなく唱えさせる",
+      "pron": "와케모 나쿠 토나에사세루",
+      "pronSrc": "user",
+      "trans": "이유도 없이 되뇌이게 해",
+      "transSrc": "user"
+    },
+    {
+      "t": 131.48,
+      "orig": "「マジタリナイ」",
+      "pron": "마지타리나이",
+      "pronSrc": "user",
+      "trans": "진짜 모자라",
+      "transSrc": "user"
+    },
+    {
+      "t": 133.01,
+      "orig": "そりゃへたった呪文みたい",
+      "pron": "소랴 헤탓타 주몬 미타이",
+      "pronSrc": "user",
+      "trans": "그건 맥빠진 주문 같아",
+      "transSrc": "user"
+    },
+    {
+      "t": 136.06,
+      "orig": "まだ足りない",
+      "pron": "마다 타리나이",
+      "pronSrc": "user",
+      "trans": "아직도 모자라",
+      "transSrc": "user"
+    },
+    {
+      "t": 137.95,
+      "orig": "穴あきの呪文みたい",
+      "pron": "아나아키노 주몬 미타이",
+      "pronSrc": "user",
+      "trans": "구멍 난 주문 같아",
+      "transSrc": "user"
+    },
+    {
+      "t": 140.78,
+      "orig": "その欠けた未来の",
+      "pron": "소노 카케타 미라이노",
+      "pronSrc": "user",
+      "trans": "그 깨진 미래의",
+      "transSrc": "user"
+    },
+    {
+      "t": 143.32,
+      "orig": "先埋める常夜灯",
+      "pron": "사키 우메루 죠-야토-",
+      "pronSrc": "user",
+      "trans": "앞을 채워주는 상야등",
+      "transSrc": "user"
+    },
+    {
+      "t": 145.54,
+      "orig": "意味もなく希望唱える",
+      "pron": "이미모 나쿠 키보- 토나에루",
+      "pronSrc": "user",
+      "trans": "의미도 없이 희망을 읊조려",
+      "transSrc": "user"
+    },
+    {
+      "t": 149.68,
+      "orig": "「ネエマジタリナイ」",
+      "pron": "네- 마지타리나이",
+      "pronSrc": "user",
+      "trans": "있지, 진짜 모자라",
+      "transSrc": "user"
+    },
+    {
+      "t": 151.89,
+      "orig": "まだへたった呪文みたい",
+      "pron": "마다 헤탓타 주몬 미타이",
+      "pronSrc": "user",
+      "trans": "여전히 맥빠진 주문 같아",
+      "transSrc": "user"
+    },
+    {
+      "t": 154.92,
+      "orig": "まだ足りない",
+      "pron": "마다 타리나이",
+      "pronSrc": "user",
+      "trans": "아직도 모자라",
+      "transSrc": "user"
+    },
+    {
+      "t": 156.82,
+      "orig": "穴あきの呪文みたい",
+      "pron": "아나아키노 주몬 미타이",
+      "pronSrc": "user",
+      "trans": "구멍 난 주문 같아",
+      "transSrc": "user"
+    },
+    {
+      "t": 159.66,
+      "orig": "その欠けた未来の",
+      "pron": "소노 카케타 미라이노",
+      "pronSrc": "user",
+      "trans": "그 깨진 미래의",
+      "transSrc": "user"
+    },
+    {
+      "t": 162.22,
+      "orig": "先埋める常夜灯",
+      "pron": "사키 우메루 죠-야토-",
+      "pronSrc": "user",
+      "trans": "앞을 메워 주는 상야등",
+      "transSrc": "user"
+    },
+    {
+      "t": 164.46,
+      "orig": "「マジタリナイ」",
+      "pron": "마지타리나이",
+      "pronSrc": "user",
+      "trans": "진짜 모자라",
+      "transSrc": "user"
+    },
+    {
+      "t": 166.86,
+      "orig": "かぼそく灯せ美電球",
+      "pron": "카보소쿠 토모세 비덴큐-",
+      "pronSrc": "user",
+      "trans": "가늘게 밝혀라, 미전구",
+      "transSrc": "user"
+    }
+  ]
+}

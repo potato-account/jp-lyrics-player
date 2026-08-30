@@ -1,0 +1,401 @@
+{
+  "title": "逆光",
+  "artist": "Vaundy",
+  "youtubeId": "RhDxXvn6YaQ",
+  "bundleId": "vaundy-gyakkou",
+  "offset": 0,
+  "lines": [
+    {
+      "t": 27.59,
+      "orig": "散々な思い出は悲しみを穿つほど",
+      "pron": "산잔나 오모이데와 카나시미오 우가츠호도",
+      "pronSrc": "user",
+      "trans": "흩어진 추억들은 슬픔을 떠올릴 정도로",
+      "transSrc": "user"
+    },
+    {
+      "t": 34.15,
+      "orig": "やるせない恨みはアイツのために",
+      "pron": "야루세나이 우라미와 아이츠노 타메니",
+      "pronSrc": "user",
+      "trans": "쓸쓸한 원한은 그 녀석을 위해서",
+      "transSrc": "user"
+    },
+    {
+      "t": 39.26,
+      "orig": "置いてきたのさ",
+      "pron": "오이테키타노사",
+      "pronSrc": "user",
+      "trans": "두고 왔어",
+      "transSrc": "user"
+    },
+    {
+      "t": 40.81,
+      "orig": "あんたらわかっちゃないだろ",
+      "pron": "안타라 와캇챠나이다로-",
+      "pronSrc": "user",
+      "trans": "니들이 뭘 알아?",
+      "transSrc": "user"
+    },
+    {
+      "t": 42.28,
+      "orig": "本当に傷む孤独を",
+      "pron": "혼토니 이타무 코도쿠오",
+      "pronSrc": "user",
+      "trans": "정말로 아픈 고독을",
+      "transSrc": "user"
+    },
+    {
+      "t": 44.17,
+      "orig": "今だけ箍外してきて",
+      "pron": "이마다케 타가하즈시테키테",
+      "pronSrc": "user",
+      "trans": "지금만 떼어내고",
+      "transSrc": "user"
+    },
+    {
+      "t": 46.59,
+      "orig": "怒りよ今 悪党ぶっ飛ばして",
+      "pron": "이카리요 이마 아쿠토- 붓토바시테",
+      "pronSrc": "user",
+      "trans": "분노여, 지금 악당을 날려보내",
+      "transSrc": "user"
+    },
+    {
+      "t": 51.11,
+      "orig": "そりゃあ愛ある罰だ",
+      "pron": "소랴- 아이아루 바츠다",
+      "pronSrc": "user",
+      "trans": "그건 사랑스러운 벌이야",
+      "transSrc": "user"
+    },
+    {
+      "t": 53.4,
+      "orig": "もう眠くはないや ないやないや",
+      "pron": "모- 네무쿠와나이야 나이야 나이야",
+      "pronSrc": "user",
+      "trans": "이제 졸리지 않아",
+      "transSrc": "user"
+    },
+    {
+      "t": 56.72,
+      "orig": "もう悲しくないさ ないさ",
+      "pron": "모- 카나시쿠나이사 나이사",
+      "pronSrc": "user",
+      "trans": "이제 슬프지도 않아",
+      "transSrc": "user"
+    },
+    {
+      "t": 59.49,
+      "orig": "そう 怒りよ今 悪党蹴り飛ばして",
+      "pron": "소- 이카리요 이마 아쿠토 케리토바시테",
+      "pronSrc": "user",
+      "trans": "그래. 분노여, 지금 악당을 걷어차",
+      "transSrc": "user"
+    },
+    {
+      "t": 64.26,
+      "orig": "そりゃあ愛への罰だ",
+      "pron": "소랴- 아이에노 바츠다",
+      "pronSrc": "user",
+      "trans": "그건 사랑스러운 벌이야",
+      "transSrc": "user"
+    },
+    {
+      "t": 66.62,
+      "orig": "もう眠くはないな ないなないな",
+      "pron": "모- 네무쿠와나이나 나이나 나이나",
+      "pronSrc": "user",
+      "trans": "이제 졸리지 않아",
+      "transSrc": "user"
+    },
+    {
+      "t": 70.03,
+      "orig": "もう寂しくないさ ないさ",
+      "pron": "모- 사비시쿠나이사 나이사",
+      "pronSrc": "user",
+      "trans": "이제 외롭지도 않아",
+      "transSrc": "user"
+    },
+    {
+      "t": 72.55,
+      "orig": "逆光よ",
+      "pron": "걋코-요",
+      "pronSrc": "user",
+      "trans": "역광이여",
+      "transSrc": "user"
+    },
+    {
+      "t": 77.31,
+      "orig": "惨憺たる結末は美しさを纏うほど",
+      "pron": "산탄타로 케츠마츠와 우츠쿠시사오 마토우호도",
+      "pronSrc": "user",
+      "trans": "참담한 결말은 아름다움을 휘감을맡큼",
+      "transSrc": "user"
+    },
+    {
+      "t": 82.62,
+      "orig": "限りなく、体温に近い「赤」に",
+      "pron": "카기리나쿠 타이온니 치카이 아카니",
+      "pronSrc": "user",
+      "trans": "한없이 체온에 가까운 '빨강'으로",
+      "transSrc": "user"
+    },
+    {
+      "t": 86.52,
+      "orig": "彩られていた",
+      "pron": "이로도라레테이타",
+      "pronSrc": "user",
+      "trans": "칠해졌어",
+      "transSrc": "user"
+    },
+    {
+      "t": 88.64,
+      "orig": "散漫な視界でも美しさがわかるほど",
+      "pron": "산만나 시카이데모 우츠쿠시사가 와카루호도",
+      "pronSrc": "user",
+      "trans": "산만한 풍경에서도 아름다움을 알아 볼 정도로",
+      "transSrc": "user"
+    },
+    {
+      "t": 94.31,
+      "orig": "焼き付ける光を背に受ける「赤」に",
+      "pron": "야키츠케루 히카리오 세니 우케루 아카니",
+      "pronSrc": "user",
+      "trans": "타들어가는 빛을 등으로 받는 '빨강'에",
+      "transSrc": "user"
+    },
+    {
+      "t": 99.27,
+      "orig": "気を取られている",
+      "pron": "키오 토라레테이루",
+      "pronSrc": "user",
+      "trans": "정신이 팔렸어",
+      "transSrc": "user"
+    },
+    {
+      "t": 102.1,
+      "orig": "もつれてしまった心は",
+      "pron": "모츠레테시맛타 코코로와",
+      "pronSrc": "user",
+      "trans": "엉켜버린 마음은",
+      "transSrc": "user"
+    },
+    {
+      "t": 105.64,
+      "orig": "解っている今でも",
+      "pron": "와캇테이루 이마데모",
+      "pronSrc": "user",
+      "trans": "알고있어 지금도",
+      "transSrc": "user"
+    },
+    {
+      "t": 108.48,
+      "orig": "ほつれてしまった。",
+      "pron": "호츠레테시맛타",
+      "pronSrc": "user",
+      "trans": "풀렸다는 걸 말야",
+      "transSrc": "user"
+    },
+    {
+      "t": 111.31,
+      "orig": "言葉が焦っている。",
+      "pron": "코토바가 아셋테이루",
+      "pronSrc": "user",
+      "trans": "그 말을 참을수가 없어",
+      "transSrc": "user"
+    },
+    {
+      "t": 114.14,
+      "orig": "怒りよ今悪党ぶっ飛ばして",
+      "pron": "이카리요 이마 아쿠토- 붓토바시테",
+      "pronSrc": "user",
+      "trans": "분노여, 지금 악당을 날려보내",
+      "transSrc": "user"
+    },
+    {
+      "t": 118.39,
+      "orig": "そりゃあ愛ある罰だ",
+      "pron": "소랴- 아이아루 바츠다",
+      "pronSrc": "user",
+      "trans": "그건 사랑스러운 벌이야",
+      "transSrc": "user"
+    },
+    {
+      "t": 121.58,
+      "orig": "もう眠くはないやないやないや",
+      "pron": "모- 네무쿠와나이야 나이야 나이야",
+      "pronSrc": "user",
+      "trans": "이제 졸리지 않아",
+      "transSrc": "user"
+    },
+    {
+      "t": 126.54,
+      "orig": "もう悲しくないさないさ",
+      "pron": "모- 카나시쿠나이사 나이사",
+      "pronSrc": "user",
+      "trans": "이제 슬프지도 않아",
+      "transSrc": "user"
+    },
+    {
+      "t": 130.43,
+      "orig": "そう怒りよ今悪党蹴り飛ばして",
+      "pron": "소- 이카리요 이마 아쿠토 케리토바시테",
+      "pronSrc": "user",
+      "trans": "그래. 분노여, 지금 악당을 걷어차",
+      "transSrc": "user"
+    },
+    {
+      "t": 135.39,
+      "orig": "そりゃあ愛への罰だ",
+      "pron": "소랴- 아이에노 바츠다",
+      "pronSrc": "user",
+      "trans": "그건 사랑스러운 벌이야",
+      "transSrc": "user"
+    },
+    {
+      "t": 138.58,
+      "orig": "もう眠くはないなないなないな",
+      "pron": "모- 네무쿠와나이나 나이나 나이나",
+      "pronSrc": "user",
+      "trans": "이제 졸리지 않아",
+      "transSrc": "user"
+    },
+    {
+      "t": 143.54,
+      "orig": "もう寂しくないさないさ",
+      "pron": "모- 사비시쿠나이사 나이사",
+      "pronSrc": "user",
+      "trans": "이제 외롭지도 않아",
+      "transSrc": "user"
+    },
+    {
+      "t": 147.43,
+      "orig": "逆光よ",
+      "pron": "걋코-요",
+      "pronSrc": "user",
+      "trans": "역광이여",
+      "transSrc": "user"
+    },
+    {
+      "t": 148.5,
+      "orig": "もう、怒り願った言葉は",
+      "pron": "모- 이카리 네갓타 코토바와",
+      "pronSrc": "user",
+      "trans": "이제 화를 내길 바라던 그 말은",
+      "transSrc": "user"
+    },
+    {
+      "t": 152.04,
+      "orig": "崩れ、へたってしまったが",
+      "pron": "쿠즈레 헤탓테시맛타가",
+      "pronSrc": "user",
+      "trans": "무너지고, 지쳐버렸지만",
+      "transSrc": "user"
+    },
+    {
+      "t": 155.93,
+      "orig": "今でも未練たらしくしている。",
+      "pron": "이마데모 미렌타라시쿠 시테이루",
+      "pronSrc": "user",
+      "trans": "지금도 미련을 버리지 못했어",
+      "transSrc": "user"
+    },
+    {
+      "t": 160.54,
+      "orig": "あぁ、何度も放った言葉が",
+      "pron": "아- 난도모 하낫타 코토바가",
+      "pronSrc": "user",
+      "trans": "아아, 몇 번이고 내뱉은 말이",
+      "transSrc": "user"
+    },
+    {
+      "t": 164.43,
+      "orig": "届き、解っているのなら",
+      "pron": "토도키 와캇테이루노나라",
+      "pronSrc": "user",
+      "trans": "닿기를, 알고있다면",
+      "transSrc": "user"
+    },
+    {
+      "t": 167.98,
+      "orig": "なんて、夢見が苦しいから",
+      "pron": "난테 유메미가 쿠루시-카라",
+      "pronSrc": "user",
+      "trans": "이라니, 꿈자리가 괴로우니까",
+      "transSrc": "user"
+    },
+    {
+      "t": 171.87,
+      "orig": "もう怒りよまた悪党ぶっ飛ばして",
+      "pron": "모- 이카리요 마타 아쿠토-붓토바시테",
+      "pronSrc": "user",
+      "trans": "이제, 분노여, 다시 악당을 날려보내",
+      "transSrc": "user"
+    },
+    {
+      "t": 177.18,
+      "orig": "そりゃあ愛ある罰だ",
+      "pron": "소랴- 아이아루 바츠다",
+      "pronSrc": "user",
+      "trans": "그건 사랑스러운 벌이야",
+      "transSrc": "user"
+    },
+    {
+      "t": 180.37,
+      "orig": "もう眠くはないやないやないや",
+      "pron": "모- 네무쿠와나이야 나이야 나이야",
+      "pronSrc": "user",
+      "trans": "이제 졸리지 않아",
+      "transSrc": "user"
+    },
+    {
+      "t": 185.33,
+      "orig": "もう悲しくないさないさ",
+      "pron": "모- 카나시쿠나이사 나이사",
+      "pronSrc": "user",
+      "trans": "이제 슬프지도 않아",
+      "transSrc": "user"
+    },
+    {
+      "t": 189.23,
+      "orig": "そう怒りよさぁ悪党ふっ飛ばして",
+      "pron": "소- 이카리요 사- 아쿠도훗토바시테",
+      "pronSrc": "user",
+      "trans": "그래. 분노여, 자, 악당을 날려버려",
+      "transSrc": "user"
+    },
+    {
+      "t": 194.54,
+      "orig": "そりゃあ愛への罰だ",
+      "pron": "소랴- 아이에노 바츠다",
+      "pronSrc": "user",
+      "trans": "그건 사랑스러운 벌이야",
+      "transSrc": "user"
+    },
+    {
+      "t": 197.73,
+      "orig": "もう眠くはないなないなないな",
+      "pron": "모- 네무쿠와나이나 나이나 나이나",
+      "pronSrc": "user",
+      "trans": "이제 졸리지 않아",
+      "transSrc": "user"
+    },
+    {
+      "t": 202.68,
+      "orig": "もう寂しくないさないさ",
+      "pron": "모- 사비시쿠나이사 나이사",
+      "pronSrc": "user",
+      "trans": "이제 외롭지도 않아",
+      "transSrc": "user"
+    },
+    {
+      "t": 206.58,
+      "orig": "逆光よ",
+      "pron": "걋코-요",
+      "pronSrc": "user",
+      "trans": "역광이여",
+      "transSrc": "user"
+    }
+  ]
+}

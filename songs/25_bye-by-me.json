@@ -1,0 +1,399 @@
+{
+  "title": "Bye by me",
+  "artist": "Vaundy",
+  "youtubeId": "zQAV6i_OJpM",
+  "bundleId": "vaundy-bye-by-me",
+  "offset": 0,
+  "lines": [
+    {
+      "t": 11.67,
+      "orig": "まんでい今日は",
+      "pron": "만데이 쿄-와",
+      "pronSrc": "user",
+      "trans": "월요일인 오늘은",
+      "transSrc": "user"
+    },
+    {
+      "t": 14.65,
+      "orig": "どこへ行くの?",
+      "pron": "도코에 이쿠노?",
+      "pronSrc": "user",
+      "trans": "어디에 가는 거야?",
+      "transSrc": "user"
+    },
+    {
+      "t": 17.7,
+      "orig": "まぁいいけど",
+      "pron": "마- 이-케도",
+      "pronSrc": "user",
+      "trans": "뭐, 괜찮지만",
+      "transSrc": "user"
+    },
+    {
+      "t": 21.37,
+      "orig": "ちゅーすでぃ今日も",
+      "pron": "츄-스데이 쿄-모",
+      "pronSrc": "user",
+      "trans": "화요일인 오늘도",
+      "transSrc": "user"
+    },
+    {
+      "t": 24.59,
+      "orig": "お仕事だったんでしょ?",
+      "pron": "오시고토 닷탄데쇼?",
+      "pronSrc": "user",
+      "trans": "일이었잖아?",
+      "transSrc": "user"
+    },
+    {
+      "t": 27.7,
+      "orig": "まぁいいけど",
+      "pron": "마- 이-케도",
+      "pronSrc": "user",
+      "trans": "뭐, 괜찮지만",
+      "transSrc": "user"
+    },
+    {
+      "t": 30.05,
+      "orig": "まぁいいけど",
+      "pron": "마- 이-케도",
+      "pronSrc": "user",
+      "trans": "뭐, 괜찮지만",
+      "transSrc": "user"
+    },
+    {
+      "t": 41.33,
+      "orig": "うぇんずでぃ今日は",
+      "pron": "웬즈데이 쿄-와",
+      "pronSrc": "user",
+      "trans": "수요일인 오늘은",
+      "transSrc": "user"
+    },
+    {
+      "t": 44.59,
+      "orig": "何を見ているの?",
+      "pron": "나니오 미테이루노?",
+      "pronSrc": "user",
+      "trans": "무엇을 보고 있어?",
+      "transSrc": "user"
+    },
+    {
+      "t": 47.53,
+      "orig": "辛いでしょ",
+      "pron": "츠라이데쇼",
+      "pronSrc": "user",
+      "trans": "괴롭지?",
+      "transSrc": "user"
+    },
+    {
+      "t": 50.3,
+      "orig": "またさ",
+      "pron": "마타사",
+      "pronSrc": "user",
+      "trans": "또 있잖아",
+      "transSrc": "user"
+    },
+    {
+      "t": 51.56,
+      "orig": "遠く去った過去の日々に",
+      "pron": "토-쿠 삿타 카코노 히비니",
+      "pronSrc": "user",
+      "trans": "멀리 떠나간 지난날들에",
+      "transSrc": "user"
+    },
+    {
+      "t": 56.18,
+      "orig": "名前をつけて",
+      "pron": "나마에오 츠케테",
+      "pronSrc": "user",
+      "trans": "이름을 붙이고",
+      "transSrc": "user"
+    },
+    {
+      "t": 59.98,
+      "orig": "いたんでしょ",
+      "pron": "이탄데쇼",
+      "pronSrc": "user",
+      "trans": "그러고 있었지?",
+      "transSrc": "user"
+    },
+    {
+      "t": 63.79,
+      "orig": "お帰り でももういいよ",
+      "pron": "오카에리, 데모 모- 이-요",
+      "pronSrc": "user",
+      "trans": "어서 와, 하지만 이제 됐어",
+      "transSrc": "user"
+    },
+    {
+      "t": 67.96,
+      "orig": "伝えたいことは特にないから",
+      "pron": "츠타에타이 코토와 토쿠니 나이카라",
+      "pronSrc": "user",
+      "trans": "전하고 싶은 건 특별히 없으니까",
+      "transSrc": "user"
+    },
+    {
+      "t": 73.82,
+      "orig": "お帰り でももういいの",
+      "pron": "오카에리, 데모 모- 이-노",
+      "pronSrc": "user",
+      "trans": "어서 와, 그래도 이제 괜찮아",
+      "transSrc": "user"
+    },
+    {
+      "t": 77.95,
+      "orig": "覚えてることも",
+      "pron": "오보에테루 코토모",
+      "pronSrc": "user",
+      "trans": "기억하고 있는 것들도",
+      "transSrc": "user"
+    },
+    {
+      "t": 81.77,
+      "orig": "もうないよ",
+      "pron": "모- 나이요",
+      "pronSrc": "user",
+      "trans": "이젠 없어",
+      "transSrc": "user"
+    },
+    {
+      "t": 93.99,
+      "orig": "さーすでぃ今日は",
+      "pron": "사-스데이 쿄-와",
+      "pronSrc": "user",
+      "trans": "목요일인 오늘은",
+      "transSrc": "user"
+    },
+    {
+      "t": 97.09,
+      "orig": "どこに行ってきたの?",
+      "pron": "도코니 잇테 키타노?",
+      "pronSrc": "user",
+      "trans": "어디에 다녀온 거야?",
+      "transSrc": "user"
+    },
+    {
+      "t": 99.81,
+      "orig": "遅いでしょ",
+      "pron": "오소이데쇼",
+      "pronSrc": "user",
+      "trans": "늦었잖아",
+      "transSrc": "user"
+    },
+    {
+      "t": 103.69,
+      "orig": "ふらいでぃ今日は",
+      "pron": "후라이데이 쿄-와",
+      "pronSrc": "user",
+      "trans": "금요일인 오늘은",
+      "transSrc": "user"
+    },
+    {
+      "t": 107.13,
+      "orig": "思い出していたの?",
+      "pron": "오모이다시테 이타노?",
+      "pronSrc": "user",
+      "trans": "떠올리고 있었어?",
+      "transSrc": "user"
+    },
+    {
+      "t": 110.03,
+      "orig": "あのことを",
+      "pron": "아노 코토오",
+      "pronSrc": "user",
+      "trans": "그 일을",
+      "transSrc": "user"
+    },
+    {
+      "t": 112.78,
+      "orig": "でもさ",
+      "pron": "데모사",
+      "pronSrc": "user",
+      "trans": "하지만 말이야",
+      "transSrc": "user"
+    },
+    {
+      "t": 114.04,
+      "orig": "遠く去った過去の日々と",
+      "pron": "토-쿠 삿타 카코노 히비토",
+      "pronSrc": "user",
+      "trans": "멀리 떠나간 지난날들과",
+      "transSrc": "user"
+    },
+    {
+      "t": 118.66,
+      "orig": "サヨナラしたら",
+      "pron": "사요나라 시타라",
+      "pronSrc": "user",
+      "trans": "작별하면",
+      "transSrc": "user"
+    },
+    {
+      "t": 123.2,
+      "orig": "楽でしょ",
+      "pron": "라쿠데쇼",
+      "pronSrc": "user",
+      "trans": "편하잖아",
+      "transSrc": "user"
+    },
+    {
+      "t": 125.8,
+      "orig": "お帰り でももういいよ",
+      "pron": "오카에리, 데모 모- 이-요",
+      "pronSrc": "user",
+      "trans": "어서 와, 하지만 이제 됐어",
+      "transSrc": "user"
+    },
+    {
+      "t": 130.47,
+      "orig": "伝えたいことは特にないから",
+      "pron": "츠타에타이 코토와 토쿠니 나이카라",
+      "pronSrc": "user",
+      "trans": "전하고 싶은 건 특별히 없으니까",
+      "transSrc": "user"
+    },
+    {
+      "t": 136.19,
+      "orig": "お帰り でももういいの",
+      "pron": "오카에리, 데모 모- 이-노",
+      "pronSrc": "user",
+      "trans": "어서 와, 그래도 이제 괜찮아",
+      "transSrc": "user"
+    },
+    {
+      "t": 140.39,
+      "orig": "覚えてることも",
+      "pron": "오보에테루 코토모",
+      "pronSrc": "user",
+      "trans": "기억하고 있는 것들도",
+      "transSrc": "user"
+    },
+    {
+      "t": 142.89,
+      "orig": "もうないよ",
+      "pron": "모- 나이요",
+      "pronSrc": "user",
+      "trans": "이젠 없어",
+      "transSrc": "user"
+    },
+    {
+      "t": 144.67,
+      "orig": "休みの夜のやけ酒も",
+      "pron": "야스미노 요루노 야케자케모",
+      "pronSrc": "user",
+      "trans": "쉬는 날 밤의 홧술도",
+      "transSrc": "user"
+    },
+    {
+      "t": 147.88,
+      "orig": "それくらいにして",
+      "pron": "소레쿠라이니 시테",
+      "pronSrc": "user",
+      "trans": "그 정도로 해두고",
+      "transSrc": "user"
+    },
+    {
+      "t": 150.73,
+      "orig": "もういいだろ？",
+      "pron": "모- 이-다로?",
+      "pronSrc": "user",
+      "trans": "이제 됐지?",
+      "transSrc": "user"
+    },
+    {
+      "t": 152.87,
+      "orig": "愛していたんだきっと",
+      "pron": "아이시테 이탄다 킷토",
+      "pronSrc": "user",
+      "trans": "사랑하고 있었던 거야, 분명",
+      "transSrc": "user"
+    },
+    {
+      "t": 156.44,
+      "orig": "思い出すことを",
+      "pron": "오모이다스 코토오",
+      "pronSrc": "user",
+      "trans": "떠올리는 일을",
+      "transSrc": "user"
+    },
+    {
+      "t": 158.94,
+      "orig": "愛して、愛して",
+      "pron": "아이시테, 아이시테",
+      "pronSrc": "user",
+      "trans": "사랑하고, 또 사랑해서",
+      "transSrc": "user"
+    },
+    {
+      "t": 161.08,
+      "orig": "満たしているなら",
+      "pron": "미타시테 이루나라",
+      "pronSrc": "user",
+      "trans": "그것으로 채워지고 있다면",
+      "transSrc": "user"
+    },
+    {
+      "t": 163.93,
+      "orig": "忘れても、もういいよ",
+      "pron": "와스레테모, 모- 이-요",
+      "pronSrc": "user",
+      "trans": "잊어버려도, 이제 괜찮아",
+      "transSrc": "user"
+    },
+    {
+      "t": 167.14,
+      "orig": "伝えたいことはもう伝えたから",
+      "pron": "츠타에타이 코토와 모- 츠타에타카라",
+      "pronSrc": "user",
+      "trans": "전하고 싶은 말은 이미 다 전했으니까",
+      "transSrc": "user"
+    },
+    {
+      "t": 172.13,
+      "orig": "忘れても、もういいよ",
+      "pron": "와스레테모, 모- 이-요",
+      "pronSrc": "user",
+      "trans": "잊어도, 이제 괜찮아",
+      "transSrc": "user"
+    },
+    {
+      "t": 175.34,
+      "orig": "この先もいっぱいたまっていくから",
+      "pron": "코노 사키모 잇파이 타맛테 이쿠카라",
+      "pronSrc": "user",
+      "trans": "앞으로도 잔뜩 쌓여 갈 테니까",
+      "transSrc": "user"
+    },
+    {
+      "t": 181.05,
+      "orig": "愛してやまない傷を",
+      "pron": "아이시테 야마나이 키즈오",
+      "pronSrc": "user",
+      "trans": "사랑해 마지않는 상처를",
+      "transSrc": "user"
+    },
+    {
+      "t": 184.26,
+      "orig": "無くして新しい日々を",
+      "pron": "나쿠시테 아타라시- 히비오",
+      "pronSrc": "user",
+      "trans": "없애 버리고 새로운 날들을",
+      "transSrc": "user"
+    },
+    {
+      "t": 187.82,
+      "orig": "またね",
+      "pron": "마타네",
+      "pronSrc": "user",
+      "trans": "또 보자",
+      "transSrc": "user"
+    },
+    {
+      "t": 188.89,
+      "orig": "Bye by me",
+      "pron": "",
+      "trans": ""
+    }
+  ]
+}

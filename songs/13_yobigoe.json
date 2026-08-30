@@ -1,0 +1,497 @@
+{
+  "title": "呼び声",
+  "artist": "Vaundy",
+  "youtubeId": "WMMlqpcWBr8",
+  "bundleId": "vaundy-yobigoe",
+  "offset": 0,
+  "lines": [
+    {
+      "t": 1.13,
+      "orig": "この惑星の真ん中で",
+      "pron": "코노 호시노 만나카데",
+      "pronSrc": "user",
+      "trans": "이 행성의 한가운데서",
+      "transSrc": "user"
+    },
+    {
+      "t": 8.66,
+      "orig": "時折り描いた",
+      "pron": "토키오리 카이타",
+      "pronSrc": "user",
+      "trans": "이따금 그려 왔던",
+      "transSrc": "user"
+    },
+    {
+      "t": 10.45,
+      "orig": "暗闇照らす何か",
+      "pron": "쿠라야미 테라스 나니카",
+      "pronSrc": "user",
+      "trans": "어둠을 비추는 무언가",
+      "transSrc": "user"
+    },
+    {
+      "t": 12.53,
+      "orig": "この部屋を立ち籠めている何か",
+      "pron": "코노 헤야오 타치코메테이루 나니카",
+      "pronSrc": "user",
+      "trans": "이 방에 가득 서린 무언가",
+      "transSrc": "user"
+    },
+    {
+      "t": 16.7,
+      "orig": "それは紅色の記憶のような",
+      "pron": "소레와 베니이로노 키오쿠노요-나",
+      "pronSrc": "user",
+      "trans": "그건 선홍빛 기억 같은",
+      "transSrc": "user"
+    },
+    {
+      "t": 24.87,
+      "orig": "空いた穴を埋めていくような何か",
+      "pron": "아이타 아나오 우메테이쿠요-나 나니카",
+      "pronSrc": "user",
+      "trans": "빈 구멍을 메워 가는 무언가",
+      "transSrc": "user"
+    },
+    {
+      "t": 29.56,
+      "orig": "天井のしみ",
+      "pron": "텐죠-노 시미",
+      "pronSrc": "user",
+      "trans": "천장에 번진 얼룩",
+      "transSrc": "user"
+    },
+    {
+      "t": 31.12,
+      "orig": "無数の何か",
+      "pron": "무수-노 나니카",
+      "pronSrc": "user",
+      "trans": "무수한 무언가",
+      "transSrc": "user"
+    },
+    {
+      "t": 32.68,
+      "orig": "（この夢が覚めたら）",
+      "pron": "코노 유메가 사메타라",
+      "pronSrc": "user",
+      "trans": "「이 꿈에서 깨어나면」",
+      "transSrc": "user"
+    },
+    {
+      "t": 36.02,
+      "orig": "逃げ出してしまうか",
+      "pron": "니게다시테 시마우카",
+      "pronSrc": "user",
+      "trans": "도망쳐 버릴까",
+      "transSrc": "user"
+    },
+    {
+      "t": 39.1,
+      "orig": "このまま",
+      "pron": "코노 마마",
+      "pronSrc": "user",
+      "trans": "이대로",
+      "transSrc": "user"
+    },
+    {
+      "t": 40.47,
+      "orig": "（この夢が覚めたら）",
+      "pron": "코노 유메가 사메타라",
+      "pronSrc": "user",
+      "trans": "「이 꿈에서 깨어나면」",
+      "transSrc": "user"
+    },
+    {
+      "t": 44.5,
+      "orig": "寂しくなるよ",
+      "pron": "사비시쿠 나루요",
+      "pronSrc": "user",
+      "trans": "외로워지겠지",
+      "transSrc": "user"
+    },
+    {
+      "t": 46.54,
+      "orig": "だからいつまでも",
+      "pron": "다카라 이츠마데모",
+      "pronSrc": "user",
+      "trans": "그러니 언제까지고",
+      "transSrc": "user"
+    },
+    {
+      "t": 49.25,
+      "orig": "今",
+      "pron": "이마",
+      "pronSrc": "user",
+      "trans": "지금",
+      "transSrc": "user"
+    },
+    {
+      "t": 49.47,
+      "orig": "チェンジ",
+      "pron": "첸지",
+      "pronSrc": "user",
+      "trans": "체인지",
+      "transSrc": "user"
+    },
+    {
+      "t": 50.34,
+      "orig": "どんな夜も",
+      "pron": "돈나 요루모",
+      "pronSrc": "user",
+      "trans": "그 어떤 밤도",
+      "transSrc": "user"
+    },
+    {
+      "t": 52.27,
+      "orig": "輝いて消えないものに手を伸ばして",
+      "pron": "카가야이테 키에나이 모노니 테오 노바시테",
+      "pronSrc": "user",
+      "trans": "빛나며 사라지지 않는 것을 향해 손을 뻗어",
+      "transSrc": "user"
+    },
+    {
+      "t": 58.45,
+      "orig": "僕らまだ不確かな未来歌えるよ",
+      "pron": "보쿠라 마다 후타시카나 미라이 우타에루요",
+      "pronSrc": "user",
+      "trans": "우린 아직 불확실한 미래를 노래할 수 있어",
+      "transSrc": "user"
+    },
+    {
+      "t": 63.57,
+      "orig": "チェンジ",
+      "pron": "첸지",
+      "pronSrc": "user",
+      "trans": "체인지",
+      "transSrc": "user"
+    },
+    {
+      "t": 64.37,
+      "orig": "どんな日々も",
+      "pron": "돈나 히비모",
+      "pronSrc": "user",
+      "trans": "그 어떤 날들도",
+      "transSrc": "user"
+    },
+    {
+      "t": 66.57,
+      "orig": "輝いて消えてくものさ、手を伸ばして",
+      "pron": "카가야이테 키에테쿠 모노사 테오 노바시테",
+      "pronSrc": "user",
+      "trans": "빛나며 사라져 가는 법이야、손을 뻗어",
+      "transSrc": "user"
+    },
+    {
+      "t": 72.44,
+      "orig": "僕らまた不確かな未来歌えるよ",
+      "pron": "보쿠라 마타 후타시카나 미라이 우타에루요",
+      "pronSrc": "user",
+      "trans": "우린 다시 불확실한 미래를 노래할 수 있어",
+      "transSrc": "user"
+    },
+    {
+      "t": 77.67,
+      "orig": "チェンジ",
+      "pron": "첸지",
+      "pronSrc": "user",
+      "trans": "체인지",
+      "transSrc": "user"
+    },
+    {
+      "t": 85.17,
+      "orig": "この惑星の真ん中で",
+      "pron": "코노 호시노 만나카데",
+      "pronSrc": "user",
+      "trans": "이 행성의 한가운데서",
+      "transSrc": "user"
+    },
+    {
+      "t": 89.49,
+      "orig": "差し詰め、希望に似た溢れる何か",
+      "pron": "사시즈메 키보-니 니타 아후레루 나니카",
+      "pronSrc": "user",
+      "trans": "이를테면、희망 비슷한 차오르는 무언가",
+      "transSrc": "user"
+    },
+    {
+      "t": 96.22,
+      "orig": "余さず描いた立ち籠めていた何か",
+      "pron": "아마사즈 카이타 타치코메테이타 나니카",
+      "pronSrc": "user",
+      "trans": "빠짐없이 그렸던 서려 있던 무언가",
+      "transSrc": "user"
+    },
+    {
+      "t": 103.42,
+      "orig": "まだ紅色",
+      "pron": "마다 베니이로",
+      "pronSrc": "user",
+      "trans": "여전히 선홍빛",
+      "transSrc": "user"
+    },
+    {
+      "t": 105.35,
+      "orig": "幕開け前か",
+      "pron": "마쿠아케 마에카",
+      "pronSrc": "user",
+      "trans": "막이 오르기 전인 걸까",
+      "transSrc": "user"
+    },
+    {
+      "t": 107.75,
+      "orig": "隙間風たどりここまで来ていた",
+      "pron": "스키마카제 타도리 코코마데 키테이타",
+      "pronSrc": "user",
+      "trans": "틈새바람을 따라 여기까지 와 있었어",
+      "transSrc": "user"
+    },
+    {
+      "t": 114.47,
+      "orig": "明白だが、まだ知らない何か",
+      "pron": "메이하쿠다가 마다 시라나이 나니카",
+      "pronSrc": "user",
+      "trans": "명백하지만、아직 알지 못하는 무언가",
+      "transSrc": "user"
+    },
+    {
+      "t": 120.24,
+      "orig": "これじゃ",
+      "pron": "코레쟈",
+      "pronSrc": "user",
+      "trans": "이래선",
+      "transSrc": "user"
+    },
+    {
+      "t": 122.16,
+      "orig": "不安だらけ",
+      "pron": "후안다라케",
+      "pronSrc": "user",
+      "trans": "불안투성이",
+      "transSrc": "user"
+    },
+    {
+      "t": 124.56,
+      "orig": "勘違いだらけ",
+      "pron": "칸치가이다라케",
+      "pronSrc": "user",
+      "trans": "착각투성이",
+      "transSrc": "user"
+    },
+    {
+      "t": 127.44,
+      "orig": "独りよがりじゃないか",
+      "pron": "히토리요가리쟈 나이카",
+      "pronSrc": "user",
+      "trans": "혼자만의 생각 아닌가",
+      "transSrc": "user"
+    },
+    {
+      "t": 132.25,
+      "orig": "でも",
+      "pron": "데모",
+      "pronSrc": "user",
+      "trans": "그래도",
+      "transSrc": "user"
+    },
+    {
+      "t": 133.21,
+      "orig": "震えてる声",
+      "pron": "후루에테루 코에",
+      "pronSrc": "user",
+      "trans": "떨려오는 목소리",
+      "transSrc": "user"
+    },
+    {
+      "t": 135.61,
+      "orig": "武者震いは",
+      "pron": "무샤부루이와",
+      "pronSrc": "user",
+      "trans": "기대에 찬 떨림은",
+      "transSrc": "user"
+    },
+    {
+      "t": 138.01,
+      "orig": "「今チェンジ」",
+      "pron": "이마 첸지",
+      "pronSrc": "user",
+      "trans": "「지금 체인지」",
+      "transSrc": "user"
+    },
+    {
+      "t": 140.41,
+      "orig": "このままこの続きを",
+      "pron": "코노 마마 코노 츠즈키오",
+      "pronSrc": "user",
+      "trans": "이대로 이 다음 이야기를",
+      "transSrc": "user"
+    },
+    {
+      "t": 144.73,
+      "orig": "今",
+      "pron": "이마",
+      "pronSrc": "user",
+      "trans": "지금",
+      "transSrc": "user"
+    },
+    {
+      "t": 145.21,
+      "orig": "チェンジ",
+      "pron": "첸지",
+      "pronSrc": "user",
+      "trans": "체인지",
+      "transSrc": "user"
+    },
+    {
+      "t": 147.14,
+      "orig": "どんな夜も",
+      "pron": "돈나 요루모",
+      "pronSrc": "user",
+      "trans": "그 어떤 밤도",
+      "transSrc": "user"
+    },
+    {
+      "t": 149.54,
+      "orig": "輝いて消えないものに手を伸ばして",
+      "pron": "카가야이테 키에나이 모노니 테오 노바시테",
+      "pronSrc": "user",
+      "trans": "빛나며 사라지지 않는 것을 향해 손을 뻗어",
+      "transSrc": "user"
+    },
+    {
+      "t": 157.22,
+      "orig": "僕らまだ不確かな未来歌えるよ",
+      "pron": "보쿠라 마다 후타시카나 미라이 우타에루요",
+      "pronSrc": "user",
+      "trans": "우린 아직 불확실한 미래를 노래할 수 있어",
+      "transSrc": "user"
+    },
+    {
+      "t": 163.95,
+      "orig": "チェンジ",
+      "pron": "첸지",
+      "pronSrc": "user",
+      "trans": "체인지",
+      "transSrc": "user"
+    },
+    {
+      "t": 165.87,
+      "orig": "「この夢が覚めたら」",
+      "pron": "코노 유메가 사메타라",
+      "pronSrc": "user",
+      "trans": "「이 꿈에서 깨어나면」",
+      "transSrc": "user"
+    },
+    {
+      "t": 169.71,
+      "orig": "呼び声はもう覚えた",
+      "pron": "요비고에와 모- 오보에타",
+      "pronSrc": "user",
+      "trans": "부르는 소리는 이제 기억했어",
+      "transSrc": "user"
+    },
+    {
+      "t": 174.04,
+      "orig": "「この夢が覚めたら」",
+      "pron": "코노 유메가 사메타라",
+      "pronSrc": "user",
+      "trans": "「이 꿈에서 깨어나면」",
+      "transSrc": "user"
+    },
+    {
+      "t": 177.88,
+      "orig": "唱えるわ",
+      "pron": "토나에루와",
+      "pronSrc": "user",
+      "trans": "외칠게",
+      "transSrc": "user"
+    },
+    {
+      "t": 179.8,
+      "orig": "今",
+      "pron": "이마",
+      "pronSrc": "user",
+      "trans": "지금",
+      "transSrc": "user"
+    },
+    {
+      "t": 180.28,
+      "orig": "チェンジ",
+      "pron": "첸지",
+      "pronSrc": "user",
+      "trans": "체인지",
+      "transSrc": "user"
+    },
+    {
+      "t": 182.2,
+      "orig": "どんな夜も",
+      "pron": "돈나 요루모",
+      "pronSrc": "user",
+      "trans": "그 어떤 밤도",
+      "transSrc": "user"
+    },
+    {
+      "t": 184.6,
+      "orig": "輝いて消えないものに手を伸ばして",
+      "pron": "카가야이테 키에나이 모노니 테오 노바시테",
+      "pronSrc": "user",
+      "trans": "빛나며 사라지지 않는 것을 향해 손을 뻗어",
+      "transSrc": "user"
+    },
+    {
+      "t": 192.29,
+      "orig": "僕ら今確かに、見上げているはず",
+      "pron": "보쿠라 이마 타시카니 미아게테이루 하즈",
+      "pronSrc": "user",
+      "trans": "우린 지금 분명히、올려다보고 있을 거야",
+      "transSrc": "user"
+    },
+    {
+      "t": 199.01,
+      "orig": "今",
+      "pron": "이마",
+      "pronSrc": "user",
+      "trans": "지금",
+      "transSrc": "user"
+    },
+    {
+      "t": 199.5,
+      "orig": "チェンジ",
+      "pron": "첸지",
+      "pronSrc": "user",
+      "trans": "체인지",
+      "transSrc": "user"
+    },
+    {
+      "t": 201.42,
+      "orig": "どんな時も",
+      "pron": "돈나 토키모",
+      "pronSrc": "user",
+      "trans": "그 어떤 순간도",
+      "transSrc": "user"
+    },
+    {
+      "t": 203.82,
+      "orig": "輝いて消えないものに手を伸ばして",
+      "pron": "카가야이테 키에나이 모노니 테오 노바시테",
+      "pronSrc": "user",
+      "trans": "빛나며 사라지지 않는 것을 향해 손을 뻗어",
+      "transSrc": "user"
+    },
+    {
+      "t": 211.5,
+      "orig": "僕ら今確かに、未来歌えるよ",
+      "pron": "보쿠라 이마 타시카니 미라이 우타에루요",
+      "pronSrc": "user",
+      "trans": "우린 지금 분명히、미래를 노래할 수 있어",
+      "transSrc": "user"
+    },
+    {
+      "t": 217.27,
+      "orig": "チェンジ",
+      "pron": "첸지",
+      "pronSrc": "user",
+      "trans": "체인지",
+      "transSrc": "user"
+    }
+  ]
+}

@@ -1,0 +1,361 @@
+{
+  "title": "走馬灯",
+  "artist": "Vaundy",
+  "youtubeId": "MecVtfGY4fk",
+  "bundleId": "vaundy-soumatou",
+  "offset": 0,
+  "lines": [
+    {
+      "t": 24.9,
+      "orig": "気づいたら",
+      "pron": "키즈이타라",
+      "pronSrc": "user",
+      "trans": "문득 정신 차려 보니",
+      "transSrc": "user"
+    },
+    {
+      "t": 29.19,
+      "orig": "どこか知らない場所に来ていた",
+      "pron": "도코카 시라나이 바쇼 니 키테 바쇼 니이타",
+      "pronSrc": "user",
+      "trans": "어느새 낯선 곳에 와 있었어",
+      "transSrc": "user"
+    },
+    {
+      "t": 36.96,
+      "orig": "止めどなく",
+      "pron": "토메도나쿠",
+      "pronSrc": "user",
+      "trans": "끝도 없이",
+      "transSrc": "user"
+    },
+    {
+      "t": 41.18,
+      "orig": "流れる車窓はもう見飽きた",
+      "pron": "나가레루 샤소- 와 모- 미아키타",
+      "pronSrc": "user",
+      "trans": "흘러가는 차창 밖 풍경은 이젠 질렸어",
+      "transSrc": "user"
+    },
+    {
+      "t": 47.87,
+      "orig": "何をしようとしたのかも忘れて",
+      "pron": "나니오 시요- 토 시타 노 카모 와스레테",
+      "pronSrc": "user",
+      "trans": "무엇을 하려 했는지도 잊어버리고",
+      "transSrc": "user"
+    },
+    {
+      "t": 54.72,
+      "orig": "大事なものを見落としてきたことも",
+      "pron": "다이지나 모노오 미오토시테 키타 코토모",
+      "pronSrc": "user",
+      "trans": "소중한 것들을 놓쳐 온 일도",
+      "transSrc": "user"
+    },
+    {
+      "t": 60.92,
+      "orig": "考えることが増えてきて",
+      "pron": "칸가에루 코토가 후에테 키테",
+      "pronSrc": "user",
+      "trans": "생각할 것이 자꾸만 늘어나서",
+      "transSrc": "user"
+    },
+    {
+      "t": 66.57,
+      "orig": "大事なこと忘れても",
+      "pron": "다이지나 코토 와스레테모",
+      "pronSrc": "user",
+      "trans": "중요한 건 잊어도",
+      "transSrc": "user"
+    },
+    {
+      "t": 71.46,
+      "orig": "君のせいじゃない",
+      "pron": "키미노 세- 자나이",
+      "pronSrc": "user",
+      "trans": "너 탓이 아니야",
+      "transSrc": "user"
+    },
+    {
+      "t": 77.34,
+      "orig": "僕のせいでもない",
+      "pron": "보쿠노 세- 데모 나이",
+      "pronSrc": "user",
+      "trans": "내 탓도 아니고",
+      "transSrc": "user"
+    },
+    {
+      "t": 83.56,
+      "orig": "ありふれてた未来が",
+      "pron": "아리후레테타 미라이가",
+      "pronSrc": "user",
+      "trans": "평범하던 미래가",
+      "transSrc": "user"
+    },
+    {
+      "t": 89.41,
+      "orig": "変わっただけ",
+      "pron": "카왓타 다케",
+      "pronSrc": "user",
+      "trans": "달라졌을 뿐",
+      "transSrc": "user"
+    },
+    {
+      "t": 94.76,
+      "orig": "もう",
+      "pron": "모-",
+      "pronSrc": "user",
+      "trans": "이젠,",
+      "transSrc": "user"
+    },
+    {
+      "t": 95.81,
+      "orig": "寝言が止まらなくなる前に",
+      "pron": "네고토가 토마라나쿠 나루 마에니",
+      "pronSrc": "user",
+      "trans": "잠꼬대가 멈추지 않기 전에",
+      "transSrc": "user"
+    },
+    {
+      "t": 102.08,
+      "orig": "やめとこう",
+      "pron": "야메토코-",
+      "pronSrc": "user",
+      "trans": "여기서 멈추자",
+      "transSrc": "user"
+    },
+    {
+      "t": 105.96,
+      "orig": "やるせなく",
+      "pron": "야루세나쿠",
+      "pronSrc": "user",
+      "trans": "허탈하게",
+      "transSrc": "user"
+    },
+    {
+      "t": 110.25,
+      "orig": "顔を隠した人の姿",
+      "pron": "카오오 카쿠시타 히토노 스가타",
+      "pronSrc": "user",
+      "trans": "얼굴을 가린 사람의 모습",
+      "transSrc": "user"
+    },
+    {
+      "t": 118.03,
+      "orig": "思いやる",
+      "pron": "오모이야루",
+      "pronSrc": "user",
+      "trans": "헤아린",
+      "transSrc": "user"
+    },
+    {
+      "t": 122.04,
+      "orig": "見上げた理想は僕にもあった",
+      "pron": "미아게타 리소- 와 보쿠니모 앗타",
+      "pronSrc": "user",
+      "trans": "올려다본 이상은 나에게도 있었지",
+      "transSrc": "user"
+    },
+    {
+      "t": 128.91,
+      "orig": "どこに行こうとしたのかも忘れて",
+      "pron": "도코니 이코- 토 시타 노 카모 와스레테",
+      "pronSrc": "user",
+      "trans": "어디로 가려 했는지도 잊어버리고",
+      "transSrc": "user"
+    },
+    {
+      "t": 135.68,
+      "orig": "大事な何かに出会えなくとも",
+      "pron": "다이지나 나니카니 데아에나쿠토모",
+      "pronSrc": "user",
+      "trans": "소중한 무언가와 만나지 못하더라도",
+      "transSrc": "user"
+    },
+    {
+      "t": 142.04,
+      "orig": "散々なことが増えてきて",
+      "pron": "산잔나 코토가 후에테 키테",
+      "pronSrc": "user",
+      "trans": "엉망진창인 일들이 늘어나고",
+      "transSrc": "user"
+    },
+    {
+      "t": 147.59,
+      "orig": "大事なもの失くしても",
+      "pron": "다이지나 모노 나쿠시테모",
+      "pronSrc": "user",
+      "trans": "소중한 것을 잃는다 해도",
+      "transSrc": "user"
+    },
+    {
+      "t": 152.43,
+      "orig": "君のせいじゃない",
+      "pron": "키미노 세- 자나이",
+      "pronSrc": "user",
+      "trans": "너 탓이 아니야",
+      "transSrc": "user"
+    },
+    {
+      "t": 158.58,
+      "orig": "僕のせいでもない",
+      "pron": "보쿠노 세- 데모 나이",
+      "pronSrc": "user",
+      "trans": "내 탓도 아니고",
+      "transSrc": "user"
+    },
+    {
+      "t": 164.51,
+      "orig": "ありふれてた未来が",
+      "pron": "아리후레테타 미라이가",
+      "pronSrc": "user",
+      "trans": "평범하던 미래가",
+      "transSrc": "user"
+    },
+    {
+      "t": 170.46,
+      "orig": "変わってくだけ",
+      "pron": "카왓테쿠 다케",
+      "pronSrc": "user",
+      "trans": "그저 변해갈 뿐",
+      "transSrc": "user"
+    },
+    {
+      "t": 175.85,
+      "orig": "もう",
+      "pron": "모-",
+      "pronSrc": "user",
+      "trans": "이젠,",
+      "transSrc": "user"
+    },
+    {
+      "t": 180.61,
+      "orig": "寝言が止まらなくなる前に",
+      "pron": "네고토가 토마라나쿠 나루 마에니",
+      "pronSrc": "user",
+      "trans": "잠꼬대가 멈추지 않기 전에",
+      "transSrc": "user"
+    },
+    {
+      "t": 209.16,
+      "orig": "日々寄り添いまた離れ",
+      "pron": "히비 요리소이 마타 하나레",
+      "pronSrc": "user",
+      "trans": "매일 붙었다 또 멀어지고",
+      "transSrc": "user"
+    },
+    {
+      "t": 213.62,
+      "orig": "さらばと願い纏う僕の姿は",
+      "pron": "사라바토 네가이 마토- 보쿠노 스가타와",
+      "pronSrc": "user",
+      "trans": "작별과 소망을 두른 내 모습은",
+      "transSrc": "user"
+    },
+    {
+      "t": 221.05,
+      "orig": "晒し合いまた痛む",
+      "pron": "사라시아이 마타 이타무",
+      "pronSrc": "user",
+      "trans": "서로를 드러내 보이다 또 아파하고",
+      "transSrc": "user"
+    },
+    {
+      "t": 225.73,
+      "orig": "愛とすり減る僕のこころは",
+      "pron": "아이 토 스리헤루 보쿠노 코코로와",
+      "pronSrc": "user",
+      "trans": "사랑과 함께 닳아가는 내 마음은",
+      "transSrc": "user"
+    },
+    {
+      "t": 233.52,
+      "orig": "君のせいじゃない",
+      "pron": "키미노 세- 자나이",
+      "pronSrc": "user",
+      "trans": "그건 너 탓이 아니야",
+      "transSrc": "user"
+    },
+    {
+      "t": 239.54,
+      "orig": "僕のせいでもない",
+      "pron": "보쿠노 세- 데모 나이",
+      "pronSrc": "user",
+      "trans": "내 탓도 아니고",
+      "transSrc": "user"
+    },
+    {
+      "t": 245.5,
+      "orig": "ありふれてた未来が",
+      "pron": "아리후레테타 미라이가",
+      "pronSrc": "user",
+      "trans": "평범하던 미래가",
+      "transSrc": "user"
+    },
+    {
+      "t": 251.2,
+      "orig": "変わっただけ",
+      "pron": "카왓타 다케",
+      "pronSrc": "user",
+      "trans": "달라졌을 뿐이야",
+      "transSrc": "user"
+    },
+    {
+      "t": 256.61,
+      "orig": "もう",
+      "pron": "모-",
+      "pronSrc": "user",
+      "trans": "이젠,",
+      "transSrc": "user"
+    },
+    {
+      "t": 257.85,
+      "orig": "全て忘れてしまう前に",
+      "pron": "스베테 와스레테 시마우 마에니",
+      "pronSrc": "user",
+      "trans": "모든 걸 잊어버리고 말기 전에",
+      "transSrc": "user"
+    },
+    {
+      "t": 264.02,
+      "orig": "思い出そう",
+      "pron": "오모이다소-",
+      "pronSrc": "user",
+      "trans": "다시 떠올리자",
+      "transSrc": "user"
+    },
+    {
+      "t": 266.93,
+      "orig": "寄り添いまた離れ",
+      "pron": "요리소이 마타 하나레",
+      "pronSrc": "user",
+      "trans": "기대다 또 멀어지고",
+      "transSrc": "user"
+    },
+    {
+      "t": 270.6,
+      "orig": "さらばと願い纏う僕の姿は",
+      "pron": "사라바 토 네가이 마토- 보쿠노 스가타와",
+      "pronSrc": "user",
+      "trans": "작별과 소망을 두른 내 모습은",
+      "transSrc": "user"
+    },
+    {
+      "t": 278.08,
+      "orig": "晒し合いまた痛む",
+      "pron": "사라시아이 마타 이타무",
+      "pronSrc": "user",
+      "trans": "서로를 드러내며 또 아파해",
+      "transSrc": "user"
+    },
+    {
+      "t": 282.58,
+      "orig": "愛を許してくれ",
+      "pron": "아이오 유루시테 쿠레",
+      "pronSrc": "user",
+      "trans": "사랑을 용서해줘",
+      "transSrc": "user"
+    }
+  ]
+}

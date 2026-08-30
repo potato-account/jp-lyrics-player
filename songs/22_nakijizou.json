@@ -1,0 +1,385 @@
+{
+  "title": "泣き地蔵",
+  "artist": "Vaundy",
+  "youtubeId": "yedEqZW27bc",
+  "bundleId": "vaundy-nakijizou",
+  "offset": 0,
+  "lines": [
+    {
+      "t": 14.75,
+      "orig": "僕たちは少数の利益のためのピラミッド",
+      "pron": "보쿠타치와 쇼-스-노 리에키노 타메노 피라밋도",
+      "pronSrc": "user",
+      "trans": "우리는 소수의 이익을 위한 피라미드야",
+      "transSrc": "user"
+    },
+    {
+      "t": 19.59,
+      "orig": "ねぇ感想は？",
+      "pron": "네- 칸소-와?",
+      "pronSrc": "user",
+      "trans": "저기, 소감은?",
+      "transSrc": "user"
+    },
+    {
+      "t": 20.52,
+      "orig": "あぁ、聞かないよ",
+      "pron": "아-, 키카나이요",
+      "pronSrc": "user",
+      "trans": "아, 묻지 않을래",
+      "transSrc": "user"
+    },
+    {
+      "t": 21.82,
+      "orig": "さも幸せかのよなその笑顔",
+      "pron": "사모 시아와세 카노 요나 소노 에가오",
+      "pronSrc": "user",
+      "trans": "마치 행복한 척하는 그 미소",
+      "transSrc": "user"
+    },
+    {
+      "t": 23.74,
+      "orig": "もう精一杯をもう一回",
+      "pron": "모- 세-잇파이오 모- 잇카이",
+      "pronSrc": "user",
+      "trans": "있는 힘껏을 다시 한 번만 더",
+      "transSrc": "user"
+    },
+    {
+      "t": 25.59,
+      "orig": "ねぇ神様もういいだろって",
+      "pron": "네- 카미사마 모- 이-다롯테",
+      "pronSrc": "user",
+      "trans": "저기 신님, 이제 됐다고 해줘",
+      "transSrc": "user"
+    },
+    {
+      "t": 27.83,
+      "orig": "ねぇもう一回を精一杯",
+      "pron": "네- 모- 잇카이오 세-잇파이",
+      "pronSrc": "user",
+      "trans": "저기, 한 번 더, 있는 힘껏",
+      "transSrc": "user"
+    },
+    {
+      "t": 29.7,
+      "orig": "ねぇ苦難と努力の洗脳でしたっけ?",
+      "pron": "네- 쿠난토 도료쿠노 센노-데시탓케?",
+      "pronSrc": "user",
+      "trans": "저기, 고난과 노력의 세뇌였던가요?",
+      "transSrc": "user"
+    },
+    {
+      "t": 39.07,
+      "orig": "あぁ もう",
+      "pron": "아- 모-",
+      "pronSrc": "user",
+      "trans": "아— 이제",
+      "transSrc": "user"
+    },
+    {
+      "t": 40.33,
+      "orig": "何回目の最後の警告?",
+      "pron": "난카이메노 사이고노 케-코쿠?",
+      "pronSrc": "user",
+      "trans": "몇 번째의 마지막 경고?",
+      "transSrc": "user"
+    },
+    {
+      "t": 42.45,
+      "orig": "じゃあここらで",
+      "pron": "자- 코코라데",
+      "pronSrc": "user",
+      "trans": "그럼 이쯤에서",
+      "transSrc": "user"
+    },
+    {
+      "t": 43.6,
+      "orig": "祈り繋いどく？",
+      "pron": "이노리 츠나이도쿠?",
+      "pronSrc": "user",
+      "trans": "기도나 이어둘까?",
+      "transSrc": "user"
+    },
+    {
+      "t": 44.58,
+      "orig": "感動も何もない自暴自棄の中で",
+      "pron": "칸도-모 나니모 나이 지보-지키노 나카데",
+      "pronSrc": "user",
+      "trans": "감동도 아무 것도 없는 자포자기의 한가운데서",
+      "transSrc": "user"
+    },
+    {
+      "t": 48.54,
+      "orig": "何回目の愛のお買い得?",
+      "pron": "난카이메노 아이노 오카이도쿠?",
+      "pronSrc": "user",
+      "trans": "몇 번째야 사랑의 세일?",
+      "transSrc": "user"
+    },
+    {
+      "t": 50.5,
+      "orig": "じゃあここらで",
+      "pron": "자- 코코라데",
+      "pronSrc": "user",
+      "trans": "그럼 이쯤에서",
+      "transSrc": "user"
+    },
+    {
+      "t": 52.02,
+      "orig": "心繋いどく？",
+      "pron": "코코로 츠나이도쿠?",
+      "pronSrc": "user",
+      "trans": "마음이나 이어둘까?",
+      "transSrc": "user"
+    },
+    {
+      "t": 53.1,
+      "orig": "感覚が落とした僕は泣き地蔵",
+      "pron": "칸카쿠가 오토시타 보쿠와 나키지조-",
+      "pronSrc": "user",
+      "trans": "감각이 추락한 나는 우는 지장",
+      "transSrc": "user"
+    },
+    {
+      "t": 57.45,
+      "orig": "あぁ",
+      "pron": "아-",
+      "pronSrc": "user",
+      "trans": "아—",
+      "transSrc": "user"
+    },
+    {
+      "t": 57.88,
+      "orig": "私たちに流れるこの血は",
+      "pron": "와타시타치니 나가레루 코노 치와",
+      "pronSrc": "user",
+      "trans": "우리에게 흐르는 이 피는",
+      "transSrc": "user"
+    },
+    {
+      "t": 60.25,
+      "orig": "惨憺たる日々を彩るためか",
+      "pron": "산탄타루 히비오 이로도루 타메카",
+      "pronSrc": "user",
+      "trans": "참담한 나날을 채색하라고 있는 걸까",
+      "transSrc": "user"
+    },
+    {
+      "t": 62.19,
+      "orig": "たぎり出したこの命の種は",
+      "pron": "타기리다시타 코노 이노치노 타네와",
+      "pronSrc": "user",
+      "trans": "끓어오른 이 생명의 씨앗은",
+      "transSrc": "user"
+    },
+    {
+      "t": 64.23,
+      "orig": "考えるほどに断崖絶壁だ",
+      "pron": "칸가에루 호도니 단가이 젯페키다",
+      "pronSrc": "user",
+      "trans": "생각할수록 벼랑 끝 같다",
+      "transSrc": "user"
+    },
+    {
+      "t": 66.51,
+      "orig": "相容れぬだろう",
+      "pron": "아이이레누 다로-",
+      "pronSrc": "user",
+      "trans": "양립 못 하겠지",
+      "transSrc": "user"
+    },
+    {
+      "t": 68.48,
+      "orig": "このままここは",
+      "pron": "코노 마마 코코와",
+      "pronSrc": "user",
+      "trans": "이대로라면 여긴",
+      "transSrc": "user"
+    },
+    {
+      "t": 70.45,
+      "orig": "知らぬ仏より",
+      "pron": "시라누 호토케요리",
+      "pronSrc": "user",
+      "trans": "모르는 부처보다",
+      "transSrc": "user"
+    },
+    {
+      "t": 72.22,
+      "orig": "馴染みの地獄で",
+      "pron": "나지미노 지고쿠데",
+      "pronSrc": "user",
+      "trans": "익숙한 지옥이 낫겠어",
+      "transSrc": "user"
+    },
+    {
+      "t": 81.56,
+      "orig": "あぁ もう",
+      "pron": "아- 모-",
+      "pronSrc": "user",
+      "trans": "아— 이제",
+      "transSrc": "user"
+    },
+    {
+      "t": 82.56,
+      "orig": "何回目の最後の警告?",
+      "pron": "난카이메노 사이고노 케-코쿠?",
+      "pronSrc": "user",
+      "trans": "몇 번째의 마지막 경고지?",
+      "transSrc": "user"
+    },
+    {
+      "t": 84.37,
+      "orig": "じゃあここらで",
+      "pron": "자- 코코라데",
+      "pronSrc": "user",
+      "trans": "그럼 이쯤에서",
+      "transSrc": "user"
+    },
+    {
+      "t": 85.68,
+      "orig": "祈り繋いどく？",
+      "pron": "이노리 츠나이도쿠?",
+      "pronSrc": "user",
+      "trans": "기도나 이어둘까?",
+      "transSrc": "user"
+    },
+    {
+      "t": 86.81,
+      "orig": "感動も何もない自暴自棄の中で",
+      "pron": "칸도-모 나니모 나이 지보-지키노 나카데",
+      "pronSrc": "user",
+      "trans": "감동도 아무 것도 없는 자포자기의 한가운데서",
+      "transSrc": "user"
+    },
+    {
+      "t": 90.28,
+      "orig": "何回目の愛のお買い得?",
+      "pron": "난카이메노 아이노 오카이도쿠?",
+      "pronSrc": "user",
+      "trans": "몇 번째야 사랑의 세일?",
+      "transSrc": "user"
+    },
+    {
+      "t": 92.75,
+      "orig": "じゃあここらで",
+      "pron": "자- 코코라데",
+      "pronSrc": "user",
+      "trans": "그럼 이쯤에서",
+      "transSrc": "user"
+    },
+    {
+      "t": 93.8,
+      "orig": "心繋いどく？",
+      "pron": "코코로 츠나이도쿠?",
+      "pronSrc": "user",
+      "trans": "마음이나 이어둘까?",
+      "transSrc": "user"
+    },
+    {
+      "t": 94.55,
+      "orig": "感覚が落とした僕は泣き地蔵",
+      "pron": "칸카쿠가 오토시타 보쿠와 나키지조-",
+      "pronSrc": "user",
+      "trans": "감각이 추락한 나는 우는 지장",
+      "transSrc": "user"
+    },
+    {
+      "t": 107.43,
+      "orig": "僕もずっと",
+      "pron": "보쿠모 즛토",
+      "pronSrc": "user",
+      "trans": "나도 줄곧",
+      "transSrc": "user"
+    },
+    {
+      "t": 110.73,
+      "orig": "笑う夢を見ていたい",
+      "pron": "와라우 유메오 미테 이타이",
+      "pronSrc": "user",
+      "trans": "웃는 꿈을 계속 꾸고 싶어",
+      "transSrc": "user"
+    },
+    {
+      "t": 115.19,
+      "orig": "でもずっと",
+      "pron": "데모 즛토",
+      "pronSrc": "user",
+      "trans": "하지만 줄곧",
+      "transSrc": "user"
+    },
+    {
+      "t": 117.05,
+      "orig": "願うほどの夢じゃなかった気がして",
+      "pron": "네가우 호도노 유메쟈 나캇타 키가 시테",
+      "pronSrc": "user",
+      "trans": "바라왔던 정도의 꿈은 아니었던 것 같아서",
+      "transSrc": "user"
+    },
+    {
+      "t": 124.81,
+      "orig": "何回目の最後の警告?",
+      "pron": "난카이메노 사이고노 케-코쿠?",
+      "pronSrc": "user",
+      "trans": "몇 번째의 마지막 경고지?",
+      "transSrc": "user"
+    },
+    {
+      "t": 126.33,
+      "orig": "じゃあここらで",
+      "pron": "자- 코코라데",
+      "pronSrc": "user",
+      "trans": "그럼 이쯤에서",
+      "transSrc": "user"
+    },
+    {
+      "t": 127.47,
+      "orig": "祈り繋いどく？",
+      "pron": "이노리 츠나이도쿠?",
+      "pronSrc": "user",
+      "trans": "기도나 이어둘까?",
+      "transSrc": "user"
+    },
+    {
+      "t": 128.45,
+      "orig": "感動も何もない自暴自棄の中で",
+      "pron": "칸도-모 나니모 나이 지보-지키노 나카데",
+      "pronSrc": "user",
+      "trans": "감동도 아무 것도 없는 자포자기의 한가운데서",
+      "transSrc": "user"
+    },
+    {
+      "t": 132.11,
+      "orig": "何回目の愛のお買い得?",
+      "pron": "난카이메노 아이노 오카이도쿠?",
+      "pronSrc": "user",
+      "trans": "몇 번째야 사랑의 세일?",
+      "transSrc": "user"
+    },
+    {
+      "t": 134.48,
+      "orig": "じゃあここらで",
+      "pron": "자- 코코라데",
+      "pronSrc": "user",
+      "trans": "그럼 이쯤에서",
+      "transSrc": "user"
+    },
+    {
+      "t": 135.76,
+      "orig": "心繋いどく？",
+      "pron": "코코로 츠나이도쿠?",
+      "pronSrc": "user",
+      "trans": "마음이나 이어둘까?",
+      "transSrc": "user"
+    },
+    {
+      "t": 136.67,
+      "orig": "感覚が落とした僕は泣き地蔵",
+      "pron": "칸카쿠가 오토시타 보쿠와 나키지조-",
+      "pronSrc": "user",
+      "trans": "감각이 추락한 나는 우는 지장",
+      "transSrc": "user"
+    }
+  ]
+}
