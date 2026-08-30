@@ -261,6 +261,13 @@
       "artist": "Vaundy"
     },
     {
+      "file": "38_kimagure.json",
+      "bundleId": "vaundy-kimagure",
+      "version": 1,
+      "title": "気まぐれ",
+      "artist": "Vaundy"
+    },
+    {
       "file": "39_jounetsu.json",
       "bundleId": "vaundy-jounetsu",
       "version": 10,
@@ -303,6 +310,13 @@
       "artist": "Vaundy"
     },
     {
+      "file": "45_time-paradox.json",
+      "bundleId": "vaundy-time-paradox",
+      "version": 1,
+      "title": "タイムパラドックス",
+      "artist": "Vaundy"
+    },
+    {
       "file": "46_fuujin.json",
       "bundleId": "vaundy-fuujin",
       "version": 10,
@@ -312,7 +326,7 @@
     {
       "file": "47_gorilla-shibai.json",
       "bundleId": "vaundy-gorilla-shibai",
-      "version": 10,
+      "version": 11,
       "title": "GORILLA芝居",
       "artist": "Vaundy"
     },

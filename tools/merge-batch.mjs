@@ -190,8 +190,32 @@ for (const f of files) {
 
   const { lines: hand, step, ratio } = parseHand(fs.readFileSync(path.join(HAND_DIR, f), "utf-8"));
   const lrc = await getLrc(meta.title, YTDUR.get(meta.yt));
-  if (!lrc) { rep.push(`${num} ${meta.title}  ⚠ LRCLIB 싱크 가사 없음`); continue; }
   await new Promise((r) => setTimeout(r, 350));
+
+  // LRCLIB 싱크 가사 없음 → 원문/발음/번역만 넣고 타임은 영상 길이에 균등 배분(임시).
+  // 앱 편집모드에서 줄마다 '찍기' 로 맞추면 됨.
+  if (!lrc) {
+    const yt = YTDUR.get(meta.yt) || 220;
+    const t0 = 6, t1 = Math.max(t0 + 10, yt - 12);
+    const total = hand.reduce((s, g) => s + Math.max(1, norm(g.orig).length), 0);
+    let acc = 0;
+    const out = hand.map((g) => {
+      const t = +(t0 + (t1 - t0) * (acc / Math.max(1, total))).toFixed(2);
+      acc += Math.max(1, norm(g.orig).length);
+      return { t, orig: g.orig, pron: g.pron, pronSrc: g.pron ? "user" : undefined, trans: g.trans, transSrc: g.trans ? "user" : undefined };
+    });
+    const num2 = num.padStart(2, "0");
+    const file = `${num2}_${meta.slug}.json`;
+    const bundleId = `vaundy-${meta.slug}`;
+    rep.push(`${num} ${meta.title}  ⚠ LRCLIB 없음 → 타임 임시배분 ${out.length}줄 (탭싱크 필요)`);
+    if (!DRY) {
+      fs.writeFileSync(path.join(SONGS_DIR, file), JSON.stringify({ title: meta.title, artist: "Vaundy", youtubeId: meta.yt, bundleId, offset: 0, approxTiming: true, needsTapSync: true, lines: out }, null, 2) + "\n");
+      const ei = idx.songs.findIndex((s) => s.bundleId === bundleId);
+      const entry = { file, bundleId, version: 1, title: meta.title, artist: "Vaundy" };
+      if (ei >= 0) { entry.version = (idx.songs[ei].version || 1) + 1; idx.songs[ei] = entry; } else idx.songs.push(entry);
+    }
+    continue;
+  }
 
   let { out, mismatches, leftover } = merge(hand, lrc.lines);
   let corrupt = out.filter((l) => /[가-힣]/.test(l.orig)).length;

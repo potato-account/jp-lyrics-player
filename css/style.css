@@ -154,15 +154,21 @@ button:active { transform: scale(0.97); }
   gap: 8px;
   border: 1px dashed var(--border);
 }
-.lyric-line .set-time {
-  display: none;
-  white-space: nowrap;
-  font-variant-numeric: tabular-nums;
-  background: var(--accent-soft);
-  border-color: var(--accent);
+.lyric-line .line-btns { display: none; }
+#app.edit-on .lyric-line .line-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
-#app.edit-on .lyric-line .set-time { display: inline-block; }
+.lyric-line .line-btns button {
+  white-space: nowrap;
+  font-size: 0.78rem;
+  padding: 6px 8px;
+  min-width: 52px;
+}
+.lyric-line .set-time { background: var(--accent-soft); border-color: var(--accent); font-variant-numeric: tabular-nums; }
 .lyric-line .set-time.has-time { background: var(--bg-soft); border-color: var(--border); }
+.lyric-line .save-line { background: var(--bg-soft); }
 
 /* --- 하단 컨트롤 --- */
 #controls {

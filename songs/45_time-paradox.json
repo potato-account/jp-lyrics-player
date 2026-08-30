@@ -1,0 +1,283 @@
+{
+  "title": "タイムパラドックス",
+  "artist": "Vaundy",
+  "youtubeId": "Ih2eEKTJXRg",
+  "bundleId": "vaundy-time-paradox",
+  "offset": 0,
+  "approxTiming": true,
+  "needsTapSync": true,
+  "lines": [
+    {
+      "t": 6,
+      "orig": "あのね君と出会ったことを今でも",
+      "pron": "아노네 키미토 데앗타 코토오 이마데모",
+      "pronSrc": "user",
+      "trans": "있잖아 너와 만난 일을 지금도",
+      "transSrc": "user"
+    },
+    {
+      "t": 14.86,
+      "orig": "ずっと覚えているけど",
+      "pron": "즛토 오보에테이루케도",
+      "pronSrc": "user",
+      "trans": "계속 기억하고 있어",
+      "transSrc": "user"
+    },
+    {
+      "t": 20.76,
+      "orig": "でもね それは ずっと先の未来の話を",
+      "pron": "데모네 소레와 즛토 사키노 미라이노 하나시오",
+      "pronSrc": "user",
+      "trans": "그런데 그건 아주 먼 미래의 이야기를",
+      "transSrc": "user"
+    },
+    {
+      "t": 30.21,
+      "orig": "横で見てるみたいなの",
+      "pron": "요코데 미테루미타이나노",
+      "pronSrc": "user",
+      "trans": "옆에서 보고 있는 것만 같아",
+      "transSrc": "user"
+    },
+    {
+      "t": 36.11,
+      "orig": "もしも君の願い一つ叶うとする",
+      "pron": "모시모 키미노 네가이 히토츠 카나우토 스루",
+      "pronSrc": "user",
+      "trans": "만약 너의 소원이 한 가지 이루어진다고 한다면",
+      "transSrc": "user"
+    },
+    {
+      "t": 44.38,
+      "orig": "未来変えるとする",
+      "pron": "미라이 카에루토 스루",
+      "pronSrc": "user",
+      "trans": "미래를 바꾼다고 한다면",
+      "transSrc": "user"
+    },
+    {
+      "t": 49.1,
+      "orig": "いや",
+      "pron": "이야",
+      "pronSrc": "user",
+      "trans": "아니",
+      "transSrc": "user"
+    },
+    {
+      "t": 50.28,
+      "orig": "あのね僕のポケットの未来を覗いて",
+      "pron": "아노네 보쿠노 포켓토노 미라이오 노조이테",
+      "pronSrc": "user",
+      "trans": "있잖아 나의 주머니 속 미래를 들여다봐",
+      "transSrc": "user"
+    },
+    {
+      "t": 59.73,
+      "orig": "きっと笑ってくれるから",
+      "pron": "킷토 와랏테쿠레루카라",
+      "pronSrc": "user",
+      "trans": "분명 웃음이 나올 테니까",
+      "transSrc": "user"
+    },
+    {
+      "t": 66.22,
+      "orig": "これは いつか この先出会うあなたの",
+      "pron": "코레와 이츠카 코노 사키 데아우 아나타노",
+      "pronSrc": "user",
+      "trans": "이건 언젠가 앞으로 마주치게 될 너의",
+      "transSrc": "user"
+    },
+    {
+      "t": 75.67,
+      "orig": "痛み一つ拭う魔法",
+      "pron": "이타미 히토츠 누구우 마호-",
+      "pronSrc": "user",
+      "trans": "아픔을 하나 씻어내는 마법",
+      "transSrc": "user"
+    },
+    {
+      "t": 80.39,
+      "orig": "僕らの抱えてる魔法には",
+      "pron": "보쿠라노 카카에테루 마호-니와",
+      "pronSrc": "user",
+      "trans": "우리들이 안고 있는 마법에는",
+      "transSrc": "user"
+    },
+    {
+      "t": 86.88,
+      "orig": "いつも一つ小さな秘密があって",
+      "pron": "이츠모 히토츠 치이사나 히미츠가 앗테",
+      "pronSrc": "user",
+      "trans": "언제나 한 가지 작은 비밀이 있어서",
+      "transSrc": "user"
+    },
+    {
+      "t": 95.15,
+      "orig": "どうしても一人じゃ使えないのさ",
+      "pron": "도-시테모 히토리쟈 츠카에나이노사",
+      "pronSrc": "user",
+      "trans": "어떻게도 혼자서는 사용할 수 없어",
+      "transSrc": "user"
+    },
+    {
+      "t": 104.01,
+      "orig": "だから聞いて",
+      "pron": "다카라 키이테",
+      "pronSrc": "user",
+      "trans": "그러니 들어 줘",
+      "transSrc": "user"
+    },
+    {
+      "t": 107.55,
+      "orig": "ねぇ",
+      "pron": "네-",
+      "pronSrc": "user",
+      "trans": "저기",
+      "transSrc": "user"
+    },
+    {
+      "t": 108.73,
+      "orig": "あのね君のポケットの未来を覗いて",
+      "pron": "아노네 키미노 포켓토노 미라이오 노조이테",
+      "pronSrc": "user",
+      "trans": "있잖아 너의 주머니 속 미래를 들여다봐",
+      "transSrc": "user"
+    },
+    {
+      "t": 118.18,
+      "orig": "きっと笑ってくれるから",
+      "pron": "킷토 와랏테쿠레루카라",
+      "pronSrc": "user",
+      "trans": "분명 웃음이 나올 테니까",
+      "transSrc": "user"
+    },
+    {
+      "t": 124.67,
+      "orig": "これは いつか この先出会うあなたの",
+      "pron": "코레와 이츠카 코노 사키 데아우 아나타노",
+      "pronSrc": "user",
+      "trans": "이건 언젠가 앞으로 마주치게 될 너의",
+      "transSrc": "user"
+    },
+    {
+      "t": 134.12,
+      "orig": "痛み一つ拭う魔法",
+      "pron": "이타미 히토츠 누구우 마호-",
+      "pronSrc": "user",
+      "trans": "아픔을 하나 씻어내는 마법",
+      "transSrc": "user"
+    },
+    {
+      "t": 138.84,
+      "orig": "ねぇ ほら しまっておきなよ",
+      "pron": "네- 호라 시맛테오키나요",
+      "pronSrc": "user",
+      "trans": "저기 자 간직해 두고 있어",
+      "transSrc": "user"
+    },
+    {
+      "t": 145.92,
+      "orig": "どうしても拭えない痛みが",
+      "pron": "도-시테모 누구에나이 이타미가",
+      "pronSrc": "user",
+      "trans": "어떻게도 씻어낼 수 없는 아픔이",
+      "transSrc": "user"
+    },
+    {
+      "t": 153.01,
+      "orig": "君を襲いかかる時がくるさ",
+      "pron": "키미오 오소이카카루 토키가 쿠루사",
+      "pronSrc": "user",
+      "trans": "너를 덮쳐들 때가 올 거야",
+      "transSrc": "user"
+    },
+    {
+      "t": 160.09,
+      "orig": "そんなときは君もその魔法の力を",
+      "pron": "손나 토키와 키미모 소노 마호-노 치카라오",
+      "pronSrc": "user",
+      "trans": "그럴 땐 너도 그 마법의 힘을",
+      "transSrc": "user"
+    },
+    {
+      "t": 168.95,
+      "orig": "唱えてみて",
+      "pron": "토나에테미테",
+      "pronSrc": "user",
+      "trans": "외워 봐",
+      "transSrc": "user"
+    },
+    {
+      "t": 171.9,
+      "orig": "ねぇ",
+      "pron": "네-",
+      "pronSrc": "user",
+      "trans": "저기",
+      "transSrc": "user"
+    },
+    {
+      "t": 173.08,
+      "orig": "あのね僕のポケットの未来の君はね",
+      "pron": "아노네 보쿠노 포켓토노 미라이노 키미와네",
+      "pronSrc": "user",
+      "trans": "있잖아 나의 주머니 속 미래의 너는 말이야",
+      "transSrc": "user"
+    },
+    {
+      "t": 182.53,
+      "orig": "いつも笑ってるんだよ",
+      "pron": "이츠모 와랏테룬다요",
+      "pronSrc": "user",
+      "trans": "언제나 웃고 있어",
+      "transSrc": "user"
+    },
+    {
+      "t": 188.43,
+      "orig": "だから君のポケットの未来の僕もね",
+      "pron": "다카라 키미노 포켓토노 미라이노 보쿠모네",
+      "pronSrc": "user",
+      "trans": "그러니 너의 주머니 속 미래의 나도 말이지",
+      "transSrc": "user"
+    },
+    {
+      "t": 197.88,
+      "orig": "笑っててほしいから",
+      "pron": "와랏테테 호시이카라",
+      "pronSrc": "user",
+      "trans": "웃고 있으면 하니까",
+      "transSrc": "user"
+    },
+    {
+      "t": 203.19,
+      "orig": "ねぇ",
+      "pron": "네-",
+      "pronSrc": "user",
+      "trans": "저기",
+      "transSrc": "user"
+    },
+    {
+      "t": 204.37,
+      "orig": "笑っててほしいから",
+      "pron": "와랏테테 호시이카라",
+      "pronSrc": "user",
+      "trans": "웃고 있길 바라니까",
+      "transSrc": "user"
+    },
+    {
+      "t": 209.69,
+      "orig": "ねぇ",
+      "pron": "네-",
+      "pronSrc": "user",
+      "trans": "저기",
+      "transSrc": "user"
+    },
+    {
+      "t": 210.87,
+      "orig": "笑っててくれよ",
+      "pron": "와랏테테쿠레요",
+      "pronSrc": "user",
+      "trans": "웃고 있어 줘",
+      "transSrc": "user"
+    }
+  ]
+}

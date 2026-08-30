@@ -39,12 +39,13 @@ function splitCols(s) {
 
 // ================= 렌더링 & 싱크 =================
 export class LyricsView {
-  constructor(listEl, { onSeekToLine, onSetTime, onEditLine }) {
+  constructor(listEl, { onSeekToLine, onSetTime, onEditLine, onSaveLine }) {
     this.listEl = listEl;
     this.scroller = listEl.parentElement; // #lyrics
     this.onSeekToLine = onSeekToLine;
     this.onSetTime = onSetTime;
     this.onEditLine = onEditLine || (() => {});
+    this.onSaveLine = onSaveLine || (() => {});
     this.song = null;
     this.rows = [];
     this.activeIdx = -1;
@@ -100,23 +101,39 @@ export class LyricsView {
         });
       }
 
-      // 편집: 현재 시각으로 타임 찍기
+      // 편집 버튼: [타임] [저장]
+      const btns = document.createElement("div");
+      btns.className = "line-btns";
+
       const setBtn = document.createElement("button");
       setBtn.type = "button";
       setBtn.className = "set-time" + (line.t != null ? " has-time" : "");
-      setBtn.textContent = line.t != null ? fmtClock(line.t) : "찍기";
+      setBtn.textContent = line.t != null ? fmtClock(line.t) : "타임";
       setBtn.addEventListener("click", (e) => { e.stopPropagation(); this.onSetTime(i); });
-      li.appendChild(setBtn);
+
+      const saveBtn = document.createElement("button");
+      saveBtn.type = "button";
+      saveBtn.className = "save-line";
+      saveBtn.textContent = "저장";
+      saveBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        this.onSaveLine(i, pronEl.textContent.trim(), transEl.textContent.trim());
+        saveBtn.textContent = "✓";
+        setTimeout(() => { saveBtn.textContent = "저장"; }, 900);
+      });
+
+      btns.append(setBtn, saveBtn);
+      li.appendChild(btns);
 
       // 줄 탭 → 그 줄로 이동 (편집 모드에서는 무시)
       li.addEventListener("click", (e) => {
         if (this.editable) return;
-        if (e.target.closest(".set-time")) return;
+        if (e.target.closest(".line-btns")) return;
         if (line.t != null) this.onSeekToLine(line.t + (this.song.offset || 0));
       });
 
       this.listEl.appendChild(li);
-      this.rows.push({ li, setBtn, pronEl, transEl });
+      this.rows.push({ li, setBtn, saveBtn, pronEl, transEl });
     });
   }
 
@@ -124,7 +141,7 @@ export class LyricsView {
     const line = this.song.lines[i];
     const r = this.rows[i];
     if (!r) return;
-    r.setBtn.textContent = line.t != null ? fmtClock(line.t) : "찍기";
+    r.setBtn.textContent = line.t != null ? fmtClock(line.t) : "타임";
     r.setBtn.classList.toggle("has-time", line.t != null);
     if (document.activeElement !== r.pronEl) r.pronEl.textContent = line.pron || "";
     if (document.activeElement !== r.transEl) r.transEl.textContent = line.trans || "";

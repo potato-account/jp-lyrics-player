@@ -123,16 +123,65 @@ function wireControls() {
 }
 
 // ---------- 편집: 타임/칸 ----------
-function setLineTime(i) {
-  if (!song) return;
-  song.lines[i].t = +(player.currentTime - (song.offset || 0)).toFixed(2);
-  view.refreshRow(i);
-  persist();
+const fmtTime = (t) => {
+  if (t == null) return "";
+  const m = Math.floor(t / 60);
+  const s = (t % 60).toFixed(2).padStart(5, "0");
+  return `${m}:${s}`;
+};
+// "m:ss.xx" 또는 초 숫자 → 초. 빈 문자열이면 null.
+function parseTime(str) {
+  const s = (str || "").trim();
+  if (!s) return null;
+  const mm = s.match(/^(\d+):(\d+(?:\.\d+)?)$/);
+  if (mm) return +mm[1] * 60 + +mm[2];
+  const n = parseFloat(s);
+  return isFinite(n) ? n : null;
 }
+
+let timeDialogIdx = -1;
+function openTimeDialog(i) {
+  if (!song) return;
+  timeDialogIdx = i;
+  $("#time-line-orig").textContent = song.lines[i].orig || "";
+  $("#time-value").value = fmtTime(song.lines[i].t);
+  $("#time-dialog").showModal();
+  $("#time-value").focus();
+}
+function wireTimeDialog() {
+  const dlg = $("#time-dialog");
+  dlg.querySelectorAll("[data-close]").forEach((b) => b.addEventListener("click", () => dlg.close()));
+  // 현재 재생 위치 담기
+  $("#time-now").addEventListener("click", () => {
+    $("#time-value").value = fmtTime(+(player.currentTime - (song.offset || 0)).toFixed(2));
+  });
+  $("#time-ok").addEventListener("click", () => {
+    if (timeDialogIdx < 0 || !song) return dlg.close();
+    song.lines[timeDialogIdx].t = parseTime($("#time-value").value); // 빈칸이면 null(=타임 지움)
+    view.refreshRow(timeDialogIdx);
+    persist();
+    dlg.close();
+  });
+}
+
+// 타임 버튼 클릭 → 다이얼로그 (예전처럼 즉시 0:00 으로 안 감)
+function setLineTime(i) { openTimeDialog(i); }
+
 function editLine(i, field, value) {
   if (!song) return;
   song.lines[i][field] = value;
   song.lines[i][field + "Src"] = value ? "user" : undefined; // 내가 직접 = 최우선
+  updateAutofillBanner();
+  persist();
+}
+
+// 줄 저장 버튼: 그 줄의 현재 발음/번역(DOM)을 확정 저장
+function saveLine(i, pron, trans) {
+  if (!song) return;
+  song.lines[i].pron = pron;
+  song.lines[i].pronSrc = pron ? "user" : undefined;
+  song.lines[i].trans = trans;
+  song.lines[i].transSrc = trans ? "user" : undefined;
   updateAutofillBanner();
   persist();
 }
@@ -490,12 +539,14 @@ async function main() {
     onSeekToLine: (t) => player.seek(t),
     onSetTime: setLineTime,
     onEditLine: editLine,
+    onSaveLine: saveLine,
   });
   wireControls();
   wireAddDialog();
   wireMetaDialog();
   wireBulk();
   wireAutofill();
+  wireTimeDialog();
   $("#open-list").addEventListener("click", openSheet);
   $("#close-list").addEventListener("click", closeSheet);
   $("#song-list").addEventListener("click", (e) => { if (e.target.id === "song-list") closeSheet(); });
