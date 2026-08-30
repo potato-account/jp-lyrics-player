@@ -443,8 +443,10 @@ async function syncBundledSongsInner() {
     data.bundleId = entry.bundleId;
     data.bundleVersion = entry.version;
 
-    // 번들 파일의 발음·번역은 "hand"(Claude 손 품질)로 표시.
-    // 단, 기존 레코드에서 내가 직접 고친("user") 칸은 그대로 보존한다.
+    // 번들 파일의 발음·번역 출처 태그 정리.
+    // - 파일이 pronSrc/transSrc 를 명시했으면 그대로 존중 ("user" = 수작업 병합본 등)
+    // - 명시 안 했으면 값이 있는 칸은 "hand"(Claude 손 품질)
+    // - 어느 경우든 기존 레코드에서 내가 직접 고친("user") 칸은 보존
     for (let i = 0; i < data.lines.length; i++) {
       const nl = data.lines[i];
       const ol = existing && existing.lines[i];
@@ -453,7 +455,7 @@ async function syncBundledSongsInner() {
           nl[f] = ol[f];
           nl[f + "Src"] = "user";
         } else {
-          nl[f + "Src"] = nl[f] ? "hand" : undefined;
+          nl[f + "Src"] = nl[f + "Src"] || (nl[f] ? "hand" : undefined);
         }
       }
     }

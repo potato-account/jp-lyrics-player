@@ -1,0 +1,481 @@
+{
+  "title": "忘れる前に",
+  "artist": "Vaundy",
+  "youtubeId": "Hy7GWPkrZv0",
+  "bundleId": "vaundy-wasureru-mae-ni",
+  "offset": 0,
+  "lines": [
+    {
+      "t": 23.22,
+      "orig": "街の風景にうなだれて",
+      "pron": "마치노 후-케이니 우나다레테",
+      "pronSrc": "user",
+      "trans": "거리의 풍경에 고개를 떨구고",
+      "transSrc": "user"
+    },
+    {
+      "t": 33.07,
+      "orig": "街を背景に黄昏て",
+      "pron": "마치오 하이케이니 타소가레테",
+      "pronSrc": "user",
+      "trans": "거리를 배경으로 황혼에 잠겨",
+      "transSrc": "user"
+    },
+    {
+      "t": 38.91,
+      "orig": "思い出した",
+      "pron": "오모이다시타",
+      "pronSrc": "user",
+      "trans": "떠올렸어",
+      "transSrc": "user"
+    },
+    {
+      "t": 40.76,
+      "orig": "ねぇお願い",
+      "pron": "네- 오네가이",
+      "pronSrc": "user",
+      "trans": "있잖아 부탁이야",
+      "transSrc": "user"
+    },
+    {
+      "t": 42.56,
+      "orig": "見てるだけじゃ",
+      "pron": "미테루다케쟈",
+      "pronSrc": "user",
+      "trans": "그저 보기만 해선",
+      "transSrc": "user"
+    },
+    {
+      "t": 45.08,
+      "orig": "探し物は全然",
+      "pron": "사가시모노와 젠젠",
+      "pronSrc": "user",
+      "trans": "찾고 있는 것들을 전혀",
+      "transSrc": "user"
+    },
+    {
+      "t": 47.72,
+      "orig": "見つからないよ",
+      "pron": "미츠카라나이요",
+      "pronSrc": "user",
+      "trans": "발견할 수 없을 거야",
+      "transSrc": "user"
+    },
+    {
+      "t": 50.79,
+      "orig": "お願い",
+      "pron": "오네가이",
+      "pronSrc": "user",
+      "trans": "부탁이니",
+      "transSrc": "user"
+    },
+    {
+      "t": 52.35,
+      "orig": "手探り探して",
+      "pron": "테사구리 사가시테",
+      "pronSrc": "user",
+      "trans": "손으로 더듬어 찾아 줘",
+      "transSrc": "user"
+    },
+    {
+      "t": 55.47,
+      "orig": "夢から覚めて",
+      "pron": "유메카라 사메테",
+      "pronSrc": "user",
+      "trans": "꿈에서 깨어나",
+      "transSrc": "user"
+    },
+    {
+      "t": 58.65,
+      "orig": "忘れる前に",
+      "pron": "와스레루 마에니",
+      "pronSrc": "user",
+      "trans": "잊기 전에",
+      "transSrc": "user"
+    },
+    {
+      "t": 61.3,
+      "orig": "僕ら夢の中",
+      "pron": "보쿠라 유메노 나카",
+      "pronSrc": "user",
+      "trans": "우리는 꿈속에서",
+      "transSrc": "user"
+    },
+    {
+      "t": 64.74,
+      "orig": "消えそうな",
+      "pron": "키에소-나",
+      "pronSrc": "user",
+      "trans": "사라질 듯한",
+      "transSrc": "user"
+    },
+    {
+      "t": 66.7,
+      "orig": "灯火探して話をしている",
+      "pron": "토모시비 사가시테 하나시오 시테이루",
+      "pronSrc": "user",
+      "trans": "등불을 찾으며 이야길 나누고 있어",
+      "transSrc": "user"
+    },
+    {
+      "t": 71.01,
+      "orig": "これが夢ならば",
+      "pron": "코레가 유메나라바",
+      "pronSrc": "user",
+      "trans": "이게 만일 꿈이라면",
+      "transSrc": "user"
+    },
+    {
+      "t": 74.07,
+      "orig": "試そうか",
+      "pron": "타메소-카",
+      "pronSrc": "user",
+      "trans": "시험해 볼까",
+      "transSrc": "user"
+    },
+    {
+      "t": 75.82,
+      "orig": "繊細な思い出だけを",
+      "pron": "센사이나 오모이데다케오",
+      "pronSrc": "user",
+      "trans": "섬세한 추억들만을 골라",
+      "transSrc": "user"
+    },
+    {
+      "t": 84.85,
+      "orig": "引っ張り合って",
+      "pron": "힛파리앗테",
+      "pronSrc": "user",
+      "trans": "서로 끌어당겨 보자",
+      "transSrc": "user"
+    },
+    {
+      "t": 91.88,
+      "orig": "泡の暴発に急かされて",
+      "pron": "아와노 보-하츠니 세카사레테",
+      "pronSrc": "user",
+      "trans": "거품의 폭발에 재촉당해서",
+      "transSrc": "user"
+    },
+    {
+      "t": 101.5,
+      "orig": "空の轟音にかこつけて",
+      "pron": "소라노 고-온니 카코츠케테",
+      "pronSrc": "user",
+      "trans": "하늘의 굉음을 핑계 삼아",
+      "transSrc": "user"
+    },
+    {
+      "t": 107.45,
+      "orig": "頬をつねった",
+      "pron": "호호오 츠넷타",
+      "pronSrc": "user",
+      "trans": "뺨을 꼬집었어",
+      "transSrc": "user"
+    },
+    {
+      "t": 109.45,
+      "orig": "「あれはっ！」",
+      "pron": "아레왓",
+      "pronSrc": "user",
+      "trans": "「저것은！」",
+      "transSrc": "user"
+    },
+    {
+      "t": 111.26,
+      "orig": "目を奪われた君の横瞳を眺め",
+      "pron": "메오 우바와레타 키미노 요코 히토미오 나가메",
+      "pronSrc": "user",
+      "trans": "시선을 빼앗긴 너의 옆 눈동자를 바라보며",
+      "transSrc": "user"
+    },
+    {
+      "t": 117.36,
+      "orig": "奥に潜んだ竜に、幻の願いを",
+      "pron": "오쿠니 히손다 류-니 마보로시노 네가이오",
+      "pronSrc": "user",
+      "trans": "내 안에 잠든 용에게、환상 같은 소원을",
+      "transSrc": "user"
+    },
+    {
+      "t": 123.99,
+      "orig": "「今だけ持たせて、愛する勇気を」",
+      "pron": "이마다케 모타세테 아이스루 유-키오",
+      "pronSrc": "user",
+      "trans": "「지금만이라도 허락해 줘、사랑할 용기를」",
+      "transSrc": "user"
+    },
+    {
+      "t": 129.83,
+      "orig": "僕ら夢の中",
+      "pron": "보쿠라 유메노 나카",
+      "pronSrc": "user",
+      "trans": "우리는 꿈속에서",
+      "transSrc": "user"
+    },
+    {
+      "t": 133.33,
+      "orig": "消えそうな",
+      "pron": "키에소-나",
+      "pronSrc": "user",
+      "trans": "사라질 듯한",
+      "transSrc": "user"
+    },
+    {
+      "t": 135.3,
+      "orig": "灯火探して話をしている",
+      "pron": "토모시비 사가시테 하나시오 시테이루",
+      "pronSrc": "user",
+      "trans": "등불을 찾으며 이야길 나누고 있어",
+      "transSrc": "user"
+    },
+    {
+      "t": 139.64,
+      "orig": "これが夢ならば",
+      "pron": "코레가 유메나라바",
+      "pronSrc": "user",
+      "trans": "이게 만일 꿈이라면",
+      "transSrc": "user"
+    },
+    {
+      "t": 142.72,
+      "orig": "試そうか",
+      "pron": "타메소-카",
+      "pronSrc": "user",
+      "trans": "시험해 볼까",
+      "transSrc": "user"
+    },
+    {
+      "t": 144.48,
+      "orig": "繊細な思い出だけを",
+      "pron": "센사이나 오모이데다케오",
+      "pronSrc": "user",
+      "trans": "섬세한 추억들만을 골라",
+      "transSrc": "user"
+    },
+    {
+      "t": 157.56,
+      "orig": "引っ張り合って",
+      "pron": "힛파리앗테",
+      "pronSrc": "user",
+      "trans": "서로 끌어당겨 보자",
+      "transSrc": "user"
+    },
+    {
+      "t": 167.74,
+      "orig": "もう君は魅惑を超えた",
+      "pron": "모- 키미와 미와쿠오 코에타",
+      "pronSrc": "user",
+      "trans": "이미 너는 매혹을 넘어섰어",
+      "transSrc": "user"
+    },
+    {
+      "t": 172.3,
+      "orig": "それはもう",
+      "pron": "소레와 모-",
+      "pronSrc": "user",
+      "trans": "그건 실로",
+      "transSrc": "user"
+    },
+    {
+      "t": 173.62,
+      "orig": "某星のエイリアンズ",
+      "pron": "보- 호시노 에이리안즈",
+      "pronSrc": "user",
+      "trans": "어떠한 별의 에일리언들",
+      "transSrc": "user"
+    },
+    {
+      "t": 176.21,
+      "orig": "にも負けないよ",
+      "pron": "니모 마케나이요",
+      "pronSrc": "user",
+      "trans": "에게도 지지 않을 거야",
+      "transSrc": "user"
+    },
+    {
+      "t": 178.23,
+      "orig": "だから",
+      "pron": "다카라",
+      "pronSrc": "user",
+      "trans": "그러니",
+      "transSrc": "user"
+    },
+    {
+      "t": 179.63,
+      "orig": "手探り満たして",
+      "pron": "테사구리 미타시테",
+      "pronSrc": "user",
+      "trans": "손으로 더듬어 채워 줘",
+      "transSrc": "user"
+    },
+    {
+      "t": 182.88,
+      "orig": "魔法が解けて",
+      "pron": "마호-가 토케테",
+      "pronSrc": "user",
+      "trans": "마법이 풀려",
+      "transSrc": "user"
+    },
+    {
+      "t": 185.78,
+      "orig": "途切れる前に",
+      "pron": "토기레루 마에니",
+      "pronSrc": "user",
+      "trans": "끊어지기 전에",
+      "transSrc": "user"
+    },
+    {
+      "t": 188.68,
+      "orig": "僕ら夢の中",
+      "pron": "보쿠라 유메노 나카",
+      "pronSrc": "user",
+      "trans": "우리는 꿈속에서",
+      "transSrc": "user"
+    },
+    {
+      "t": 192.05,
+      "orig": "消えそうな",
+      "pron": "키에소-나",
+      "pronSrc": "user",
+      "trans": "사라질 듯한",
+      "transSrc": "user"
+    },
+    {
+      "t": 194.06,
+      "orig": "灯火探して話をしている",
+      "pron": "토모시비 사가시테 하나시오 시테이루",
+      "pronSrc": "user",
+      "trans": "등불을 찾으며 이야길 나누고 있어",
+      "transSrc": "user"
+    },
+    {
+      "t": 198.49,
+      "orig": "これが夢ならば",
+      "pron": "코레가 유메나라바",
+      "pronSrc": "user",
+      "trans": "이게 만일 꿈이라면",
+      "transSrc": "user"
+    },
+    {
+      "t": 201.51,
+      "orig": "試そうか",
+      "pron": "타메소-카",
+      "pronSrc": "user",
+      "trans": "시험해 볼까",
+      "transSrc": "user"
+    },
+    {
+      "t": 203.24,
+      "orig": "繊細な思い出だけを",
+      "pron": "센사이나 오모이데다케오",
+      "pronSrc": "user",
+      "trans": "섬세한 추억들만을 골라",
+      "transSrc": "user"
+    },
+    {
+      "t": 206.26,
+      "orig": "引っ張り合い",
+      "pron": "힛파리아이",
+      "pronSrc": "user",
+      "trans": "서로 끌어당기고서",
+      "transSrc": "user"
+    },
+    {
+      "t": 208.27,
+      "orig": "もしもこの夢が",
+      "pron": "모시모 코노 유메가",
+      "pronSrc": "user",
+      "trans": "만약 이 꿈이",
+      "transSrc": "user"
+    },
+    {
+      "t": 211.07,
+      "orig": "覚めるなら",
+      "pron": "사메루나라",
+      "pronSrc": "user",
+      "trans": "깨어난다면",
+      "transSrc": "user"
+    },
+    {
+      "t": 213.07,
+      "orig": "目を擦り書き留めて",
+      "pron": "메오 코스리 카키코메테",
+      "pronSrc": "user",
+      "trans": "눈을 비비고 얼른 적어 두자",
+      "transSrc": "user"
+    },
+    {
+      "t": 216.6,
+      "orig": "忘れる前に",
+      "pron": "와스레루 마에니",
+      "pronSrc": "user",
+      "trans": "잊기 전에",
+      "transSrc": "user"
+    },
+    {
+      "t": 218.56,
+      "orig": "ツルリ、ツルリ",
+      "pron": "츠루리 츠루리",
+      "pronSrc": "user",
+      "trans": "스르륵、스르륵",
+      "transSrc": "user"
+    },
+    {
+      "t": 221.13,
+      "orig": "熱にやられて",
+      "pron": "네츠니 야라레테",
+      "pronSrc": "user",
+      "trans": "열기에 당해",
+      "transSrc": "user"
+    },
+    {
+      "t": 223.45,
+      "orig": "ゴクリ、ゴクリ",
+      "pron": "고쿠리 고쿠리",
+      "pronSrc": "user",
+      "trans": "꿀꺽、꿀꺽",
+      "transSrc": "user"
+    },
+    {
+      "t": 225.74,
+      "orig": "ぼやけ始めて",
+      "pron": "보야케하지메테",
+      "pronSrc": "user",
+      "trans": "희미해지기 시작해",
+      "transSrc": "user"
+    },
+    {
+      "t": 228.31,
+      "orig": "ツルリ、ツルリ",
+      "pron": "츠루리 츠루리",
+      "pronSrc": "user",
+      "trans": "스르륵、스르륵",
+      "transSrc": "user"
+    },
+    {
+      "t": 230.76,
+      "orig": "君を忘れて",
+      "pron": "키미오 와스레테",
+      "pronSrc": "user",
+      "trans": "너를 점점 잊고",
+      "transSrc": "user"
+    },
+    {
+      "t": 233.27,
+      "orig": "ゴクリ、ゴクリ",
+      "pron": "고쿠리 고쿠리",
+      "pronSrc": "user",
+      "trans": "꿀꺽、꿀꺽",
+      "transSrc": "user"
+    },
+    {
+      "t": 235.62,
+      "orig": "バクに食われた",
+      "pron": "바쿠니 쿠와레타",
+      "pronSrc": "user",
+      "trans": "바쿠가 삼켜 갔네",
+      "transSrc": "user"
+    }
+  ]
+}
