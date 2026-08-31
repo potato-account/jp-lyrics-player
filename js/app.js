@@ -808,7 +808,10 @@ if ("serviceWorker" in navigator) {
   });
   window.addEventListener("load", async () => {
     try {
-      const reg = await navigator.serviceWorker.register("sw.js");
+      // updateViaCache:"none" — sw.js 자체를 HTTP 캐시에서 읽지 않는다.
+      // GitHub Pages 의 max-age=600 때문에, 이게 없으면 새 버전을 배포해도
+      // 최대 10분간 옛 서비스워커가 살아 있어서 자동 새로고침이 걸리지 않는다.
+      const reg = await navigator.serviceWorker.register("sw.js", { updateViaCache: "none" });
       // 앱을 오래 켜둔 경우에도 새 버전 확인: 주기적으로 + 포그라운드 복귀 시
       setInterval(() => reg.update().catch(() => {}), 60000);
       document.addEventListener("visibilitychange", () => {
