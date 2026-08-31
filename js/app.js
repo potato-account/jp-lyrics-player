@@ -125,13 +125,11 @@ function wireControls() {
   $("#back5").addEventListener("click", () => player.seek(player.currentTime - 5));
   $("#fwd5").addEventListener("click", () => player.seek(player.currentTime + 5));
 
-  // 다음 곡 / 이전 곡 — 반복 모드와 무관하게 대기열을 직접 이동
-  $("#next-song").addEventListener("click", () => playAdjacent(+1));
-  $("#prev-song").addEventListener("click", () => {
-    // 흔한 플레이어 관례: 3초 넘게 재생됐으면 이 곡 처음으로, 아니면 이전 곡
-    if (player.currentTime > 3) player.seek(0);
-    else playAdjacent(-1);
-  });
+  // 곡 이동 — 반복 모드와 무관하게 지금 목록(대기열)을 직접 이동
+  $("#prev-song").addEventListener("click", () => playAdjacent(-1)); // 이전 곡
+  $("#next-song").addEventListener("click", () => playAdjacent(+1)); // 다음 곡
+  $("#first-song").addEventListener("click", () => playEdge("first")); // 목록 첫 곡
+  $("#last-song").addEventListener("click", () => playEdge("last"));   // 목록 마지막 곡
 
   const bar = $("#seekbar");
   bar.addEventListener("pointerdown", () => (seeking = true));
@@ -569,15 +567,27 @@ async function ensureQueue() {
   return queue.length > 0 && queueIndex >= 0;
 }
 
-// dir: +1 다음 곡 / -1 이전 곡. 양끝에서는 순환한다.
-async function playAdjacent(dir) {
-  if (!(await ensureQueue())) return;
+// 대기열의 at 위치 곡을 재생(대기열이 유효하다고 가정). 범위를 벗어나면 순환한다.
+async function playAt(at) {
   const n = queue.length;
-  const at = (queueIndex + dir + n) % n;
+  if (!n) return;
+  at = ((at % n) + n) % n;
   const next = await getSong(queue[at]);
   if (!next) return;
   queueIndex = at;
   await loadSong(next, { autoplay: true });
+}
+
+// dir: +1 다음 곡 / -1 이전 곡. 양끝에서는 순환한다.
+async function playAdjacent(dir) {
+  if (!(await ensureQueue())) return;
+  await playAt(queueIndex + dir);
+}
+
+// which: "first" 목록 첫 곡 / "last" 목록 마지막 곡
+async function playEdge(which) {
+  if (!(await ensureQueue())) return;
+  await playAt(which === "first" ? 0 : queue.length - 1);
 }
 
 // ---------- 곡이 끝났을 때 ----------

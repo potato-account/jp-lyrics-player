@@ -49,15 +49,17 @@
       <input id="seekbar" type="range" min="0" max="1000" value="0" step="1" aria-label="재생 위치" />
       <div class="row time-row">
         <span id="time-cur">0:00</span>
-        <div class="btns">
-          <button id="prev-song" type="button" aria-label="이전 곡" title="이전 곡">⏮</button>
-          <button id="back5" type="button">−5s</button>
-          <button id="playpause" type="button" aria-label="재생/일시정지">▶</button>
-          <button id="fwd5" type="button">+5s</button>
-          <button id="next-song" type="button" aria-label="다음 곡" title="다음 곡">⏭</button>
-          <button id="repeat-btn" type="button" aria-live="polite"></button>
-        </div>
         <span id="time-dur">0:00</span>
+      </div>
+      <div class="row ctrl-row">
+        <button id="first-song" type="button" aria-label="첫 곡" title="첫 곡">|◀◀</button>
+        <button id="prev-song" type="button" aria-label="이전 곡" title="이전 곡">|◀</button>
+        <button id="back5" type="button">−5s</button>
+        <button id="playpause" type="button" aria-label="재생/일시정지">▶</button>
+        <button id="fwd5" type="button">+5s</button>
+        <button id="next-song" type="button" aria-label="다음 곡" title="다음 곡">▶|</button>
+        <button id="last-song" type="button" aria-label="마지막 곡" title="마지막 곡">▶▶|</button>
+        <button id="repeat-btn" type="button" aria-live="polite"></button>
       </div>
       <div class="row menu-row">
         <button id="open-list" type="button">목록</button>

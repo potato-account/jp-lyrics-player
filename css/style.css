@@ -184,12 +184,22 @@ button:active { transform: scale(0.97); }
 #seekbar { width: 100%; margin: 0; accent-color: var(--accent); }
 
 .row { display: flex; align-items: center; justify-content: space-between; gap: 6px; }
-.time-row span { font-size: 0.75rem; color: var(--fg-dim); font-variant-numeric: tabular-nums; min-width: 32px; }
-.time-row .btns { display: flex; gap: 5px; align-items: center; }
-.time-row .btns button { padding: 8px 8px; }
-#playpause { min-width: 46px; font-size: 1.05rem; }
-#back5, #fwd5 { font-size: 0.8rem; }
-#prev-song, #next-song { font-size: 0.95rem; }
+.time-row { margin: -2px 2px 0; }
+.time-row span { font-size: 0.78rem; color: var(--fg-dim); font-variant-numeric: tabular-nums; }
+
+/* 곡 이동 · 탐색 버튼 한 줄: |◀◀  |◀  −5s  ▶  +5s  ▶|  ▶▶|  (반복) */
+.ctrl-row { gap: 4px; }
+.ctrl-row button {
+  flex: 1;                 /* 폭을 균등 분배 → 넘치지 않음 */
+  min-width: 0;
+  padding: 9px 2px;
+  font-size: 0.8rem;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+.ctrl-row #playpause { flex: 1.4; font-size: 1.05rem; }
+.ctrl-row #repeat-btn { padding: 7px 4px; }
+#first-song, #last-song, #prev-song, #next-song { letter-spacing: -1px; }
 
 .menu-row button { flex: 1; padding: 9px 6px; font-size: 0.9rem; }
 #app.edit-on #edit-mode { background: var(--accent); border-color: var(--accent); color: #fff; }
