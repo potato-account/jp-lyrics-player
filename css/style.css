@@ -183,10 +183,13 @@ button:active { transform: scale(0.97); }
 }
 #seekbar { width: 100%; margin: 0; accent-color: var(--accent); }
 
-.row { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
-.time-row span { font-size: 0.8rem; color: var(--fg-dim); font-variant-numeric: tabular-nums; min-width: 40px; }
-.time-row .btns { display: flex; gap: 6px; align-items: center; }
-#playpause { min-width: 60px; font-size: 1.1rem; }
+.row { display: flex; align-items: center; justify-content: space-between; gap: 6px; }
+.time-row span { font-size: 0.75rem; color: var(--fg-dim); font-variant-numeric: tabular-nums; min-width: 32px; }
+.time-row .btns { display: flex; gap: 5px; align-items: center; }
+.time-row .btns button { padding: 8px 8px; }
+#playpause { min-width: 46px; font-size: 1.05rem; }
+#back5, #fwd5 { font-size: 0.8rem; }
+#prev-song, #next-song { font-size: 0.95rem; }
 
 .menu-row button { flex: 1; padding: 9px 6px; font-size: 0.9rem; }
 #app.edit-on #edit-mode { background: var(--accent); border-color: var(--accent); color: #fff; }
@@ -298,6 +301,29 @@ code { background: var(--bg); padding: 1px 5px; border-radius: 4px; font-size: 0
 .song-pick .s-artist { font-size: 0.8rem; color: var(--fg-dim); }
 .row-btn { flex: 0 0 auto; padding: 8px 10px; font-size: 0.9rem; }
 .row-btn:disabled { opacity: 0.3; }
+
+/* --- 여러 곡 선택 모드 --- */
+#select-toggle { padding: 4px 10px; font-size: 0.78rem; }
+#song-list.select-mode .song-row .row-btn { display: none; }
+.sel-check {
+  flex: 0 0 auto; align-self: center;
+  width: 20px; height: 20px; accent-color: var(--accent);
+}
+.song-row.sel-on .song-pick { border-color: var(--accent); background: var(--accent-soft); }
+
+#select-bar {
+  position: sticky; bottom: 0;
+  display: flex; align-items: center; gap: 8px;
+  margin-top: 8px; padding: 10px 0 calc(4px + env(safe-area-inset-bottom));
+  background: var(--bg-soft); border-top: 1px solid var(--border);
+}
+#select-bar[hidden] { display: none; }
+#select-bar #sel-count { flex: 1; text-align: center; font-size: 0.85rem; color: var(--fg-dim); }
+#sel-all { padding: 8px 12px; font-size: 0.82rem; }
+#sel-add { background: var(--accent); border-color: var(--accent); color: #fff; }
+#sel-add:disabled { opacity: 0.45; }
+
+#plpick-list input:indeterminate { accent-color: var(--fg-dim); }
 
 /* --- 플레이리스트 칩 바 --- */
 #pl-chips {

@@ -54,6 +54,11 @@ if (!REPEAT_CYCLE.includes(endMode)) {
 let queue = [];       // 재생 대기열(곡 id 배열). 목록에서 곡을 고를 때 그 시점 목록으로 채워진다.
 let queueIndex = -1;
 
+// 목록 시트의 "선택" 모드: 체크한 곡들을 한 번에 플레이리스트에 담는다.
+let selectMode = false;
+const selected = new Set();     // 체크된 song.id
+let plpickSongs = [];           // 플레이리스트 담기 다이얼로그가 지금 다루는 곡들
+
 // ---------- 공통 ----------
 function fmt(t) {
   if (!isFinite(t) || t < 0) t = 0;
@@ -119,6 +124,14 @@ function wireControls() {
   $("#playpause").addEventListener("click", () => (player.isPlaying ? player.pause() : player.play()));
   $("#back5").addEventListener("click", () => player.seek(player.currentTime - 5));
   $("#fwd5").addEventListener("click", () => player.seek(player.currentTime + 5));
+
+  // 다음 곡 / 이전 곡 — 반복 모드와 무관하게 대기열을 직접 이동
+  $("#next-song").addEventListener("click", () => playAdjacent(+1));
+  $("#prev-song").addEventListener("click", () => {
+    // 흔한 플레이어 관례: 3초 넘게 재생됐으면 이 곡 처음으로, 아니면 이전 곡
+    if (player.currentTime > 3) player.seek(0);
+    else playAdjacent(-1);
+  });
 
   const bar = $("#seekbar");
   bar.addEventListener("pointerdown", () => (seeking = true));
@@ -242,6 +255,7 @@ async function currentList() {
 function setFilter(f) {
   listFilter = f;
   saveListFilter();
+  exitSelectMode();          // 필터를 바꾸면 선택 모드 해제
   renderChips();
   renderList();
 }
@@ -278,6 +292,8 @@ async function renderChips() {
   $("#list-title").textContent =
     pl ? pl.name : listFilter.type === "hidden" ? "숨긴 곡" : "저장된 곡";
   $("#pl-manage").hidden = !pl;
+  // 여러 곡 선택은 "전체" 목록에서만 (플리 안에서는 순서·빼기 버튼과 겹친다)
+  $("#select-toggle").hidden = listFilter.type !== "all";
 }
 
 // --- 플레이리스트 만들기/이름 변경/삭제 ---
@@ -370,6 +386,17 @@ async function renderList() {
     const li = document.createElement("li");
     li.className = "song-row" + (song && s.id === song.id ? " current" : "");
 
+    if (selectMode) {
+      const cb = document.createElement("input");
+      cb.type = "checkbox";
+      cb.className = "sel-check";
+      cb.checked = selected.has(s.id);
+      li.classList.toggle("sel-on", cb.checked);
+      cb.addEventListener("click", (e) => e.stopPropagation());
+      cb.addEventListener("change", () => toggleSelect(s.id, li));
+      li.appendChild(cb);
+    }
+
     const info = document.createElement("button");
     info.type = "button";
     info.className = "song-pick";
@@ -378,6 +405,7 @@ async function renderList() {
     info.querySelector(".s-artist").textContent =
       [s.artist, `${s.lines.length}줄`].filter(Boolean).join(" · ");
     info.addEventListener("click", async () => {
+      if (selectMode) { toggleSelect(s.id, li); return; } // 선택 모드: 재생 대신 체크
       // 이 시점의 목록이 곧 재생 대기열이 된다(연속재생용)
       queue = list.map((x) => x.id);
       queueIndex = i;
@@ -406,34 +434,91 @@ async function renderList() {
   }
 }
 
-function openSheet() { $("#song-list").hidden = false; renderChips(); renderList(); }
+function openSheet() {
+  $("#song-list").hidden = false;
+  exitSelectMode();          // 열 때는 항상 일반 모드
+  renderChips();
+  renderList();
+}
 function closeSheet() { $("#song-list").hidden = true; }
 
+// ---------- 여러 곡 선택 → 한 번에 담기 ----------
+function exitSelectMode() {
+  selectMode = false;
+  selected.clear();
+  $("#song-list").classList.remove("select-mode");
+  $("#select-toggle").textContent = "선택";
+  updateSelectBar();
+}
+
+function updateSelectBar() {
+  $("#select-bar").hidden = !selectMode;
+  $("#sel-count").textContent = `${selected.size}곡 선택`;
+  $("#sel-add").disabled = selected.size === 0;
+}
+
+function toggleSelect(id, li) {
+  if (selected.has(id)) selected.delete(id);
+  else selected.add(id);
+  const on = selected.has(id);
+  li.classList.toggle("sel-on", on);
+  const cb = li.querySelector(".sel-check");
+  if (cb) cb.checked = on;
+  updateSelectBar();
+}
+
+function wireSelectMode() {
+  $("#select-toggle").addEventListener("click", () => {
+    selectMode = !selectMode;
+    selected.clear();
+    $("#song-list").classList.toggle("select-mode", selectMode);
+    $("#select-toggle").textContent = selectMode ? "선택 취소" : "선택";
+    updateSelectBar();
+    renderList();
+  });
+
+  $("#sel-all").addEventListener("click", async () => {
+    const list = await currentList();
+    const allOn = list.length > 0 && list.every((s) => selected.has(s.id));
+    selected.clear();
+    if (!allOn) list.forEach((s) => selected.add(s.id));
+    updateSelectBar();
+    renderList();
+  });
+
+  $("#sel-add").addEventListener("click", async () => {
+    if (!selected.size) return;
+    const chosen = (await allSongs()).filter((s) => selected.has(s.id));
+    if (chosen.length) openPlPick(chosen);
+  });
+}
+
 // ---------- 플레이리스트 담기 다이얼로그 ----------
-async function openPlPick(s) {
+// songs: 곡 하나 또는 곡 배열. 변경은 "완료"를 눌렀을 때 한꺼번에 반영한다.
+async function openPlPick(songs) {
+  plpickSongs = Array.isArray(songs) ? songs.slice() : [songs];
   const pls = await allPlaylists();
-  const ref = songRef(s);
+  const refs = plpickSongs.map(songRef);
   const ul = $("#plpick-list");
   ul.innerHTML = "";
   $("#plpick-empty").hidden = pls.length > 0;
-  $("#plpick-song").textContent = s.title || "제목 없음";
+  $("#plpick-song").textContent = plpickSongs.length === 1
+    ? (plpickSongs[0].title || "제목 없음")
+    : `${plpickSongs.length}곡 선택됨`;
 
   for (const pl of pls) {
+    const inCount = refs.filter((r) => pl.refs.includes(r)).length;
     const li = document.createElement("li");
     const lab = document.createElement("label");
     const cb = document.createElement("input");
     cb.type = "checkbox";
-    cb.checked = pl.refs.includes(ref);
-    cb.addEventListener("change", async () => {
-      const fresh = await getPlaylist(pl.id);
-      if (!fresh) return;
-      const at = fresh.refs.indexOf(ref);
-      if (cb.checked && at < 0) fresh.refs.push(ref); // 담으면 맨 뒤로
-      if (!cb.checked && at >= 0) fresh.refs.splice(at, 1);
-      await putPlaylist(fresh);
-    });
+    cb.checked = inCount === refs.length;                 // 전부 들어있을 때만 체크
+    cb.indeterminate = inCount > 0 && inCount < refs.length;
+    cb.dataset.plId = pl.id;
+    cb.dataset.was = cb.checked ? "1" : "";
     const span = document.createElement("span");
-    span.textContent = pl.name;
+    span.textContent = pl.name +
+      (cb.indeterminate ? ` (${inCount}/${refs.length})` : "");
     lab.append(cb, span);
     li.appendChild(lab);
     ul.appendChild(li);
@@ -441,11 +526,58 @@ async function openPlPick(s) {
   $("#plpick-dialog").showModal();
 }
 
+// "완료" 시: 체크된 플리에는 없는 곡을 뒤에 추가, 원래 전부 담겨 있었는데
+// 체크를 해제한 플리에서는 이 곡들을 뺀다. 일부만 담긴(중간상태) 플리는 건드리지 않는다.
+async function applyPlPick() {
+  const refs = plpickSongs.map(songRef);
+  const boxes = $("#plpick-list").querySelectorAll("input[type=checkbox]");
+  for (const cb of boxes) {
+    if (cb.checked === (cb.dataset.was === "1")) continue; // 변화 없음
+    const pl = await getPlaylist(cb.dataset.plId);
+    if (!pl) continue;
+    if (cb.checked) {
+      for (const r of refs) if (!pl.refs.includes(r)) pl.refs.push(r);
+    } else {
+      pl.refs = pl.refs.filter((r) => !refs.includes(r));
+    }
+    await putPlaylist(pl);
+  }
+  plpickSongs = [];
+}
+
 function wirePlPick() {
   const dlg = $("#plpick-dialog");
-  const done = () => { dlg.close(); renderChips(); renderList(); };
-  dlg.querySelectorAll("[data-close]").forEach((b) => b.addEventListener("click", done));
-  $("#plpick-done").addEventListener("click", done);
+  dlg.querySelectorAll("[data-close]").forEach((b) =>
+    b.addEventListener("click", () => { plpickSongs = []; dlg.close(); }));
+  $("#plpick-done").addEventListener("click", async () => {
+    await applyPlPick();
+    dlg.close();
+    if (selectMode) exitSelectMode();
+    renderChips();
+    renderList();
+  });
+}
+
+// ---------- 대기열 이동 ----------
+// 대기열이 비었거나 현재 곡과 어긋나면(앱 시작 직후 등) 지금 필터 목록으로 다시 만든다.
+async function ensureQueue() {
+  if (queueIndex < 0 || queue[queueIndex] !== (song && song.id)) {
+    const list = await currentList();
+    queue = list.map((s) => s.id);
+    queueIndex = song ? queue.indexOf(song.id) : -1;
+  }
+  return queue.length > 0 && queueIndex >= 0;
+}
+
+// dir: +1 다음 곡 / -1 이전 곡. 양끝에서는 순환한다.
+async function playAdjacent(dir) {
+  if (!(await ensureQueue())) return;
+  const n = queue.length;
+  const at = (queueIndex + dir + n) % n;
+  const next = await getSong(queue[at]);
+  if (!next) return;
+  queueIndex = at;
+  await loadSong(next, { autoplay: true });
 }
 
 // ---------- 곡이 끝났을 때 ----------
@@ -459,20 +591,8 @@ async function onSongEnd() {
     return;
   }
 
-  // 대기열이 비었거나 현재 곡과 어긋나면(앱 시작 직후 등) 지금 필터 목록으로 다시 만든다
-  if (queueIndex < 0 || queue[queueIndex] !== (song && song.id)) {
-    const list = await currentList();
-    queue = list.map((s) => s.id);
-    queueIndex = song ? queue.indexOf(song.id) : -1;
-  }
-  if (!queue.length || queueIndex < 0) return;
-
   // 전체 반복: 마지막 곡 다음은 첫 곡
-  const nextIndex = (queueIndex + 1) % queue.length;
-  const next = await getSong(queue[nextIndex]);
-  if (!next) return;
-  queueIndex = nextIndex;
-  await loadSong(next, { autoplay: true });
+  await playAdjacent(+1);
 }
 
 function renderEndMode() {
@@ -836,6 +956,7 @@ async function main() {
   wireAutofill();
   wireTimeDialog();
   wirePlPick();
+  wireSelectMode();
   $("#open-list").addEventListener("click", openSheet);
   $("#close-list").addEventListener("click", closeSheet);
   $("#song-list").addEventListener("click", (e) => { if (e.target.id === "song-list") closeSheet(); });
