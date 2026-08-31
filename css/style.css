@@ -283,17 +283,51 @@ code { background: var(--bg); padding: 1px 5px; border-radius: 4px; font-size: 0
 }
 .sheet-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
 .sheet-head h2 { margin: 0; font-size: 1.05rem; }
+.head-btns { display: flex; gap: 6px; flex: 0 0 auto; }
+#pl-manage { padding: 4px 10px; font-size: 0.78rem; }
 #close-list { padding: 4px 12px; }
 #song-list-items { list-style: none; margin: 0; padding: 0; }
-.song-row { display: flex; align-items: stretch; gap: 8px; margin-bottom: 8px; }
+.song-row { display: flex; align-items: stretch; gap: 6px; margin-bottom: 8px; }
 .song-row.current .song-pick { border-color: var(--lyric-orig); }
 .song-pick {
-  flex: 1; text-align: left; display: flex; flex-direction: column; gap: 2px;
+  flex: 1; min-width: 0; text-align: left; display: flex; flex-direction: column; gap: 2px;
   padding: 11px 12px;
 }
-.song-pick .s-title { font-weight: 700; }
+.song-pick .s-title { font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .song-pick .s-artist { font-size: 0.8rem; color: var(--fg-dim); }
-.song-del { flex: 0 0 auto; }
+.row-btn { flex: 0 0 auto; padding: 8px 10px; font-size: 0.9rem; }
+.row-btn:disabled { opacity: 0.3; }
+
+/* --- 플레이리스트 칩 바 --- */
+#pl-chips {
+  display: flex; gap: 6px; overflow-x: auto; padding-bottom: 8px; margin-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+  scrollbar-width: none;
+}
+#pl-chips::-webkit-scrollbar { display: none; }
+.pl-chip {
+  flex: 0 0 auto; padding: 7px 13px; font-size: 0.82rem; border-radius: 999px;
+  white-space: nowrap;
+}
+.pl-chip.active { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 700; }
+.pl-chip.chip-muted { color: var(--fg-dim); }
+.pl-chip.chip-add { color: var(--lyric-orig); border-style: dashed; }
+
+/* --- 반복 모드 (누를 때마다 순환) --- */
+#end-mode { margin-bottom: 12px; }
+#repeat-btn { padding: 9px 14px; font-size: 0.8rem; color: var(--fg-dim); white-space: nowrap; }
+#repeat-btn.on { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 700; }
+
+/* --- 플레이리스트 담기 --- */
+#plpick-list { list-style: none; margin: 10px 0 0; padding: 0; max-height: 46dvh; overflow-y: auto; }
+#plpick-list li { margin-bottom: 6px; }
+#plpick-list label {
+  display: flex; align-items: center; gap: 10px; margin: 0;
+  padding: 11px 12px; border: 1px solid var(--border); border-radius: 8px;
+  color: var(--fg); font-size: 0.92rem; cursor: pointer;
+}
+#plpick-list input { accent-color: var(--accent); width: 18px; height: 18px; flex: 0 0 auto; }
+#plpick-done { background: var(--accent); border-color: var(--accent); color: #fff; }
 
 /* --- 곡 추가 다이얼로그 --- */
 .add-sec { border-top: 1px solid var(--border); padding-top: 12px; margin-top: 12px; }

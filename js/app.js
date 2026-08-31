@@ -1,6 +1,9 @@
 import { Player, parseVideoId } from "./player.js";
 import { LyricsView, parsePaste } from "./lyrics.js";
-import { allSongs, getSong, putSong, deleteSong, getLastId, setLastId, migrateLegacy } from "./store.js";
+import {
+  allSongs, getSong, putSong, getLastId, setLastId, migrateLegacy,
+  allPlaylists, getPlaylist, putPlaylist, deletePlaylist, songRef, findByRef,
+} from "./store.js";
 import { autofillSong, hasFillable } from "./autofill.js";
 
 const $ = (s) => document.querySelector(s);
@@ -17,6 +20,24 @@ const player = new Player("player");
 let view;
 let wakeLock = null;
 let bulkMode = "pron";
+
+// 목록 시트가 지금 무엇을 보여주는가.
+// { type:"all" } | { type:"playlist", id } | { type:"hidden" }
+let listFilter = { type: "all" };
+try { listFilter = JSON.parse(localStorage.getItem("jlp:listFilter")) || listFilter; } catch {}
+const saveListFilter = () => localStorage.setItem("jlp:listFilter", JSON.stringify(listFilter));
+
+// 반복 모드. 버튼을 누를 때마다 이 순서로 돈다.
+// "stop" 한 곡만 재생하고 끝 | "loop" 전체 반복(마지막 → 첫 곡) | "one" 한 곡 반복
+const REPEAT_CYCLE = ["stop", "loop", "one"];
+const REPEAT_LABEL = { stop: "🔁 반복 없음", loop: "🔁 전체 반복", one: "🔂 한 곡 반복" };
+let endMode = localStorage.getItem("jlp:endMode");
+if (endMode === "next") endMode = "loop";              // 4단 시절의 "다음 곡" → 가장 가까운 동작으로
+if (!REPEAT_CYCLE.includes(endMode)) {
+  endMode = localStorage.getItem("jlp:autoplay") === "1" ? "loop" : "stop"; // 더 이전 설정 이어받기
+}
+let queue = [];       // 재생 대기열(곡 id 배열). 목록에서 곡을 고를 때 그 시점 목록으로 채워진다.
+let queueIndex = -1;
 
 // ---------- 공통 ----------
 function fmt(t) {
@@ -187,47 +208,272 @@ function saveLine(i, pron, trans) {
 }
 
 // ---------- 곡 목록 시트 ----------
+// 곡은 지우지 않는다. "숨기기"로 목록에서만 감춘다 —
+// 레코드가 남아 있어야 플레이리스트 참조가 깨지지 않는다.
+
+// 현재 필터가 보여줄 곡들을, 보여줄 순서대로.
+async function currentList() {
+  const all = await allSongs();
+  if (listFilter.type === "hidden") return all.filter((s) => s.hidden);
+  if (listFilter.type === "playlist") {
+    const pl = await getPlaylist(listFilter.id);
+    if (!pl) { listFilter = { type: "all" }; saveListFilter(); return all.filter((s) => !s.hidden); }
+    // 플리 안에서는 저장된 순서를 지킨다(최근 수정 순으로 다시 정렬하지 않는다)
+    return pl.refs.map((r) => findByRef(all, r)).filter((s) => s && !s.hidden);
+  }
+  return all.filter((s) => !s.hidden);
+}
+
+function setFilter(f) {
+  listFilter = f;
+  saveListFilter();
+  renderChips();
+  renderList();
+}
+
+// --- 칩 바 ---
+async function renderChips() {
+  const wrap = $("#pl-chips");
+  const [pls, all] = await Promise.all([allPlaylists(), allSongs()]);
+  const hiddenCount = all.filter((s) => s.hidden).length;
+  wrap.innerHTML = "";
+
+  const chip = (label, active, onClick, cls = "") => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.className = "pl-chip" + (active ? " active" : "") + (cls ? " " + cls : "");
+    b.textContent = label;
+    b.addEventListener("click", onClick);
+    wrap.appendChild(b);
+  };
+
+  chip("전체", listFilter.type === "all", () => setFilter({ type: "all" }));
+  for (const pl of pls) {
+    chip(pl.name, listFilter.type === "playlist" && listFilter.id === pl.id,
+      () => setFilter({ type: "playlist", id: pl.id }));
+  }
+  if (hiddenCount) {
+    chip(`숨김 ${hiddenCount}`, listFilter.type === "hidden",
+      () => setFilter({ type: "hidden" }), "chip-muted");
+  }
+  chip("＋ 새 플레이리스트", false, newPlaylist, "chip-add");
+
+  // 제목 + 이름·삭제 버튼은 플리를 보고 있을 때만
+  const pl = listFilter.type === "playlist" ? pls.find((p) => p.id === listFilter.id) : null;
+  $("#list-title").textContent =
+    pl ? pl.name : listFilter.type === "hidden" ? "숨긴 곡" : "저장된 곡";
+  $("#pl-manage").hidden = !pl;
+}
+
+// --- 플레이리스트 만들기/이름 변경/삭제 ---
+async function newPlaylist() {
+  const name = (prompt("새 플레이리스트 이름") || "").trim();
+  if (!name) return;
+  const pl = await putPlaylist({ name, refs: [] });
+  setFilter({ type: "playlist", id: pl.id });
+}
+
+async function managePlaylist() {
+  const pl = await getPlaylist(listFilter.id);
+  if (!pl) return;
+  const name = prompt(`"${pl.name}" 이름 변경 (비우고 확인하면 이 플레이리스트 삭제)`, pl.name);
+  if (name === null) return; // 취소
+  if (!name.trim()) {
+    if (!confirm(`플레이리스트 "${pl.name}" 을(를) 삭제할까요?\n담긴 곡은 지워지지 않습니다.`)) return;
+    await deletePlaylist(pl.id);
+    setFilter({ type: "all" });
+    return;
+  }
+  pl.name = name.trim();
+  await putPlaylist(pl);
+  renderChips();
+}
+
+// --- 플레이리스트 안에서 순서 바꾸기 ---
+// 화면 인덱스와 refs 인덱스는 다를 수 있다(숨긴 곡·사라진 곡은 화면에서 빠지므로).
+// 그래서 화면에 보이는 이웃을 먼저 찾고, 그 둘의 refs 위치를 맞바꾼다.
+async function moveInPlaylist(ref, dir) {
+  const pl = await getPlaylist(listFilter.id);
+  if (!pl) return;
+  const all = await allSongs();
+  const visible = pl.refs.filter((r) => { const s = findByRef(all, r); return s && !s.hidden; });
+  const vi = visible.indexOf(ref);
+  const neighbour = visible[vi + dir];
+  if (vi < 0 || neighbour == null) return;
+  const a = pl.refs.indexOf(ref), b = pl.refs.indexOf(neighbour);
+  [pl.refs[a], pl.refs[b]] = [pl.refs[b], pl.refs[a]];
+  await putPlaylist(pl);
+  renderList();
+}
+
+async function removeFromPlaylist(ref) {
+  const pl = await getPlaylist(listFilter.id);
+  if (!pl) return;
+  pl.refs = pl.refs.filter((r) => r !== ref);
+  await putPlaylist(pl);
+  renderList();
+}
+
+async function setHidden(s, hidden) {
+  const full = await getSong(s.id);
+  if (!full) return;
+  if (hidden) full.hidden = true; else delete full.hidden;
+  await putSong(full);
+  renderChips();
+  renderList();
+}
+
+// --- 목록 그리기 ---
+function rowBtn(label, title, onClick) {
+  const b = document.createElement("button");
+  b.type = "button";
+  b.className = "row-btn";
+  b.textContent = label;
+  b.title = title;
+  b.setAttribute("aria-label", title);
+  b.addEventListener("click", (e) => { e.stopPropagation(); onClick(); });
+  return b;
+}
+
 async function renderList() {
   const wrap = $("#song-list-items");
-  const list = await allSongs();
+  const list = await currentList();
+  const inPlaylist = listFilter.type === "playlist";
+  const inHidden = listFilter.type === "hidden";
   wrap.innerHTML = "";
-  $("#song-list-empty").hidden = list.length > 0;
-  for (const s of list) {
+
+  const empty = $("#song-list-empty");
+  empty.hidden = list.length > 0;
+  empty.textContent = inPlaylist
+    ? "이 플레이리스트가 비어 있습니다. 전체 목록에서 ＋ 로 곡을 담으세요."
+    : inHidden ? "숨긴 곡이 없습니다."
+    : "아직 저장된 곡이 없습니다.";
+
+  for (let i = 0; i < list.length; i++) {
+    const s = list[i];
+    const ref = songRef(s);
     const li = document.createElement("li");
     li.className = "song-row" + (song && s.id === song.id ? " current" : "");
+
     const info = document.createElement("button");
     info.type = "button";
     info.className = "song-pick";
     info.innerHTML = `<span class="s-title"></span><span class="s-artist"></span>`;
     info.querySelector(".s-title").textContent = s.title || "제목 없음";
-    info.querySelector(".s-artist").textContent = [s.artist, `${s.lines.length}줄`].filter(Boolean).join(" · ");
+    info.querySelector(".s-artist").textContent =
+      [s.artist, `${s.lines.length}줄`].filter(Boolean).join(" · ");
     info.addEventListener("click", async () => {
+      // 이 시점의 목록이 곧 재생 대기열이 된다(연속재생용)
+      queue = list.map((x) => x.id);
+      queueIndex = i;
       const full = await getSong(s.id);
       await loadSong(full, { autoplay: true });
       closeSheet();
       if (!full.youtubeId) openMeta(); // 영상 링크 없는 곡이면 바로 입력창
     });
-    const del = document.createElement("button");
-    del.type = "button";
-    del.className = "song-del";
-    del.textContent = "🗑";
-    del.addEventListener("click", async (e) => {
-      e.stopPropagation();
-      if (!confirm(`"${s.title}" 삭제할까요?`)) return;
-      await deleteSong(s.id);
-      if (song && s.id === song.id) {
-        const rest = await allSongs();
-        if (rest.length) await loadSong(await getSong(rest[0].id));
-        else { song = null; appEl.classList.remove("has-song"); view.setSong(null); }
-      }
-      renderList();
-    });
-    li.append(info, del);
+    li.appendChild(info);
+
+    if (inPlaylist) {
+      const up = rowBtn("▲", "위로", () => moveInPlaylist(ref, -1));
+      const down = rowBtn("▼", "아래로", () => moveInPlaylist(ref, +1));
+      up.disabled = i === 0;
+      down.disabled = i === list.length - 1;
+      li.append(up, down, rowBtn("✕", "플레이리스트에서 빼기", () => removeFromPlaylist(ref)));
+    } else if (inHidden) {
+      li.appendChild(rowBtn("↩", "다시 보이기", () => setHidden(s, false)));
+    } else {
+      li.append(
+        rowBtn("＋", "플레이리스트에 담기", () => openPlPick(s)),
+        rowBtn("🙈", "목록에서 숨기기", () => setHidden(s, true)),
+      );
+    }
     wrap.appendChild(li);
   }
 }
-function openSheet() { $("#song-list").hidden = false; renderList(); }
+
+function openSheet() { $("#song-list").hidden = false; renderChips(); renderList(); }
 function closeSheet() { $("#song-list").hidden = true; }
+
+// ---------- 플레이리스트 담기 다이얼로그 ----------
+async function openPlPick(s) {
+  const pls = await allPlaylists();
+  const ref = songRef(s);
+  const ul = $("#plpick-list");
+  ul.innerHTML = "";
+  $("#plpick-empty").hidden = pls.length > 0;
+  $("#plpick-song").textContent = s.title || "제목 없음";
+
+  for (const pl of pls) {
+    const li = document.createElement("li");
+    const lab = document.createElement("label");
+    const cb = document.createElement("input");
+    cb.type = "checkbox";
+    cb.checked = pl.refs.includes(ref);
+    cb.addEventListener("change", async () => {
+      const fresh = await getPlaylist(pl.id);
+      if (!fresh) return;
+      const at = fresh.refs.indexOf(ref);
+      if (cb.checked && at < 0) fresh.refs.push(ref); // 담으면 맨 뒤로
+      if (!cb.checked && at >= 0) fresh.refs.splice(at, 1);
+      await putPlaylist(fresh);
+    });
+    const span = document.createElement("span");
+    span.textContent = pl.name;
+    lab.append(cb, span);
+    li.appendChild(lab);
+    ul.appendChild(li);
+  }
+  $("#plpick-dialog").showModal();
+}
+
+function wirePlPick() {
+  const dlg = $("#plpick-dialog");
+  const done = () => { dlg.close(); renderChips(); renderList(); };
+  dlg.querySelectorAll("[data-close]").forEach((b) => b.addEventListener("click", done));
+  $("#plpick-done").addEventListener("click", done);
+}
+
+// ---------- 곡이 끝났을 때 ----------
+async function onSongEnd() {
+  if (endMode === "stop") return;
+
+  // 한 곡 반복은 대기열과 무관하게 지금 곡을 다시 튼다
+  if (endMode === "one") {
+    player.seek(0);
+    player.play();
+    return;
+  }
+
+  // 대기열이 비었거나 현재 곡과 어긋나면(앱 시작 직후 등) 지금 필터 목록으로 다시 만든다
+  if (queueIndex < 0 || queue[queueIndex] !== (song && song.id)) {
+    const list = await currentList();
+    queue = list.map((s) => s.id);
+    queueIndex = song ? queue.indexOf(song.id) : -1;
+  }
+  if (!queue.length || queueIndex < 0) return;
+
+  // 전체 반복: 마지막 곡 다음은 첫 곡
+  const nextIndex = (queueIndex + 1) % queue.length;
+  const next = await getSong(queue[nextIndex]);
+  if (!next) return;
+  queueIndex = nextIndex;
+  await loadSong(next, { autoplay: true });
+}
+
+function renderEndMode() {
+  const b = $("#repeat-btn");
+  b.textContent = REPEAT_LABEL[endMode];
+  b.classList.toggle("on", endMode !== "stop");
+}
+
+function wireEndMode() {
+  $("#repeat-btn").addEventListener("click", () => {
+    endMode = REPEAT_CYCLE[(REPEAT_CYCLE.indexOf(endMode) + 1) % REPEAT_CYCLE.length];
+    localStorage.setItem("jlp:endMode", endMode);
+    renderEndMode();
+  });
+  renderEndMode();
+}
 
 // ---------- 곡 추가 다이얼로그 ----------
 function wireAddDialog() {
@@ -371,12 +617,15 @@ function wireMetaDialog() {
     URL.revokeObjectURL(a.href);
   });
 
-  $("#m-delete").addEventListener("click", async () => {
+  // 삭제 대신 숨기기. 레코드는 남으므로 플레이리스트 참조가 깨지지 않고,
+  // 목록의 "숨김" 칩에서 언제든 되돌릴 수 있다.
+  $("#m-hide").addEventListener("click", async () => {
     if (!song) return;
-    if (!confirm(`"${song.title}" 삭제할까요?`)) return;
-    await deleteSong(song.id);
-    const rest = await allSongs();
+    if (!confirm(`"${song.title}" 을(를) 목록에서 숨길까요?\n지워지지 않고, 목록의 "숨김" 에서 되돌릴 수 있습니다.`)) return;
+    song.hidden = true;
+    await persist();
     dlg.close();
+    const rest = (await allSongs()).filter((s) => !s.hidden);
     if (rest.length) await loadSong(await getSong(rest[0].id));
     else { song = null; appEl.classList.remove("has-song"); view.setSong(null); }
   });
@@ -523,6 +772,7 @@ async function syncBundledSongsInner() {
       data.id = existing.id;                              // 같은 레코드로 덮어쓰기
       if (!data.youtubeId && existing.youtubeId) data.youtubeId = existing.youtubeId; // 내가 넣은 링크 보존
       if (!data.offset && existing.offset) data.offset = existing.offset;
+      if (existing.hidden) data.hidden = true;            // 숨김 상태도 보존(안 그러면 버전 올릴 때 되살아남)
     }
     await putSong(data);
   }
@@ -564,14 +814,19 @@ async function main() {
   wireBulk();
   wireAutofill();
   wireTimeDialog();
+  wirePlPick();
   $("#open-list").addEventListener("click", openSheet);
   $("#close-list").addEventListener("click", closeSheet);
   $("#song-list").addEventListener("click", (e) => { if (e.target.id === "song-list") closeSheet(); });
+  $("#pl-manage").addEventListener("click", managePlaylist);
+  wireEndMode();
 
-  // 재생 상태에 따라 Wake Lock 확보/해제
+  // 재생 상태에 따라 Wake Lock 확보/해제 + 곡이 끝나면 설정대로
   player.onStateChange((state) => {
     if (state === 1) acquireWakeLock();                 // 재생
-    else if ((state === 2 || state === 0) && !appEl.classList.contains("edit-on")) releaseWakeLock(); // 일시정지/종료
+    // 종료(0) 후 이어서 재생할 거면 Wake Lock 을 놓지 않는다
+    else if ((state === 2 || (state === 0 && endMode === "stop")) && !appEl.classList.contains("edit-on")) releaseWakeLock();
+    if (state === 0) onSongEnd();                       // 종료 → 다음 곡 / 반복
   });
 
   await migrateLegacy();
@@ -581,7 +836,7 @@ async function main() {
   const lastId = getLastId();
   if (lastId) start = await getSong(lastId);
   if (!start) {
-    const list = await allSongs();
+    const list = (await allSongs()).filter((s) => !s.hidden);
     if (list.length) start = await getSong(list[0].id);
   }
   if (start) await loadSong(start);

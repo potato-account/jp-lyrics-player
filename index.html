@@ -69,13 +69,39 @@
   <div id="song-list" hidden>
     <div class="sheet">
       <div class="sheet-head">
-        <h2>저장된 곡</h2>
-        <button id="close-list" type="button" aria-label="닫기">✕</button>
+        <h2 id="list-title">저장된 곡</h2>
+        <div class="head-btns">
+          <button id="pl-manage" type="button" hidden>이름·삭제</button>
+          <button id="close-list" type="button" aria-label="닫기">✕</button>
+        </div>
       </div>
+
+      <!-- 플레이리스트 칩 바 -->
+      <div id="pl-chips"></div>
+
+      <!-- 반복 모드: 누를 때마다 없음 → 전체 반복 → 한 곡 반복 → 없음 -->
+      <div id="end-mode">
+        <button id="repeat-btn" type="button" aria-live="polite"></button>
+      </div>
+
       <ul id="song-list-items"></ul>
       <p id="song-list-empty" class="hint small">아직 저장된 곡이 없습니다.</p>
     </div>
   </div>
+
+  <!-- ===== 플레이리스트 담기 다이얼로그 ===== -->
+  <dialog id="plpick-dialog">
+    <div class="dlg-head">
+      <h2>플레이리스트에 담기</h2>
+      <button class="dlg-x" data-close="plpick-dialog" type="button" aria-label="닫기">✕</button>
+    </div>
+    <p id="plpick-song" class="hint small"></p>
+    <ul id="plpick-list"></ul>
+    <p id="plpick-empty" class="hint small">플레이리스트가 없습니다. 목록에서 <b>＋ 새 플레이리스트</b>로 만드세요.</p>
+    <menu>
+      <button id="plpick-done" type="button">완료</button>
+    </menu>
+  </dialog>
 
   <!-- ===== 곡 추가 다이얼로그 ===== -->
   <dialog id="add-dialog">
@@ -129,7 +155,7 @@
       </span>
     </label>
     <menu>
-      <button id="m-delete" type="button" class="danger">이 곡 삭제</button>
+      <button id="m-hide" type="button" class="danger">목록에서 숨기기</button>
       <button id="m-export" type="button">JSON 내보내기</button>
       <button id="m-save" type="button">저장</button>
     </menu>
