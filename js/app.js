@@ -30,7 +30,11 @@ const saveListFilter = () => localStorage.setItem("jlp:listFilter", JSON.stringi
 // 반복 모드. 버튼을 누를 때마다 이 순서로 돈다.
 // "stop" 한 곡만 재생하고 끝 | "loop" 전체 반복(마지막 → 첫 곡) | "one" 한 곡 반복
 const REPEAT_CYCLE = ["stop", "loop", "one"];
-const REPEAT_LABEL = { stop: "🔁 반복 없음", loop: "🔁 전체 반복", one: "🔂 한 곡 반복" };
+const REPEAT_UI = {
+  stop: { icon: "🔁", text: "반복 없음" },
+  loop: { icon: "🔁", text: "전체 반복" },
+  one:  { icon: "🔂", text: "한 곡 반복" },
+};
 let endMode = localStorage.getItem("jlp:endMode");
 if (endMode === "next") endMode = "loop";              // 4단 시절의 "다음 곡" → 가장 가까운 동작으로
 if (!REPEAT_CYCLE.includes(endMode)) {
@@ -462,8 +466,21 @@ async function onSongEnd() {
 
 function renderEndMode() {
   const b = $("#repeat-btn");
-  b.textContent = REPEAT_LABEL[endMode];
+  const ui = REPEAT_UI[endMode];
+  b.textContent = ui.icon;
+  b.title = `반복: ${ui.text}`;
+  b.setAttribute("aria-label", `반복 ${ui.text}`);
   b.classList.toggle("on", endMode !== "stop");
+}
+
+// 아이콘만으로는 방금 뭘로 바뀌었는지 놓치기 쉬워서, 누를 때 잠깐 이름을 띄운다
+let repeatToastTimer = null;
+function flashRepeatToast(text) {
+  const t = $("#repeat-toast");
+  t.textContent = text;
+  t.classList.add("show");
+  clearTimeout(repeatToastTimer);
+  repeatToastTimer = setTimeout(() => t.classList.remove("show"), 1100);
 }
 
 function wireEndMode() {
@@ -471,6 +488,7 @@ function wireEndMode() {
     endMode = REPEAT_CYCLE[(REPEAT_CYCLE.indexOf(endMode) + 1) % REPEAT_CYCLE.length];
     localStorage.setItem("jlp:endMode", endMode);
     renderEndMode();
+    flashRepeatToast(REPEAT_UI[endMode].text);
   });
   renderEndMode();
 }

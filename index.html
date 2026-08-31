@@ -46,6 +46,7 @@
 
     <!-- ===== 하단: 재생 컨트롤 ===== -->
     <footer id="controls">
+      <div id="repeat-toast" aria-hidden="true"></div>
       <input id="seekbar" type="range" min="0" max="1000" value="0" step="1" aria-label="재생 위치" />
       <div class="row time-row">
         <span id="time-cur">0:00</span>
@@ -53,6 +54,7 @@
           <button id="back5" type="button">−5s</button>
           <button id="playpause" type="button" aria-label="재생/일시정지">▶</button>
           <button id="fwd5" type="button">+5s</button>
+          <button id="repeat-btn" type="button" aria-live="polite"></button>
         </div>
         <span id="time-dur">0:00</span>
       </div>
@@ -78,11 +80,6 @@
 
       <!-- 플레이리스트 칩 바 -->
       <div id="pl-chips"></div>
-
-      <!-- 반복 모드: 누를 때마다 없음 → 전체 반복 → 한 곡 반복 → 없음 -->
-      <div id="end-mode">
-        <button id="repeat-btn" type="button" aria-live="polite"></button>
-      </div>
 
       <ul id="song-list-items"></ul>
       <p id="song-list-empty" class="hint small">아직 저장된 곡이 없습니다.</p>

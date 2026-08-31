@@ -173,6 +173,7 @@ button:active { transform: scale(0.97); }
 /* --- 하단 컨트롤 --- */
 #controls {
   flex: 0 0 auto;
+  position: relative;                 /* #repeat-toast 의 기준 */
   padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
   background: var(--bg-soft);
   border-top: 1px solid var(--border);
@@ -184,8 +185,8 @@ button:active { transform: scale(0.97); }
 
 .row { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
 .time-row span { font-size: 0.8rem; color: var(--fg-dim); font-variant-numeric: tabular-nums; min-width: 40px; }
-.time-row .btns { display: flex; gap: 8px; }
-#playpause { min-width: 64px; font-size: 1.1rem; }
+.time-row .btns { display: flex; gap: 6px; align-items: center; }
+#playpause { min-width: 60px; font-size: 1.1rem; }
 
 .menu-row button { flex: 1; padding: 9px 6px; font-size: 0.9rem; }
 #app.edit-on #edit-mode { background: var(--accent); border-color: var(--accent); color: #fff; }
@@ -313,10 +314,27 @@ code { background: var(--bg); padding: 1px 5px; border-radius: 4px; font-size: 0
 .pl-chip.chip-muted { color: var(--fg-dim); }
 .pl-chip.chip-add { color: var(--lyric-orig); border-style: dashed; }
 
-/* --- 반복 모드 (누를 때마다 순환) --- */
-#end-mode { margin-bottom: 12px; }
-#repeat-btn { padding: 9px 14px; font-size: 0.8rem; color: var(--fg-dim); white-space: nowrap; }
-#repeat-btn.on { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 700; }
+/* --- 반복 버튼 (재생 컨트롤 안, 누를 때마다 순환) --- */
+#repeat-btn {
+  padding: 8px 10px; font-size: 1rem; line-height: 1;
+  opacity: 0.35;                      /* 꺼짐: 흐리게 */
+  filter: grayscale(1);
+}
+#repeat-btn.on {
+  opacity: 1; filter: none;
+  background: var(--accent-soft); border-color: var(--accent);
+}
+
+/* 모드가 바뀐 걸 아이콘만으로 놓치지 않게, 잠깐 이름을 띄운다 */
+#repeat-toast {
+  position: absolute; left: 50%; transform: translate(-50%, 6px);
+  bottom: calc(100% + 6px);
+  padding: 6px 12px; border-radius: 999px;
+  background: var(--bg); border: 1px solid var(--accent);
+  color: var(--fg); font-size: 0.78rem; white-space: nowrap;
+  opacity: 0; pointer-events: none; transition: opacity 0.18s, transform 0.18s;
+}
+#repeat-toast.show { opacity: 1; transform: translate(-50%, 0); }
 
 /* --- 플레이리스트 담기 --- */
 #plpick-list { list-style: none; margin: 10px 0 0; padding: 0; max-height: 46dvh; overflow-y: auto; }
