@@ -30,10 +30,21 @@ const saveListFilter = () => localStorage.setItem("jlp:listFilter", JSON.stringi
 // 반복 모드. 버튼을 누를 때마다 이 순서로 돈다.
 // "stop" 한 곡만 재생하고 끝 | "loop" 전체 반복(마지막 → 첫 곡) | "one" 한 곡 반복
 const REPEAT_CYCLE = ["stop", "loop", "one"];
+// 상태는 아이콘 모양만으로 구분한다(빗금 / 그냥 / 가운데 1).
+// 이모지로는 "빗금 친 반복"이 없어서 직접 그린다.
+const REPEAT_ARROWS = '<path d="M7 7h10v3l4-4-4-4v3H5v6h2V7z"/><path d="M17 17H7v-3l-4 4 4 4v-3h12v-6h-2v4z"/>';
+const svg = (inner) =>
+  `<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">${inner}</svg>`;
 const REPEAT_UI = {
-  stop: { icon: "🔁", text: "반복 없음" },
-  loop: { icon: "🔁", text: "전체 반복" },
-  one:  { icon: "🔂", text: "한 곡 반복" },
+  // 빗금은 배경색 굵은 선을 깔아 아이콘과 분리한다(안 그러면 뭉쳐 보인다)
+  stop: {
+    text: "반복 없음",
+    html: svg(REPEAT_ARROWS +
+      '<line x1="3.5" y1="20.5" x2="20.5" y2="3.5" stroke="var(--bg-soft)" stroke-width="4.5" stroke-linecap="round"/>' +
+      '<line x1="3.5" y1="20.5" x2="20.5" y2="3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>'),
+  },
+  loop: { text: "전체 반복", html: svg(REPEAT_ARROWS) },
+  one:  { text: "한 곡 반복", html: svg(REPEAT_ARROWS + '<path d="M13 15V9h-1l-2 1v1h1.5v4H13z"/>') },
 };
 let endMode = localStorage.getItem("jlp:endMode");
 if (endMode === "next") endMode = "loop";              // 4단 시절의 "다음 곡" → 가장 가까운 동작으로
@@ -467,20 +478,10 @@ async function onSongEnd() {
 function renderEndMode() {
   const b = $("#repeat-btn");
   const ui = REPEAT_UI[endMode];
-  b.textContent = ui.icon;
-  b.title = `반복: ${ui.text}`;
+  b.innerHTML = ui.html;                       // 고정 문자열이라 안전
+  b.title = `반복: ${ui.text}`;                // 화면에는 안 보이고 길게 눌렀을 때만
   b.setAttribute("aria-label", `반복 ${ui.text}`);
   b.classList.toggle("on", endMode !== "stop");
-}
-
-// 아이콘만으로는 방금 뭘로 바뀌었는지 놓치기 쉬워서, 누를 때 잠깐 이름을 띄운다
-let repeatToastTimer = null;
-function flashRepeatToast(text) {
-  const t = $("#repeat-toast");
-  t.textContent = text;
-  t.classList.add("show");
-  clearTimeout(repeatToastTimer);
-  repeatToastTimer = setTimeout(() => t.classList.remove("show"), 1100);
 }
 
 function wireEndMode() {
@@ -488,7 +489,6 @@ function wireEndMode() {
     endMode = REPEAT_CYCLE[(REPEAT_CYCLE.indexOf(endMode) + 1) % REPEAT_CYCLE.length];
     localStorage.setItem("jlp:endMode", endMode);
     renderEndMode();
-    flashRepeatToast(REPEAT_UI[endMode].text);
   });
   renderEndMode();
 }

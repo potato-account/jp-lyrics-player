@@ -315,26 +315,10 @@ code { background: var(--bg); padding: 1px 5px; border-radius: 4px; font-size: 0
 .pl-chip.chip-add { color: var(--lyric-orig); border-style: dashed; }
 
 /* --- 반복 버튼 (재생 컨트롤 안, 누를 때마다 순환) --- */
-#repeat-btn {
-  padding: 8px 10px; font-size: 1rem; line-height: 1;
-  opacity: 0.35;                      /* 꺼짐: 흐리게 */
-  filter: grayscale(1);
-}
-#repeat-btn.on {
-  opacity: 1; filter: none;
-  background: var(--accent-soft); border-color: var(--accent);
-}
-
-/* 모드가 바뀐 걸 아이콘만으로 놓치지 않게, 잠깐 이름을 띄운다 */
-#repeat-toast {
-  position: absolute; left: 50%; transform: translate(-50%, 6px);
-  bottom: calc(100% + 6px);
-  padding: 6px 12px; border-radius: 999px;
-  background: var(--bg); border: 1px solid var(--accent);
-  color: var(--fg); font-size: 0.78rem; white-space: nowrap;
-  opacity: 0; pointer-events: none; transition: opacity 0.18s, transform 0.18s;
-}
-#repeat-toast.show { opacity: 1; transform: translate(-50%, 0); }
+/* 상태 구분은 아이콘 모양이 한다. 색은 거들기만 한다. */
+#repeat-btn { padding: 7px 9px; line-height: 0; color: var(--fg-dim); }
+#repeat-btn svg { display: block; }
+#repeat-btn.on { color: var(--fg); }
 
 /* --- 플레이리스트 담기 --- */
 #plpick-list { list-style: none; margin: 10px 0 0; padding: 0; max-height: 46dvh; overflow-y: auto; }
