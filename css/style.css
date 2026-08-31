@@ -310,7 +310,7 @@ code { background: var(--bg); padding: 1px 5px; border-radius: 4px; font-size: 0
   flex: 0 0 auto; padding: 7px 13px; font-size: 0.82rem; border-radius: 999px;
   white-space: nowrap;
 }
-.pl-chip.active { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 700; }
+.pl-chip.active { background: var(--fg); border-color: var(--fg); color: var(--bg); font-weight: 700; }
 .pl-chip.chip-muted { color: var(--fg-dim); }
 .pl-chip.chip-add { color: var(--lyric-orig); border-style: dashed; }
 
