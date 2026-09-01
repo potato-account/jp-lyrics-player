@@ -78,26 +78,28 @@
   <!-- ===== 곡 목록 시트 ===== -->
   <div id="song-list" hidden>
     <div class="sheet">
-      <div class="sheet-head">
-        <h2 id="list-title">저장된 곡</h2>
-        <div class="head-btns">
-          <button id="select-toggle" type="button" hidden>선택</button>
-          <button id="pl-manage" type="button" hidden>이름·삭제</button>
-          <button id="close-list" type="button" aria-label="닫기">✕</button>
+      <div class="sheet-inner">
+        <div class="sheet-head">
+          <h2 id="list-title">저장된 곡</h2>
+          <div class="head-btns">
+            <button id="select-toggle" type="button" hidden>선택</button>
+            <button id="pl-manage" type="button" hidden>이름·삭제</button>
+            <button id="close-list" type="button" aria-label="닫기">✕</button>
+          </div>
         </div>
-      </div>
 
-      <!-- 플레이리스트 칩 바 -->
-      <div id="pl-chips"></div>
+        <!-- 플레이리스트 칩 바 -->
+        <div id="pl-chips"></div>
 
-      <ul id="song-list-items"></ul>
-      <p id="song-list-empty" class="hint small">아직 저장된 곡이 없습니다.</p>
+        <ul id="song-list-items"></ul>
+        <p id="song-list-empty" class="hint small">아직 저장된 곡이 없습니다.</p>
 
-      <!-- 여러 곡 선택 시 하단 액션 바 -->
-      <div id="select-bar" hidden>
-        <button id="sel-all" type="button">전체선택</button>
-        <span id="sel-count">0곡 선택</span>
-        <button id="sel-add" type="button" disabled>＋ 담기</button>
+        <!-- 여러 곡 선택 시 하단 액션 바 -->
+        <div id="select-bar" hidden>
+          <button id="sel-all" type="button">전체선택</button>
+          <span id="sel-count">0곡 선택</span>
+          <button id="sel-add" type="button" disabled>＋ 담기</button>
+        </div>
       </div>
     </div>
   </div>

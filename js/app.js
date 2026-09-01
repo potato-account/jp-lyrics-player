@@ -83,6 +83,7 @@ async function loadSong(next, { autoplay = false } = {}) {
   view.setEditable(appEl.classList.contains("edit-on"));
   updateAutofillBanner();
   applyArt();
+  if (!$("#song-list").hidden) updateSheetBg();   // 목록 열어둔 채 곡이 바뀌면 배경도
   $("#time-dur").textContent = "0:00";
   $("#time-cur").textContent = "0:00";
   $("#seekbar").value = "0";
@@ -119,6 +120,45 @@ async function applyArt() {
     img.src = song.image;                // repo 에 커밋된 이미지 경로 (revoke 안 함)
     va.classList.add("has-art");
   }
+}
+
+// ---------- 목록 시트 배경 (A: 고정 img/list-bg.jpg / B: 지금 곡 이미지) ----------
+let listBgProbed = null;               // null 미확인 / true·false
+function probeListBg() {
+  if (listBgProbed !== null) return Promise.resolve(listBgProbed);
+  return new Promise((res) => {
+    const im = new Image();
+    im.onload = () => { listBgProbed = true; res(true); };
+    im.onerror = () => { listBgProbed = false; res(false); };
+    im.src = "img/list-bg.jpg";
+  });
+}
+
+let sheetBgUrl = null;
+async function updateSheetBg() {
+  const sheet = document.querySelector("#song-list .sheet");
+  if (!sheet) return;
+  if (sheetBgUrl) { URL.revokeObjectURL(sheetBgUrl); sheetBgUrl = null; }
+  sheet.classList.remove("sheet-a", "sheet-b");
+  sheet.style.removeProperty("--sheet-img");
+
+  // B: 지금 재생 중인 곡이 "지금 보고 있는 목록"에 있고, 그 곡에 이미지가 있으면
+  if (song && song.id) {
+    const list = await currentList();
+    if (list.some((x) => x.id === song.id)) {
+      const rec = await getImage(song.id);
+      let src = null;
+      if (rec && rec.blob) { sheetBgUrl = URL.createObjectURL(rec.blob); src = sheetBgUrl; }
+      else if (song.image) src = song.image;
+      if (src) {
+        sheet.style.setProperty("--sheet-img", `url("${src}")`);
+        sheet.classList.add("sheet-b");
+        return;
+      }
+    }
+  }
+  // A: 고정 배경 파일이 실제로 있을 때만
+  if (await probeListBg()) sheet.classList.add("sheet-a");
 }
 
 function setShowVideo(on) {
@@ -482,6 +522,7 @@ async function renderList() {
     }
     wrap.appendChild(li);
   }
+  updateSheetBg();            // 목록·필터가 바뀔 때마다 배경 갱신
 }
 
 function openSheet() {
@@ -490,7 +531,10 @@ function openSheet() {
   renderChips();
   renderList();
 }
-function closeSheet() { $("#song-list").hidden = true; }
+function closeSheet() {
+  $("#song-list").hidden = true;
+  if (sheetBgUrl) { URL.revokeObjectURL(sheetBgUrl); sheetBgUrl = null; }
+}
 
 // ---------- 여러 곡 선택 → 한 번에 담기 ----------
 function exitSelectMode() {
