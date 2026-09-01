@@ -140,7 +140,7 @@ async function updateSheetBg() {
   const sheet = document.querySelector("#song-list .sheet");
   if (!sheet) return;
   if (sheetBgUrl) { URL.revokeObjectURL(sheetBgUrl); sheetBgUrl = null; }
-  sheet.classList.remove("sheet-a", "sheet-b", "sheet-v");
+  sheet.classList.remove("sheet-a", "sheet-b", "sheet-v", "has-bg");
   sheet.style.removeProperty("--sheet-img");
   appEl.classList.remove("list-video-bg");
 
@@ -155,7 +155,7 @@ async function updateSheetBg() {
     else if (song.image) src = song.image;
     if (src) {
       sheet.style.setProperty("--sheet-img", `url("${src}")`);
-      sheet.classList.add("sheet-b");
+      sheet.classList.add("sheet-b", "has-bg");
       return;
     }
   }
@@ -164,12 +164,12 @@ async function updateSheetBg() {
   // iframe 을 CSS 로만 옮겨 시트 뒤에 깐다(재생 안 끊김).
   if (curInList && song.youtubeId && player.isPlaying) {
     appEl.classList.add("list-video-bg");
-    sheet.classList.add("sheet-v");
+    sheet.classList.add("sheet-v", "has-bg");
     return;
   }
 
   // A: 고정 배경 파일이 실제로 있을 때만
-  if (await probeListBg()) sheet.classList.add("sheet-a");
+  if (await probeListBg()) sheet.classList.add("sheet-a", "has-bg");
 }
 
 function setShowVideo(on) {

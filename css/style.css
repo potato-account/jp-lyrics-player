@@ -366,6 +366,14 @@ code { background: var(--bg); padding: 1px 5px; border-radius: 4px; font-size: 0
   content: ""; position: absolute; inset: 0; z-index: 1;
   background: rgba(11, 11, 15, 0.5); display: block;
 }
+
+/* 배경이 있을 때(B·영상·A) 목록 안 요소들도 반투명 → 같은 배경 한 장이
+   줄 모양대로 잘려 비쳐 보인다. 줄마다 이미지를 맞추는 처리는 없다. */
+#song-list .sheet.has-bg .song-pick,
+#song-list .sheet.has-bg .row-btn,
+#song-list .sheet.has-bg #select-bar,
+#song-list .sheet.has-bg .sel-check { background: rgba(20, 20, 28, 0.5); }
+#song-list .sheet.has-bg .pl-chip:not(.active) { background: rgba(20, 20, 28, 0.42); }
 .sheet-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
 .sheet-head h2 { margin: 0; font-size: 1.05rem; }
 .head-btns { display: flex; gap: 6px; flex: 0 0 auto; }
