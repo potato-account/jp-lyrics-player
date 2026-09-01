@@ -139,9 +139,31 @@ $env:DEEPL_API_KEY = "xxxxxxxx"; node fill.mjs ../songs/napori.json --engine dee
 ```
 tools/
   fill.mjs           실행 스크립트 (ESM, Node 18+)
+  apply-backup.mjs   앱 백업 파일 → repo 반영 (아래)
   package.json       의존성/버전 고정
   package-lock.json  잠금 파일
   README.md          이 문서
   .gitignore         node_modules/ 와 *.bak 제외
   node_modules/      npm install 결과
 ```
+
+---
+
+# apply-backup.mjs — 앱 "전체 내보내기" 백업을 repo 에 반영
+
+앱(곡 정보 › 전체 백업)에서 내보낸 `jlp-backup-YYYYMMDD.json` 을 받아서:
+
+```
+node tools/apply-backup.mjs <받은 백업 파일 경로>
+```
+
+- **번들 곡**: 사용자가 직접 고친 `pron`/`trans`(Src === `"user"`), `offset`, `youtubeId` 를
+  `songs/<file>.json` 에 병합하고 `songs/index.json` 의 `version` 을 올린다.
+- **사용자가 만든 곡**: `songs/NN_<slug>.json` 으로 승격해 새로 쓰고 `index.json` 에 등록한다.
+  제목이 일본어면 슬러그를 못 만들어 `user-XXXX` 로 두니 **커밋 전에 파일명·bundleId 를 직접 정리**한다.
+- **이미지**: `backup.images`(songRef 키) → `img/<곡파일명>.webp` 로 저장하고 곡 json 에 `"image"` 필드를 넣는다.
+- **state.json**: 백업의 `playlists` / `hidden` / `settings` 로 새로 쓰고 `version` 을 +1.
+  앱은 시작할 때 `state.json` 을 읽어 `version` 이 올라갔으면 이 값들로 이 기기를 덮어쓴다.
+- **backups/jlp-backup-\<date\>.json**: 이미지 blob 을 뺀 가벼운 사본을 보관(원본 통짜 백업은 repo 밖에서 관리).
+
+의존성 없음(순수 Node). **자동 커밋하지 않는다** — `git diff` 로 확인하고 직접 커밋한다.

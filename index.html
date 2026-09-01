@@ -158,13 +158,14 @@
     <label>제목 <input id="m-title" type="text" autocomplete="off" /></label>
     <label>아티스트 <input id="m-artist" type="text" autocomplete="off" /></label>
     <label>YouTube 링크 또는 ID <input id="m-youtube" type="text" autocomplete="off" /></label>
-    <label>이미지 — 영상 대신 이 곡에 띄울 사진 (고르면 바로 저장, 이 기기에만)
+    <label>이미지 — 영상 대신 이 곡에 띄울 사진 (고르면 바로 저장)
       <input id="m-image-file" type="file" accept="image/*" />
     </label>
     <div id="m-image-row">
       <img id="m-image-preview" alt="이미지 미리보기" />
-      <button id="m-image-clear" type="button">이미지 제거</button>
+      <button id="m-image-clear" type="button">이 기기 이미지 제거</button>
     </div>
+    <p id="m-image-note" class="hint small"></p>
     <label>싱크 보정 (초) — 양수: 가사 늦게 / 음수: 가사 빨리
       <span class="offset-row">
         <button type="button" id="m-offset-mm" class="offset-btn">−0.5</button>
@@ -179,6 +180,16 @@
       <button id="m-export" type="button">JSON 내보내기</button>
       <button id="m-save" type="button">저장</button>
     </menu>
+
+    <details id="backup-sec">
+      <summary>전체 백업 · 복원</summary>
+      <p class="hint small">이 기기의 <b>모든 곡·가사 수정·이미지·플레이리스트·설정</b>을 파일 하나로 내보냅니다.
+        그 파일을 가져오면 이 기기 내용을 그 상태로 <b>덮어씁니다</b>.</p>
+      <div class="backup-btns">
+        <button id="backup-export" type="button">전체 내보내기</button>
+        <button id="backup-import" type="button">가져오기 (덮어쓰기)</button>
+      </div>
+    </details>
   </dialog>
 
   <!-- ===== 일괄 붙여넣기 다이얼로그 ===== -->
@@ -212,6 +223,7 @@
   </dialog>
 
   <input id="file-input" type="file" accept="application/json,.json" hidden />
+  <input id="backup-file" type="file" accept="application/json,.json" hidden />
 
   <script src="https://www.youtube.com/iframe_api"></script>
   <script type="module" src="js/app.js"></script>

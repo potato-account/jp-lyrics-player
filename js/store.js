@@ -66,6 +66,22 @@ export async function deleteSong(id) {
   await wrap((await tx(STORE, "readwrite")).delete(id));
 }
 
+// 앞서 낸 쓰기들이 디스크에 커밋될 때까지 기다린다.
+// wrap() 은 request.onsuccess 에서 풀리는데 그건 트랜잭션 커밋 전이다 —
+// 직후에 location.reload() 같은 걸 하면 커밋 안 된 트랜잭션이 날아갈 수 있다.
+// 같은 스토어에 새 readwrite 트랜잭션을 만들면 IndexedDB 가 생성 순서대로 커밋을 보장하므로,
+// 그 트랜잭션의 complete 를 기다리면 앞선 쓰기가 모두 끝난 것이다.
+export async function flush() {
+  const d = await db();
+  await Promise.all([STORE, IMAGES, PLISTS].map((st) => new Promise((res, rej) => {
+    const t = d.transaction(st, "readwrite");
+    t.objectStore(st).get("__flush__");     // 아무 것도 안 바꾸는 no-op
+    t.oncomplete = () => res();
+    t.onerror = () => rej(t.error);
+    t.onabort = () => rej(t.error);
+  })));
+}
+
 // ---------- 곡 이미지 (영상 대신 표시할 사진) ----------
 // 이 데이터는 이 기기의 브라우저에만 저장된다. GitHub 저장소로는 올라가지 않는다.
 export async function getImage(id) {

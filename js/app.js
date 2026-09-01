@@ -3,7 +3,7 @@ import { LyricsView, parsePaste } from "./lyrics.js";
 import {
   allSongs, getSong, putSong, getLastId, setLastId, migrateLegacy,
   allPlaylists, getPlaylist, putPlaylist, deletePlaylist, songRef, findByRef,
-  getImage, putImage, deleteImage,
+  getImage, putImage, deleteImage, flush,
 } from "./store.js";
 import { autofillSong, hasFillable } from "./autofill.js";
 
@@ -97,7 +97,8 @@ function updateAutofillBanner() {
 // ---------- 곡 이미지 (영상 대신 화면에 띄우는 사진) ----------
 // iframe 은 소리를 위해 뒤에서 계속 재생되고, 이 이미지가 그 위를 덮는다.
 // "⇅" 버튼으로 이미지 ↔ 실제 영상을 오간다. 기본은 이미지.
-let artUrl = null;
+// 우선순위: 이 기기에서 올린 이미지(IndexedDB) > 곡에 박힌 repo 경로(song.image)
+let artUrl = null;                        // 우리가 만든 objectURL(직접 revoke). repo 경로면 null.
 let artToken = 0;
 async function applyArt() {
   const va = $("#video-area");
@@ -106,11 +107,16 @@ async function applyArt() {
   if (artUrl) { URL.revokeObjectURL(artUrl); artUrl = null; }
   img.removeAttribute("src");
   va.classList.remove("has-art");
-  const rec = song && song.id ? await getImage(song.id) : null;
+  if (!song) return;
+  const rec = song.id ? await getImage(song.id) : null;
   if (my !== artToken) return;           // 그 사이 다른 곡으로 넘어감
+  img.onerror = () => { if (my === artToken) va.classList.remove("has-art"); };  // 이미지가 깨지면 "없음" 안내로
   if (rec && rec.blob) {
     artUrl = URL.createObjectURL(rec.blob);
     img.src = artUrl;
+    va.classList.add("has-art");
+  } else if (song.image) {
+    img.src = song.image;                // repo 에 커밋된 이미지 경로 (revoke 안 함)
     va.classList.add("has-art");
   }
 }
@@ -779,16 +785,25 @@ let metaImgUrl = null;
 async function refreshMetaImagePreview() {
   const row = $("#m-image-row");
   const img = $("#m-image-preview");
+  const note = $("#m-image-note");
   if (metaImgUrl) { URL.revokeObjectURL(metaImgUrl); metaImgUrl = null; }
   const rec = song && song.id ? await getImage(song.id) : null;
   if (rec && rec.blob) {
     metaImgUrl = URL.createObjectURL(rec.blob);
     img.src = metaImgUrl;
     row.classList.add("on");
+    note.textContent = "이 기기에서 올린 이미지 (repo 이미지가 있으면 이게 우선)";
+  } else if (song && song.image) {
+    img.src = song.image;
+    row.classList.add("on");
+    note.textContent = "repo 에 커밋된 이미지. 여기서 새로 올리면 이 기기에서만 덮어씀";
   } else {
     img.removeAttribute("src");
     row.classList.remove("on");
+    note.textContent = "";
   }
+  // "제거" 는 이 기기 업로드가 있을 때만 의미가 있다
+  $("#m-image-clear").style.display = rec && rec.blob ? "" : "none";
 }
 
 function wireMetaDialog() {
@@ -1011,6 +1026,157 @@ async function syncBundledSongsInner() {
   }
 }
 
+// ---------- repo 상태 동기화 (state.json) ----------
+// 플레이리스트·숨김·설정을 repo 에 담아두고, 새 버전이면 이 기기에 덮어쓴다.
+// (곡·이미지는 songs/ 와 img/ 로, 이건 개인 셋업 담당)
+async function syncState() {
+  let st;
+  try {
+    const res = await fetch("state.json", { cache: "no-cache" });
+    if (!res.ok) return;                               // 아직 커밋 안 됨 → 조용히 통과
+    st = await res.json();
+  } catch { return; }
+  const applied = +(localStorage.getItem("jlp:stateVersion") || 0);
+  if (!st || +(st.version || 0) <= applied) return;    // 이미 반영한 버전
+
+  // 숨김: state.json 목록과 정확히 일치시킨다(덮어쓰기)
+  const want = new Set(st.hidden || []);
+  for (const s of await allSongs()) {
+    const on = want.has(songRef(s));
+    if (!!s.hidden === on) continue;
+    const full = await getSong(s.id);
+    if (!full) continue;
+    if (on) full.hidden = true; else delete full.hidden;
+    await putSong(full);
+  }
+
+  // 플레이리스트: 전체 교체
+  for (const p of await allPlaylists()) await deletePlaylist(p.id);
+  for (const p of st.playlists || []) {
+    if (p && p.name) await putPlaylist({ name: p.name, refs: Array.isArray(p.refs) ? p.refs : [] });
+  }
+  listFilter = { type: "all" };
+  saveListFilter();
+
+  // 설정
+  if (st.settings) {
+    if (REPEAT_CYCLE.includes(st.settings.endMode)) {
+      endMode = st.settings.endMode;
+      localStorage.setItem("jlp:endMode", endMode);
+      renderEndMode();
+    }
+    if (typeof st.settings.showVideo === "boolean") setShowVideo(st.settings.showVideo);
+  }
+
+  localStorage.setItem("jlp:stateVersion", String(st.version));
+}
+
+// ---------- 전체 백업 / 복원 ----------
+const blobToDataURL = (blob) => new Promise((res, rej) => {
+  const fr = new FileReader();
+  fr.onload = () => res(fr.result);
+  fr.onerror = () => rej(fr.error || new Error("read fail"));
+  fr.readAsDataURL(blob);
+});
+function dataURLToBlob(u) {
+  const [head, b64] = String(u).split(",");
+  const mime = (head.match(/:(.*?);/) || [])[1] || "image/webp";
+  const bin = atob(b64);
+  const arr = new Uint8Array(bin.length);
+  for (let i = 0; i < bin.length; i++) arr[i] = bin.charCodeAt(i);
+  return new Blob([arr], { type: mime });
+}
+function downloadJSON(obj, name) {
+  const blob = new Blob([JSON.stringify(obj)], { type: "application/json" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = name;
+  a.click();
+  setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+}
+
+// 이 기기의 모든 것 → 파일 하나. 이미지는 data URL 로, songRef 를 키로 담는다.
+async function exportBackup() {
+  const songs = await allSongs();
+  const playlists = (await allPlaylists()).map((p) => ({ name: p.name, refs: p.refs }));
+  const images = {};
+  for (const s of songs) {
+    const rec = await getImage(s.id);
+    if (rec && rec.blob) images[songRef(s)] = await blobToDataURL(rec.blob);
+  }
+  const backup = {
+    app: "jp-lyrics-player",
+    kind: "backup",
+    exportedAt: new Date().toISOString(),
+    songs,
+    playlists,
+    images,
+    settings: {
+      endMode,
+      showVideo: localStorage.getItem("jlp:showVideo") === "1",
+    },
+  };
+  const d = new Date();
+  const stamp = `${d.getFullYear()}${String(d.getMonth() + 1).padStart(2, "0")}${String(d.getDate()).padStart(2, "0")}`;
+  downloadJSON(backup, `jlp-backup-${stamp}.json`);
+}
+
+// 백업 파일 → 이 기기. 곡/플리/이미지/설정을 그 상태로 덮어쓴다.
+async function importBackup(obj) {
+  if (!obj || obj.kind !== "backup" || !Array.isArray(obj.songs)) {
+    alert("이 앱의 백업 파일이 아닙니다.");
+    return;
+  }
+  const when = (obj.exportedAt || "").slice(0, 16).replace("T", " ");
+  if (!confirm(`백업(${when})으로 이 기기의 곡·이미지·플레이리스트·설정을 덮어씁니다.\n계속할까요?`)) return;
+
+  const lib = await allSongs();
+  const imgBlobs = {};
+  for (const [ref, u] of Object.entries(obj.images || {})) {
+    try { imgBlobs[ref] = dataURLToBlob(u); } catch {}
+  }
+
+  for (const s of obj.songs) {
+    const ref = s.bundleId ? "b:" + s.bundleId : "i:" + s.id;
+    const target = s.bundleId
+      ? lib.find((x) => x.bundleId === s.bundleId)
+      : lib.find((x) => x.id === s.id);
+    const rec = { ...s };
+    if (target) rec.id = target.id;          // 이미 있으면 같은 레코드로
+    const saved = await putSong(rec);        // 없으면 백업의 id 그대로(플리 i: 참조 유지)
+    if (imgBlobs[ref]) await putImage(saved.id, imgBlobs[ref]);
+  }
+
+  for (const p of await allPlaylists()) await deletePlaylist(p.id);
+  for (const p of obj.playlists || []) {
+    if (p && p.name) await putPlaylist({ name: p.name, refs: Array.isArray(p.refs) ? p.refs : [] });
+  }
+
+  if (obj.settings) {
+    if (REPEAT_CYCLE.includes(obj.settings.endMode)) localStorage.setItem("jlp:endMode", obj.settings.endMode);
+    if (typeof obj.settings.showVideo === "boolean") localStorage.setItem("jlp:showVideo", obj.settings.showVideo ? "1" : "0");
+  }
+  localStorage.setItem("jlp:listFilter", JSON.stringify({ type: "all" }));
+  await flush();                          // 쓰기가 다 커밋된 뒤에 새로고침
+  alert("복원 완료. 새로고침합니다.");
+  location.reload();
+}
+
+function wireBackup() {
+  $("#backup-export").addEventListener("click", async () => {
+    try { await exportBackup(); }
+    catch (e) { alert("내보내기 실패: " + (e.message || e)); }
+  });
+  $("#backup-import").addEventListener("click", () => $("#backup-file").click());
+  $("#backup-file").addEventListener("change", async (e) => {
+    const file = e.target.files[0];
+    e.target.value = "";
+    if (!file) return;
+    try { await importBackup(JSON.parse(await file.text())); }
+    catch (err) { alert("가져오기 실패: " + (err.message || err)); }
+  });
+}
+
 // ---------- 서비스 워커 + 새 버전 자동 새로고침 ----------
 if ("serviceWorker" in navigator) {
   const hadController = !!navigator.serviceWorker.controller;
@@ -1052,6 +1218,7 @@ async function main() {
   wireTimeDialog();
   wirePlPick();
   wireSelectMode();
+  wireBackup();
   $("#open-list").addEventListener("click", openSheet);
   $("#close-list").addEventListener("click", closeSheet);
   $("#song-list").addEventListener("click", (e) => { if (e.target.id === "song-list") closeSheet(); });
@@ -1068,6 +1235,7 @@ async function main() {
 
   await migrateLegacy();
   await syncBundledSongs();
+  await syncState();
 
   let start = null;
   const lastId = getLastId();

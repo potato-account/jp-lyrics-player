@@ -264,6 +264,13 @@ code { background: var(--bg); padding: 1px 5px; border-radius: 4px; font-size: 0
 #m-image-row.on #m-image-preview { display: block; }
 #m-image-clear { flex: 0 0 auto; padding: 6px 10px; font-size: 0.8rem; display: none; }
 #m-image-row.on #m-image-clear { display: block; }
+#m-image-note { margin: -4px 0 10px; }
+
+/* 전체 백업 · 복원 */
+#backup-sec { margin-top: 14px; border-top: 1px solid var(--border); padding-top: 10px; }
+#backup-sec summary { color: var(--fg-dim); }
+#backup-sec .backup-btns { display: flex; gap: 8px; margin-top: 8px; }
+#backup-sec .backup-btns button { flex: 1; font-size: 0.85rem; padding: 9px 6px; }
 
 .dlg-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
 .dlg-head h2 { margin: 0; font-size: 1.1rem; }
