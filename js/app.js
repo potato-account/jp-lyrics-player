@@ -122,7 +122,8 @@ async function applyArt() {
   }
 }
 
-// ---------- 목록 시트 배경 (A: 고정 img/list-bg.jpg / B: 지금 곡 이미지) ----------
+// ---------- 목록 시트 배경 ----------
+// 우선순위: B(지금 곡 이미지) → 영상(이미지 없고 재생 중) → A(고정 img/list-bg.jpg) → 단색
 let listBgProbed = null;               // null 미확인 / true·false
 function probeListBg() {
   if (listBgProbed !== null) return Promise.resolve(listBgProbed);
@@ -139,24 +140,34 @@ async function updateSheetBg() {
   const sheet = document.querySelector("#song-list .sheet");
   if (!sheet) return;
   if (sheetBgUrl) { URL.revokeObjectURL(sheetBgUrl); sheetBgUrl = null; }
-  sheet.classList.remove("sheet-a", "sheet-b");
+  sheet.classList.remove("sheet-a", "sheet-b", "sheet-v");
   sheet.style.removeProperty("--sheet-img");
+  appEl.classList.remove("list-video-bg");
 
-  // B: 지금 재생 중인 곡이 "지금 보고 있는 목록"에 있고, 그 곡에 이미지가 있으면
-  if (song && song.id) {
-    const list = await currentList();
-    if (list.some((x) => x.id === song.id)) {
-      const rec = await getImage(song.id);
-      let src = null;
-      if (rec && rec.blob) { sheetBgUrl = URL.createObjectURL(rec.blob); src = sheetBgUrl; }
-      else if (song.image) src = song.image;
-      if (src) {
-        sheet.style.setProperty("--sheet-img", `url("${src}")`);
-        sheet.classList.add("sheet-b");
-        return;
-      }
+  const curInList = !!(song && song.id &&
+    (await currentList()).some((x) => x.id === song.id));
+
+  // B: 그 곡에 이미지가 있으면 그 이미지
+  if (curInList) {
+    const rec = await getImage(song.id);
+    let src = null;
+    if (rec && rec.blob) { sheetBgUrl = URL.createObjectURL(rec.blob); src = sheetBgUrl; }
+    else if (song.image) src = song.image;
+    if (src) {
+      sheet.style.setProperty("--sheet-img", `url("${src}")`);
+      sheet.classList.add("sheet-b");
+      return;
     }
   }
+
+  // 영상: 이미지는 없지만 곡이 목록에 있고 유튜브 영상이 재생 중이면
+  // iframe 을 CSS 로만 옮겨 시트 뒤에 깐다(재생 안 끊김).
+  if (curInList && song.youtubeId && player.isPlaying) {
+    appEl.classList.add("list-video-bg");
+    sheet.classList.add("sheet-v");
+    return;
+  }
+
   // A: 고정 배경 파일이 실제로 있을 때만
   if (await probeListBg()) sheet.classList.add("sheet-a");
 }
@@ -533,6 +544,7 @@ function openSheet() {
 }
 function closeSheet() {
   $("#song-list").hidden = true;
+  appEl.classList.remove("list-video-bg");   // 영상을 원래 위치로
   if (sheetBgUrl) { URL.revokeObjectURL(sheetBgUrl); sheetBgUrl = null; }
 }
 
@@ -1275,6 +1287,8 @@ async function main() {
     // 종료(0) 후 이어서 재생할 거면 Wake Lock 을 놓지 않는다
     else if ((state === 2 || (state === 0 && endMode === "stop")) && !appEl.classList.contains("edit-on")) releaseWakeLock();
     if (state === 0) onSongEnd();                       // 종료 → 다음 곡 / 반복
+    // 목록을 열어둔 채 재생/일시정지가 바뀌면 배경(영상 tier)도 갱신
+    if ((state === 1 || state === 2) && !$("#song-list").hidden) updateSheetBg();
   });
 
   await migrateLegacy();
