@@ -3,6 +3,7 @@ import { LyricsView, parsePaste } from "./lyrics.js";
 import {
   allSongs, getSong, putSong, getLastId, setLastId, migrateLegacy,
   allPlaylists, getPlaylist, putPlaylist, deletePlaylist, songRef, findByRef,
+  getImage, putImage, deleteImage,
 } from "./store.js";
 import { autofillSong, hasFillable } from "./autofill.js";
 
@@ -81,6 +82,7 @@ async function loadSong(next, { autoplay = false } = {}) {
   view.setSong(song);
   view.setEditable(appEl.classList.contains("edit-on"));
   updateAutofillBanner();
+  applyArt();
   $("#time-dur").textContent = "0:00";
   $("#time-cur").textContent = "0:00";
   $("#seekbar").value = "0";
@@ -90,6 +92,50 @@ async function loadSong(next, { autoplay = false } = {}) {
 // 발음·번역이 비어 있으면 상단에 "자동 채우기" 배너 표시
 function updateAutofillBanner() {
   appEl.classList.toggle("needs-autofill", hasFillable(song));
+}
+
+// ---------- 곡 이미지 (영상 대신 화면에 띄우는 사진) ----------
+// iframe 은 소리를 위해 뒤에서 계속 재생되고, 이 이미지가 그 위를 덮는다.
+// "⇅" 버튼으로 이미지 ↔ 실제 영상을 오간다. 기본은 이미지.
+let artUrl = null;
+let artToken = 0;
+async function applyArt() {
+  const va = $("#video-area");
+  const img = $("#art-img");
+  const my = ++artToken;                 // 곡이 빠르게 바뀔 때 늦게 온 응답 무시
+  if (artUrl) { URL.revokeObjectURL(artUrl); artUrl = null; }
+  img.removeAttribute("src");
+  va.classList.remove("has-art");
+  const rec = song && song.id ? await getImage(song.id) : null;
+  if (my !== artToken) return;           // 그 사이 다른 곡으로 넘어감
+  if (rec && rec.blob) {
+    artUrl = URL.createObjectURL(rec.blob);
+    img.src = artUrl;
+    va.classList.add("has-art");
+  }
+}
+
+function setShowVideo(on) {
+  $("#video-area").classList.toggle("show-video", on);
+  localStorage.setItem("jlp:showVideo", on ? "1" : "0");
+  const b = $("#toggle-video");
+  b.title = on ? "영상 → 이미지" : "이미지 → 영상";
+  b.setAttribute("aria-label", on ? "이미지로 전환" : "영상으로 전환");
+}
+
+// 이미지 파일 → 캔버스로 축소·재인코딩한 Blob. 큰 원본을 그대로 넣지 않는다.
+async function downscaleImage(file, maxPx = 1080) {
+  const bmp = await createImageBitmap(file).catch(() => null);
+  if (!bmp) return file;                 // 디코딩 실패 시 원본이라도 저장
+  const scale = Math.min(1, maxPx / Math.max(bmp.width, bmp.height));
+  const w = Math.round(bmp.width * scale);
+  const h = Math.round(bmp.height * scale);
+  const canvas = document.createElement("canvas");
+  canvas.width = w; canvas.height = h;
+  canvas.getContext("2d").drawImage(bmp, 0, 0, w, h);
+  bmp.close && bmp.close();
+  const blob = await new Promise((res) => canvas.toBlob(res, "image/webp", 0.85));
+  return blob && blob.size ? blob : file;
 }
 
 // 파일/붙여넣기로 들어온 줄에 출처 태그 부여.
@@ -141,11 +187,11 @@ function wireControls() {
   bar.addEventListener("pointerup", endSeek);
   bar.addEventListener("change", endSeek);
 
+  // 이미지 ↔ 영상 전환. 기본은 이미지, 마지막 선택을 기억한다.
   $("#toggle-video").addEventListener("click", () => {
-    const v = $("#video-area");
-    const collapsed = v.classList.toggle("video-collapsed");
-    v.classList.toggle("video-expanded", !collapsed);
+    setShowVideo(!$("#video-area").classList.contains("show-video"));
   });
+  setShowVideo(localStorage.getItem("jlp:showVideo") === "1");
 
   // 영상 전체화면 → 여기서 홈 버튼을 누르면 안드로이드가 작은 창(PiP)으로 재생을 이어감
   $("#go-fullscreen").addEventListener("click", async () => {
@@ -724,7 +770,25 @@ function openMeta() {
   $("#m-artist").value = song.artist || "";
   $("#m-youtube").value = song.youtubeId || "";
   $("#m-offset").value = song.offset || 0;
+  $("#m-image-file").value = "";
+  refreshMetaImagePreview();
   $("#meta-dialog").showModal();
+}
+
+let metaImgUrl = null;
+async function refreshMetaImagePreview() {
+  const row = $("#m-image-row");
+  const img = $("#m-image-preview");
+  if (metaImgUrl) { URL.revokeObjectURL(metaImgUrl); metaImgUrl = null; }
+  const rec = song && song.id ? await getImage(song.id) : null;
+  if (rec && rec.blob) {
+    metaImgUrl = URL.createObjectURL(rec.blob);
+    img.src = metaImgUrl;
+    row.classList.add("on");
+  } else {
+    img.removeAttribute("src");
+    row.classList.remove("on");
+  }
 }
 
 function wireMetaDialog() {
@@ -741,6 +805,27 @@ function wireMetaDialog() {
   $("#m-offset-m").addEventListener("click", () => bumpOffset(-0.1));
   $("#m-offset-p").addEventListener("click", () => bumpOffset(0.1));
   $("#m-offset-pp").addEventListener("click", () => bumpOffset(0.5));
+
+  // 이미지: 고르는 즉시 저장(이 기기 IndexedDB). 저장소로는 안 올라간다.
+  $("#m-image-file").addEventListener("change", async (e) => {
+    const file = e.target.files[0];
+    e.target.value = "";
+    if (!file || !song || !song.id) return;
+    try {
+      const blob = await downscaleImage(file);
+      await putImage(song.id, blob);
+      await refreshMetaImagePreview();
+      if (song && song.id) applyArt();          // 현재 곡이면 화면에 바로 반영
+    } catch (err) {
+      alert("이미지를 저장하지 못했습니다: " + (err.message || err));
+    }
+  });
+  $("#m-image-clear").addEventListener("click", async () => {
+    if (!song || !song.id) return;
+    await deleteImage(song.id);
+    await refreshMetaImagePreview();
+    applyArt();
+  });
 
   $("#m-save").addEventListener("click", async () => {
     if (!song) return;

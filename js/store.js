@@ -1,11 +1,13 @@
 // 여러 곡을 저장하는 IndexedDB 래퍼. 곡 하나 = 레코드 하나.
 // 스키마: { id, title, artist, youtubeId, offset, hidden, lines:[{t,orig,pron,trans}], updatedAt }
 // 플레이리스트: { id, name, refs:["b:bundleId" | "i:songId", ...], createdAt, updatedAt }
+// 곡 이미지: { id(=songId), blob, updatedAt } — 영상 대신 화면에 띄울 사진. 기기 로컬 전용.
 
 const DB_NAME = "jlp";
 const STORE = "songs";
 const PLISTS = "playlists";
-const VERSION = 3;
+const IMAGES = "images";
+const VERSION = 4;
 
 let _db = null;
 function db() {
@@ -19,6 +21,9 @@ function db() {
       }
       if (!d.objectStoreNames.contains(PLISTS)) {
         d.createObjectStore(PLISTS, { keyPath: "id" });
+      }
+      if (!d.objectStoreNames.contains(IMAGES)) {
+        d.createObjectStore(IMAGES, { keyPath: "id" });
       }
     };
     req.onsuccess = () => { _db = req.result; resolve(_db); };
@@ -59,6 +64,21 @@ export async function putSong(song) {
 
 export async function deleteSong(id) {
   await wrap((await tx(STORE, "readwrite")).delete(id));
+}
+
+// ---------- 곡 이미지 (영상 대신 표시할 사진) ----------
+// 이 데이터는 이 기기의 브라우저에만 저장된다. GitHub 저장소로는 올라가지 않는다.
+export async function getImage(id) {
+  if (!id) return null;
+  return wrap((await tx(IMAGES, "readonly")).get(id));
+}
+export async function putImage(id, blob) {
+  const rec = { id, blob, updatedAt: Date.now() };
+  await wrap((await tx(IMAGES, "readwrite")).put(rec));
+  return rec;
+}
+export async function deleteImage(id) {
+  await wrap((await tx(IMAGES, "readwrite")).delete(id));
 }
 
 // ---------- 플레이리스트 ----------

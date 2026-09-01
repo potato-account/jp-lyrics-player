@@ -15,13 +15,18 @@
 </head>
 <body>
   <div id="app">
-    <!-- ===== 상단: YouTube 영상 (접기 가능) ===== -->
+    <!-- ===== 상단: 곡 이미지(기본) / YouTube 영상 ===== -->
+    <!-- iframe 은 소리를 위해 항상 뒤에서 재생되고, 기본은 이미지가 그 위를 덮는다. -->
     <header id="video-area" class="video-expanded">
       <div id="player-wrap">
         <div id="player"></div>
       </div>
+      <div id="art-layer">
+        <img id="art-img" alt="" />
+        <span id="art-empty">이미지 없음<br /><small>정보 › 이미지에서 추가</small></span>
+      </div>
       <button id="go-fullscreen" type="button" aria-label="영상 전체화면" title="전체화면 (홈 버튼으로 작은 창 재생)">⛶</button>
-      <button id="toggle-video" type="button" aria-label="영상 접기/펴기" title="영상 접기/펴기">▲</button>
+      <button id="toggle-video" type="button" aria-label="이미지 / 영상 전환" title="이미지 ↔ 영상">⇅</button>
     </header>
 
     <!-- ===== 가운데: 3단 가사 ===== -->
@@ -153,6 +158,13 @@
     <label>제목 <input id="m-title" type="text" autocomplete="off" /></label>
     <label>아티스트 <input id="m-artist" type="text" autocomplete="off" /></label>
     <label>YouTube 링크 또는 ID <input id="m-youtube" type="text" autocomplete="off" /></label>
+    <label>이미지 — 영상 대신 이 곡에 띄울 사진 (고르면 바로 저장, 이 기기에만)
+      <input id="m-image-file" type="file" accept="image/*" />
+    </label>
+    <div id="m-image-row">
+      <img id="m-image-preview" alt="이미지 미리보기" />
+      <button id="m-image-clear" type="button">이미지 제거</button>
+    </div>
     <label>싱크 보정 (초) — 양수: 가사 늦게 / 음수: 가사 빨리
       <span class="offset-row">
         <button type="button" id="m-offset-mm" class="offset-btn">−0.5</button>
