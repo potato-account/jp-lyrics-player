@@ -340,7 +340,7 @@ code { background: var(--bg); padding: 1px 5px; border-radius: 4px; font-size: 0
 }
 #song-list .sheet::after {
   content: ""; position: absolute; inset: 0; z-index: 1;
-  background: rgba(11, 11, 15, 0.74);
+  background: rgba(11, 11, 15, 0.5);   /* 스크림 옅게 → 배경 이미지 색이 선명하게 */
   display: none;
 }
 #song-list .sheet.sheet-a::before, #song-list .sheet.sheet-b::before,
@@ -372,8 +372,11 @@ code { background: var(--bg); padding: 1px 5px; border-radius: 4px; font-size: 0
 #song-list .sheet.has-bg .song-pick,
 #song-list .sheet.has-bg .row-btn,
 #song-list .sheet.has-bg #select-bar,
-#song-list .sheet.has-bg .sel-check { background: rgba(20, 20, 28, 0.78); }
-#song-list .sheet.has-bg .pl-chip:not(.active) { background: rgba(20, 20, 28, 0.7); }
+#song-list .sheet.has-bg .sel-check { background: rgba(20, 20, 28, 0.66); }
+#song-list .sheet.has-bg .pl-chip:not(.active) { background: rgba(20, 20, 28, 0.55); }
+/* 줄이 반투명해진 만큼 밝은 배경 위에서도 흰 글씨가 또렷하게 */
+#song-list .sheet.has-bg .song-pick,
+#song-list .sheet.has-bg .row-btn { text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75); }
 .sheet-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
 .sheet-head h2 { margin: 0; font-size: 1.05rem; }
 .head-btns { display: flex; gap: 6px; flex: 0 0 auto; }

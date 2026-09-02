@@ -60,7 +60,8 @@ export class Player {
 
   get currentTime() { return this.yt ? this.yt.getCurrentTime() : 0; }
   get duration()    { return this.yt ? this.yt.getDuration() : 0; }
-  get isPlaying()   { return this.yt ? this.yt.getPlayerState() === window.YT.PlayerState.PLAYING : false; }
+  // 플레이어가 아직 덜 붙었을 때 getPlayerState 가 없을 수 있어 방어적으로 처리. 1 = PLAYING
+  get isPlaying()   { return this.yt && typeof this.yt.getPlayerState === "function" ? this.yt.getPlayerState() === 1 : false; }
   get iframeEl()    { return this.yt && this.yt.getIframe ? this.yt.getIframe() : null; }
 }
 

@@ -99,6 +99,8 @@ function updateAutofillBanner() {
 // iframe 은 소리를 위해 뒤에서 계속 재생되고, 이 이미지가 그 위를 덮는다.
 // "⇅" 버튼으로 이미지 ↔ 실제 영상을 오간다. 기본은 이미지.
 // 우선순위: 이 기기에서 올린 이미지(IndexedDB) > 곡에 박힌 repo 경로(song.image)
+//         > 유튜브 썸네일(youtubeId 있으면 자동, 별도 설정 불필요)
+const ytThumb = (id) => `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
 let artUrl = null;                        // 우리가 만든 objectURL(직접 revoke). repo 경로면 null.
 let artToken = 0;
 async function applyArt() {
@@ -118,6 +120,9 @@ async function applyArt() {
     va.classList.add("has-art");
   } else if (song.image) {
     img.src = song.image;                // repo 에 커밋된 이미지 경로 (revoke 안 함)
+    va.classList.add("has-art");
+  } else if (song.youtubeId) {
+    img.src = ytThumb(song.youtubeId);   // 설정된 이미지가 없으면 유튜브 썸네일
     va.classList.add("has-art");
   }
 }
@@ -147,12 +152,18 @@ async function updateSheetBg() {
   const curInList = !!(song && song.id &&
     (await currentList()).some((x) => x.id === song.id));
 
-  // B: 그 곡에 이미지가 있으면 그 이미지
+  // B: 그 곡의 이미지 — 업로드 > repo 경로 > 유튜브 썸네일 순.
+  //    "영상 모드(⇅)" 로 두고 재생 중일 때만 정지 썸네일 대신 살아있는 영상을 쓴다.
   if (curInList) {
     const rec = await getImage(song.id);
     let src = null;
     if (rec && rec.blob) { sheetBgUrl = URL.createObjectURL(rec.blob); src = sheetBgUrl; }
     else if (song.image) src = song.image;
+
+    const preferVideo = song.youtubeId && player.isPlaying &&
+      $("#video-area").classList.contains("show-video");
+    if (!src && song.youtubeId && !preferVideo) src = ytThumb(song.youtubeId);
+
     if (src) {
       sheet.style.setProperty("--sheet-img", `url("${src}")`);
       sheet.classList.add("sheet-b", "has-bg");
@@ -160,7 +171,7 @@ async function updateSheetBg() {
     }
   }
 
-  // 영상: 이미지는 없지만 곡이 목록에 있고 유튜브 영상이 재생 중이면
+  // 영상: 이미지가 하나도 없고(또는 영상 모드) 곡이 목록에 있고 유튜브 영상이 재생 중이면
   // iframe 을 CSS 로만 옮겨 시트 뒤에 깐다(재생 안 끊김).
   if (curInList && song.youtubeId && player.isPlaying) {
     appEl.classList.add("list-video-bg");
