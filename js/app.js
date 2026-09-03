@@ -59,9 +59,11 @@ let queueIndex = -1;
 let selectMode = false;
 const selected = new Set();     // 체크된 song.id
 
-// 플레이리스트 "편집" 모드: 켰을 때만 줄에 ▲▼(순서)·✕(빼기) 버튼과
-// 헤더의 "이름·삭제"가 나온다. 평소엔 목록만 깔끔하게 보이고 탭하면 재생.
-let plEditMode = false;
+// 목록 "편집" 모드: 켰을 때만 줄에 관리 버튼이 나온다.
+//   전체 목록  → ＋(플리 담기)·숨기기
+//   플레이리스트 → ▲▼(순서)·✕(빼기) + 헤더 "이름·삭제"
+// 평소엔 목록만 깔끔하게 보이고 탭하면 재생.
+let editMode = false;
 let plpickSongs = [];           // 플레이리스트 담기 다이얼로그가 지금 다루는 곡들
 
 // ---------- 공통 ----------
@@ -375,15 +377,16 @@ function setFilter(f) {
   listFilter = f;
   saveListFilter();
   exitSelectMode();          // 필터를 바꾸면 선택 모드 해제
-  exitPlEdit();              // 편집 모드도 해제
+  exitEditMode();            // 편집 모드도 해제
   renderChips();
   renderList();
 }
 
-// 플레이리스트 "편집" 모드 끄기
-function exitPlEdit() {
-  plEditMode = false;
-  $("#pl-edit").textContent = "편집";
+// 목록 "편집" 모드 끄기
+function exitEditMode() {
+  editMode = false;
+  $("#list-edit").textContent = "편집";
+  $("#pl-manage").hidden = true;
 }
 
 // --- 칩 바 ---
@@ -413,16 +416,16 @@ async function renderChips() {
   }
   chip("＋ 새 플레이리스트", false, newPlaylist, "chip-add");
 
-  // 제목 + 이름·삭제 버튼은 플리를 보고 있을 때만
   const pl = listFilter.type === "playlist" ? pls.find((p) => p.id === listFilter.id) : null;
   $("#list-title").textContent =
     pl ? pl.name : listFilter.type === "hidden" ? "숨긴 곡" : "저장된 곡";
-  // "편집"은 플리를 볼 때만. "이름·삭제"는 편집 모드일 때만 딸려 나온다.
-  $("#pl-edit").hidden = !pl;
-  $("#pl-edit").textContent = plEditMode ? "편집 완료" : "편집";
-  $("#pl-manage").hidden = !(pl && plEditMode);
-  // 여러 곡 선택은 "전체" 목록에서만 (플리 안에서는 순서·빼기 버튼과 겹친다)
-  $("#select-toggle").hidden = listFilter.type !== "all";
+  // "편집"은 전체·플리 목록에서(숨긴 곡 관리 화면에선 숨김). "이름·삭제"는
+  // 플리를 편집 모드로 볼 때만 딸려 나온다.
+  $("#list-edit").hidden = listFilter.type === "hidden";
+  $("#list-edit").textContent = editMode ? "편집 완료" : "편집";
+  $("#pl-manage").hidden = !(pl && editMode);
+  // 여러 곡 선택은 "전체" 목록에서만, 편집 모드일 땐 겹치니 숨긴다
+  $("#select-toggle").hidden = listFilter.type !== "all" || editMode;
 }
 
 // --- 플레이리스트 만들기/이름 변경/삭제 ---
@@ -546,7 +549,7 @@ async function renderList() {
     li.appendChild(info);
 
     if (inPlaylist) {
-      if (plEditMode) {                       // "편집" 켰을 때만 순서·빼기 버튼
+      if (editMode) {                         // "편집" 켰을 때만 순서·빼기 버튼
         const up = rowBtn("▲", "위로", () => moveInPlaylist(ref, -1));
         const down = rowBtn("▼", "아래로", () => moveInPlaylist(ref, +1));
         up.disabled = i === 0;
@@ -554,11 +557,11 @@ async function renderList() {
         li.append(up, down, rowBtn("✕", "플레이리스트에서 빼기", () => removeFromPlaylist(ref)));
       }
     } else if (inHidden) {
-      li.appendChild(rowBtn("↩", "다시 보이기", () => setHidden(s, false)));
-    } else {
+      li.appendChild(rowBtn("숨김 해제", "다시 보이기", () => setHidden(s, false)));
+    } else if (editMode) {                     // 전체 목록: "편집" 켰을 때만 담기·숨기기
       li.append(
         rowBtn("＋", "플레이리스트에 담기", () => openPlPick(s)),
-        rowBtn("🙈", "목록에서 숨기기", () => setHidden(s, true)),
+        rowBtn("숨기기", "목록에서 숨기기", () => setHidden(s, true)),
       );
     }
     wrap.appendChild(li);
@@ -569,7 +572,7 @@ async function renderList() {
 function openSheet() {
   $("#song-list").hidden = false;
   exitSelectMode();          // 열 때는 항상 일반 모드
-  exitPlEdit();
+  exitEditMode();
   renderChips();
   renderList();
 }
@@ -608,6 +611,7 @@ function wireSelectMode() {
   $("#select-toggle").addEventListener("click", () => {
     selectMode = !selectMode;
     selected.clear();
+    if (selectMode && editMode) exitEditMode();     // 두 모드는 동시에 안 켠다
     $("#song-list").classList.toggle("select-mode", selectMode);
     $("#select-toggle").textContent = selectMode ? "선택 취소" : "선택";
     updateSelectBar();
@@ -1310,10 +1314,12 @@ async function main() {
   $("#close-list").addEventListener("click", closeSheet);
   $("#song-list").addEventListener("click", (e) => { if (e.target.id === "song-list") closeSheet(); });
   $("#pl-manage").addEventListener("click", managePlaylist);
-  $("#pl-edit").addEventListener("click", () => {
-    plEditMode = !plEditMode;
-    $("#pl-edit").textContent = plEditMode ? "편집 완료" : "편집";
-    $("#pl-manage").hidden = !plEditMode;
+  $("#list-edit").addEventListener("click", () => {
+    editMode = !editMode;
+    if (editMode && selectMode) exitSelectMode();   // 두 모드는 동시에 안 켠다
+    $("#list-edit").textContent = editMode ? "편집 완료" : "편집";
+    $("#pl-manage").hidden = !(editMode && listFilter.type === "playlist");
+    $("#select-toggle").hidden = listFilter.type !== "all" || editMode;
     renderList();
   });
   wireEndMode();

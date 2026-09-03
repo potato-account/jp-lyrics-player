@@ -383,7 +383,7 @@ code { background: var(--bg); padding: 1px 5px; border-radius: 4px; font-size: 0
 .sheet-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 10px; }
 .sheet-head h2 { margin: 0; font-size: 1.05rem; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .head-btns { display: flex; gap: 6px; flex: 0 0 auto; }
-#pl-manage, #pl-edit { padding: 4px 10px; font-size: 0.78rem; }
+#pl-manage, #list-edit { padding: 4px 10px; font-size: 0.78rem; }
 #close-list { padding: 4px 12px; }
 #song-list-items { list-style: none; margin: 0; padding: 0; }
 .song-row { display: flex; align-items: stretch; gap: 6px; margin-bottom: 8px; }
@@ -394,7 +394,7 @@ code { background: var(--bg); padding: 1px 5px; border-radius: 4px; font-size: 0
 }
 .song-pick .s-title { font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .song-pick .s-artist { font-size: 0.8rem; color: var(--fg-dim); }
-.row-btn { flex: 0 0 auto; padding: 8px 10px; font-size: 0.9rem; }
+.row-btn { flex: 0 0 auto; padding: 8px 10px; font-size: 0.9rem; white-space: nowrap; }
 .row-btn:disabled { opacity: 0.3; }
 
 /* --- 여러 곡 선택 모드 --- */
