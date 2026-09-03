@@ -4,14 +4,14 @@
     {
       "file": "01_hanauranai.json",
       "bundleId": "vaundy-hanauranai",
-      "version": 6,
+      "version": 7,
       "title": "花占い",
       "artist": "Vaundy"
     },
     {
       "file": "02_koikaze-ni-nosete.json",
       "bundleId": "vaundy-koikaze-ni-nosete",
-      "version": 6,
+      "version": 7,
       "title": "恋風邪にのせて",
       "artist": "Vaundy"
     },
@@ -25,7 +25,7 @@
     {
       "file": "04_mabataki.json",
       "bundleId": "vaundy-mabataki",
-      "version": 6,
+      "version": 7,
       "title": "mabataki",
       "artist": "Vaundy"
     },
@@ -46,7 +46,7 @@
     {
       "file": "07_chainsaw-blood.json",
       "bundleId": "vaundy-chainsaw-blood",
-      "version": 4,
+      "version": 5,
       "title": "CHAINSAW BLOOD",
       "artist": "Vaundy"
     },
@@ -74,14 +74,14 @@
     {
       "file": "11_tokimeki.json",
       "bundleId": "vaundy-tokimeki",
-      "version": 4,
+      "version": 5,
       "title": "Tokimeki",
       "artist": "Vaundy"
     },
     {
       "file": "12_soumatou.json",
       "bundleId": "vaundy-soumatou",
-      "version": 8,
+      "version": 9,
       "title": "走馬灯",
       "artist": "Vaundy"
     },
@@ -102,14 +102,14 @@
     {
       "file": "15_sonna-bitter-na-hanashi.json",
       "bundleId": "vaundy-sonna-bitter-na-hanashi",
-      "version": 9,
+      "version": 10,
       "title": "そんなbitterな話",
       "artist": "Vaundy"
     },
     {
       "file": "16_carnival.json",
       "bundleId": "vaundy-carnival",
-      "version": 11,
+      "version": 12,
       "title": "カーニバル",
       "artist": "Vaundy"
     },
@@ -123,7 +123,7 @@
     {
       "file": "18_sekai-no-himitsu.json",
       "bundleId": "vaundy-sekai-no-himitsu",
-      "version": 10,
+      "version": 11,
       "title": "世界の秘密",
       "artist": "Vaundy"
     },
@@ -137,7 +137,7 @@
     {
       "file": "20_replica.json",
       "bundleId": "vaundy-replica",
-      "version": 4,
+      "version": 5,
       "title": "replica",
       "artist": "Vaundy"
     },
@@ -151,14 +151,14 @@
     {
       "file": "22_nakijizou.json",
       "bundleId": "vaundy-nakijizou",
-      "version": 10,
+      "version": 11,
       "title": "泣き地蔵",
       "artist": "Vaundy"
     },
     {
       "file": "23_okitegami.json",
       "bundleId": "vaundy-okitegami",
-      "version": 3,
+      "version": 4,
       "title": "置き手紙",
       "artist": "Vaundy"
     },
@@ -221,21 +221,21 @@
     {
       "file": "32_yuukai-sink.json",
       "bundleId": "vaundy-yuukai-sink",
-      "version": 4,
+      "version": 5,
       "title": "融解sink",
       "artist": "Vaundy"
     },
     {
       "file": "33_shiawase.json",
       "bundleId": "vaundy-shiawase",
-      "version": 10,
+      "version": 11,
       "title": "しわあわせ",
       "artist": "Vaundy"
     },
     {
       "file": "34_zero.json",
       "bundleId": "vaundy-zero",
-      "version": 4,
+      "version": 5,
       "title": "ZERO",
       "artist": "Vaundy"
     },
@@ -298,7 +298,7 @@
     {
       "file": "43_hitomibore.json",
       "bundleId": "vaundy-hitomibore",
-      "version": 10,
+      "version": 11,
       "title": "瞳惚れ",
       "artist": "Vaundy"
     },
@@ -347,14 +347,14 @@
     {
       "file": "50_odoriko.json",
       "bundleId": "vaundy-odoriko",
-      "version": 11,
+      "version": 12,
       "title": "踊り子",
       "artist": "Vaundy"
     },
     {
       "file": "51_wasuremono.json",
       "bundleId": "vaundy-wasuremono",
-      "version": 11,
+      "version": 12,
       "title": "忘れ物",
       "artist": "Vaundy"
     }
