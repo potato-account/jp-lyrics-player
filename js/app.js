@@ -87,6 +87,7 @@ async function loadSong(next, { autoplay = false } = {}) {
   appEl.classList.toggle("has-song", song.lines.length > 0);
   view.setSong(song);
   view.setEditable(appEl.classList.contains("edit-on"));
+  renderSyncVal();
   updateAutofillBanner();
   applyArt();
   if (!$("#song-list").hidden) updateSheetBg();   // 목록 열어둔 채 곡이 바뀌면 배경도
@@ -283,10 +284,44 @@ function wireControls() {
     else { persist(); if (!player.isPlaying) releaseWakeLock(); }
   });
 
-  // 설정: 일괄 붙여넣기 버튼을 보이거나 숨긴다 (2단 잠금)
+  // 설정: 일괄 붙여넣기 + 전체 싱크를 보이거나 숨긴다 (2단 잠금)
   $("#edit-tools").addEventListener("click", () => {
     const open = appEl.classList.toggle("edit-tools-on");
     $("#edit-tools").textContent = open ? "설정 닫기" : "설정";
+    if (open) renderSyncVal();
+  });
+
+  wireSyncBar();
+}
+
+// ---------- 전체 싱크(offset) — 편집 모드 "설정" 영역 ----------
+// 곡의 모든 줄에 일괄로 더해지는 보정치(초). 정보 다이얼로그의 "싱크 보정"과 같은 값.
+function renderSyncVal() {
+  const v = song ? (song.offset || 0) : 0;
+  const r = Math.round(v * 10) / 10;
+  $("#sync-val").textContent = (r > 0 ? "+" : "") + r.toFixed(1) + "s";
+}
+function wireSyncBar() {
+  let saveTimer = null;
+  const bump = (d) => {
+    if (!song) return;
+    song.offset = Math.round(((song.offset || 0) + d) * 10) / 10;
+    renderSyncVal();
+    view.update(player.currentTime);            // 재생 중이면 즉시 반영
+    clearTimeout(saveTimer);
+    saveTimer = setTimeout(persist, 400);       // 연타 시 마지막 한 번만 저장
+  };
+  $("#sync-mm").addEventListener("click", () => bump(-0.5));
+  $("#sync-m").addEventListener("click", () => bump(-0.1));
+  $("#sync-p").addEventListener("click", () => bump(0.1));
+  $("#sync-pp").addEventListener("click", () => bump(0.5));
+  $("#sync-reset").addEventListener("click", () => {
+    if (!song || !(song.offset || 0)) return;
+    song.offset = 0;
+    renderSyncVal();
+    view.update(player.currentTime);
+    clearTimeout(saveTimer);
+    saveTimer = setTimeout(persist, 400);
   });
 }
 
@@ -925,6 +960,7 @@ function wireMetaDialog() {
     song.artist = $("#m-artist").value.trim();
     song.youtubeId = newId;
     song.offset = parseFloat($("#m-offset").value) || 0;
+    renderSyncVal();                       // 편집 모드 "전체 싱크" 표시도 갱신
     await persist();
     if (videoChanged && newId) await player.load(newId, { autoplay: true });
     dlg.close();

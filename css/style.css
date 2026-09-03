@@ -291,17 +291,26 @@ code { background: var(--bg); padding: 1px 5px; border-radius: 4px; font-size: 0
 .dlg-head h2 { margin: 0; font-size: 1.1rem; }
 .dlg-x { padding: 4px 10px; }
 
-/* --- 편집 바 (발음/번역 일괄) --- */
-#edit-bar { display: none; gap: 8px; position: sticky; top: 0; z-index: 3;
+/* --- 편집 바 (발음/번역 일괄 + 전체 싱크) --- */
+#edit-bar { display: none; flex-direction: column; gap: 8px; position: sticky; top: 0; z-index: 3;
   padding: 8px 0 10px; background: var(--bg); }
 #app.edit-on.has-song #edit-bar { display: flex; }
+#edit-bar .eb-row { display: flex; gap: 8px; align-items: center; }
 #edit-bar button { flex: 1; font-size: 0.85rem; padding: 9px 6px; }
 
-/* 2단 잠금: 설정을 눌러야 일괄 붙여넣기 버튼이 나온다 */
-#edit-bar #paste-pron, #edit-bar #paste-trans { display: none; }
+/* 2단 잠금: 설정을 눌러야 일괄 붙여넣기 + 전체 싱크가 나온다 */
+#edit-bar #paste-pron, #edit-bar #paste-trans, #edit-bar #edit-sync { display: none; }
 #app.edit-tools-on #edit-bar #paste-pron,
 #app.edit-tools-on #edit-bar #paste-trans { display: block; }
+#app.edit-tools-on #edit-bar #edit-sync { display: flex; }
 #app.edit-tools-on #edit-tools { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+/* 전체 싱크(offset) 줄 */
+#edit-sync .eb-sync-label { flex: 0 0 auto; font-size: 0.8rem; color: var(--fg-dim); }
+#edit-sync button { flex: 1 1 0; min-width: 0; font-size: 0.8rem; padding: 8px 3px; font-variant-numeric: tabular-nums; }
+#edit-sync #sync-val { flex: 0 0 auto; min-width: 44px; text-align: center; font-size: 0.85rem;
+  font-variant-numeric: tabular-nums; color: var(--fg); }
+#edit-sync #sync-reset { flex: 0 0 auto; min-width: 32px; }
 
 /* --- 자동 채우기 배너 --- */
 #autofill-banner { display: none; align-items: center; gap: 10px;
