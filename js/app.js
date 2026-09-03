@@ -149,12 +149,15 @@ async function updateSheetBg() {
   sheet.style.removeProperty("--sheet-img");
   appEl.classList.remove("list-video-bg");
 
-  const curInList = !!(song && song.id &&
-    (await currentList()).some((x) => x.id === song.id));
+  // 지금 곡이 있으면(상단 이미지와 같은 기준으로) 그 곡 배경을 쓴다.
+  // 예전엔 "그 곡이 현재 목록 필터에도 보여야" 배경을 깔았는데(curInList),
+  // 필터가 플리/숨김이거나 ref 매칭이 어긋나면 상단엔 썸네일이 떠도
+  // 목록 시트만 검정으로 남는 버그가 있었다. applyArt 처럼 게이트를 없앤다.
+  const haveSong = !!(song && song.id);
 
   // B: 그 곡의 이미지 — 업로드 > repo 경로 > 유튜브 썸네일 순.
   //    "영상 모드(⇅)" 로 두고 재생 중일 때만 정지 썸네일 대신 살아있는 영상을 쓴다.
-  if (curInList) {
+  if (haveSong) {
     const rec = await getImage(song.id);
     let src = null;
     if (rec && rec.blob) { sheetBgUrl = URL.createObjectURL(rec.blob); src = sheetBgUrl; }
@@ -171,9 +174,9 @@ async function updateSheetBg() {
     }
   }
 
-  // 영상: 이미지가 하나도 없고(또는 영상 모드) 곡이 목록에 있고 유튜브 영상이 재생 중이면
-  // iframe 을 CSS 로만 옮겨 시트 뒤에 깐다(재생 안 끊김).
-  if (curInList && song.youtubeId && player.isPlaying) {
+  // 영상: 이미지가 하나도 없고(또는 영상 모드) 유튜브 영상이 재생 중이면
+  // iframe 을 CSS 로만 옮겨 시트 뒤에 깐다(재생 안 끊김). closeSheet 에서 원위치.
+  if (haveSong && song.youtubeId && player.isPlaying) {
     appEl.classList.add("list-video-bg");
     sheet.classList.add("sheet-v", "has-bg");
     return;
