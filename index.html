@@ -42,21 +42,19 @@
       </div>
 
       <div id="edit-bar">
-        <div class="eb-row">
-          <button id="edit-tools" type="button">설정</button>
+        <button id="edit-tools" type="button">설정</button>
+        <div id="edit-tools-panel">
           <button id="paste-pron" type="button">발음 일괄 붙여넣기</button>
           <button id="paste-trans" type="button">번역 일괄 붙여넣기</button>
-        </div>
-        <div class="eb-row" id="edit-sync">
-          <span class="eb-sync-label">전체 싱크</span>
-          <button id="sync-mm" type="button">−0.5</button>
-          <button id="sync-m" type="button">−0.1</button>
-          <span id="sync-val">0.0s</span>
-          <button id="sync-p" type="button">+0.1</button>
-          <button id="sync-pp" type="button">+0.5</button>
-          <button id="sync-reset" type="button" title="0으로">0</button>
-        </div>
-        <div class="eb-row" id="edit-drift-row">
+          <button id="sync-toggle" type="button">전체 싱크</button>
+          <div id="edit-sync">
+            <button id="sync-mm" type="button">−0.5</button>
+            <button id="sync-m" type="button">−0.1</button>
+            <span id="sync-val">0.0s</span>
+            <button id="sync-p" type="button">+0.1</button>
+            <button id="sync-pp" type="button">+0.5</button>
+            <button id="sync-reset" type="button" title="0으로">0</button>
+          </div>
           <button id="drift-start" type="button">드리프트 보정 (2점)</button>
         </div>
       </div>
@@ -233,13 +231,15 @@
     </menu>
   </dialog>
 
-  <!-- ===== 줄 수정 (발음 · 번역 · 시간 한 번에) ===== -->
+  <!-- ===== 줄 수정 (원문 · 발음 · 번역 · 시간 + 줄 삽입/삭제) ===== -->
   <dialog id="line-dialog">
     <div class="dlg-head">
-      <h2>줄 수정</h2>
+      <h2 id="line-dlg-title">줄 수정</h2>
       <button class="dlg-x" data-close="line-dialog" type="button" aria-label="닫기">✕</button>
     </div>
-    <p id="line-orig" class="hint small"></p>
+    <label>원문
+      <input id="line-orig" type="text" autocomplete="off" />
+    </label>
     <label>발음
       <input id="line-pron" type="text" autocomplete="off" />
     </label>
@@ -252,6 +252,11 @@
         <button type="button" id="line-time-now" class="offset-btn">▶ 지금</button>
       </span>
     </label>
+    <menu class="line-struct">
+      <button id="line-insert-above" type="button">↑ 위에 새 줄</button>
+      <button id="line-insert-below" type="button">↓ 아래 새 줄</button>
+      <button id="line-delete" type="button" class="danger">이 줄 삭제</button>
+    </menu>
     <menu>
       <button id="line-save" type="button">저장</button>
     </menu>

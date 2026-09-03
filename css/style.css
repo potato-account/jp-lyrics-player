@@ -262,6 +262,10 @@ dialog menu button { flex: 0 0 auto; }
 #m-save, #d-add, #q-run, #bulk-apply { background: var(--accent); border-color: var(--accent); color: #fff; }
 /* 줄 수정 다이얼로그의 "저장"은 줄의 "수정" 버튼과 같은 서식 (흰 테두리 + 회색 배경) */
 #line-save { background: #3a3a42; border-color: #e8e8ea; color: var(--fg); }
+/* 줄 삽입/삭제 행 */
+menu.line-struct { justify-content: stretch; margin-top: 12px; }
+menu.line-struct button { flex: 1 1 0; min-width: 0; font-size: 0.8rem; padding: 9px 4px; }
+menu.line-struct button:disabled { opacity: 0.4; }
 .danger { background: #3a1620; border-color: #7a2740; color: #ff9db0; }
 code { background: var(--bg); padding: 1px 5px; border-radius: 4px; font-size: 0.85em; }
 
@@ -291,30 +295,26 @@ code { background: var(--bg); padding: 1px 5px; border-radius: 4px; font-size: 0
 .dlg-head h2 { margin: 0; font-size: 1.1rem; }
 .dlg-x { padding: 4px 10px; }
 
-/* --- 편집 바 (발음/번역 일괄 + 전체 싱크) --- */
+/* --- 편집 바: 설정을 누르면 세로 목록으로 펼쳐진다 --- */
 #edit-bar { display: none; flex-direction: column; gap: 8px; position: sticky; top: 0; z-index: 3;
   padding: 8px 0 10px; background: var(--bg); }
 #app.edit-on.has-song #edit-bar { display: flex; }
-#edit-bar .eb-row { display: flex; gap: 8px; align-items: center; }
-#edit-bar button { flex: 1; font-size: 0.85rem; padding: 9px 6px; }
+#edit-bar > button,
+#edit-tools-panel > button { width: 100%; font-size: 0.85rem; padding: 10px 8px; }
 
-/* 2단 잠금: 설정을 눌러야 일괄 붙여넣기 + 전체 싱크가 나온다 */
-#edit-bar #paste-pron, #edit-bar #paste-trans, #edit-bar #edit-sync { display: none; }
-#app.edit-tools-on #edit-bar #paste-pron,
-#app.edit-tools-on #edit-bar #paste-trans { display: block; }
-#app.edit-tools-on #edit-bar #edit-sync { display: flex; }
+/* 2단 잠금: 설정을 눌러야 목록이 나온다 */
+#edit-tools-panel { display: none; flex-direction: column; gap: 8px; }
+#app.edit-tools-on #edit-bar #edit-tools-panel { display: flex; }
 #app.edit-tools-on #edit-tools { background: var(--accent); border-color: var(--accent); color: #fff; }
 
-/* 전체 싱크(offset) 줄 */
-#edit-sync .eb-sync-label { flex: 0 0 auto; font-size: 0.8rem; color: var(--fg-dim); }
+/* 3단 잠금: "전체 싱크" 버튼을 눌러야 −0.5~0 스텝퍼가 나온다 */
+#edit-sync { display: none; gap: 6px; align-items: center; }
+#app.sync-open #edit-bar #edit-sync { display: flex; }
+#app.sync-open #sync-toggle { background: var(--accent); border-color: var(--accent); color: #fff; }
 #edit-sync button { flex: 1 1 0; min-width: 0; font-size: 0.8rem; padding: 8px 3px; font-variant-numeric: tabular-nums; }
 #edit-sync #sync-val { flex: 0 0 auto; min-width: 44px; text-align: center; font-size: 0.85rem;
   font-variant-numeric: tabular-nums; color: var(--fg); }
 #edit-sync #sync-reset { flex: 0 0 auto; min-width: 32px; }
-
-/* 드리프트 보정(2점) */
-#edit-bar #edit-drift-row { display: none; }
-#app.edit-tools-on #edit-bar #edit-drift-row { display: flex; }
 
 #drift-bar { display: none; position: sticky; top: 0; z-index: 4;
   margin-bottom: 8px; padding: 10px 12px;

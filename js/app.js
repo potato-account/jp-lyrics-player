@@ -276,8 +276,8 @@ function wireControls() {
   $("#edit-mode").addEventListener("click", () => {
     const on = appEl.classList.toggle("edit-on");
     $("#edit-mode").textContent = on ? "편집 끝" : "편집";
-    // 편집을 끌 때(그리고 켤 때도) 설정은 항상 접힌 상태로 초기화
-    appEl.classList.remove("edit-tools-on");
+    // 편집을 끌 때(그리고 켤 때도) 설정·전체싱크는 항상 접힌 상태로 초기화
+    appEl.classList.remove("edit-tools-on", "sync-open");
     $("#edit-tools").textContent = "설정";
     driftExit();                       // 드리프트 보정 진행 중이었으면 취소
     view.setEditable(on);
@@ -285,10 +285,16 @@ function wireControls() {
     else { persist(); if (!player.isPlaying) releaseWakeLock(); }
   });
 
-  // 설정: 일괄 붙여넣기 + 전체 싱크를 보이거나 숨긴다 (2단 잠금)
+  // 설정: 목록(붙여넣기·전체싱크·드리프트)을 펼치거나 접는다 (2단 잠금)
   $("#edit-tools").addEventListener("click", () => {
     const open = appEl.classList.toggle("edit-tools-on");
     $("#edit-tools").textContent = open ? "설정 닫기" : "설정";
+    if (!open) appEl.classList.remove("sync-open");   // 설정 접으면 전체싱크도 접힘
+  });
+
+  // 전체 싱크: 눌러야 −0.5~0 스텝퍼가 나온다 (3단 잠금)
+  $("#sync-toggle").addEventListener("click", () => {
+    const open = appEl.classList.toggle("sync-open");
     if (open) renderSyncVal();
   });
 
@@ -434,17 +440,25 @@ function parseTime(str) {
   return isFinite(n) ? n : null;
 }
 
-// 줄 하나의 발음·번역·시간을 한 다이얼로그에서 수정
+// 줄 하나의 원문·발음·번역·시간을 한 다이얼로그에서 수정 + 줄 삽입/삭제(낱개 편집)
 let lineDialogIdx = -1;
 function openLineDialog(i) {
-  if (!song) return;
+  if (!song || !song.lines[i]) return;
   lineDialogIdx = i;
   const L = song.lines[i];
-  $("#line-orig").textContent = L.orig || "";
+  $("#line-dlg-title").textContent = `줄 수정 (${i + 1}/${song.lines.length})`;
+  $("#line-orig").value = L.orig || "";
   $("#line-pron").value = L.pron || "";
   $("#line-trans").value = L.trans || "";
   $("#line-time").value = fmtTime(L.t);
-  $("#line-dialog").showModal();
+  $("#line-delete").disabled = song.lines.length <= 1;
+  const dlg = $("#line-dialog");
+  if (!dlg.open) dlg.showModal();
+}
+// 편집 모드면 목록을 다시 그린다(줄 수/원문이 바뀐 경우)
+function rerenderLines() {
+  view.setSong(song);
+  view.setEditable(appEl.classList.contains("edit-on"));
 }
 function wireLineDialog() {
   const dlg = $("#line-dialog");
@@ -454,16 +468,44 @@ function wireLineDialog() {
     $("#line-time").value = fmtTime(+(player.currentTime - (song.offset || 0)).toFixed(2));
   });
   $("#line-save").addEventListener("click", () => {
-    if (lineDialogIdx < 0 || !song) return dlg.close();
+    if (lineDialogIdx < 0 || !song || !song.lines[lineDialogIdx]) return dlg.close();
     const L = song.lines[lineDialogIdx];
+    const orig = $("#line-orig").value.trim();
     const pron = $("#line-pron").value.trim();
     const trans = $("#line-trans").value.trim();
+    const origChanged = orig !== (L.orig || "");
+    L.orig = orig;
     L.pron = pron;   L.pronSrc = pron ? "user" : undefined;   // 내가 직접 = 최우선
     L.trans = trans; L.transSrc = trans ? "user" : undefined;
     L.t = parseTime($("#line-time").value);                   // 빈칸이면 null(=타임 지움)
-    view.refreshRow(lineDialogIdx);
+    if (origChanged) rerenderLines();
+    else view.refreshRow(lineDialogIdx);
     updateAutofillBanner();
     persist();
+    dlg.close();
+  });
+
+  // 낱개: 빈 줄 삽입 후 그 줄을 바로 편집
+  const insertAt = (at) => {
+    if (lineDialogIdx < 0 || !song) return;
+    song.lines.splice(at, 0, { t: null, orig: "", pron: "", trans: "" });
+    persist();
+    rerenderLines();
+    updateAutofillBanner();
+    dlg.close();
+    openLineDialog(at);
+  };
+  $("#line-insert-above").addEventListener("click", () => insertAt(lineDialogIdx));
+  $("#line-insert-below").addEventListener("click", () => insertAt(lineDialogIdx + 1));
+
+  $("#line-delete").addEventListener("click", () => {
+    if (lineDialogIdx < 0 || !song) return;
+    if (song.lines.length <= 1) { alert("마지막 한 줄은 지울 수 없어요."); return; }
+    if (!confirm("이 줄을 삭제할까요?")) return;
+    song.lines.splice(lineDialogIdx, 1);
+    persist();
+    rerenderLines();
+    updateAutofillBanner();
     dlg.close();
   });
 }
