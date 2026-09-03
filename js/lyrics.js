@@ -39,13 +39,11 @@ function splitCols(s) {
 
 // ================= 렌더링 & 싱크 =================
 export class LyricsView {
-  constructor(listEl, { onSeekToLine, onSetTime, onEditLine, onSaveLine }) {
+  constructor(listEl, { onSeekToLine, onEditRow }) {
     this.listEl = listEl;
     this.scroller = listEl.parentElement; // #lyrics
     this.onSeekToLine = onSeekToLine;
-    this.onSetTime = onSetTime;
-    this.onEditLine = onEditLine || (() => {});
-    this.onSaveLine = onSaveLine || (() => {});
+    this.onEditRow = onEditRow || (() => {}); // 줄 하나의 발음·번역·시간을 한 다이얼로그에서 수정
     this.song = null;
     this.rows = [];
     this.activeIdx = -1;
@@ -66,10 +64,8 @@ export class LyricsView {
 
   setEditable(on) {
     this.editable = on;
-    for (const { pronEl, transEl } of this.rows) {
-      pronEl.contentEditable = on ? "true" : "false";
-      transEl.contentEditable = on ? "true" : "false";
-    }
+    // 발음/번역은 이제 줄에서 직접 타이핑하지 않고 "수정" 다이얼로그에서만 고친다.
+    // 편집 모드 표시는 #app.edit-on CSS 가 담당하므로 여기서는 플래그만 갱신.
   }
 
   render() {
@@ -86,43 +82,22 @@ export class LyricsView {
       const origEl = el("div", "orig", line.orig || " ");
       const pronEl = el("div", "pron", line.pron || "");
       const transEl = el("div", "trans", line.trans || "");
-      body.append(origEl, pronEl, transEl);
+      // 편집 모드에서만 보이는 시간 표시 (수정은 다이얼로그에서)
+      const tEl = el("div", "line-t", line.t != null ? fmtClock(line.t) : "타임 없음");
+      body.append(origEl, pronEl, transEl, tEl);
       li.appendChild(body);
 
-      // 편집: 칸 직접 수정
-      for (const [field, node] of [["pron", pronEl], ["trans", transEl]]) {
-        node.contentEditable = this.editable ? "true" : "false";
-        node.addEventListener("blur", () => {
-          const v = node.textContent.trim();
-          if (v !== (this.song.lines[i][field] || "")) this.onEditLine(i, field, v);
-        });
-        node.addEventListener("keydown", (e) => {
-          if (e.key === "Enter") { e.preventDefault(); node.blur(); }
-        });
-      }
-
-      // 편집 버튼: [타임] [저장]
+      // 편집 버튼: [수정] 하나. 누르면 발음·번역·시간을 한 다이얼로그에서 편집.
       const btns = document.createElement("div");
       btns.className = "line-btns";
 
-      const setBtn = document.createElement("button");
-      setBtn.type = "button";
-      setBtn.className = "set-time" + (line.t != null ? " has-time" : "");
-      setBtn.textContent = line.t != null ? fmtClock(line.t) : "타임";
-      setBtn.addEventListener("click", (e) => { e.stopPropagation(); this.onSetTime(i); });
+      const editBtn = document.createElement("button");
+      editBtn.type = "button";
+      editBtn.className = "edit-line" + (line.t != null ? " has-time" : "");
+      editBtn.textContent = "수정";
+      editBtn.addEventListener("click", (e) => { e.stopPropagation(); this.onEditRow(i); });
 
-      const saveBtn = document.createElement("button");
-      saveBtn.type = "button";
-      saveBtn.className = "save-line";
-      saveBtn.textContent = "저장";
-      saveBtn.addEventListener("click", (e) => {
-        e.stopPropagation();
-        this.onSaveLine(i, pronEl.textContent.trim(), transEl.textContent.trim());
-        saveBtn.textContent = "✓";
-        setTimeout(() => { saveBtn.textContent = "저장"; }, 900);
-      });
-
-      btns.append(setBtn, saveBtn);
+      btns.append(editBtn);
       li.appendChild(btns);
 
       // 줄 탭 → 그 줄로 이동 (편집 모드에서는 무시)
@@ -133,7 +108,7 @@ export class LyricsView {
       });
 
       this.listEl.appendChild(li);
-      this.rows.push({ li, setBtn, saveBtn, pronEl, transEl });
+      this.rows.push({ li, editBtn, tEl, pronEl, transEl });
     });
   }
 
@@ -141,10 +116,10 @@ export class LyricsView {
     const line = this.song.lines[i];
     const r = this.rows[i];
     if (!r) return;
-    r.setBtn.textContent = line.t != null ? fmtClock(line.t) : "타임";
-    r.setBtn.classList.toggle("has-time", line.t != null);
-    if (document.activeElement !== r.pronEl) r.pronEl.textContent = line.pron || "";
-    if (document.activeElement !== r.transEl) r.transEl.textContent = line.trans || "";
+    r.pronEl.textContent = line.pron || "";
+    r.transEl.textContent = line.trans || "";
+    r.tEl.textContent = line.t != null ? fmtClock(line.t) : "타임 없음";
+    r.editBtn.classList.toggle("has-time", line.t != null);
   }
 
   update(now) {

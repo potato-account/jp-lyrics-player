@@ -143,6 +143,21 @@ button:active { transform: scale(0.97); }
 .lyric-line .pron:empty,
 .lyric-line .trans:empty { display: none; }
 
+/* 편집 모드에서만 보이는 시간 표시 */
+.lyric-line .line-t { display: none; }
+#app.edit-on .lyric-line .line-t {
+  display: block;
+  margin-top: 5px;
+  font-size: 0.8rem;
+  color: var(--fg-dimmer);
+  font-variant-numeric: tabular-nums;
+}
+/* 편집 모드에서는 비어 있는 발음/번역도 자리를 보여줘서 "수정"으로 채우게 */
+#app.edit-on .lyric-line .pron:empty,
+#app.edit-on .lyric-line .trans:empty { display: block; }
+#app.edit-on .lyric-line .pron:empty::before { content: "발음 없음"; color: var(--fg-dimmer); }
+#app.edit-on .lyric-line .trans:empty::before { content: "번역 없음"; color: var(--fg-dimmer); }
+
 .lyric-line.is-active {
   opacity: 1;
   background: var(--line-active-bg);
@@ -165,18 +180,17 @@ button:active { transform: scale(0.97); }
 .lyric-line .line-btns { display: none; }
 #app.edit-on .lyric-line .line-btns {
   display: flex;
-  flex-direction: column;
-  gap: 4px;
+  align-items: center;
 }
 .lyric-line .line-btns button {
   white-space: nowrap;
-  font-size: 0.78rem;
-  padding: 6px 8px;
-  min-width: 52px;
+  font-size: 0.82rem;
+  padding: 10px 14px;
+  min-width: 56px;
 }
-.lyric-line .set-time { background: var(--accent-soft); border-color: var(--accent); font-variant-numeric: tabular-nums; }
-.lyric-line .set-time.has-time { background: var(--bg-soft); border-color: var(--border); }
-.lyric-line .save-line { background: var(--bg-soft); }
+/* 줄마다 하나뿐인 "수정" 버튼. 시간이 있는 줄은 살짝 강조. */
+.lyric-line .edit-line { background: var(--bg-soft); }
+.lyric-line .edit-line.has-time { background: var(--accent-soft); border-color: var(--accent); }
 
 /* --- 하단 컨트롤 --- */
 #controls {
@@ -246,7 +260,7 @@ dialog textarea { resize: vertical; font-size: 0.9rem; }
 dialog summary { cursor: pointer; font-size: 0.85rem; color: var(--fg); margin: 6px 0; }
 dialog menu { display: flex; gap: 8px; justify-content: flex-end; margin: 14px 0 0; padding: 0; flex-wrap: wrap; }
 dialog menu button { flex: 0 0 auto; }
-#m-save, #d-add, #q-run, #bulk-apply { background: var(--accent); border-color: var(--accent); color: #fff; }
+#m-save, #d-add, #q-run, #bulk-apply, #line-save { background: var(--accent); border-color: var(--accent); color: #fff; }
 .danger { background: #3a1620; border-color: #7a2740; color: #ff9db0; }
 code { background: var(--bg); padding: 1px 5px; border-radius: 4px; font-size: 0.85em; }
 

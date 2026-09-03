@@ -318,51 +318,38 @@ function parseTime(str) {
   return isFinite(n) ? n : null;
 }
 
-let timeDialogIdx = -1;
-function openTimeDialog(i) {
+// 줄 하나의 발음·번역·시간을 한 다이얼로그에서 수정
+let lineDialogIdx = -1;
+function openLineDialog(i) {
   if (!song) return;
-  timeDialogIdx = i;
-  $("#time-line-orig").textContent = song.lines[i].orig || "";
-  $("#time-value").value = fmtTime(song.lines[i].t);
-  $("#time-dialog").showModal();
-  $("#time-value").focus();
+  lineDialogIdx = i;
+  const L = song.lines[i];
+  $("#line-orig").textContent = L.orig || "";
+  $("#line-pron").value = L.pron || "";
+  $("#line-trans").value = L.trans || "";
+  $("#line-time").value = fmtTime(L.t);
+  $("#line-dialog").showModal();
 }
-function wireTimeDialog() {
-  const dlg = $("#time-dialog");
+function wireLineDialog() {
+  const dlg = $("#line-dialog");
   dlg.querySelectorAll("[data-close]").forEach((b) => b.addEventListener("click", () => dlg.close()));
-  // 현재 재생 위치 담기
-  $("#time-now").addEventListener("click", () => {
-    $("#time-value").value = fmtTime(+(player.currentTime - (song.offset || 0)).toFixed(2));
+  // 시간 칸에 현재 재생 위치 담기
+  $("#line-time-now").addEventListener("click", () => {
+    $("#line-time").value = fmtTime(+(player.currentTime - (song.offset || 0)).toFixed(2));
   });
-  $("#time-ok").addEventListener("click", () => {
-    if (timeDialogIdx < 0 || !song) return dlg.close();
-    song.lines[timeDialogIdx].t = parseTime($("#time-value").value); // 빈칸이면 null(=타임 지움)
-    view.refreshRow(timeDialogIdx);
+  $("#line-save").addEventListener("click", () => {
+    if (lineDialogIdx < 0 || !song) return dlg.close();
+    const L = song.lines[lineDialogIdx];
+    const pron = $("#line-pron").value.trim();
+    const trans = $("#line-trans").value.trim();
+    L.pron = pron;   L.pronSrc = pron ? "user" : undefined;   // 내가 직접 = 최우선
+    L.trans = trans; L.transSrc = trans ? "user" : undefined;
+    L.t = parseTime($("#line-time").value);                   // 빈칸이면 null(=타임 지움)
+    view.refreshRow(lineDialogIdx);
+    updateAutofillBanner();
     persist();
     dlg.close();
   });
-}
-
-// 타임 버튼 클릭 → 다이얼로그 (예전처럼 즉시 0:00 으로 안 감)
-function setLineTime(i) { openTimeDialog(i); }
-
-function editLine(i, field, value) {
-  if (!song) return;
-  song.lines[i][field] = value;
-  song.lines[i][field + "Src"] = value ? "user" : undefined; // 내가 직접 = 최우선
-  updateAutofillBanner();
-  persist();
-}
-
-// 줄 저장 버튼: 그 줄의 현재 발음/번역(DOM)을 확정 저장
-function saveLine(i, pron, trans) {
-  if (!song) return;
-  song.lines[i].pron = pron;
-  song.lines[i].pronSrc = pron ? "user" : undefined;
-  song.lines[i].trans = trans;
-  song.lines[i].transSrc = trans ? "user" : undefined;
-  updateAutofillBanner();
-  persist();
 }
 
 // ---------- 곡 목록 시트 ----------
@@ -1306,16 +1293,14 @@ if ("serviceWorker" in navigator) {
 async function main() {
   view = new LyricsView($("#lyrics-list"), {
     onSeekToLine: (t) => player.seek(t),
-    onSetTime: setLineTime,
-    onEditLine: editLine,
-    onSaveLine: saveLine,
+    onEditRow: openLineDialog,
   });
   wireControls();
   wireAddDialog();
   wireMetaDialog();
   wireBulk();
   wireAutofill();
-  wireTimeDialog();
+  wireLineDialog();
   wirePlPick();
   wireSelectMode();
   wireBackup();

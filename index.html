@@ -210,19 +210,27 @@
     </menu>
   </dialog>
 
-  <!-- ===== 줄 타임 편집 ===== -->
-  <dialog id="time-dialog">
+  <!-- ===== 줄 수정 (발음 · 번역 · 시간 한 번에) ===== -->
+  <dialog id="line-dialog">
     <div class="dlg-head">
-      <h2>타임 편집</h2>
-      <button class="dlg-x" data-close="time-dialog" type="button" aria-label="닫기">✕</button>
+      <h2>줄 수정</h2>
+      <button class="dlg-x" data-close="line-dialog" type="button" aria-label="닫기">✕</button>
     </div>
-    <p id="time-line-orig" class="hint small"></p>
-    <label>시각 (분:초 또는 초). 비우면 타임 삭제.
-      <input id="time-value" type="text" inputmode="decimal" placeholder="1:23.45" autocomplete="off" />
+    <p id="line-orig" class="hint small"></p>
+    <label>발음
+      <input id="line-pron" type="text" autocomplete="off" />
+    </label>
+    <label>번역
+      <input id="line-trans" type="text" autocomplete="off" />
+    </label>
+    <label>시간 (분:초 또는 초). 비우면 타임 삭제.
+      <span class="offset-row">
+        <input id="line-time" type="text" inputmode="decimal" placeholder="1:23.45" autocomplete="off" />
+        <button type="button" id="line-time-now" class="offset-btn">▶ 지금</button>
+      </span>
     </label>
     <menu>
-      <button id="time-now" type="button">▶ 현재 재생 위치</button>
-      <button id="time-ok" type="button">확인</button>
+      <button id="line-save" type="button">저장</button>
     </menu>
   </dialog>
 
