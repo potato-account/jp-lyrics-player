@@ -282,6 +282,12 @@ code { background: var(--bg); padding: 1px 5px; border-radius: 4px; font-size: 0
 #app.edit-on.has-song #edit-bar { display: flex; }
 #edit-bar button { flex: 1; font-size: 0.85rem; padding: 9px 6px; }
 
+/* 2단 잠금: 설정을 눌러야 일괄 붙여넣기 버튼이 나온다 */
+#edit-bar #paste-pron, #edit-bar #paste-trans { display: none; }
+#app.edit-tools-on #edit-bar #paste-pron,
+#app.edit-tools-on #edit-bar #paste-trans { display: block; }
+#app.edit-tools-on #edit-tools { background: var(--accent); border-color: var(--accent); color: #fff; }
+
 /* --- 자동 채우기 배너 --- */
 #autofill-banner { display: none; align-items: center; gap: 10px;
   position: sticky; top: 0; z-index: 3;

@@ -286,9 +286,18 @@ function wireControls() {
   $("#edit-mode").addEventListener("click", () => {
     const on = appEl.classList.toggle("edit-on");
     $("#edit-mode").textContent = on ? "편집 끝" : "편집";
+    // 편집을 끌 때(그리고 켤 때도) 설정은 항상 접힌 상태로 초기화
+    appEl.classList.remove("edit-tools-on");
+    $("#edit-tools").textContent = "설정";
     view.setEditable(on);
     if (on) acquireWakeLock();
     else { persist(); if (!player.isPlaying) releaseWakeLock(); }
+  });
+
+  // 설정: 일괄 붙여넣기 버튼을 보이거나 숨긴다 (2단 잠금)
+  $("#edit-tools").addEventListener("click", () => {
+    const open = appEl.classList.toggle("edit-tools-on");
+    $("#edit-tools").textContent = open ? "설정 닫기" : "설정";
   });
 }
 
