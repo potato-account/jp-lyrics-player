@@ -350,9 +350,10 @@ code { background: var(--bg); padding: 1px 5px; border-radius: 4px; font-size: 0
 }
 
 /* 목록 시트 배경.
-   sheet-b = 지금 곡이 이 목록에 있고 이미지가 있을 때 그 이미지(블러+어둡게).
+   sheet-b = 지금 곡의 이미지(없으면 유튜브 썸네일)를 블러+어둡게.
    sheet-a = 그 외엔 고정 배경 img/list-bg.jpg (JS 가 실제로 있을 때만 클래스 부여).
-   둘 다 아니면 그냥 --bg-soft 단색(지금과 동일). */
+   둘 다 아니면 그냥 --bg-soft 단색.
+   MV(유튜브 영상)는 목록을 열어도 배경으로 끌어오지 않고 원래 자리에서 재생. */
 #song-list .sheet::before {
   content: ""; position: absolute; inset: -24px; z-index: 0;
   background-size: cover; background-position: center;
@@ -372,26 +373,7 @@ code { background: var(--bg); padding: 1px 5px; border-radius: 4px; font-size: 0
 #song-list .sheet.sheet-a::before { background-image: url("../img/list-bg.jpg"); }
 #song-list .sheet.sheet-b::before { background-image: var(--sheet-img); }
 
-/* 영상 tier: 재생 중인 iframe 을 CSS 로만 화면 전체로 옮겨 시트 뒤에 깐다.
-   DOM 위치는 안 바꾸므로 재생이 끊기지 않는다. */
-#app.list-video-bg #video-area {
-  position: fixed;
-  inset: 0;
-  height: auto;
-  z-index: 15;                       /* #song-list(20) 아래 */
-  border-bottom: 0;
-}
-#app.list-video-bg #video-area #art-layer,
-#app.list-video-bg #video-area #toggle-video,
-#app.list-video-bg #video-area #go-fullscreen { display: none; }
-/* 영상 위에 얹는 어두운 막(글씨 가독성). 시트 자체도 반투명으로. */
-#song-list .sheet.sheet-v { background: rgba(16, 16, 29, 0.72); }
-#song-list .sheet.sheet-v::after {
-  content: ""; position: absolute; inset: 0; z-index: 1;
-  background: rgba(11, 11, 15, 0.5); display: block;
-}
-
-/* 배경이 있을 때(B·영상·A) 목록 안 요소들도 반투명 → 같은 배경 한 장이
+/* 배경이 있을 때(B·A) 목록 안 요소들도 반투명 → 같은 배경 한 장이
    줄 모양대로 잘려 비쳐 보인다. 줄마다 이미지를 맞추는 처리는 없다. */
 #song-list .sheet.has-bg .song-pick,
 #song-list .sheet.has-bg .row-btn,
