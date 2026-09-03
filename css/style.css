@@ -312,6 +312,25 @@ code { background: var(--bg); padding: 1px 5px; border-radius: 4px; font-size: 0
   font-variant-numeric: tabular-nums; color: var(--fg); }
 #edit-sync #sync-reset { flex: 0 0 auto; min-width: 32px; }
 
+/* 드리프트 보정(2점) */
+#edit-bar #edit-drift-row { display: none; }
+#app.edit-tools-on #edit-bar #edit-drift-row { display: flex; }
+
+#drift-bar { display: none; position: sticky; top: 0; z-index: 4;
+  margin-bottom: 8px; padding: 10px 12px;
+  background: #241a2e; border: 1px solid #4a3866; border-radius: 12px; }
+#app.drift-mode #drift-bar { display: block; }
+#app.drift-mode #edit-bar { display: none !important; }   /* 드리프트 중엔 편집바 숨겨 집중 */
+#drift-msg { font-size: 0.9rem; color: var(--fg); line-height: 1.5; }
+#drift-info { margin-top: 4px; }
+#drift-info:empty { display: none; }
+.drift-btns { display: flex; gap: 8px; margin-top: 10px; }
+.drift-btns button { flex: 1; font-size: 0.85rem; padding: 9px 6px; }
+#drift-apply { background: var(--accent); border-color: var(--accent); color: #fff; }
+#drift-apply:disabled { opacity: 0.5; }
+
+.lyric-line.drift-anchor { border-color: var(--accent) !important; background: var(--accent-soft); }
+
 /* --- 자동 채우기 배너 --- */
 #autofill-banner { display: none; align-items: center; gap: 10px;
   position: sticky; top: 0; z-index: 3;

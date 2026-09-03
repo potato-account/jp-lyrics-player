@@ -279,6 +279,7 @@ function wireControls() {
     // 편집을 끌 때(그리고 켤 때도) 설정은 항상 접힌 상태로 초기화
     appEl.classList.remove("edit-tools-on");
     $("#edit-tools").textContent = "설정";
+    driftExit();                       // 드리프트 보정 진행 중이었으면 취소
     view.setEditable(on);
     if (on) acquireWakeLock();
     else { persist(); if (!player.isPlaying) releaseWakeLock(); }
@@ -292,6 +293,7 @@ function wireControls() {
   });
 
   wireSyncBar();
+  wireDrift();
 }
 
 // ---------- 전체 싱크(offset) — 편집 모드 "설정" 영역 ----------
@@ -323,6 +325,96 @@ function wireSyncBar() {
     clearTimeout(saveTimer);
     saveTimer = setTimeout(persist, 400);
   });
+}
+
+// ---------- 드리프트 보정 (2점 선형 보정) ----------
+// 앞/뒤 두 줄의 "실제 재생시각"을 잡아 전체 타임을 t' = k·t + b 로 다시 계산.
+// offset(전체 싱크)이 못 잡는, 뒤로 갈수록 벌어지는 어긋남을 고친다.
+let driftState = 0;                 // 0 꺼짐 / 1 앞 대기 / 2 뒤 대기 / 3 적용 가능
+let driftA = null, driftB = null;
+
+function driftExit() {
+  driftState = 0; driftA = null; driftB = null;
+  appEl.classList.remove("drift-mode");
+  document.querySelectorAll(".lyric-line.drift-anchor").forEach((n) => n.classList.remove("drift-anchor"));
+}
+function driftMsg() {
+  const m = $("#drift-msg");
+  if (driftState === 1) m.textContent = "재생하면서, 지금 들리는 가사 줄을 탭하세요 — ① 앞부분 1곳";
+  else if (driftState === 2) m.textContent = "② 뒷부분 1곳을 탭하세요 (앞 기준보다 뒤쪽 줄, 멀수록 정확)";
+  else if (driftState === 3) m.textContent = "두 지점 기록됨. [적용] 하면 전체 타임을 다시 계산합니다.";
+}
+function driftEnter() {
+  if (!song) return;
+  if (song.lines.filter((l) => l.t != null).length < 2) { alert("타임이 있는 줄이 2개 이상이어야 해요."); return; }
+  driftState = 1; driftA = null; driftB = null;
+  appEl.classList.add("drift-mode");
+  document.querySelectorAll(".lyric-line.drift-anchor").forEach((n) => n.classList.remove("drift-anchor"));
+  $("#drift-apply").disabled = true;
+  $("#drift-info").textContent = "";
+  driftMsg();
+}
+function driftMark(idx) {
+  const li = $(`#lyrics-list .lyric-line[data-idx="${idx}"]`);
+  if (li) li.classList.add("drift-anchor");
+}
+function driftPick(idx) {
+  const line = song && song.lines[idx];
+  if (!line || line.t == null) { alert("타임이 없는 줄은 기준으로 쓸 수 없어요."); return; }
+  const real = +Number(player.currentTime).toFixed(2);
+  if (driftState === 1) {
+    driftA = { idx, oldT: line.t, real };
+    driftMark(idx);
+    driftState = 2; driftMsg();
+    return;
+  }
+  // 뒤 기준 (2 또는 3에서 다시 찍기 허용)
+  if (idx === driftA.idx || line.t <= driftA.oldT) { alert("뒤 기준은 앞 기준보다 뒤쪽 줄이어야 해요."); return; }
+  driftB = { idx, oldT: line.t, real };
+  document.querySelectorAll(".lyric-line.drift-anchor").forEach((n) => {
+    if (+n.dataset.idx !== driftA.idx) n.classList.remove("drift-anchor");
+  });
+  driftMark(idx);
+  const k = (driftB.real - driftA.real) / (driftB.oldT - driftA.oldT);
+  const perMin = (k - 1) * 60;
+  const n = song.lines.filter((l) => l.t != null).length;
+  driftState = 3;
+  $("#drift-apply").disabled = !(isFinite(k) && k > 0.3 && k < 3);
+  $("#drift-info").textContent =
+    `배속 k=${k.toFixed(3)} · 분당 ${perMin >= 0 ? "+" : ""}${perMin.toFixed(1)}초 · ${n}줄 적용`;
+  driftMsg();
+}
+async function driftApply() {
+  if (driftState !== 3 || !driftA || !driftB || !song) return;
+  const k = (driftB.real - driftA.real) / (driftB.oldT - driftA.oldT);
+  const b = driftA.real - k * driftA.oldT;
+  if (!isFinite(k) || k <= 0) { alert("계산값이 이상해요. 취소하고 다시 시도하세요."); return; }
+  if (!confirm(`전체 줄 타임을 다시 계산합니다 (배속 ${k.toFixed(3)}). 되돌릴 수 없어요. 진행할까요?`)) return;
+  for (const l of song.lines) {
+    if (l.t == null) continue;
+    l.t = Math.max(0, Math.round((k * l.t + b) * 100) / 100);
+  }
+  song.offset = 0;                 // 절대 시각으로 구웠으니 보정치는 0
+  await persist();
+  view.setSong(song);
+  view.setEditable(appEl.classList.contains("edit-on"));
+  renderSyncVal();
+  updateAutofillBanner();
+  driftExit();
+}
+function wireDrift() {
+  $("#drift-start").addEventListener("click", driftEnter);
+  $("#drift-cancel").addEventListener("click", driftExit);
+  $("#drift-apply").addEventListener("click", driftApply);
+  // 드리프트 모드에서 가사 줄 탭 = 앵커 선택 (seek/수정 다이얼로그 대신)
+  $("#lyrics-list").addEventListener("click", (e) => {
+    if (driftState === 0) return;
+    const li = e.target.closest(".lyric-line");
+    if (!li) return;
+    e.stopImmediatePropagation();
+    e.preventDefault();
+    driftPick(+li.dataset.idx);
+  }, true);
 }
 
 // ---------- 편집: 타임/칸 ----------
