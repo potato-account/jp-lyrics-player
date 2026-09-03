@@ -44,8 +44,21 @@
       <div id="edit-bar">
         <button id="edit-tools" type="button">설정</button>
         <div id="edit-tools-panel">
-          <button id="paste-pron" type="button">발음 일괄 붙여넣기</button>
-          <button id="paste-trans" type="button">번역 일괄 붙여넣기</button>
+          <button class="cat-btn" data-cat="orig" type="button">가사 붙여넣기</button>
+          <div class="cat-sub" data-cat="orig">
+            <button id="paste-orig" type="button">가사 일괄 붙여넣기</button>
+            <button id="single-orig" type="button">가사 개별 붙여넣기</button>
+          </div>
+          <button class="cat-btn" data-cat="pron" type="button">발음 붙여넣기</button>
+          <div class="cat-sub" data-cat="pron">
+            <button id="paste-pron" type="button">발음 일괄 붙여넣기</button>
+            <button id="single-pron" type="button">발음 개별 붙여넣기</button>
+          </div>
+          <button class="cat-btn" data-cat="trans" type="button">번역 붙여넣기</button>
+          <div class="cat-sub" data-cat="trans">
+            <button id="paste-trans" type="button">번역 일괄 붙여넣기</button>
+            <button id="single-trans" type="button">번역 개별 붙여넣기</button>
+          </div>
           <button id="sync-toggle" type="button">전체 싱크</button>
           <div id="edit-sync">
             <button id="sync-mm" type="button">−0.5</button>
@@ -259,6 +272,30 @@
     </menu>
     <menu>
       <button id="line-save" type="button">저장</button>
+    </menu>
+  </dialog>
+
+  <!-- ===== 개별 붙여넣기 (한 줄) ===== -->
+  <dialog id="single-dialog">
+    <div class="dlg-head">
+      <h2 id="single-title">개별 붙여넣기</h2>
+      <button class="dlg-x" data-close="single-dialog" type="button" aria-label="닫기">✕</button>
+    </div>
+    <label id="single-value-label">값
+      <input id="single-value" type="text" autocomplete="off" />
+    </label>
+    <label>줄 번호
+      <span class="offset-row">
+        <input id="single-line" type="number" min="1" inputmode="numeric" autocomplete="off" />
+        <button type="button" id="single-now" class="offset-btn">▶ 지금 줄</button>
+      </span>
+    </label>
+    <menu class="single-orig-only">
+      <button id="single-above" type="button">↑ 이 줄 위에 삽입</button>
+      <button id="single-below" type="button">↓ 이 줄 아래 삽입</button>
+    </menu>
+    <menu class="single-field-only">
+      <button id="single-set" type="button">이 줄에 넣기</button>
     </menu>
   </dialog>
 

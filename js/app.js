@@ -276,20 +276,36 @@ function wireControls() {
   $("#edit-mode").addEventListener("click", () => {
     const on = appEl.classList.toggle("edit-on");
     $("#edit-mode").textContent = on ? "편집 끝" : "편집";
-    // 편집을 끌 때(그리고 켤 때도) 설정·전체싱크는 항상 접힌 상태로 초기화
+    // 편집을 끌 때(그리고 켤 때도) 설정·전체싱크·카테고리는 항상 접힌 상태로 초기화
     appEl.classList.remove("edit-tools-on", "sync-open");
     $("#edit-tools").textContent = "설정";
+    collapseCats();
     driftExit();                       // 드리프트 보정 진행 중이었으면 취소
     view.setEditable(on);
     if (on) acquireWakeLock();
     else { persist(); if (!player.isPlaying) releaseWakeLock(); }
   });
 
+  const collapseCats = () => {
+    document.querySelectorAll(".cat-sub.open").forEach((n) => n.classList.remove("open"));
+    document.querySelectorAll(".cat-btn.active").forEach((n) => n.classList.remove("active"));
+  };
+
   // 설정: 목록(붙여넣기·전체싱크·드리프트)을 펼치거나 접는다 (2단 잠금)
   $("#edit-tools").addEventListener("click", () => {
     const open = appEl.classList.toggle("edit-tools-on");
     $("#edit-tools").textContent = open ? "설정 닫기" : "설정";
-    if (!open) appEl.classList.remove("sync-open");   // 설정 접으면 전체싱크도 접힘
+    if (!open) { appEl.classList.remove("sync-open"); collapseCats(); }
+  });
+
+  // 카테고리 아코디언: 가사/발음/번역 → 눌러야 일괄/개별이 나온다 (한 번에 하나만)
+  document.querySelectorAll(".cat-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const sub = document.querySelector(`.cat-sub[data-cat="${btn.dataset.cat}"]`);
+      const willOpen = !sub.classList.contains("open");
+      collapseCats();
+      if (willOpen) { sub.classList.add("open"); btn.classList.add("active"); }
+    });
   });
 
   // 전체 싱크: 눌러야 −0.5~0 스텝퍼가 나온다 (3단 잠금)
@@ -506,6 +522,55 @@ function wireLineDialog() {
     persist();
     rerenderLines();
     updateAutofillBanner();
+    dlg.close();
+  });
+}
+
+// ---------- 개별 붙여넣기 (한 줄) ----------
+// 가사(원문): 지정 줄 위/아래에 새 줄로 삽입.  발음·번역: 지정 줄의 그 칸에 채움.
+let singleMode = "orig";
+function openSingle(mode) {
+  if (!song || !song.lines.length) { alert("먼저 곡을 열어주세요."); return; }
+  singleMode = mode;
+  const label = { orig: "가사", pron: "발음", trans: "번역" }[mode];
+  $("#single-title").textContent = `${label} 개별 붙여넣기`;
+  $("#single-value-label").childNodes[0].nodeValue = label + " ";
+  $("#single-value").value = "";
+  const cur = view.activeIdx >= 0 ? view.activeIdx + 1 : 1;
+  const inp = $("#single-line");
+  inp.value = String(cur);
+  inp.max = String(mode === "orig" ? song.lines.length : song.lines.length);
+  $("#single-dialog").classList.toggle("mode-orig", mode === "orig");
+  $("#single-dialog").showModal();
+}
+function wireSingleDialog() {
+  const dlg = $("#single-dialog");
+  dlg.querySelectorAll("[data-close]").forEach((b) => b.addEventListener("click", () => dlg.close()));
+  $("#single-orig").addEventListener("click", () => openSingle("orig"));
+  $("#single-pron").addEventListener("click", () => openSingle("pron"));
+  $("#single-trans").addEventListener("click", () => openSingle("trans"));
+  $("#single-now").addEventListener("click", () => {
+    if (view.activeIdx >= 0) $("#single-line").value = String(view.activeIdx + 1);
+  });
+  const lineNo = () => {
+    const n = Math.round(Number($("#single-line").value));
+    return Math.min(Math.max(isFinite(n) ? n : 1, 1), song.lines.length);
+  };
+  const insertOrig = (offset) => {                    // offset 0 = 그 줄 위, 1 = 그 줄 아래
+    const v = $("#single-value").value.trim();
+    const at = Math.min(Math.max(lineNo() - 1 + offset, 0), song.lines.length);
+    song.lines.splice(at, 0, { t: null, orig: v, pron: "", trans: "" });
+    persist(); rerenderLines(); updateAutofillBanner();
+    dlg.close();
+  };
+  $("#single-above").addEventListener("click", () => insertOrig(0));
+  $("#single-below").addEventListener("click", () => insertOrig(1));
+  $("#single-set").addEventListener("click", () => {
+    const v = $("#single-value").value.trim();
+    const L = song.lines[lineNo() - 1];
+    L[singleMode] = v;
+    L[singleMode + "Src"] = v ? "user" : undefined;
+    rerenderLines(); updateAutofillBanner(); persist();
     dlg.close();
   });
 }
@@ -1127,14 +1192,16 @@ function wireMetaDialog() {
 // ---------- 일괄 붙여넣기 ----------
 function wireBulk() {
   const dlg = $("#bulk-dialog");
+  const LABEL = { orig: "가사", pron: "발음", trans: "번역" };
   const open = (mode) => {
     if (!song) { alert("먼저 곡을 열어주세요."); return; }
     bulkMode = mode;
-    $("#bulk-title").textContent = mode === "pron" ? "발음 일괄 붙여넣기" : "번역 일괄 붙여넣기";
+    $("#bulk-title").textContent = `${LABEL[mode]} 일괄 붙여넣기`;
     $("#bulk-count").textContent = `현재 가사 ${song.lines.length}줄`;
     $("#bulk-text").value = song.lines.map((l) => l[mode] || "").join("\n");
     dlg.showModal();
   };
+  $("#paste-orig").addEventListener("click", () => open("orig"));
   $("#paste-pron").addEventListener("click", () => open("pron"));
   $("#paste-trans").addEventListener("click", () => open("trans"));
   dlg.querySelectorAll("[data-close]").forEach((b) => b.addEventListener("click", () => dlg.close()));
@@ -1147,7 +1214,8 @@ function wireBulk() {
     for (let i = 0; i < n; i++) {
       const v = parts[i].trim();
       song.lines[i][bulkMode] = v;
-      song.lines[i][bulkMode + "Src"] = v ? "user" : undefined; // 붙여넣기도 내가 직접
+      // 발음·번역만 출처 태그를 남긴다 (원문엔 Src 개념 없음)
+      if (bulkMode !== "orig") song.lines[i][bulkMode + "Src"] = v ? "user" : undefined;
     }
     await persist();
     view.setSong(song);
@@ -1459,6 +1527,7 @@ async function main() {
   wireBulk();
   wireAutofill();
   wireLineDialog();
+  wireSingleDialog();
   wirePlPick();
   wireSelectMode();
   wireBackup();

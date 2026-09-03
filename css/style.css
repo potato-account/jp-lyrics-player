@@ -266,6 +266,14 @@ dialog menu button { flex: 0 0 auto; }
 menu.line-struct { justify-content: stretch; margin-top: 12px; }
 menu.line-struct button { flex: 1 1 0; min-width: 0; font-size: 0.8rem; padding: 9px 4px; }
 menu.line-struct button:disabled { opacity: 0.4; }
+
+/* 개별 붙여넣기 다이얼로그 — 모드별로 버튼 그룹 노출 */
+#single-dialog .single-orig-only,
+#single-dialog .single-field-only { display: none; }
+#single-dialog.mode-orig .single-orig-only { display: flex; }
+#single-dialog:not(.mode-orig) .single-field-only { display: flex; }
+#single-dialog .single-orig-only button { flex: 1 1 0; min-width: 0; font-size: 0.8rem; padding: 9px 4px; }
+#single-line { text-align: center; font-variant-numeric: tabular-nums; }
 .danger { background: #3a1620; border-color: #7a2740; color: #ff9db0; }
 code { background: var(--bg); padding: 1px 5px; border-radius: 4px; font-size: 0.85em; }
 
@@ -306,6 +314,12 @@ code { background: var(--bg); padding: 1px 5px; border-radius: 4px; font-size: 0
 #edit-tools-panel { display: none; flex-direction: column; gap: 8px; }
 #app.edit-tools-on #edit-bar #edit-tools-panel { display: flex; }
 #app.edit-tools-on #edit-tools { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+/* 카테고리(가사/발음/번역) — 눌러야 일괄/개별이 나온다 (아코디언) */
+.cat-sub { display: none; flex-direction: column; gap: 8px; padding-left: 12px; }
+.cat-sub.open { display: flex; }
+.cat-btn.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+#edit-tools-panel .cat-sub > button { width: 100%; font-size: 0.82rem; padding: 9px 8px; }
 
 /* 3단 잠금: "전체 싱크" 버튼을 눌러야 −0.5~0 스텝퍼가 나온다 */
 #edit-sync { display: none; gap: 6px; align-items: center; }
