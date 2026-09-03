@@ -53,21 +53,21 @@
     {
       "file": "08_tokyo-flash.json",
       "bundleId": "vaundy-tokyo-flash",
-      "version": 6,
+      "version": 7,
       "title": "東京フラッシュ",
       "artist": "Vaundy"
     },
     {
       "file": "09_kaijuu-no-hanauta.json",
       "bundleId": "vaundy-kaijuu-no-hanauta",
-      "version": 6,
+      "version": 7,
       "title": "怪獣の花唄",
       "artist": "Vaundy"
     },
     {
       "file": "10_fukakouryoku.json",
       "bundleId": "vaundy-fukakouryoku",
-      "version": 4,
+      "version": 5,
       "title": "不可幸力",
       "artist": "Vaundy"
     },
@@ -88,14 +88,14 @@
     {
       "file": "13_yobigoe.json",
       "bundleId": "vaundy-yobigoe",
-      "version": 8,
+      "version": 9,
       "title": "呼び声",
       "artist": "Vaundy"
     },
     {
       "file": "14_gift.json",
       "bundleId": "vaundy-gift",
-      "version": 4,
+      "version": 5,
       "title": "Gift",
       "artist": "Vaundy"
     },
@@ -116,7 +116,7 @@
     {
       "file": "17_life-hack.json",
       "bundleId": "vaundy-life-hack",
-      "version": 10,
+      "version": 11,
       "title": "life hack",
       "artist": "Vaundy"
     },
@@ -130,7 +130,7 @@
     {
       "file": "19_hero.json",
       "bundleId": "vaundy-hero",
-      "version": 4,
+      "version": 5,
       "title": "HERO",
       "artist": "Vaundy"
     },
@@ -165,28 +165,28 @@
     {
       "file": "24_boku-ni-wa-doushite.json",
       "bundleId": "vaundy-boku-ni-wa-doushite",
-      "version": 10,
+      "version": 11,
       "title": "僕にはどうしてわかるんだろう",
       "artist": "Vaundy"
     },
     {
       "file": "25_bye-by-me.json",
       "bundleId": "vaundy-bye-by-me",
-      "version": 11,
+      "version": 12,
       "title": "Bye by me",
       "artist": "Vaundy"
     },
     {
       "file": "26_hashire-sakamoto.json",
       "bundleId": "vaundy-hashire-sakamoto",
-      "version": 4,
+      "version": 5,
       "title": "走れSAKAMOTO",
       "artist": "Vaundy"
     },
     {
       "file": "27_iseijin.json",
       "bundleId": "vaundy-iseijin",
-      "version": 10,
+      "version": 11,
       "title": "偉生人",
       "artist": "Vaundy"
     },
@@ -200,21 +200,21 @@
     {
       "file": "29_soramimi.json",
       "bundleId": "vaundy-soramimi",
-      "version": 4,
+      "version": 5,
       "title": "soramimi",
       "artist": "Vaundy"
     },
     {
       "file": "30_hadaka-no-yuusha.json",
       "bundleId": "vaundy-hadaka-no-yuusha",
-      "version": 10,
+      "version": 11,
       "title": "裸の勇者",
       "artist": "Vaundy"
     },
     {
       "file": "31_idea-ga-afurete.json",
       "bundleId": "vaundy-idea-ga-afurete",
-      "version": 10,
+      "version": 11,
       "title": "イデアが溢れて眠れない",
       "artist": "Vaundy"
     },
@@ -249,7 +249,7 @@
     {
       "file": "36_pained.json",
       "bundleId": "vaundy-pained",
-      "version": 10,
+      "version": 11,
       "title": "pained",
       "artist": "Vaundy"
     },
@@ -284,14 +284,14 @@
     {
       "file": "41_kagerou.json",
       "bundleId": "vaundy-kagerou",
-      "version": 10,
+      "version": 11,
       "title": "かげろう",
       "artist": "Vaundy"
     },
     {
       "file": "42_tobu-toki.json",
       "bundleId": "vaundy-tobu-toki",
-      "version": 10,
+      "version": 11,
       "title": "飛ぶ時",
       "artist": "Vaundy"
     },
@@ -305,28 +305,28 @@
     {
       "file": "44_homunkurusu.json",
       "bundleId": "vaundy-homunkurusu",
-      "version": 4,
+      "version": 5,
       "title": "ホムンクルス",
       "artist": "Vaundy"
     },
     {
       "file": "45_time-paradox.json",
       "bundleId": "vaundy-time-paradox",
-      "version": 1,
+      "version": 2,
       "title": "タイムパラドックス",
       "artist": "Vaundy"
     },
     {
       "file": "46_fuujin.json",
       "bundleId": "vaundy-fuujin",
-      "version": 10,
+      "version": 11,
       "title": "風神",
       "artist": "Vaundy"
     },
     {
       "file": "47_gorilla-shibai.json",
       "bundleId": "vaundy-gorilla-shibai",
-      "version": 11,
+      "version": 12,
       "title": "GORILLA芝居",
       "artist": "Vaundy"
     },
