@@ -58,6 +58,10 @@ let queueIndex = -1;
 // 목록 시트의 "선택" 모드: 체크한 곡들을 한 번에 플레이리스트에 담는다.
 let selectMode = false;
 const selected = new Set();     // 체크된 song.id
+
+// 플레이리스트 "편집" 모드: 켰을 때만 줄에 ▲▼(순서)·✕(빼기) 버튼과
+// 헤더의 "이름·삭제"가 나온다. 평소엔 목록만 깔끔하게 보이고 탭하면 재생.
+let plEditMode = false;
 let plpickSongs = [];           // 플레이리스트 담기 다이얼로그가 지금 다루는 곡들
 
 // ---------- 공통 ----------
@@ -371,8 +375,15 @@ function setFilter(f) {
   listFilter = f;
   saveListFilter();
   exitSelectMode();          // 필터를 바꾸면 선택 모드 해제
+  exitPlEdit();              // 편집 모드도 해제
   renderChips();
   renderList();
+}
+
+// 플레이리스트 "편집" 모드 끄기
+function exitPlEdit() {
+  plEditMode = false;
+  $("#pl-edit").textContent = "편집";
 }
 
 // --- 칩 바 ---
@@ -406,7 +417,10 @@ async function renderChips() {
   const pl = listFilter.type === "playlist" ? pls.find((p) => p.id === listFilter.id) : null;
   $("#list-title").textContent =
     pl ? pl.name : listFilter.type === "hidden" ? "숨긴 곡" : "저장된 곡";
-  $("#pl-manage").hidden = !pl;
+  // "편집"은 플리를 볼 때만. "이름·삭제"는 편집 모드일 때만 딸려 나온다.
+  $("#pl-edit").hidden = !pl;
+  $("#pl-edit").textContent = plEditMode ? "편집 완료" : "편집";
+  $("#pl-manage").hidden = !(pl && plEditMode);
   // 여러 곡 선택은 "전체" 목록에서만 (플리 안에서는 순서·빼기 버튼과 겹친다)
   $("#select-toggle").hidden = listFilter.type !== "all";
 }
@@ -532,11 +546,13 @@ async function renderList() {
     li.appendChild(info);
 
     if (inPlaylist) {
-      const up = rowBtn("▲", "위로", () => moveInPlaylist(ref, -1));
-      const down = rowBtn("▼", "아래로", () => moveInPlaylist(ref, +1));
-      up.disabled = i === 0;
-      down.disabled = i === list.length - 1;
-      li.append(up, down, rowBtn("✕", "플레이리스트에서 빼기", () => removeFromPlaylist(ref)));
+      if (plEditMode) {                       // "편집" 켰을 때만 순서·빼기 버튼
+        const up = rowBtn("▲", "위로", () => moveInPlaylist(ref, -1));
+        const down = rowBtn("▼", "아래로", () => moveInPlaylist(ref, +1));
+        up.disabled = i === 0;
+        down.disabled = i === list.length - 1;
+        li.append(up, down, rowBtn("✕", "플레이리스트에서 빼기", () => removeFromPlaylist(ref)));
+      }
     } else if (inHidden) {
       li.appendChild(rowBtn("↩", "다시 보이기", () => setHidden(s, false)));
     } else {
@@ -553,6 +569,7 @@ async function renderList() {
 function openSheet() {
   $("#song-list").hidden = false;
   exitSelectMode();          // 열 때는 항상 일반 모드
+  exitPlEdit();
   renderChips();
   renderList();
 }
@@ -1293,6 +1310,12 @@ async function main() {
   $("#close-list").addEventListener("click", closeSheet);
   $("#song-list").addEventListener("click", (e) => { if (e.target.id === "song-list") closeSheet(); });
   $("#pl-manage").addEventListener("click", managePlaylist);
+  $("#pl-edit").addEventListener("click", () => {
+    plEditMode = !plEditMode;
+    $("#pl-edit").textContent = plEditMode ? "편집 완료" : "편집";
+    $("#pl-manage").hidden = !plEditMode;
+    renderList();
+  });
   wireEndMode();
 
   // 재생 상태에 따라 Wake Lock 확보/해제 + 곡이 끝나면 설정대로

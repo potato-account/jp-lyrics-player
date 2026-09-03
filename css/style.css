@@ -335,12 +335,15 @@ code { background: var(--bg); padding: 1px 5px; border-radius: 4px; font-size: 0
 #song-list .sheet::before {
   content: ""; position: absolute; inset: -24px; z-index: 0;
   background-size: cover; background-position: center;
-  filter: blur(16px); opacity: 0.5;
+  /* 목록에 보이는 벽지. 블러 약하게(16→5) + contrast 로 또렷하게,
+     brightness 는 1 아래로 낮춰 눈 안 아프게 어둡게. 셋 다 독립. */
+  filter: blur(5px) brightness(0.88) contrast(1.15);
+  opacity: 0.92;
   display: none;
 }
 #song-list .sheet::after {
   content: ""; position: absolute; inset: 0; z-index: 1;
-  background: rgba(11, 11, 15, 0.5);   /* 스크림 옅게 → 배경 이미지 색이 선명하게 */
+  background: rgba(11, 11, 15, 0.24);   /* 스크림 최소 → 벽지가 또렷하게 */
   display: none;
 }
 #song-list .sheet.sheet-a::before, #song-list .sheet.sheet-b::before,
@@ -372,15 +375,15 @@ code { background: var(--bg); padding: 1px 5px; border-radius: 4px; font-size: 0
 #song-list .sheet.has-bg .song-pick,
 #song-list .sheet.has-bg .row-btn,
 #song-list .sheet.has-bg #select-bar,
-#song-list .sheet.has-bg .sel-check { background: rgba(20, 20, 28, 0.66); }
-#song-list .sheet.has-bg .pl-chip:not(.active) { background: rgba(20, 20, 28, 0.55); }
+#song-list .sheet.has-bg .sel-check { background: rgba(20, 20, 28, 0.8); }
+#song-list .sheet.has-bg .pl-chip:not(.active) { background: rgba(20, 20, 28, 0.72); }
 /* 줄이 반투명해진 만큼 밝은 배경 위에서도 흰 글씨가 또렷하게 */
 #song-list .sheet.has-bg .song-pick,
 #song-list .sheet.has-bg .row-btn { text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75); }
-.sheet-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
-.sheet-head h2 { margin: 0; font-size: 1.05rem; }
+.sheet-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 10px; }
+.sheet-head h2 { margin: 0; font-size: 1.05rem; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .head-btns { display: flex; gap: 6px; flex: 0 0 auto; }
-#pl-manage { padding: 4px 10px; font-size: 0.78rem; }
+#pl-manage, #pl-edit { padding: 4px 10px; font-size: 0.78rem; }
 #close-list { padding: 4px 12px; }
 #song-list-items { list-style: none; margin: 0; padding: 0; }
 .song-row { display: flex; align-items: stretch; gap: 6px; margin-bottom: 8px; }
