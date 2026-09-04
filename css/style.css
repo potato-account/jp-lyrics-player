@@ -5,8 +5,9 @@
   --fg: #f4f4f6;
   --fg-dim: #8b8b96;
   --fg-dimmer: #55555f;
-  --accent: #ff5a76;
-  --accent-soft: #ff5a7622;
+  --accent: #5cc8ff;              /* 상호작용 강조색 — 하늘색 (예전 핑크 #ff5a76) */
+  --accent-soft: #5cc8ff22;
+  --accent-ink: #06263a;          /* 하늘색 배경 위 글씨 (흰색은 대비 부족) */
   --line-active-bg: #ffffff0a;
   --lyric-orig: #5cc8ff;   /* 현재 줄 원문: 하늘색 */
   --lyric-trans: #4cd97f;  /* 현재 줄 번역: 초록색 */
@@ -108,7 +109,7 @@ button:active { transform: scale(0.97); }
 }
 #go-fullscreen { right: 56px; font-size: 1.1rem; }
 #toggle-video { font-size: 1.15rem; line-height: 1; }
-#video-area.show-video #toggle-video { background: var(--accent); border-color: var(--accent); }
+#video-area.show-video #toggle-video { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
 
 /* --- 가운데 가사 --- */
 #lyrics {
@@ -239,7 +240,7 @@ button:active { transform: scale(0.97); }
 #first-song, #last-song, #prev-song, #next-song { letter-spacing: -1px; }
 
 .menu-row button { flex: 1; padding: 9px 6px; font-size: 0.9rem; }
-#app.edit-on #edit-mode { background: var(--accent); border-color: var(--accent); color: #fff; }
+#app.edit-on #edit-mode { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
 
 /* --- 안내 문구 --- */
 .hint { color: var(--fg-dim); text-align: center; line-height: 1.7; }
@@ -275,7 +276,7 @@ dialog textarea { resize: vertical; font-size: 0.9rem; }
 dialog summary { cursor: pointer; font-size: 0.85rem; color: var(--fg); margin: 6px 0; }
 dialog menu { display: flex; gap: 8px; justify-content: flex-end; margin: 14px 0 0; padding: 0; flex-wrap: wrap; }
 dialog menu button { flex: 0 0 auto; }
-#m-save, #d-add, #q-run, #bulk-apply { background: var(--accent); border-color: var(--accent); color: #fff; }
+#m-save, #d-add, #q-run, #bulk-apply { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
 /* 줄 수정 다이얼로그의 "저장"은 줄의 "수정" 버튼과 같은 서식 (흰 테두리 + 회색 배경) */
 #line-save { background: #3a3a42; border-color: #e8e8ea; color: var(--fg); }
 /* 줄 삽입/삭제 행 */
@@ -329,19 +330,29 @@ code { background: var(--bg); padding: 1px 5px; border-radius: 4px; font-size: 0
 /* 2단 잠금: 설정을 눌러야 목록이 나온다 */
 #edit-tools-panel { display: none; flex-direction: column; gap: 8px; }
 #app.edit-tools-on #edit-bar #edit-tools-panel { display: flex; }
-/* 설정 열림 표시는 분홍(--accent) 대신 파랑 — 자동 채우기 버튼과 같은 톤 */
-#app.edit-tools-on #edit-tools { background: var(--lyric-orig); border-color: var(--lyric-orig); color: #06263a; }
+#app.edit-tools-on #edit-tools { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
 
 /* 카테고리(가사/발음/번역) — 눌러야 일괄/개별이 나온다 (아코디언) */
-.cat-sub { display: none; flex-direction: column; gap: 8px; padding-left: 12px; }
+/* 소분류(일괄/개별)는 상위 "…붙여넣기" 버튼보다 확실히 좁게 들여쓴다:
+   왼쪽은 가이드선 + 여백, 오른쪽은 margin 으로 폭을 줄인다. */
+.cat-sub {
+  display: none; flex-direction: column; gap: 6px;
+  margin: 2px 0 2px 10px;
+  padding-left: 12px;
+  border-left: 2px solid var(--border);
+}
 .cat-sub.open { display: flex; }
-.cat-btn.active { background: var(--accent); border-color: var(--accent); color: #fff; }
-#edit-tools-panel .cat-sub > button { width: 100%; font-size: 0.82rem; padding: 9px 8px; }
+.cat-btn.active { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+#edit-tools-panel .cat-sub > button {
+  width: auto; margin-right: 28px;
+  font-size: 0.78rem; padding: 8px 8px;
+  background: var(--bg); color: var(--fg-dim);
+}
 
 /* 3단 잠금: "전체 싱크" 버튼을 눌러야 −0.5~0 스텝퍼가 나온다 */
 #edit-sync { display: none; gap: 6px; align-items: center; }
 #app.sync-open #edit-bar #edit-sync { display: flex; }
-#app.sync-open #sync-toggle { background: var(--accent); border-color: var(--accent); color: #fff; }
+#app.sync-open #sync-toggle { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
 #edit-sync button { flex: 1 1 0; min-width: 0; font-size: 0.8rem; padding: 8px 3px; font-variant-numeric: tabular-nums; }
 #edit-sync #sync-val { flex: 0 0 auto; min-width: 44px; text-align: center; font-size: 0.85rem;
   font-variant-numeric: tabular-nums; color: var(--fg); }
@@ -359,7 +370,7 @@ code { background: var(--bg); padding: 1px 5px; border-radius: 4px; font-size: 0
 #drift-info:empty, #ripple-info:empty { display: none; }
 .drift-btns, .ripple-btns { display: flex; gap: 8px; margin-top: 10px; }
 .drift-btns button, .ripple-btns button { flex: 1; font-size: 0.85rem; padding: 9px 6px; }
-#drift-apply, #ripple-apply { background: var(--accent); border-color: var(--accent); color: #fff; }
+#drift-apply, #ripple-apply { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
 #drift-apply:disabled, #ripple-apply:disabled { opacity: 0.5; }
 
 /* 밀기 밀기량 스텝퍼 — 전체 싱크(#edit-sync)와 같은 모양 */
@@ -490,7 +501,7 @@ code { background: var(--bg); padding: 1px 5px; border-radius: 4px; font-size: 0
 #select-bar[hidden] { display: none; }
 #select-bar #sel-count { flex: 1; text-align: center; font-size: 0.85rem; color: var(--fg-dim); }
 #sel-all { padding: 8px 12px; font-size: 0.82rem; }
-#sel-add { background: var(--accent); border-color: var(--accent); color: #fff; }
+#sel-add { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
 #sel-add:disabled { opacity: 0.45; }
 
 #plpick-list input:indeterminate { accent-color: var(--fg-dim); }
@@ -525,7 +536,7 @@ code { background: var(--bg); padding: 1px 5px; border-radius: 4px; font-size: 0
   color: var(--fg); font-size: 0.92rem; cursor: pointer;
 }
 #plpick-list input { accent-color: var(--accent); width: 18px; height: 18px; flex: 0 0 auto; }
-#plpick-done { background: var(--accent); border-color: var(--accent); color: #fff; }
+#plpick-done { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
 
 /* --- 곡 추가 다이얼로그 --- */
 .add-sec { border-top: 1px solid var(--border); padding-top: 12px; margin-top: 12px; }
