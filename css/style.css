@@ -181,6 +181,9 @@ button:active { transform: scale(0.97); }
 #app.edit-on .lyric-line .line-btns {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 6px;
 }
 .lyric-line .line-btns button {
   white-space: nowrap;
@@ -190,6 +193,19 @@ button:active { transform: scale(0.97); }
 }
 /* 줄마다 하나뿐인 "수정" 버튼: 흰 테두리 + 회색 배경 */
 .lyric-line .edit-line { background: #3a3a42; border-color: #e8e8ea; color: var(--fg); }
+
+/* 활성 줄 미세 조정(±0.1초) — 재생 중 하이라이트된 줄에서만 보인다 */
+.lyric-line .nudge-t { display: none; }
+#app.edit-on .lyric-line.is-active .nudge-t {
+  display: inline-flex;
+  min-width: 0;
+  padding: 9px 10px;
+  font-size: 0.8rem;
+  font-variant-numeric: tabular-nums;
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--fg);
+}
 
 /* --- 하단 컨트롤 --- */
 #controls {
@@ -330,20 +346,33 @@ code { background: var(--bg); padding: 1px 5px; border-radius: 4px; font-size: 0
   font-variant-numeric: tabular-nums; color: var(--fg); }
 #edit-sync #sync-reset { flex: 0 0 auto; min-width: 32px; }
 
-#drift-bar { display: none; position: sticky; top: 0; z-index: 4;
+#drift-bar, #ripple-bar { display: none; position: sticky; top: 0; z-index: 4;
   margin-bottom: 8px; padding: 10px 12px;
   background: #241a2e; border: 1px solid #4a3866; border-radius: 12px; }
 #app.drift-mode #drift-bar { display: block; }
-#app.drift-mode #edit-bar { display: none !important; }   /* 드리프트 중엔 편집바 숨겨 집중 */
-#drift-msg { font-size: 0.9rem; color: var(--fg); line-height: 1.5; }
-#drift-info { margin-top: 4px; }
-#drift-info:empty { display: none; }
-.drift-btns { display: flex; gap: 8px; margin-top: 10px; }
-.drift-btns button { flex: 1; font-size: 0.85rem; padding: 9px 6px; }
-#drift-apply { background: var(--accent); border-color: var(--accent); color: #fff; }
-#drift-apply:disabled { opacity: 0.5; }
+#app.ripple-mode #ripple-bar { display: block; }
+#app.drift-mode #edit-bar,
+#app.ripple-mode #edit-bar { display: none !important; }   /* 보정 중엔 편집바 숨겨 집중 */
+#drift-msg, #ripple-msg { font-size: 0.9rem; color: var(--fg); line-height: 1.5; }
+#drift-info, #ripple-info { margin-top: 4px; }
+#drift-info:empty, #ripple-info:empty { display: none; }
+.drift-btns, .ripple-btns { display: flex; gap: 8px; margin-top: 10px; }
+.drift-btns button, .ripple-btns button { flex: 1; font-size: 0.85rem; padding: 9px 6px; }
+#drift-apply, #ripple-apply { background: var(--accent); border-color: var(--accent); color: #fff; }
+#drift-apply:disabled, #ripple-apply:disabled { opacity: 0.5; }
+
+/* 밀기 밀기량 스텝퍼 — 전체 싱크(#edit-sync)와 같은 모양 */
+.ripple-step { display: flex; gap: 6px; align-items: center; margin-top: 8px; }
+.ripple-step button { flex: 1 1 0; min-width: 0; font-size: 0.8rem; padding: 8px 3px;
+  font-variant-numeric: tabular-nums; }
+.ripple-step #ripple-val { flex: 0 0 auto; min-width: 46px; text-align: center;
+  font-size: 0.85rem; font-variant-numeric: tabular-nums; color: var(--fg); }
+.ripple-step #ripple-grab { flex: 0 0 auto; }
 
 .lyric-line.drift-anchor { border-color: var(--accent) !important; background: var(--accent-soft); }
+/* 밀기: 시작 줄은 굵게, 그 아래(영향받는 줄)는 왼쪽에 표시선 */
+.lyric-line.ripple-anchor { border-color: var(--accent) !important; background: var(--accent-soft); }
+.lyric-line.ripple-after { border-left: 3px solid var(--accent) !important; }
 
 /* --- 자동 채우기 배너 --- */
 #autofill-banner { display: none; align-items: center; gap: 10px;

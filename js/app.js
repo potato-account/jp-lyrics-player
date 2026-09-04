@@ -281,6 +281,7 @@ function wireControls() {
     $("#edit-tools").textContent = "설정";
     collapseCats();
     driftExit();                       // 드리프트 보정 진행 중이었으면 취소
+    rippleExit();                      // 밀기 진행 중이었으면 취소
     view.setEditable(on);
     if (on) acquireWakeLock();
     else { persist(); if (!player.isPlaying) releaseWakeLock(); }
@@ -316,6 +317,136 @@ function wireControls() {
 
   wireSyncBar();
   wireDrift();
+  wireRipple();
+}
+
+// ---------- 활성 줄 미세 조정 (D) ----------
+// 재생 중 하이라이트된 줄의 t 를 ±0.1초씩 즉시 옮긴다. 바로 들으며 마무리.
+let nudgeSaveTimer = null;
+function nudgeLine(i, delta) {
+  if (!song || !song.lines[i] || song.lines[i].t == null) return;
+  song.lines[i].t = Math.max(0, Math.round((song.lines[i].t + delta) * 100) / 100);
+  view.refreshRow(i);
+  view.update(player.currentTime);            // 활성 줄이 바뀔 수도 있으니 다시 계산
+  clearTimeout(nudgeSaveTimer);
+  nudgeSaveTimer = setTimeout(persist, 400);  // 연타 시 마지막 한 번만 저장
+}
+
+// ---------- 이 줄부터 밀기 (B, ripple shift) ----------
+// 한 줄을 고르고 밀기량 X초를 정하면, 그 줄부터 곡 끝까지의 모든 타임에 X를 더한다.
+// 줄 사이 간격은 그대로 유지된다("구간이 통째로 어긋남"에 바로 먹힌다).
+let rippleState = 0;              // 0 꺼짐 / 1 시작 줄 대기 / 2 줄 선택됨(밀기량 조절)
+let rippleAnchor = -1;           // 밀기 시작 줄 인덱스
+let rippleDelta = 0;            // 더할 초 (음수 = 당김)
+
+function rippleExit() {
+  rippleState = 0; rippleAnchor = -1; rippleDelta = 0;
+  appEl.classList.remove("ripple-mode");
+  document.querySelectorAll(".lyric-line.ripple-anchor, .lyric-line.ripple-after")
+    .forEach((n) => n.classList.remove("ripple-anchor", "ripple-after"));
+}
+function rippleTimedCount(from) {
+  return song.lines.slice(from).filter((l) => l.t != null).length;
+}
+function rippleRenderVal() {
+  const r = Math.round(rippleDelta * 10) / 10;
+  $("#ripple-val").textContent = (r > 0 ? "+" : "") + r.toFixed(1) + "s";
+}
+function rippleRenderInfo() {
+  const msg = $("#ripple-msg");
+  const info = $("#ripple-info");
+  if (rippleState === 1) {
+    msg.textContent = "밀기를 시작할 줄을 탭하세요 — 그 줄부터 끝까지 옮겨집니다.";
+    info.textContent = "";
+    $("#ripple-apply").disabled = true;
+    return;
+  }
+  const L = song.lines[rippleAnchor];
+  const n = rippleTimedCount(rippleAnchor);
+  msg.textContent = `${rippleAnchor + 1}번째 줄부터 ${n}줄 이동`;
+  if (L && L.t != null) {
+    const to = Math.max(0, Math.round((L.t + rippleDelta) * 100) / 100);
+    info.textContent = `${fmtTime(L.t)} → ${fmtTime(to)}`;
+  } else {
+    info.textContent = "";
+  }
+  $("#ripple-apply").disabled = !(rippleDelta && isFinite(rippleDelta));
+}
+function rippleEnter() {
+  if (!song) return;
+  if (!song.lines.some((l) => l.t != null)) { alert("타임이 있는 줄이 없어요."); return; }
+  driftExit();                          // 드리프트와 동시에 켜지 않는다
+  rippleState = 1; rippleAnchor = -1; rippleDelta = 0;
+  appEl.classList.add("ripple-mode");
+  document.querySelectorAll(".lyric-line.ripple-anchor, .lyric-line.ripple-after")
+    .forEach((n) => n.classList.remove("ripple-anchor", "ripple-after"));
+  rippleRenderVal();
+  rippleRenderInfo();
+}
+function ripplePick(idx) {
+  const line = song && song.lines[idx];
+  if (!line || line.t == null) { alert("타임이 없는 줄은 시작점으로 쓸 수 없어요."); return; }
+  rippleAnchor = idx;
+  rippleDelta = 0;                     // 시작 줄을 다시 고르면 밀기량도 0부터
+  rippleState = 2;
+  // 시작 줄 강조 + 그 아래(영향받는 줄) 표시
+  document.querySelectorAll("#lyrics-list .lyric-line").forEach((n) => {
+    const i = +n.dataset.idx;
+    n.classList.toggle("ripple-anchor", i === idx);
+    n.classList.toggle("ripple-after", i > idx);
+  });
+  rippleRenderVal();
+  rippleRenderInfo();
+}
+function rippleBump(d) {
+  if (rippleState !== 2) return;
+  rippleDelta = Math.round((rippleDelta + d) * 100) / 100;
+  rippleRenderVal();
+  rippleRenderInfo();
+}
+// 재생 위치로 밀기량 잡기 — 시작 줄이 "실제로 들리는" 지점까지 재생하고 누른다.
+function rippleGrab() {
+  if (rippleState !== 2 || rippleAnchor < 0) { alert("먼저 시작 줄을 탭하세요."); return; }
+  const L = song.lines[rippleAnchor];
+  rippleDelta = Math.round((player.currentTime - (L.t + (song.offset || 0))) * 100) / 100;
+  rippleRenderVal();
+  rippleRenderInfo();
+}
+async function rippleApply() {
+  if (rippleState !== 2 || rippleAnchor < 0 || !song) return;
+  if (!rippleDelta) { alert("밀기량이 0이에요."); return; }
+  const n = rippleTimedCount(rippleAnchor);
+  const r = Math.round(rippleDelta * 10) / 10;
+  if (!confirm(`${rippleAnchor + 1}번째 줄부터 ${n}줄을 ${r > 0 ? "+" : ""}${r}초 옮깁니다. 되돌릴 수 없어요. 진행할까요?`)) return;
+  for (let i = rippleAnchor; i < song.lines.length; i++) {
+    const l = song.lines[i];
+    if (l.t == null) continue;
+    l.t = Math.max(0, Math.round((l.t + rippleDelta) * 100) / 100);
+  }
+  await persist();
+  view.setSong(song);
+  view.setEditable(appEl.classList.contains("edit-on"));
+  updateAutofillBanner();
+  rippleExit();
+}
+function wireRipple() {
+  $("#ripple-start").addEventListener("click", rippleEnter);
+  $("#ripple-cancel").addEventListener("click", rippleExit);
+  $("#ripple-apply").addEventListener("click", rippleApply);
+  $("#ripple-grab").addEventListener("click", rippleGrab);
+  $("#ripple-m1").addEventListener("click", () => rippleBump(-1));
+  $("#ripple-m01").addEventListener("click", () => rippleBump(-0.1));
+  $("#ripple-p01").addEventListener("click", () => rippleBump(0.1));
+  $("#ripple-p1").addEventListener("click", () => rippleBump(1));
+  // 밀기 모드에서 가사 줄 탭 = 시작 줄 선택 (seek/수정 대신)
+  $("#lyrics-list").addEventListener("click", (e) => {
+    if (rippleState === 0) return;
+    const li = e.target.closest(".lyric-line");
+    if (!li) return;
+    e.stopImmediatePropagation();
+    e.preventDefault();
+    ripplePick(+li.dataset.idx);
+  }, true);
 }
 
 // ---------- 전체 싱크(offset) — 편집 모드 "설정" 영역 ----------
@@ -369,6 +500,7 @@ function driftMsg() {
 function driftEnter() {
   if (!song) return;
   if (song.lines.filter((l) => l.t != null).length < 2) { alert("타임이 있는 줄이 2개 이상이어야 해요."); return; }
+  rippleExit();                       // 밀기와 동시에 켜지 않는다
   driftState = 1; driftA = null; driftB = null;
   appEl.classList.add("drift-mode");
   document.querySelectorAll(".lyric-line.drift-anchor").forEach((n) => n.classList.remove("drift-anchor"));
@@ -1520,6 +1652,7 @@ async function main() {
   view = new LyricsView($("#lyrics-list"), {
     onSeekToLine: (t) => player.seek(t),
     onEditRow: openLineDialog,
+    onNudge: nudgeLine,
   });
   wireControls();
   wireAddDialog();

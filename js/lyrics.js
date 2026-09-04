@@ -39,11 +39,12 @@ function splitCols(s) {
 
 // ================= 렌더링 & 싱크 =================
 export class LyricsView {
-  constructor(listEl, { onSeekToLine, onEditRow }) {
+  constructor(listEl, { onSeekToLine, onEditRow, onNudge }) {
     this.listEl = listEl;
     this.scroller = listEl.parentElement; // #lyrics
     this.onSeekToLine = onSeekToLine;
     this.onEditRow = onEditRow || (() => {}); // 줄 하나의 발음·번역·시간을 한 다이얼로그에서 수정
+    this.onNudge = onNudge || (() => {});     // 재생 중 활성 줄의 t 를 ±0.1초씩 미세 조정
     this.song = null;
     this.rows = [];
     this.activeIdx = -1;
@@ -82,14 +83,27 @@ export class LyricsView {
       const origEl = el("div", "orig", line.orig || " ");
       const pronEl = el("div", "pron", line.pron || "");
       const transEl = el("div", "trans", line.trans || "");
-      // 편집 모드에서만 보이는 시간 표시 (수정은 다이얼로그에서)
-      const tEl = el("div", "line-t", line.t != null ? fmtClock(line.t) : "타임 없음");
+      // 편집 모드에서만 보이는 시간 표시 (수정은 다이얼로그에서).
+      // 미세 조정(±0.1초)이 눈에 보이도록 편집 모드에서는 1/100초까지 표시한다.
+      const tEl = el("div", "line-t", line.t != null ? fmtClock2(line.t) : "타임 없음");
       body.append(origEl, pronEl, transEl, tEl);
       li.appendChild(body);
 
-      // 편집 버튼: [수정] 하나. 누르면 발음·번역·시간을 한 다이얼로그에서 편집.
+      // 편집 버튼 묶음: 재생 중 활성 줄에만 뜨는 ±0.1초 미세 조정 + [수정].
       const btns = document.createElement("div");
       btns.className = "line-btns";
+
+      // 활성 줄 미세 조정 — 재생하며 바로 들으면서 이 줄만 당기고/미룬다.
+      // CSS 로 #app.edit-on .lyric-line.is-active 일 때만 보인다.
+      const mkNudge = (label, d) => {
+        const b = document.createElement("button");
+        b.type = "button";
+        b.className = "nudge-t";
+        b.textContent = label;
+        b.addEventListener("click", (e) => { e.stopPropagation(); this.onNudge(i, d); });
+        return b;
+      };
+      btns.append(mkNudge("−0.1s", -0.1), mkNudge("+0.1s", 0.1));
 
       const editBtn = document.createElement("button");
       editBtn.type = "button";
@@ -118,7 +132,7 @@ export class LyricsView {
     if (!r) return;
     r.pronEl.textContent = line.pron || "";
     r.transEl.textContent = line.trans || "";
-    r.tEl.textContent = line.t != null ? fmtClock(line.t) : "타임 없음";
+    r.tEl.textContent = line.t != null ? fmtClock2(line.t) : "타임 없음";
     r.editBtn.classList.toggle("has-time", line.t != null);
   }
 
@@ -157,5 +171,11 @@ function fmtClock(t) {
   const m = Math.floor(t / 60);
   const s = Math.floor(t % 60);
   return `${m}:${String(s).padStart(2, "0")}`;
+}
+// 편집 모드 줄 표시용 — 1/100초까지 ("1:23.45"). 미세 조정 결과가 바로 보이게.
+function fmtClock2(t) {
+  const m = Math.floor(t / 60);
+  const s = (t % 60).toFixed(2).padStart(5, "0");
+  return `${m}:${s}`;
 }
 export { fmtClock };

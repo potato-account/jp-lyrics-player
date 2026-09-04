@@ -69,6 +69,7 @@
             <button id="sync-reset" type="button" title="0으로">0</button>
           </div>
           <button id="drift-start" type="button">드리프트 보정 (2점)</button>
+          <button id="ripple-start" type="button">이 줄부터 밀기</button>
         </div>
       </div>
 
@@ -78,6 +79,23 @@
         <div class="drift-btns">
           <button id="drift-apply" type="button" disabled>적용</button>
           <button id="drift-cancel" type="button">취소</button>
+        </div>
+      </div>
+
+      <div id="ripple-bar">
+        <div id="ripple-msg"></div>
+        <div class="ripple-step">
+          <button id="ripple-m1" type="button">−1</button>
+          <button id="ripple-m01" type="button">−0.1</button>
+          <span id="ripple-val">0.0s</span>
+          <button id="ripple-p01" type="button">+0.1</button>
+          <button id="ripple-p1" type="button">+1</button>
+          <button id="ripple-grab" type="button" title="시작 줄이 실제로 들리는 지점까지 재생하고 누르기">⏱ 여기</button>
+        </div>
+        <div id="ripple-info" class="hint small"></div>
+        <div class="ripple-btns">
+          <button id="ripple-apply" type="button" disabled>적용</button>
+          <button id="ripple-cancel" type="button">취소</button>
         </div>
       </div>
 
