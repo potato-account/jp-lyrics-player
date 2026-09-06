@@ -4,6 +4,11 @@
   "youtubeId": "amQZKaeEyv0",
   "bundleId": "vaundy-sekai-no-himitsu",
   "offset": 0,
+  "mr": {
+    "youtubeId": "jA-sBFdRWBs",
+    "kind": "karaoke",
+    "offset": 0
+  },
   "lines": [
     {
       "t": 13.57,

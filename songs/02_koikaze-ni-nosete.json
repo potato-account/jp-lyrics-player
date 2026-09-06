@@ -4,6 +4,11 @@
   "youtubeId": "6aP_zJ21Jmw",
   "bundleId": "vaundy-koikaze-ni-nosete",
   "offset": 0,
+  "mr": {
+    "youtubeId": "mUkT7GV6sXI",
+    "kind": "karaoke",
+    "offset": 0
+  },
   "lines": [
     {
       "t": 21.03,

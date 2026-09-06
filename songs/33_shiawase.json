@@ -4,6 +4,11 @@
   "youtubeId": "Xay0HJ4LsNc",
   "bundleId": "vaundy-shiawase",
   "offset": 0,
+  "mr": {
+    "youtubeId": "gwVUG84usK8",
+    "kind": "karaoke",
+    "offset": 0
+  },
   "lines": [
     {
       "t": 12.09,

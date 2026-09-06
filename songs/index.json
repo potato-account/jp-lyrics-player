@@ -11,7 +11,7 @@
     {
       "file": "02_koikaze-ni-nosete.json",
       "bundleId": "vaundy-koikaze-ni-nosete",
-      "version": 8,
+      "version": 9,
       "title": "恋風邪にのせて",
       "artist": "Vaundy"
     },
@@ -123,7 +123,7 @@
     {
       "file": "18_sekai-no-himitsu.json",
       "bundleId": "vaundy-sekai-no-himitsu",
-      "version": 12,
+      "version": 13,
       "title": "世界の秘密",
       "artist": "Vaundy"
     },
@@ -228,7 +228,7 @@
     {
       "file": "33_shiawase.json",
       "bundleId": "vaundy-shiawase",
-      "version": 12,
+      "version": 13,
       "title": "しわあわせ",
       "artist": "Vaundy"
     },
