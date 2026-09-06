@@ -1306,6 +1306,8 @@ function openMeta() {
   $("#m-title").value = song.title || "";
   $("#m-artist").value = song.artist || "";
   $("#m-youtube").value = song.youtubeId || "";
+  $("#m-mr-youtube").value = (song.mr && song.mr.youtubeId) || "";
+  $("#m-mr-kind").value = (song.mr && song.mr.kind) || "karaoke";
   $("#m-offset").value = song.offset || 0;
   $("#m-image-file").value = "";
   refreshMetaImagePreview();
@@ -1375,16 +1377,28 @@ function wireMetaDialog() {
 
   $("#m-save").addEventListener("click", async () => {
     if (!song) return;
+    const wasMrMode = mrMode;
     const newId = parseVideoId($("#m-youtube").value);
     const videoChanged = newId !== song.youtubeId;
     song.title = $("#m-title").value.trim() || "제목 없음";
     song.artist = $("#m-artist").value.trim();
     song.youtubeId = newId;
     song.offset = parseFloat($("#m-offset").value) || 0;
-    if (videoChanged && newId && mrMode) { mrMode = false; updateMrUi(); view.setOffset(activeOffset()); } // 원곡 링크를 고쳤으니 원곡으로
+
+    // 노래방 MR — 링크를 비우면 MR 자체를 뗀다(노래방 모드 버튼이 사라짐).
+    // offset 은 이미 잡아둔 게 있으면 보존(카테고리/링크만 바꾸는 경우가 있어서).
+    const newMrId = parseVideoId($("#m-mr-youtube").value);
+    const mrChanged = newMrId !== ((song.mr && song.mr.youtubeId) || "");
+    if (newMrId) song.mr = { youtubeId: newMrId, kind: $("#m-mr-kind").value, offset: (song.mr && song.mr.offset) || 0 };
+    else delete song.mr;
+
+    if ((videoChanged || mrChanged) && wasMrMode) mrMode = false; // 원곡·MR 링크 중 하나라도 고쳤으면 혼란 없게 원곡으로
+    updateMrUi();
+    view.setOffset(activeOffset());
     renderSyncVal();                       // 편집 모드 "전체 싱크" 표시도 갱신
     await persist();
     if (videoChanged && newId) await player.load(newId, { autoplay: true });
+    else if (wasMrMode && !mrMode) await player.load(song.youtubeId, { autoplay: true }); // 노래방 재생 중 MR 링크만 바뀌어 원곡으로 돌아간 경우
     dlg.close();
   });
 

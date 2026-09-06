@@ -223,6 +223,15 @@
     <label>제목 <input id="m-title" type="text" autocomplete="off" /></label>
     <label>아티스트 <input id="m-artist" type="text" autocomplete="off" /></label>
     <label>YouTube 링크 또는 ID <input id="m-youtube" type="text" autocomplete="off" /></label>
+    <label>노래방 MR — YouTube 링크 또는 ID (비우면 노래방 모드 버튼이 사라짐)
+      <input id="m-mr-youtube" type="text" autocomplete="off" placeholder="MR 없음" />
+    </label>
+    <label>MR 종류
+      <select id="m-mr-kind">
+        <option value="karaoke">카라오케 (편곡이 원곡과 다를 수 있음)</option>
+        <option value="official">공식 인스트루멘탈</option>
+      </select>
+    </label>
     <label>이미지 — 영상 대신 이 곡에 띄울 사진 (고르면 바로 저장)
       <input id="m-image-file" type="file" accept="image/*" />
     </label>
