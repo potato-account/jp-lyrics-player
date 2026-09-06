@@ -74,7 +74,7 @@
     {
       "file": "11_tokimeki.json",
       "bundleId": "vaundy-tokimeki",
-      "version": 6,
+      "version": 7,
       "title": "Tokimeki",
       "artist": "Vaundy"
     },
@@ -270,7 +270,7 @@
     {
       "file": "39_jounetsu.json",
       "bundleId": "vaundy-jounetsu",
-      "version": 10,
+      "version": 11,
       "title": "常熱",
       "artist": "Vaundy"
     },
@@ -284,7 +284,7 @@
     {
       "file": "41_kagerou.json",
       "bundleId": "vaundy-kagerou",
-      "version": 12,
+      "version": 13,
       "title": "かげろう",
       "artist": "Vaundy"
     },
