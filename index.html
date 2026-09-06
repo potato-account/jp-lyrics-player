@@ -32,6 +32,11 @@
 
     <!-- ===== 가운데: 3단 가사 ===== -->
     <main id="lyrics">
+      <!-- 항상 보이는 줄 — 화면을 실제로 눕혀서(Screen Orientation API) 가로모드로 전환 -->
+      <div id="rotate-bar">
+        <button id="rotate-toggle" type="button">가로로 보기</button>
+      </div>
+
       <div id="lyrics-empty" class="hint">
         <p>재생할 곡이 없습니다.</p>
         <p><b>추가</b>로 곡을 등록하세요.<br />(LRCLIB 검색 · 파일 열기 · 직접 붙여넣기)</p>

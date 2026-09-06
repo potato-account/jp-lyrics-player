@@ -149,6 +149,32 @@ async function toggleMrMode() {
   view.update(player.currentTime);
 }
 
+// ---------- 가로로 보기 — 화면을 실제로 눕힌다 ----------
+// 폰 자체 자동회전이 꺼져 있으면 물리적으로 돌려도 뷰포트가 안 바뀌어서 CSS 미디어쿼리만으론 부족하다.
+// Screen Orientation API 의 lock() 은 대부분(iOS Safari 는 지원 자체 안 함) 전체화면 상태에서만 허용되므로,
+// 앱 전체를 전체화면으로 만든 다음 landscape 로 고정한다. 이러면 실제로 화면이 90도 돌아간 채로 보인다
+// (@media (orientation: landscape) 가 그 상태를 그대로 잡아서 레이아웃을 바꿔준다).
+async function toggleRotate() {
+  if (document.fullscreenElement !== document.documentElement) {
+    try {
+      await document.documentElement.requestFullscreen();
+      if (screen.orientation && screen.orientation.lock) await screen.orientation.lock("landscape").catch(() => {});
+    } catch {
+      alert("이 기기·브라우저에서는 화면을 억지로 눕히는 게 안 돼요. 폰을 직접 돌려서 봐주세요.");
+    }
+  } else {
+    if (screen.orientation && screen.orientation.unlock) screen.orientation.unlock();
+    await document.exitFullscreen().catch(() => {});
+  }
+  updateRotateUi();
+}
+function updateRotateUi() {
+  const on = document.fullscreenElement === document.documentElement;
+  const b = $("#rotate-toggle");
+  b.textContent = on ? "세로로 보기" : "가로로 보기";
+  b.classList.toggle("on", on);
+}
+
 // 발음·번역이 비어 있으면 상단에 "자동 채우기" 배너 표시
 function updateAutofillBanner() {
   appEl.classList.toggle("needs-autofill", hasFillable(song));
@@ -331,6 +357,11 @@ function wireControls() {
 
   // 노래방 모드 — MR 있는 곡에서만 보임
   $("#mr-toggle").addEventListener("click", toggleMrMode);
+
+  // 가로로 보기 — 화면을 실제로 눕힌다(Fullscreen + Screen Orientation lock).
+  // 뒤로가기 등으로 전체화면을 직접 빠져나가도 라벨이 맞게 돌아오도록 fullscreenchange 도 같이 본다.
+  $("#rotate-toggle").addEventListener("click", toggleRotate);
+  document.addEventListener("fullscreenchange", updateRotateUi);
 
   // 영상 전체화면 → 여기서 홈 버튼을 누르면 안드로이드가 작은 창(PiP)으로 재생을 이어감
   $("#go-fullscreen").addEventListener("click", async () => {

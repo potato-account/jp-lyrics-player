@@ -165,6 +165,14 @@ button:active { transform: scale(0.97); }
   padding: 40dvh 0;
 }
 
+/* 항상 보이는 가로 회전 바 — 목록 맨 위에 붙어서 스크롤해도 항상 보임.
+   실제로 화면을 landscape 로 고정하는 버튼이라 자리를 가장 눈에 잘 띄는 목록 맨 위에 둔다. */
+#rotate-bar { position: sticky; top: 0; z-index: 3; padding: 8px 0; background: var(--bg); }
+#rotate-toggle { width: 100%; font-size: 0.85rem; padding: 9px 8px; }
+#rotate-toggle.on { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+/* 편집 바(설정/드리프트/밀기)도 같은 자리에 sticky 로 붙어서 겹치니, 편집 모드에선 회전 바를 숨긴다 */
+#app.edit-on #rotate-bar { display: none; }
+
 .lyric-line {
   padding: 14px 12px;
   border-radius: 12px;
