@@ -27,6 +27,7 @@
       </div>
       <button id="go-fullscreen" type="button" aria-label="영상 전체화면" title="전체화면 (홈 버튼으로 작은 창 재생)">⛶</button>
       <button id="toggle-video" type="button" aria-label="이미지 / 영상 전환" title="이미지 ↔ 영상">⇅</button>
+      <button id="mr-toggle" type="button" hidden>노래방 모드</button>
     </header>
 
     <!-- ===== 가운데: 3단 가사 ===== -->
@@ -39,6 +40,13 @@
       <div id="autofill-banner">
         <span id="autofill-msg">발음·번역이 비어 있어요</span>
         <button id="autofill-run" type="button">자동 채우기</button>
+      </div>
+
+      <!-- 가로모드에서만 보임: 지금 재생 중인 한 줄만 원문/발음/번역 3단으로 크게 -->
+      <div id="lyrics-focus" aria-live="polite">
+        <div class="orig"></div>
+        <div class="pron"></div>
+        <div class="trans"></div>
       </div>
 
       <div id="edit-bar">
@@ -124,6 +132,7 @@
         <button id="open-add" type="button">추가</button>
         <button id="edit-mode" type="button">편집</button>
         <button id="open-meta" type="button">정보</button>
+        <button id="landscape-mode" type="button" title="가로모드 — 영상 왼쪽, 지금 줄 오른쪽 크게">가로</button>
       </div>
     </footer>
   </div>

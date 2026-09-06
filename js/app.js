@@ -22,6 +22,23 @@ let view;
 let wakeLock = null;
 let bulkMode = "pron";
 
+// 노래방 모드 — 재생 소스를 원곡 대신 MR(song.mr.youtubeId)로 바꿔서 듣는다.
+// 가사 타임(t)·붙여넣기·편집 도구는 전혀 안 건드림: 곡마다 "원곡 offset"과 "MR offset"을
+// 따로 들고 있다가, 지금 어느 소스를 재생 중이냐에 따라 그 offset 만 골라 쓴다.
+// 곡이 바뀔 때마다 꺼진 상태로 되돌아간다(다음 곡에 MR 이 없을 수도 있으므로).
+let mrMode = false;
+const hasMr = (s) => !!(s && s.mr && s.mr.youtubeId);
+const activeOffset = () => {
+  if (!song) return 0;
+  if (mrMode && hasMr(song)) return song.mr.offset || 0;
+  return song.offset || 0;
+};
+const setActiveOffset = (v) => {
+  if (!song) return;
+  if (mrMode && hasMr(song)) song.mr.offset = v;
+  else song.offset = v;
+};
+
 // 목록 시트가 지금 무엇을 보여주는가.
 // { type:"all" } | { type:"playlist", id } | { type:"hidden" }
 let listFilter = { type: "all" };
@@ -83,10 +100,15 @@ async function persist() {
 async function loadSong(next, { autoplay = false } = {}) {
   song = next;
   if (song.offset == null) song.offset = 0;
+  if (song.mr && song.mr.offset == null) song.mr.offset = 0;
+  mrMode = false;                    // 곡이 바뀌면 항상 원곡부터 (다음 곡엔 MR 이 없을 수도 있음)
   if (song.id) setLastId(song.id);
   appEl.classList.toggle("has-song", song.lines.length > 0);
   view.setSong(song);
   view.setEditable(appEl.classList.contains("edit-on"));
+  view.setOffset(activeOffset());
+  updateMrUi();
+  lastFocusIdx = -2; updateFocusLine();   // 곡이 바뀌면 가로모드 "지금 줄"도 비웠다가 새로 그림
   renderSyncVal();
   updateAutofillBanner();
   applyArt();
@@ -95,6 +117,34 @@ async function loadSong(next, { autoplay = false } = {}) {
   $("#time-cur").textContent = "0:00";
   $("#seekbar").value = "0";
   if (song.youtubeId) await player.load(song.youtubeId, { autoplay });
+}
+
+// ---------- 노래방 모드 (MR 재생) ----------
+// 곡의 mr.youtubeId 로 재생 소스만 바꾼다. 가사 t 는 그대로, offset 만 원곡/MR 각각 것을 쓴다.
+function updateMrUi() {
+  const btn = $("#mr-toggle");
+  const on = hasMr(song);
+  btn.hidden = !on;
+  if (!on) { appEl.classList.remove("mr-on"); return; }
+  appEl.classList.toggle("mr-on", mrMode);
+  btn.textContent = mrMode ? "원곡으로" : "노래방 모드";
+  btn.title = mrMode
+    ? "원곡으로 돌아가기"
+    : (song.mr.kind === "karaoke" ? "노래방 MR로 듣기 (반주 편곡이 원곡과 다를 수 있음)" : "MR로 듣기");
+  btn.setAttribute("aria-label", btn.title);
+}
+async function toggleMrMode() {
+  if (!song || !hasMr(song)) return;
+  const wasPlaying = player.isPlaying;
+  const canonical = player.currentTime - activeOffset();   // 지금 소스 기준으로 "원곡 진행 시각" 역산
+  mrMode = !mrMode;
+  updateMrUi();
+  renderSyncVal();                    // 전체싱크 표시도 지금 켜진 소스의 offset 으로
+  const off = activeOffset();
+  view.setOffset(off);
+  const videoId = mrMode ? song.mr.youtubeId : song.youtubeId;
+  await player.load(videoId, { autoplay: wasPlaying, seek: Math.max(0, canonical + off) });
+  view.update(player.currentTime);
 }
 
 // 발음·번역이 비어 있으면 상단에 "자동 채우기" 배너 표시
@@ -190,6 +240,29 @@ function setShowVideo(on) {
   b.setAttribute("aria-label", on ? "이미지로 전환" : "영상으로 전환");
 }
 
+// ---------- 가로모드 — 영상 왼쪽 / 지금 재생 중인 줄만 오른쪽에 3단으로 크게 ----------
+// 기억해뒀다 다음에 자동으로 켜지진 않는다 — 앱을 열 때는 항상 기본값(세로형)에서 시작.
+function setLandscapeMode(on) {
+  appEl.classList.toggle("landscape-on", on);
+  const b = $("#landscape-mode");
+  b.textContent = on ? "세로" : "가로";
+  b.title = on ? "세로 모드로" : "가로모드 — 영상 왼쪽, 지금 줄 오른쪽 크게";
+  lastFocusIdx = -2;               // 켜고 끌 때 지금 줄을 다시 그려서 빈 화면/묵은 줄이 안 남게
+  updateFocusLine();
+}
+// #lyrics-focus 는 스크롤 목록과 별개로 "지금 활성 줄" 하나만 따로 그린다. 매 프레임 다시 쓰지 않게
+// 활성 줄이 실제로 바뀔 때만(view.activeIdx 변화) 갱신 — LyricsView.update() 의 조기 종료와 같은 패턴.
+let lastFocusIdx = -2;
+function updateFocusLine() {
+  if (view.activeIdx === lastFocusIdx) return;
+  lastFocusIdx = view.activeIdx;
+  const L = song && view.activeIdx >= 0 ? song.lines[view.activeIdx] : null;
+  const f = $("#lyrics-focus");
+  f.querySelector(".orig").textContent = L ? (L.orig || "") : "";
+  f.querySelector(".pron").textContent = L ? (L.pron || "") : "";
+  f.querySelector(".trans").textContent = L ? (L.trans || "") : "";
+}
+
 // 이미지 파일 → 캔버스로 축소·재인코딩한 Blob. 큰 원본을 그대로 넣지 않는다.
 async function downscaleImage(file, maxPx = 1080) {
   const bmp = await createImageBitmap(file).catch(() => null);
@@ -223,6 +296,7 @@ function tick() {
   const now = player.currentTime;
   const dur = player.duration;
   view.update(now);
+  updateFocusLine();
   $("#time-cur").textContent = fmt(now);
   if (dur) {
     $("#time-dur").textContent = fmt(dur);
@@ -259,6 +333,15 @@ function wireControls() {
     setShowVideo(!$("#video-area").classList.contains("show-video"));
   });
   setShowVideo(localStorage.getItem("jlp:showVideo") === "1");
+
+  // 노래방 모드 — MR 있는 곡에서만 보임
+  $("#mr-toggle").addEventListener("click", toggleMrMode);
+
+  // 가로모드 — 영상 왼쪽 / 지금 줄만 오른쪽에 크게. 앱을 열 때는 항상 세로형이 기본.
+  $("#landscape-mode").addEventListener("click", () => {
+    setLandscapeMode(!appEl.classList.contains("landscape-on"));
+  });
+  setLandscapeMode(false);
 
   // 영상 전체화면 → 여기서 홈 버튼을 누르면 안드로이드가 작은 창(PiP)으로 재생을 이어감
   $("#go-fullscreen").addEventListener("click", async () => {
@@ -408,7 +491,7 @@ function rippleBump(d) {
 function rippleGrab() {
   if (rippleState !== 2 || rippleAnchor < 0) { alert("먼저 시작 줄을 탭하세요."); return; }
   const L = song.lines[rippleAnchor];
-  rippleDelta = Math.round((player.currentTime - (L.t + (song.offset || 0))) * 100) / 100;
+  rippleDelta = Math.round((player.currentTime - (L.t + activeOffset())) * 100) / 100;
   rippleRenderVal();
   rippleRenderInfo();
 }
@@ -451,8 +534,9 @@ function wireRipple() {
 
 // ---------- 전체 싱크(offset) — 편집 모드 "설정" 영역 ----------
 // 곡의 모든 줄에 일괄로 더해지는 보정치(초). 정보 다이얼로그의 "싱크 보정"과 같은 값.
+// 노래방 모드일 때는 song.mr.offset 을, 아니면 song.offset 을 조정한다(activeOffset/setActiveOffset).
 function renderSyncVal() {
-  const v = song ? (song.offset || 0) : 0;
+  const v = activeOffset();
   const r = Math.round(v * 10) / 10;
   $("#sync-val").textContent = (r > 0 ? "+" : "") + r.toFixed(1) + "s";
 }
@@ -460,8 +544,9 @@ function wireSyncBar() {
   let saveTimer = null;
   const bump = (d) => {
     if (!song) return;
-    song.offset = Math.round(((song.offset || 0) + d) * 10) / 10;
+    setActiveOffset(Math.round((activeOffset() + d) * 10) / 10);
     renderSyncVal();
+    view.setOffset(activeOffset());
     view.update(player.currentTime);            // 재생 중이면 즉시 반영
     clearTimeout(saveTimer);
     saveTimer = setTimeout(persist, 400);       // 연타 시 마지막 한 번만 저장
@@ -471,9 +556,10 @@ function wireSyncBar() {
   $("#sync-p").addEventListener("click", () => bump(0.1));
   $("#sync-pp").addEventListener("click", () => bump(0.5));
   $("#sync-reset").addEventListener("click", () => {
-    if (!song || !(song.offset || 0)) return;
-    song.offset = 0;
+    if (!song || !activeOffset()) return;
+    setActiveOffset(0);
     renderSyncVal();
+    view.setOffset(0);
     view.update(player.currentTime);
     clearTimeout(saveTimer);
     saveTimer = setTimeout(persist, 400);
@@ -499,6 +585,9 @@ function driftMsg() {
 }
 function driftEnter() {
   if (!song) return;
+  // 드리프트는 재생 중인 소스의 절대 시각을 그대로 구워 넣는다(offset 을 거치지 않음).
+  // 노래방 모드에서 하면 원곡 기준이어야 할 t 가 MR 영상 시각으로 박혀버리니 막는다.
+  if (mrMode) { alert("드리프트 보정은 원곡 재생 중에만 할 수 있어요. 노래방 모드를 끄고 다시 시도하세요."); return; }
   if (song.lines.filter((l) => l.t != null).length < 2) { alert("타임이 있는 줄이 2개 이상이어야 해요."); return; }
   rippleExit();                       // 밀기와 동시에 켜지 않는다
   driftState = 1; driftA = null; driftB = null;
@@ -552,6 +641,7 @@ async function driftApply() {
   await persist();
   view.setSong(song);
   view.setEditable(appEl.classList.contains("edit-on"));
+  view.setOffset(activeOffset());
   renderSyncVal();
   updateAutofillBanner();
   driftExit();
@@ -613,7 +703,7 @@ function wireLineDialog() {
   dlg.querySelectorAll("[data-close]").forEach((b) => b.addEventListener("click", () => dlg.close()));
   // 시간 칸에 현재 재생 위치 담기
   $("#line-time-now").addEventListener("click", () => {
-    $("#line-time").value = fmtTime(+(player.currentTime - (song.offset || 0)).toFixed(2));
+    $("#line-time").value = fmtTime(+(player.currentTime - activeOffset()).toFixed(2));
   });
   $("#line-save").addEventListener("click", () => {
     if (lineDialogIdx < 0 || !song || !song.lines[lineDialogIdx]) return dlg.close();
@@ -1291,6 +1381,7 @@ function wireMetaDialog() {
     song.artist = $("#m-artist").value.trim();
     song.youtubeId = newId;
     song.offset = parseFloat($("#m-offset").value) || 0;
+    if (videoChanged && newId && mrMode) { mrMode = false; updateMrUi(); view.setOffset(activeOffset()); } // 원곡 링크를 고쳤으니 원곡으로
     renderSyncVal();                       // 편집 모드 "전체 싱크" 표시도 갱신
     await persist();
     if (videoChanged && newId) await player.load(newId, { autoplay: true });
@@ -1465,6 +1556,7 @@ async function syncBundledSongsInner() {
       data.id = existing.id;                              // 같은 레코드로 덮어쓰기
       if (!data.youtubeId && existing.youtubeId) data.youtubeId = existing.youtubeId; // 내가 넣은 링크 보존
       if (!data.offset && existing.offset) data.offset = existing.offset;
+      if (data.mr && existing.mr && !data.mr.offset && existing.mr.offset) data.mr.offset = existing.mr.offset; // MR 싱크 보정치 보존
       if (existing.hidden) data.hidden = true;            // 숨김 상태도 보존(안 그러면 버전 올릴 때 되살아남)
     }
     await putSong(data);

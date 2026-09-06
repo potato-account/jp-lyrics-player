@@ -111,6 +111,38 @@ button:active { transform: scale(0.97); }
 #toggle-video { font-size: 1.15rem; line-height: 1; }
 #video-area.show-video #toggle-video { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
 
+/* 노래방 모드 — 원곡 대신 MR 재생. MR 이 있는 곡에서만 나타난다(#mr-toggle[hidden]). */
+#mr-toggle {
+  position: absolute;
+  left: 8px;
+  bottom: 8px;
+  z-index: 5;
+  height: 40px;
+  padding: 0 14px;
+  border-radius: 20px;
+  background: #000000aa;
+  backdrop-filter: blur(4px);
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+#app.mr-on #mr-toggle { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+
+/* 가로모드 — 영상/썸네일 왼쪽, 지금 재생 중인 줄만 오른쪽에 3단으로 크게.
+   #app 을 그리드로 바꿔서 header(영상)·main(가사)을 좌우로 놓고, footer(재생 컨트롤)는 아래에 전체 폭으로 둔다.
+   실제 재생·목록·편집 로직은 그대로, 화면 배치와 "지금 줄만 보여주기"만 바뀐다. */
+#app.landscape-on {
+  display: grid;
+  grid-template-columns: 42% 1fr;
+  grid-template-rows: 1fr auto;
+  grid-template-areas: "video lyrics" "controls controls";
+}
+#app.landscape-on #video-area { grid-area: video; border-bottom: 0; border-right: 1px solid var(--border); }
+#app.landscape-on #video-area.video-expanded { height: 100%; }
+#app.landscape-on #lyrics { grid-area: lyrics; display: flex; align-items: center; justify-content: center; }
+#app.landscape-on #controls { grid-area: controls; }
+#app.landscape-on #lyrics-list { display: none; }
+#app.landscape-on #landscape-mode { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+
 /* --- 가운데 가사 --- */
 #lyrics {
   flex: 1 1 0;                 /* basis 0 + grow: 남는 공간을 정확히 채움 */
@@ -143,6 +175,15 @@ button:active { transform: scale(0.97); }
 .lyric-line .trans { font-size: 0.98rem; color: var(--fg-dim); margin-top: 3px; }
 .lyric-line .pron:empty,
 .lyric-line .trans:empty { display: none; }
+
+/* 가로모드에서 지금 줄 하나만 크게 — 색은 스크롤 목록의 활성 줄과 동일(원문 하늘색/발음 흰색/번역 초록색) */
+#lyrics-focus { display: none; width: 100%; padding: 0 20px; text-align: center; }
+#lyrics-focus .orig  { font-size: 1.7rem; font-weight: 700; line-height: 1.4; color: var(--lyric-orig); }
+#lyrics-focus .pron  { font-size: 1.15rem; margin-top: 10px; color: var(--fg); }
+#lyrics-focus .trans { font-size: 1.15rem; margin-top: 10px; color: var(--lyric-trans); }
+#lyrics-focus .pron:empty,
+#lyrics-focus .trans:empty { display: none; }
+#app.landscape-on.has-song #lyrics-focus { display: block; }
 
 /* 편집 모드에서만 보이는 시간 표시 */
 .lyric-line .line-t { display: none; }

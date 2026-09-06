@@ -2,6 +2,7 @@
 
 // 곡 데이터 형식:
 // { id, title, artist, youtubeId, offset, updatedAt,
+//   mr: { youtubeId, kind: "official"|"karaoke", offset } | undefined,  // 노래방 모드용 MR. 없으면 그 곡은 노래방 모드 자체가 없음.
 //   lines: [ { t: 14.99|null, orig, pron, trans } ] }
 
 // ---- 붙여넣기 텍스트 → lines 배열 ----
@@ -50,6 +51,7 @@ export class LyricsView {
     this.activeIdx = -1;
     this.editable = false;
     this._userScrollUntil = 0;
+    this.offset = 0; // 지금 적용 중인 싱크 보정치. 원곡/노래방 어느 쪽 offset 을 쓸지는 app.js 가 setOffset 으로 넣어준다.
 
     this.scroller.addEventListener("wheel", () => this._pauseAutoScroll(), { passive: true });
     this.scroller.addEventListener("touchmove", () => this._pauseAutoScroll(), { passive: true });
@@ -67,6 +69,12 @@ export class LyricsView {
     this.editable = on;
     // 발음/번역은 이제 줄에서 직접 타이핑하지 않고 "수정" 다이얼로그에서만 고친다.
     // 편집 모드 표시는 #app.edit-on CSS 가 담당하므로 여기서는 플래그만 갱신.
+  }
+
+  // 재생 중인 소스(원곡/노래방)에 맞는 싱크 보정치를 넣는다. song.offset 을 직접 읽지 않는 건
+  // 노래방 모드일 때 다른 offset(song.mr.offset)을 써야 하기 때문 — 그 판단은 app.js 담당.
+  setOffset(off) {
+    this.offset = off || 0;
   }
 
   render() {
@@ -118,7 +126,7 @@ export class LyricsView {
       li.addEventListener("click", (e) => {
         if (this.editable) return;
         if (e.target.closest(".line-btns")) return;
-        if (line.t != null) this.onSeekToLine(line.t + (this.song.offset || 0));
+        if (line.t != null) this.onSeekToLine(line.t + this.offset);
       });
 
       this.listEl.appendChild(li);
@@ -138,7 +146,7 @@ export class LyricsView {
 
   update(now) {
     if (!this.song) return;
-    const off = this.song.offset || 0;
+    const off = this.offset;
     let idx = -1;
     for (let i = 0; i < this.song.lines.length; i++) {
       const t = this.song.lines[i].t;
