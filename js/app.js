@@ -97,11 +97,12 @@ async function persist() {
 }
 
 // ---------- 곡 적용 ----------
-async function loadSong(next, { autoplay = false } = {}) {
+// startMr: 대기열 이동 중 노래방 모드를 이어가려는 경우에만 true — 그 곡에 mr 이 없으면 그냥 원곡으로 시작.
+async function loadSong(next, { autoplay = false, startMr = false } = {}) {
   song = next;
   if (song.offset == null) song.offset = 0;
   if (song.mr && song.mr.offset == null) song.mr.offset = 0;
-  mrMode = false;                    // 곡이 바뀌면 항상 원곡부터 (다음 곡엔 MR 이 없을 수도 있음)
+  mrMode = startMr && hasMr(song);
   if (song.id) setLastId(song.id);
   appEl.classList.toggle("has-song", song.lines.length > 0);
   view.setSong(song);
@@ -116,7 +117,8 @@ async function loadSong(next, { autoplay = false } = {}) {
   $("#time-dur").textContent = "0:00";
   $("#time-cur").textContent = "0:00";
   $("#seekbar").value = "0";
-  if (song.youtubeId) await player.load(song.youtubeId, { autoplay });
+  if (mrMode) await player.load(song.mr.youtubeId, { autoplay, seek: song.mr.offset || 0 });
+  else if (song.youtubeId) await player.load(song.youtubeId, { autoplay });
 }
 
 // ---------- 노래방 모드 (MR 재생) ----------
@@ -240,16 +242,9 @@ function setShowVideo(on) {
   b.setAttribute("aria-label", on ? "이미지로 전환" : "영상으로 전환");
 }
 
-// ---------- 가로모드 — 영상 왼쪽 / 지금 재생 중인 줄만 오른쪽에 3단으로 크게 ----------
-// 기억해뒀다 다음에 자동으로 켜지진 않는다 — 앱을 열 때는 항상 기본값(세로형)에서 시작.
-function setLandscapeMode(on) {
-  appEl.classList.toggle("landscape-on", on);
-  const b = $("#landscape-mode");
-  b.textContent = on ? "세로" : "가로";
-  b.title = on ? "세로 모드로" : "가로모드 — 영상 왼쪽, 지금 줄 오른쪽 크게";
-  lastFocusIdx = -2;               // 켜고 끌 때 지금 줄을 다시 그려서 빈 화면/묵은 줄이 안 남게
-  updateFocusLine();
-}
+// ---------- 가로모드 — 폰을 실제로 눕히면(CSS 미디어쿼리) 영상 왼쪽 / 지금 줄만 오른쪽에 3단으로 ----------
+// 버튼으로 켜고 끄는 게 아니라 실제 화면 방향을 따라간다 — 자세한 배치는 style.css 의
+// @media (orientation: landscape) 담당. 여기서는 그 레이아웃이 쓸 "지금 줄" 텍스트만 채워 넣는다.
 // #lyrics-focus 는 스크롤 목록과 별개로 "지금 활성 줄" 하나만 따로 그린다. 매 프레임 다시 쓰지 않게
 // 활성 줄이 실제로 바뀔 때만(view.activeIdx 변화) 갱신 — LyricsView.update() 의 조기 종료와 같은 패턴.
 let lastFocusIdx = -2;
@@ -336,12 +331,6 @@ function wireControls() {
 
   // 노래방 모드 — MR 있는 곡에서만 보임
   $("#mr-toggle").addEventListener("click", toggleMrMode);
-
-  // 가로모드 — 영상 왼쪽 / 지금 줄만 오른쪽에 크게. 앱을 열 때는 항상 세로형이 기본.
-  $("#landscape-mode").addEventListener("click", () => {
-    setLandscapeMode(!appEl.classList.contains("landscape-on"));
-  });
-  setLandscapeMode(false);
 
   // 영상 전체화면 → 여기서 홈 버튼을 누르면 안드로이드가 작은 창(PiP)으로 재생을 이어감
   $("#go-fullscreen").addEventListener("click", async () => {
@@ -1151,26 +1140,36 @@ async function ensureQueue() {
 }
 
 // 대기열의 at 위치 곡을 재생(대기열이 유효하다고 가정). 범위를 벗어나면 순환한다.
-async function playAt(at) {
+// 노래방 모드로 듣던 중이면 그 모드를 이어가려고 시도한다: at 위치 곡에 mr 이 없으면
+// dir 방향으로 계속 다음 곡을 찾아 넘어간다(전부 없으면 결국 원래 at 위치 곡을 원곡으로 재생).
+async function playAt(at, { dir = 1 } = {}) {
   const n = queue.length;
   if (!n) return;
-  at = ((at % n) + n) % n;
-  const next = await getSong(queue[at]);
+  const wantKaraoke = mrMode;
+  let idx = ((at % n) + n) % n;
+  let next = await getSong(queue[idx]);
+  if (wantKaraoke && next && !hasMr(next)) {
+    for (let i = 1; i < n; i++) {
+      const tryIdx = (((idx + i * dir) % n) + n) % n;
+      const cand = await getSong(queue[tryIdx]);
+      if (cand && hasMr(cand)) { idx = tryIdx; next = cand; break; }
+    }
+  }
   if (!next) return;
-  queueIndex = at;
-  await loadSong(next, { autoplay: true });
+  queueIndex = idx;
+  await loadSong(next, { autoplay: true, startMr: wantKaraoke });
 }
 
 // dir: +1 다음 곡 / -1 이전 곡. 양끝에서는 순환한다.
 async function playAdjacent(dir) {
   if (!(await ensureQueue())) return;
-  await playAt(queueIndex + dir);
+  await playAt(queueIndex + dir, { dir });
 }
 
 // which: "first" 목록 첫 곡 / "last" 목록 마지막 곡
 async function playEdge(which) {
   if (!(await ensureQueue())) return;
-  await playAt(which === "first" ? 0 : queue.length - 1);
+  await playAt(which === "first" ? 0 : queue.length - 1, { dir: which === "first" ? 1 : -1 });
 }
 
 // ---------- 곡이 끝났을 때 ----------

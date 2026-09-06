@@ -127,21 +127,24 @@ button:active { transform: scale(0.97); }
 }
 #app.mr-on #mr-toggle { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
 
-/* 가로모드 — 영상/썸네일 왼쪽, 지금 재생 중인 줄만 오른쪽에 3단으로 크게.
-   #app 을 그리드로 바꿔서 header(영상)·main(가사)을 좌우로 놓고, footer(재생 컨트롤)는 아래에 전체 폭으로 둔다.
+/* 가로모드 — 폰을 실제로 눕혔을 때(뷰포트 자체가 landscape)만 적용. 버튼으로 켜는 게 아니라
+   화면 방향을 그대로 따라간다: 영상/썸네일은 왼쪽, 지금 재생 중인 줄만 오른쪽에 3단으로 크게.
+   #app 을 그리드로 바꿔서 header(영상)·main(가사)을 좌우로, footer(재생 컨트롤)는 아래에 전체 폭으로 둔다.
    실제 재생·목록·편집 로직은 그대로, 화면 배치와 "지금 줄만 보여주기"만 바뀐다. */
-#app.landscape-on {
-  display: grid;
-  grid-template-columns: 42% 1fr;
-  grid-template-rows: 1fr auto;
-  grid-template-areas: "video lyrics" "controls controls";
+@media (orientation: landscape) {
+  #app {
+    display: grid;
+    grid-template-columns: 42% 1fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas: "video lyrics" "controls controls";
+  }
+  #video-area { grid-area: video; border-bottom: 0; border-right: 1px solid var(--border); }
+  #video-area.video-expanded { height: 100%; }
+  #lyrics { grid-area: lyrics; display: flex; align-items: center; justify-content: center; }
+  #controls { grid-area: controls; }
+  #lyrics-list { display: none; }
+  #app.has-song #lyrics-focus { display: block; }
 }
-#app.landscape-on #video-area { grid-area: video; border-bottom: 0; border-right: 1px solid var(--border); }
-#app.landscape-on #video-area.video-expanded { height: 100%; }
-#app.landscape-on #lyrics { grid-area: lyrics; display: flex; align-items: center; justify-content: center; }
-#app.landscape-on #controls { grid-area: controls; }
-#app.landscape-on #lyrics-list { display: none; }
-#app.landscape-on #landscape-mode { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
 
 /* --- 가운데 가사 --- */
 #lyrics {
@@ -183,7 +186,6 @@ button:active { transform: scale(0.97); }
 #lyrics-focus .trans { font-size: 1.15rem; margin-top: 10px; color: var(--lyric-trans); }
 #lyrics-focus .pron:empty,
 #lyrics-focus .trans:empty { display: none; }
-#app.landscape-on.has-song #lyrics-focus { display: block; }
 
 /* 편집 모드에서만 보이는 시간 표시 */
 .lyric-line .line-t { display: none; }
