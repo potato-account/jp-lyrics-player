@@ -4,6 +4,11 @@
   "youtubeId": "Hy7GWPkrZv0",
   "bundleId": "vaundy-wasureru-mae-ni",
   "offset": 0,
+  "mr": {
+    "youtubeId": "tlhmBMdy5aE",
+    "kind": "karaoke",
+    "offset": 0
+  },
   "lines": [
     {
       "t": 23.22,

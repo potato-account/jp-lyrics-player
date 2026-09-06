@@ -4,6 +4,11 @@
   "youtubeId": "gtQwNVznphg",
   "bundleId": "vaundy-carnival",
   "offset": 0,
+  "mr": {
+    "youtubeId": "KDnjnOTbg9w",
+    "kind": "karaoke",
+    "offset": 0
+  },
   "lines": [
     {
       "t": 18.21,

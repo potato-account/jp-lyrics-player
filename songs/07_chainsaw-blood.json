@@ -4,6 +4,11 @@
   "youtubeId": "wiJO_OgsyPE",
   "bundleId": "vaundy-chainsaw-blood",
   "offset": 0,
+  "mr": {
+    "youtubeId": "ZpQgyIGe2qM",
+    "kind": "karaoke",
+    "offset": 0
+  },
   "lines": [
     {
       "t": 15.1,

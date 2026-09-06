@@ -4,6 +4,11 @@
   "youtubeId": "Zt7ZXRxhoT4",
   "bundleId": "vaundy-replica",
   "offset": 0,
+  "mr": {
+    "youtubeId": "3d3dgHfadus",
+    "kind": "karaoke",
+    "offset": 0
+  },
   "lines": [
     {
       "t": 20.27,

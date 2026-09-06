@@ -4,6 +4,11 @@
   "youtubeId": "rS2G7W8qeHs",
   "bundleId": "vaundy-boku-ni-wa-doushite",
   "offset": 0,
+  "mr": {
+    "youtubeId": "WO0uNwwTGY0",
+    "kind": "karaoke",
+    "offset": 0
+  },
   "lines": [
     {
       "t": 27.87,

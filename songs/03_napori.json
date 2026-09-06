@@ -4,6 +4,11 @@
   "youtubeId": "ZeIGVnkYX04",
   "bundleId": "vaundy-napori",
   "offset": 0,
+  "mr": {
+    "youtubeId": "fkEeYDL2qig",
+    "kind": "karaoke",
+    "offset": 0
+  },
   "lines": [
     {
       "t": 14.99,

@@ -4,6 +4,11 @@
   "youtubeId": "9tpGkTWUvTc",
   "bundleId": "vaundy-pained",
   "offset": 0,
+  "mr": {
+    "youtubeId": "NQ10yHctINM",
+    "kind": "karaoke",
+    "offset": 0
+  },
   "lines": [
     {
       "t": 6.45,

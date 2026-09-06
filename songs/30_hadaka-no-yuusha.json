@@ -4,6 +4,11 @@
   "youtubeId": "wWnak7V8hr0",
   "bundleId": "vaundy-hadaka-no-yuusha",
   "offset": 0,
+  "mr": {
+    "youtubeId": "LTRMNKI3OyY",
+    "kind": "karaoke",
+    "offset": 0
+  },
   "lines": [
     {
       "t": 0.73,

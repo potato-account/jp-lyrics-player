@@ -4,6 +4,11 @@
   "youtubeId": "Xr0RRdBNNUg",
   "bundleId": "vaundy-zero",
   "offset": 0,
+  "mr": {
+    "youtubeId": "94JNnBIHTFU",
+    "kind": "karaoke",
+    "offset": 0
+  },
   "lines": [
     {
       "t": 23.42,

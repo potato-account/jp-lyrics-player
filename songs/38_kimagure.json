@@ -4,6 +4,11 @@
   "youtubeId": "uYyfD5A-w8Q",
   "bundleId": "vaundy-kimagure",
   "offset": 0,
+  "mr": {
+    "youtubeId": "Q-1XG5_k5Vo",
+    "kind": "karaoke",
+    "offset": 0
+  },
   "approxTiming": true,
   "needsTapSync": true,
   "lines": [

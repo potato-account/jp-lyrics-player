@@ -4,6 +4,11 @@
   "youtubeId": "RhDxXvn6YaQ",
   "bundleId": "vaundy-gyakkou",
   "offset": 0,
+  "mr": {
+    "youtubeId": "5LSo_eT8C8U",
+    "kind": "karaoke",
+    "offset": 0
+  },
   "lines": [
     {
       "t": 27.59,

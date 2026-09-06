@@ -4,6 +4,11 @@
   "youtubeId": "3UbBjzFDkd4",
   "bundleId": "vaundy-hanauranai",
   "offset": -0.2,
+  "mr": {
+    "youtubeId": "EmnzBO5tCUY",
+    "kind": "karaoke",
+    "offset": 0
+  },
   "lines": [
     {
       "t": 0.37,

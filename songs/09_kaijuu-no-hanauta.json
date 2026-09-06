@@ -4,6 +4,11 @@
   "youtubeId": "ENQANfv2ANQ",
   "bundleId": "vaundy-kaijuu-no-hanauta",
   "offset": 0,
+  "mr": {
+    "youtubeId": "ERgwB3LMv88",
+    "kind": "karaoke",
+    "offset": 0
+  },
   "lines": [
     {
       "t": 0.33,

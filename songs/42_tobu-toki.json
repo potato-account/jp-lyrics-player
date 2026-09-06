@@ -4,6 +4,11 @@
   "youtubeId": "LVCwdZoUFQ8",
   "bundleId": "vaundy-tobu-toki",
   "offset": 0,
+  "mr": {
+    "youtubeId": "fca0LIfEDh8",
+    "kind": "karaoke",
+    "offset": 0
+  },
   "lines": [
     {
       "t": 19.52,
