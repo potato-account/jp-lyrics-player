@@ -122,8 +122,9 @@
       <div class="row view-row">
         <!-- 화면을 실제로 눕혀서(Screen Orientation API) 가로모드로 전환 -->
         <button id="rotate-toggle" type="button">가로로 보기</button>
-        <!-- 영상은 나노 크기로 줄이고 가사만 뜨는 작은 창(Document PiP) -->
-        <button id="pip-toggle" type="button" title="작게 보기 (PiP) — 최신 Chrome 필요">작게 보기</button>
+        <!-- 영상 영역을 거의 없애고 가사를 최대한 채움 — 삼성 팝업 보기 등 OS 자체
+             떠있는 작은 창 기능과 같이 쓰면 좁은 창에서도 가사가 잘 보인다 -->
+        <button id="compact-toggle" type="button" title="영상 숨기고 가사 꽉 채우기 — 팝업 보기 등 작은 창일 때 쓰면 좋아요">미니 모드</button>
       </div>
       <input id="seekbar" type="range" min="0" max="1000" value="0" step="1" aria-label="재생 위치" />
       <div class="row time-row">
