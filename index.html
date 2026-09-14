@@ -76,9 +76,16 @@
             <button id="sync-pp" type="button">+0.5</button>
             <button id="sync-reset" type="button" title="0으로">0</button>
           </div>
+          <button id="livesync-toggle" type="button">실시간 반영 (탭 싱크)</button>
           <button id="drift-start" type="button">드리프트 보정 (2점)</button>
           <button id="ripple-start" type="button">이 줄부터 밀기</button>
         </div>
+      </div>
+
+      <div id="livesync-bar">
+        <div id="livesync-msg">재생하면서 가사를 탭하면, 그 순간이 그 줄에 바로 기록돼요.</div>
+        <div id="livesync-info" class="hint small"></div>
+        <button id="livesync-stop" type="button">끄기</button>
       </div>
 
       <div id="drift-bar">

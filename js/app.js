@@ -385,6 +385,7 @@ function wireControls() {
     collapseCats();
     driftExit();                       // 드리프트 보정 진행 중이었으면 취소
     rippleExit();                      // 밀기 진행 중이었으면 취소
+    liveSyncExit();                    // 실시간 반영 진행 중이었으면 취소
     view.setEditable(on);
     if (on) acquireWakeLock();
     else { persist(); if (!player.isPlaying) releaseWakeLock(); }
@@ -421,6 +422,7 @@ function wireControls() {
   wireSyncBar();
   wireDrift();
   wireRipple();
+  wireLiveSync();
 }
 
 // ---------- 활성 줄 미세 조정 (D) ----------
@@ -479,6 +481,7 @@ function rippleEnter() {
   if (!song) return;
   if (!song.lines.some((l) => l.t != null)) { alert("타임이 있는 줄이 없어요."); return; }
   driftExit();                          // 드리프트와 동시에 켜지 않는다
+  liveSyncExit();                       // 실시간 반영과 동시에 켜지 않는다
   rippleState = 1; rippleAnchor = -1; rippleDelta = 0;
   appEl.classList.add("ripple-mode");
   document.querySelectorAll(".lyric-line.ripple-anchor, .lyric-line.ripple-after")
@@ -552,6 +555,65 @@ function wireRipple() {
   }, true);
 }
 
+// ---------- 실시간 반영 (재생하면서 가사를 탭 → 그 줄 t 를 바로 기록) ----------
+// 드리프트(2점)·밀기와 달리 매 탭마다 그 줄의 t 를 "지금 재생 위치"로 즉시 덮어쓴다.
+// 노래를 처음부터 끝까지 들으며 가사가 나올 때마다 탭 한 번씩 — 줄마다 다이얼로그를 여는 것보다 훨씬 빠르다.
+let liveSyncOn = false;
+let liveSyncCount = 0;
+let liveSyncSaveTimer = null;
+
+function liveSyncMsg() {
+  $("#livesync-info").textContent = liveSyncOn ? `${liveSyncCount}줄 기록됨` : "";
+}
+function liveSyncEnter() {
+  if (!song) return;
+  driftExit();                       // 다른 보정 모드와 동시에 켜지 않는다
+  rippleExit();
+  liveSyncOn = true;
+  liveSyncCount = 0;
+  appEl.classList.add("livesync-mode");
+  $("#livesync-toggle").textContent = "실시간 반영 끄기";
+  liveSyncMsg();
+}
+function liveSyncExit() {
+  liveSyncOn = false;
+  appEl.classList.remove("livesync-mode");
+  $("#livesync-toggle").textContent = "실시간 반영 (탭 싱크)";
+  if (liveSyncCount) { clearTimeout(liveSyncSaveTimer); persist(); }
+}
+function liveSyncPick(idx) {
+  const line = song && song.lines[idx];
+  if (!line) return;
+  line.t = Math.max(0, +(player.currentTime - activeOffset()).toFixed(2));
+  view.refreshRow(idx);
+  view.update(player.currentTime);
+  liveSyncCount++;
+  liveSyncMsg();
+  const li = $(`#lyrics-list .lyric-line[data-idx="${idx}"]`);
+  if (li) {
+    li.classList.remove("livesync-hit");
+    void li.offsetWidth;              // 리플로우를 강제해 연속 탭에도 반짝임이 다시 걸리게
+    li.classList.add("livesync-hit");
+  }
+  clearTimeout(liveSyncSaveTimer);
+  liveSyncSaveTimer = setTimeout(persist, 400);  // 연타 시 마지막 한 번만 저장
+}
+function wireLiveSync() {
+  $("#livesync-toggle").addEventListener("click", () => {
+    if (liveSyncOn) liveSyncExit(); else liveSyncEnter();
+  });
+  $("#livesync-stop").addEventListener("click", liveSyncExit);
+  // 실시간 반영 중 가사 줄 탭 = 그 줄에 지금 시각 기록 (seek/수정 대신)
+  $("#lyrics-list").addEventListener("click", (e) => {
+    if (!liveSyncOn) return;
+    const li = e.target.closest(".lyric-line");
+    if (!li) return;
+    e.stopImmediatePropagation();
+    e.preventDefault();
+    liveSyncPick(+li.dataset.idx);
+  }, true);
+}
+
 // ---------- 전체 싱크(offset) — 편집 모드 "설정" 영역 ----------
 // 곡의 모든 줄에 일괄로 더해지는 보정치(초). 정보 다이얼로그의 "싱크 보정"과 같은 값.
 // 노래방 모드일 때는 song.mr.offset 을, 아니면 song.offset 을 조정한다(activeOffset/setActiveOffset).
@@ -610,6 +672,7 @@ function driftEnter() {
   if (mrMode) { alert("드리프트 보정은 원곡 재생 중에만 할 수 있어요. 노래방 모드를 끄고 다시 시도하세요."); return; }
   if (song.lines.filter((l) => l.t != null).length < 2) { alert("타임이 있는 줄이 2개 이상이어야 해요."); return; }
   rippleExit();                       // 밀기와 동시에 켜지 않는다
+  liveSyncExit();                     // 실시간 반영과 동시에 켜지 않는다
   driftState = 1; driftA = null; driftB = null;
   appEl.classList.add("drift-mode");
   document.querySelectorAll(".lyric-line.drift-anchor").forEach((n) => n.classList.remove("drift-anchor"));
