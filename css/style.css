@@ -286,6 +286,16 @@ button:active { transform: scale(0.97); }
 #app.compact-mode .lyric-line .pron,
 #app.compact-mode .lyric-line .trans { font-size: 0.85rem; margin-top: 1px; }
 
+/* 팝업 창을 옆으로 넓적하게 줄이면 뷰포트 자체가 "가로(landscape)" 판정을 받아서,
+   폰을 실제로 눕혔을 때 쓰는 가로모드(지금 줄 하나만 가운데 크게, #lyrics-focus)가
+   미니 모드에서도 끼어든다. 그러면 오히려 줄 수가 줄고 글자도 가운데 정렬로 바뀌어
+   버려서 — 미니 모드에서는 창 모양과 무관하게 항상 스크롤 목록(왼쪽 정렬, 여러 줄)을
+   강제한다. */
+#app.compact-mode { display: flex !important; flex-direction: column !important; }
+#app.compact-mode #lyrics { display: block !important; }
+#app.compact-mode #lyrics-list { display: block !important; }
+#app.compact-mode #lyrics-focus { display: none !important; }
+
 .row { display: flex; align-items: center; justify-content: space-between; gap: 6px; }
 .time-row { margin: -2px 2px 0; }
 .time-row span { font-size: 0.78rem; color: var(--fg-dim); font-variant-numeric: tabular-nums; }
