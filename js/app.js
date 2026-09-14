@@ -188,6 +188,34 @@ function toggleCompact() {
   view.update(player.currentTime);   // 스크롤 위치 다시 맞추기
 }
 
+// ---------- 컨트롤 접기/펼치기 ----------
+// 재생 컨트롤(재생바·버튼줄)을 통째로 접어서 그 공간을 가사에 넘긴다.
+// 미니 모드와 독립적으로, 일반 화면에서도 쓸 수 있다.
+// 📌 고정을 켜면 지금 접힌/펼친 상태가 localStorage 에 저장돼 다음에 앱을 열 때도 유지된다.
+// 고정을 안 켰으면 손대지 않는다 — 매번 앱을 열 때마다 의도치 않게 컨트롤이 없어져 있으면 당황스러우니까.
+function setControlsCollapsed(on) {
+  appEl.classList.toggle("controls-collapsed", on);
+  $("#controls-toggle").textContent = on ? "▴ 컨트롤 펼치기" : "▾ 컨트롤 접기";
+  if (localStorage.getItem("jlp:controlsPinned") === "1") {
+    localStorage.setItem("jlp:controlsCollapsed", on ? "1" : "0");
+  }
+}
+function wireControlsCollapse() {
+  const pinned = localStorage.getItem("jlp:controlsPinned") === "1";
+  $("#controls-pin").classList.toggle("on", pinned);
+  setControlsCollapsed(pinned && localStorage.getItem("jlp:controlsCollapsed") === "1");
+
+  $("#controls-toggle").addEventListener("click", () => {
+    setControlsCollapsed(!appEl.classList.contains("controls-collapsed"));
+  });
+  $("#controls-pin").addEventListener("click", () => {
+    const on = !$("#controls-pin").classList.contains("on");
+    $("#controls-pin").classList.toggle("on", on);
+    localStorage.setItem("jlp:controlsPinned", on ? "1" : "0");
+    if (on) localStorage.setItem("jlp:controlsCollapsed", appEl.classList.contains("controls-collapsed") ? "1" : "0");
+  });
+}
+
 // 발음·번역이 비어 있으면 상단에 "자동 채우기" 배너 표시
 function updateAutofillBanner() {
   appEl.classList.toggle("needs-autofill", hasFillable(song));
@@ -378,6 +406,9 @@ function wireControls() {
 
   // 미니 모드 — 영상 영역을 거의 없애고 가사를 최대한 채운다 (OS 팝업 보기와 같이 쓰는 용도)
   $("#compact-toggle").addEventListener("click", toggleCompact);
+
+  // 컨트롤 접기/펼치기 — 미니 모드와 별개로, 일반 화면에서도 쓸 수 있다
+  wireControlsCollapse();
 
   // 영상 전체화면 → 여기서 홈 버튼을 누르면 안드로이드가 작은 창(PiP)으로 재생을 이어감
   $("#go-fullscreen").addEventListener("click", async () => {

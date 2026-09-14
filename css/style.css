@@ -265,6 +265,14 @@ button:active { transform: scale(0.97); }
 }
 #seekbar { width: 100%; margin: 0; accent-color: var(--accent); }
 
+/* 컨트롤 접기/펼치기 손잡이 — 항상 보이고, 접으면 #controls-body 전체가 사라져
+   그 공간이 전부 가사 쪽으로 넘어간다. */
+#controls-body { display: flex; flex-direction: column; gap: 8px; }
+#controls-toggle { flex: 1 1 0; font-size: 0.85rem; padding: 8px; }
+#controls-pin { flex: 0 0 auto; padding: 8px 12px; }
+#controls-pin.on { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+#app.controls-collapsed #controls-body { display: none; }
+
 /* 화면을 실제로 눕히는 버튼 · 미니 모드 버튼 — 재생 바로 위, 재생 컨트롤 맨 위 줄 */
 .view-row { margin-bottom: 8px; }
 .view-row button { flex: 1 1 0; min-width: 0; font-size: 0.85rem; padding: 9px 8px; }
