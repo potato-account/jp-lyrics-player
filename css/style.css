@@ -277,6 +277,14 @@ button:active { transform: scale(0.97); }
 #app.compact-mode #video-area { height: 3px !important; }
 #app.compact-mode .menu-row,
 #app.compact-mode #autofill-banner { display: none !important; }
+/* 영상이 비운 자리를 실제로 가사가 채우게: 위아래로 화면 40%씩(80%) 비워두던
+   센터링용 여백을 크게 줄이고, 줄 하나하나도 더 촘촘하게 — 그래야 같은 높이에
+   더 많은 줄(과 그 번역)이 실제로 보인다. */
+#app.compact-mode #lyrics-list { padding: 8dvh 0; }
+#app.compact-mode .lyric-line { padding: 8px 10px; margin-bottom: 3px; }
+#app.compact-mode .lyric-line .orig { font-size: 1.05rem; }
+#app.compact-mode .lyric-line .pron,
+#app.compact-mode .lyric-line .trans { font-size: 0.85rem; margin-top: 1px; }
 
 .row { display: flex; align-items: center; justify-content: space-between; gap: 6px; }
 .time-row { margin: -2px 2px 0; }
