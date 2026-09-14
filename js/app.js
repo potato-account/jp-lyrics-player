@@ -591,9 +591,11 @@ function liveSyncPick(idx) {
   liveSyncMsg();
   const li = $(`#lyrics-list .lyric-line[data-idx="${idx}"]`);
   if (li) {
+    clearTimeout(li._livesyncHitTimer);
     li.classList.remove("livesync-hit");
     void li.offsetWidth;              // 리플로우를 강제해 연속 탭에도 반짝임이 다시 걸리게
     li.classList.add("livesync-hit");
+    li._livesyncHitTimer = setTimeout(() => li.classList.remove("livesync-hit"), 250);
   }
   clearTimeout(liveSyncSaveTimer);
   liveSyncSaveTimer = setTimeout(persist, 400);  // 연타 시 마지막 한 번만 저장
