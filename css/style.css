@@ -265,9 +265,21 @@ button:active { transform: scale(0.97); }
 }
 #seekbar { width: 100%; margin: 0; accent-color: var(--accent); }
 
-/* 화면을 실제로 눕히는 버튼 — 재생 바로 위, 재생 컨트롤 맨 위 줄 */
-#rotate-toggle { width: 100%; font-size: 0.85rem; padding: 9px 8px; }
-#rotate-toggle.on { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+/* 화면을 실제로 눕히는 버튼 · 작게 보기(PiP) 버튼 — 재생 바로 위, 재생 컨트롤 맨 위 줄 */
+.view-row { margin-bottom: 8px; }
+.view-row button { flex: 1 1 0; min-width: 0; font-size: 0.85rem; padding: 9px 8px; }
+#rotate-toggle.on, #pip-toggle.on { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+
+/* --- PiP(Document Picture-in-Picture) 창 내부 레이아웃 --- */
+/* #pip-root 이하는 이 페이지가 아니라, 별도로 뜬 PiP 창의 document 안에 만들어진다. */
+#pip-root { display: flex; flex-direction: column; height: 100%; }
+#pip-video-box { position: relative; flex: 0 0 auto; width: 6px; height: 6px; overflow: hidden; opacity: 0.02; pointer-events: none; }
+#pip-lyrics-box { flex: 1 1 0; min-height: 0; overflow-y: auto; overflow-x: hidden; scroll-behavior: smooth; padding: 0 16px; }
+
+/* 메인 화면 쪽: 가사가 PiP 창으로 옮겨간 동안 보여주는 안내 */
+#pip-placeholder { display: none; margin: 4dvh 20px 0; padding: 14px; text-align: center;
+  border: 1px dashed var(--border); border-radius: 12px; cursor: pointer; }
+#app.pip-active #pip-placeholder { display: block; }
 
 .row { display: flex; align-items: center; justify-content: space-between; gap: 6px; }
 .time-row { margin: -2px 2px 0; }

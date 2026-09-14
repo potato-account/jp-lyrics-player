@@ -119,8 +119,12 @@
 
     <!-- ===== 하단: 재생 컨트롤 ===== -->
     <footer id="controls">
-      <!-- 화면을 실제로 눕혀서(Screen Orientation API) 가로모드로 전환 -->
-      <button id="rotate-toggle" type="button">가로로 보기</button>
+      <div class="row view-row">
+        <!-- 화면을 실제로 눕혀서(Screen Orientation API) 가로모드로 전환 -->
+        <button id="rotate-toggle" type="button">가로로 보기</button>
+        <!-- 영상은 나노 크기로 줄이고 가사만 뜨는 작은 창(Document PiP) -->
+        <button id="pip-toggle" type="button" title="작게 보기 (PiP) — 최신 Chrome 필요">작게 보기</button>
+      </div>
       <input id="seekbar" type="range" min="0" max="1000" value="0" step="1" aria-label="재생 위치" />
       <div class="row time-row">
         <span id="time-cur">0:00</span>

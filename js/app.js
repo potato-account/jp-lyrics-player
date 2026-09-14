@@ -175,6 +175,75 @@ function updateRotateUi() {
   b.classList.toggle("on", on);
 }
 
+// ---------- PiP (Document Picture-in-Picture) ----------
+// 영상은 거의 안 보이는 크기로 줄이고, 가사 목록만 별도의 항상 위 떠있는 작은 창으로 옮긴다.
+// 최신 Chrome 계열에서만 지원(안드로이드는 기기·버전에 따라 안 될 수 있음) — 없으면 안내만 하고 끝.
+let pipWin = null;
+let pipRestore = null;   // 닫을 때 #player-wrap · #lyrics-list 를 되돌릴 위치
+let pipPlaceholder = null;
+
+function pipEnter() {
+  if (!("documentPictureInPicture" in window)) {
+    alert("이 브라우저는 작게 보기(PiP)를 지원하지 않아요. 최신 Chrome이 필요해요.");
+    return;
+  }
+  if (!song) { alert("먼저 곡을 열어주세요."); return; }
+  documentPictureInPicture.requestWindow({ width: 260, height: 420 }).then((win) => {
+    pipWin = win;
+    const link = pipWin.document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = new URL("css/style.css", document.baseURI).href;
+    pipWin.document.head.append(link);
+    pipWin.document.title = "가사 싱크 플레이어";
+
+    const videoBox = pipWin.document.createElement("div");
+    videoBox.id = "pip-video-box";
+    const lyricsBox = pipWin.document.createElement("div");
+    lyricsBox.id = "pip-lyrics-box";
+    const root = pipWin.document.createElement("div");
+    root.id = "pip-root";
+    root.append(videoBox, lyricsBox);
+    pipWin.document.body.append(root);
+
+    const playerWrap = $("#player-wrap");
+    const lyricsList = $("#lyrics-list");
+    pipRestore = {
+      playerWrap, playerHome: playerWrap.parentElement, playerNext: playerWrap.nextSibling,
+      lyricsList, lyricsHome: lyricsList.parentElement, lyricsNext: lyricsList.nextSibling,
+    };
+    videoBox.append(playerWrap);
+    lyricsBox.append(lyricsList);
+
+    pipPlaceholder = document.createElement("div");
+    pipPlaceholder.id = "pip-placeholder";
+    pipPlaceholder.className = "hint";
+    pipPlaceholder.textContent = "가사가 작은 창에 떠 있어요 — 눌러서 여기로 가져오기";
+    pipPlaceholder.addEventListener("click", () => pipWin && pipWin.close());
+    $("#lyrics").prepend(pipPlaceholder);
+
+    appEl.classList.add("pip-active");
+    $("#pip-toggle").classList.add("on");
+    pipWin.addEventListener("pagehide", pipExit, { once: true });
+  }).catch(() => {}); // 사용자가 취소했거나 시스템이 거부함
+}
+function pipExit() {
+  if (pipRestore) {
+    const { playerWrap, playerHome, playerNext, lyricsList, lyricsHome, lyricsNext } = pipRestore;
+    playerHome.insertBefore(playerWrap, playerNext);
+    lyricsHome.insertBefore(lyricsList, lyricsNext);
+    pipRestore = null;
+  }
+  if (pipPlaceholder) { pipPlaceholder.remove(); pipPlaceholder = null; }
+  appEl.classList.remove("pip-active");
+  $("#pip-toggle").classList.remove("on");
+  pipWin = null;
+  view.update(player.currentTime);   // 되돌아온 뒤 활성 줄 스크롤 위치를 다시 맞춘다
+}
+function togglePip() {
+  if (pipWin) pipWin.close();  // pagehide → pipExit 가 되돌림 처리
+  else pipEnter();
+}
+
 // 발음·번역이 비어 있으면 상단에 "자동 채우기" 배너 표시
 function updateAutofillBanner() {
   appEl.classList.toggle("needs-autofill", hasFillable(song));
@@ -362,6 +431,9 @@ function wireControls() {
   // 뒤로가기 등으로 전체화면을 직접 빠져나가도 라벨이 맞게 돌아오도록 fullscreenchange 도 같이 본다.
   $("#rotate-toggle").addEventListener("click", toggleRotate);
   document.addEventListener("fullscreenchange", updateRotateUi);
+
+  // 작게 보기(PiP) — 영상은 나노 크기로, 가사만 떠있는 작은 창으로
+  $("#pip-toggle").addEventListener("click", togglePip);
 
   // 영상 전체화면 → 여기서 홈 버튼을 누르면 안드로이드가 작은 창(PiP)으로 재생을 이어감
   $("#go-fullscreen").addEventListener("click", async () => {
