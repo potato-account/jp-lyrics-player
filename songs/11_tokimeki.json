@@ -4,7 +4,11 @@
   "youtubeId": "GXc9h3hXRUk",
   "bundleId": "vaundy-tokimeki",
   "offset": 0,
-  "mr": { "youtubeId": "smLAnCnUNp8", "kind": "karaoke", "offset": 0 },
+  "mr": {
+    "youtubeId": "smLAnCnUNp8",
+    "kind": "karaoke",
+    "offset": 0
+  },
   "lines": [
     {
       "t": 0.68,
@@ -15,7 +19,7 @@
       "transSrc": "user"
     },
     {
-      "t": 4.18,
+      "t": 2.95,
       "orig": "確かな",
       "pron": "타시카나",
       "pronSrc": "user",
@@ -23,7 +27,7 @@
       "transSrc": "user"
     },
     {
-      "t": 5.93,
+      "t": 5.76,
       "orig": "Tokimekiで光る魔法",
       "pron": "토키메키데 히카루 마호-",
       "pronSrc": "user",
@@ -31,7 +35,7 @@
       "transSrc": "user"
     },
     {
-      "t": 8.84,
+      "t": 8.57,
       "orig": "思い当たるのは",
       "pron": "오모이 아타루노와",
       "pronSrc": "user",
@@ -39,7 +43,7 @@
       "transSrc": "user"
     },
     {
-      "t": 12.34,
+      "t": 11,
       "orig": "誰かの",
       "pron": "다레카노",
       "pronSrc": "user",
@@ -47,7 +51,7 @@
       "transSrc": "user"
     },
     {
-      "t": 13.84,
+      "t": 13.74,
       "orig": "涙が落ちる音",
       "pron": "나미다가 오치루 오토",
       "pronSrc": "user",
@@ -55,25 +59,25 @@
       "transSrc": "user"
     },
     {
-      "t": 21.69,
+      "t": 16.61,
       "orig": "Hu Hu Hu Ya Ya",
       "pron": "",
       "trans": ""
     },
     {
-      "t": 25.25,
+      "t": 18.52,
       "orig": "Hu Hu Hu Ya Ya",
       "pron": "",
       "trans": ""
     },
     {
-      "t": 28.81,
+      "t": 20.55,
       "orig": "Hu Hu Hu Ya Ya",
       "pron": "",
       "trans": ""
     },
     {
-      "t": 32.37,
+      "t": 21.87,
       "orig": "それは、軽やかな魔法",
       "pron": "소레와, 카로야카나 마호-",
       "pronSrc": "user",
@@ -81,19 +85,19 @@
       "transSrc": "user"
     },
     {
-      "t": 35.58,
+      "t": 24.51,
       "orig": "Hu Hu Hu Ya Ya",
       "pron": "",
       "trans": ""
     },
     {
-      "t": 39.14,
+      "t": 26.47,
       "orig": "Hu Hu Hu Ya Ya",
       "pron": "",
       "trans": ""
     },
     {
-      "t": 42.7,
+      "t": 28.64,
       "orig": "美しいほど",
       "pron": "우츠쿠시- 호도",
       "pronSrc": "user",
@@ -101,7 +105,7 @@
       "transSrc": "user"
     },
     {
-      "t": 44.48,
+      "t": 30.13,
       "orig": "止まらぬCRY",
       "pron": "토마라누 크라이",
       "pronSrc": "user",
@@ -109,19 +113,19 @@
       "transSrc": "user"
     },
     {
-      "t": 46.97,
+      "t": 32.25,
       "orig": "DA-DADADADA",
       "pron": "",
       "trans": ""
     },
     {
-      "t": 50.53,
+      "t": 34.67,
       "orig": "Just dancing tonight",
       "pron": "",
       "trans": ""
     },
     {
-      "t": 56.94,
+      "t": 38.88,
       "orig": "涙流して笑えばいいさ",
       "pron": "나미다 나가시테 와라에바 이-사",
       "pronSrc": "user",
@@ -129,7 +133,7 @@
       "transSrc": "user"
     },
     {
-      "t": 60.5,
+      "t": 43.1,
       "orig": "見えぬ未来も",
       "pron": "미에누 미라이모",
       "pronSrc": "user",
@@ -137,7 +141,7 @@
       "transSrc": "user"
     },
     {
-      "t": 62.64,
+      "t": 45.21,
       "orig": "悪くはないぜ",
       "pron": "와루쿠와 나이제",
       "pronSrc": "user",
@@ -145,19 +149,19 @@
       "transSrc": "user"
     },
     {
-      "t": 64.77,
+      "t": 48.43,
       "orig": "DA-DADADADA",
       "pron": "",
       "trans": ""
     },
     {
-      "t": 68.33,
+      "t": 50.62,
       "orig": "Just dancing tonight",
       "pron": "",
       "trans": ""
     },
     {
-      "t": 74.74,
+      "t": 54.91,
       "orig": "あくびしてる暇なんかないぜ",
       "pron": "아쿠비 시테루 히마 난카 나이제",
       "pronSrc": "user",
@@ -165,7 +169,7 @@
       "transSrc": "user"
     },
     {
-      "t": 79.37,
+      "t": 59.13,
       "orig": "ほら、ほらもっと聞かせて",
       "pron": "호라, 호라 못토 키카세테",
       "pronSrc": "user",
@@ -173,13 +177,13 @@
       "transSrc": "user"
     },
     {
-      "t": 83.29,
+      "t": 62.06,
       "orig": "HU HU HU HU HU",
       "pron": "",
       "trans": ""
     },
     {
-      "t": 86.85,
+      "t": 72.35,
       "orig": "聞こえてるのは",
       "pron": "키코에테루노와",
       "pronSrc": "user",
@@ -187,7 +191,7 @@
       "transSrc": "user"
     },
     {
-      "t": 89.34,
+      "t": 74.91,
       "orig": "確かな",
       "pron": "타시카나",
       "pronSrc": "user",
@@ -195,7 +199,7 @@
       "transSrc": "user"
     },
     {
-      "t": 90.41,
+      "t": 77.68,
       "orig": "Tokimekiで歌う魔法",
       "pron": "토키메키 데 우타우 마호-",
       "pronSrc": "user",
@@ -203,7 +207,7 @@
       "transSrc": "user"
     },
     {
-      "t": 95.04,
+      "t": 80.46,
       "orig": "思い当たるのは",
       "pron": "오모이 아타루노와",
       "pronSrc": "user",
@@ -211,7 +215,7 @@
       "transSrc": "user"
     },
     {
-      "t": 97.53,
+      "t": 82.88,
       "orig": "誰かの",
       "pron": "다레카노",
       "pronSrc": "user",
@@ -219,7 +223,7 @@
       "transSrc": "user"
     },
     {
-      "t": 98.6,
+      "t": 85.69,
       "orig": "鼻歌のIntro",
       "pron": "하나우타노 인트로",
       "pronSrc": "user",
@@ -227,25 +231,25 @@
       "transSrc": "user"
     },
     {
-      "t": 101.44,
+      "t": 88.46,
       "orig": "Hu Hu Hu Ya Ya",
       "pron": "",
       "trans": ""
     },
     {
-      "t": 105.01,
+      "t": 90.5,
       "orig": "Hu Hu Hu Ya Ya",
       "pron": "",
       "trans": ""
     },
     {
-      "t": 108.57,
+      "t": 92.48,
       "orig": "Hu Hu Hu Ya Ya",
       "pron": "",
       "trans": ""
     },
     {
-      "t": 112.13,
+      "t": 94.08,
       "orig": "それは、鮮やかな魔法",
       "pron": "소레와, 아자야카나 마호-",
       "pronSrc": "user",
@@ -253,19 +257,19 @@
       "transSrc": "user"
     },
     {
-      "t": 115.33,
+      "t": 96.37,
       "orig": "Hu Hu Hu Ya Ya",
       "pron": "",
       "trans": ""
     },
     {
-      "t": 118.89,
+      "t": 98.41,
       "orig": "Hu Hu Hu Ya Ya",
       "pron": "",
       "trans": ""
     },
     {
-      "t": 122.45,
+      "t": 100.5,
       "orig": "聞こえてるのは",
       "pron": "키코에테루노와",
       "pronSrc": "user",
@@ -273,19 +277,19 @@
       "transSrc": "user"
     },
     {
-      "t": 124.94,
+      "t": 104.3,
       "orig": "DA-DADADADA",
       "pron": "",
       "trans": ""
     },
     {
-      "t": 128.5,
+      "t": 106.55,
       "orig": "Just dancing tonight",
       "pron": "",
       "trans": ""
     },
     {
-      "t": 134.91,
+      "t": 111,
       "orig": "涙流して笑えばいいさ",
       "pron": "나미다 나가시테 와라에바 이-사",
       "pronSrc": "user",
@@ -293,7 +297,7 @@
       "transSrc": "user"
     },
     {
-      "t": 138.47,
+      "t": 114.99,
       "orig": "見えぬ未来も",
       "pron": "미에누 미라이모",
       "pronSrc": "user",
@@ -301,7 +305,7 @@
       "transSrc": "user"
     },
     {
-      "t": 140.61,
+      "t": 117.07,
       "orig": "悪くはないぜ",
       "pron": "와루쿠와 나이제",
       "pronSrc": "user",
@@ -309,19 +313,19 @@
       "transSrc": "user"
     },
     {
-      "t": 142.48,
+      "t": 120.28,
       "orig": "DA-DADADADA",
       "pron": "",
       "trans": ""
     },
     {
-      "t": 145.6,
+      "t": 122.52,
       "orig": "Just dancing tonight",
       "pron": "",
       "trans": ""
     },
     {
-      "t": 151.21,
+      "t": 126.91,
       "orig": "あくびしてる暇なんかないぜ",
       "pron": "아쿠비 시테루 히마 난카 나이제",
       "pronSrc": "user",
@@ -329,7 +333,7 @@
       "transSrc": "user"
     },
     {
-      "t": 155.27,
+      "t": 130.89,
       "orig": "ほら、ほらもっと聞かせて",
       "pron": "호라, 호라 못토 키카세테",
       "pronSrc": "user",
@@ -337,13 +341,13 @@
       "transSrc": "user"
     },
     {
-      "t": 158.7,
+      "t": 133.96,
       "orig": "HU HU HU HU",
       "pron": "",
       "trans": ""
     },
     {
-      "t": 161.19,
+      "t": 136.7,
       "orig": "途切れない",
       "pron": "토기레나이",
       "pronSrc": "user",
@@ -351,7 +355,7 @@
       "transSrc": "user"
     },
     {
-      "t": 162.75,
+      "t": 138.08,
       "orig": "悲しみは",
       "pron": "카나시미와",
       "pronSrc": "user",
@@ -359,7 +363,7 @@
       "transSrc": "user"
     },
     {
-      "t": 164,
+      "t": 139.45,
       "orig": "点で、線を描いてるようだ",
       "pron": "텐데, 센오 에가이테루 요-다",
       "pronSrc": "user",
@@ -367,7 +371,7 @@
       "transSrc": "user"
     },
     {
-      "t": 167.43,
+      "t": 144.5,
       "orig": "震え出す",
       "pron": "후루에다스",
       "pronSrc": "user",
@@ -375,7 +379,7 @@
       "transSrc": "user"
     },
     {
-      "t": 168.68,
+      "t": 146.14,
       "orig": "その線のせいで",
       "pron": "소노 센노 세-데",
       "pronSrc": "user",
@@ -383,7 +387,7 @@
       "transSrc": "user"
     },
     {
-      "t": 170.86,
+      "t": 148.44,
       "orig": "動き出してしまうの",
       "pron": "우고키다시테 시마우노",
       "pronSrc": "user",
@@ -391,7 +395,7 @@
       "transSrc": "user"
     },
     {
-      "t": 173.67,
+      "t": 156.16,
       "orig": "止まれないのは",
       "pron": "토마레나이노와",
       "pronSrc": "user",
@@ -399,7 +403,7 @@
       "transSrc": "user"
     },
     {
-      "t": 175.85,
+      "t": 158.04,
       "orig": "Tokimekiのせい",
       "pron": "토키메키노 세-",
       "pronSrc": "user",
@@ -407,19 +411,19 @@
       "transSrc": "user"
     },
     {
-      "t": 179.28,
+      "t": 160.22,
       "orig": "DA-DADADADA",
       "pron": "",
       "trans": ""
     },
     {
-      "t": 182.4,
+      "t": 162.53,
       "orig": "Just dancing tonight",
       "pron": "",
       "trans": ""
     },
     {
-      "t": 188.02,
+      "t": 166.98,
       "orig": "涙流して笑えばいいさ",
       "pron": "나미다 나가시테 와라에바 이-사",
       "pronSrc": "user",
@@ -427,7 +431,7 @@
       "transSrc": "user"
     },
     {
-      "t": 191.13,
+      "t": 171.04,
       "orig": "見えぬ未来も",
       "pron": "미에누 미라이모",
       "pronSrc": "user",
@@ -435,7 +439,7 @@
       "transSrc": "user"
     },
     {
-      "t": 193.01,
+      "t": 173.02,
       "orig": "悪くはないぜ",
       "pron": "와루쿠와 나이제",
       "pronSrc": "user",
@@ -443,13 +447,13 @@
       "transSrc": "user"
     },
     {
-      "t": 194.88,
+      "t": 176.24,
       "orig": "DA-DADADADA",
       "pron": "",
       "trans": ""
     },
     {
-      "t": 198,
+      "t": 178.56,
       "orig": "Just dancing tonight",
       "pron": "",
       "trans": ""
