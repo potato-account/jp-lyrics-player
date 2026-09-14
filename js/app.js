@@ -191,28 +191,15 @@ function toggleCompact() {
 // ---------- 컨트롤 접기/펼치기 ----------
 // 재생 컨트롤(재생바·버튼줄)을 통째로 접어서 그 공간을 가사에 넘긴다.
 // 미니 모드와 독립적으로, 일반 화면에서도 쓸 수 있다.
-// 📌 고정을 켜면 지금 접힌/펼친 상태가 localStorage 에 저장돼 다음에 앱을 열 때도 유지된다.
-// 고정을 안 켰으면 손대지 않는다 — 매번 앱을 열 때마다 의도치 않게 컨트롤이 없어져 있으면 당황스러우니까.
+// 앱을 새로 열 때마다 항상 접힌 상태로 시작 — 필요할 때만 손으로 펼친다.
 function setControlsCollapsed(on) {
   appEl.classList.toggle("controls-collapsed", on);
   $("#controls-toggle").textContent = on ? "▴ 컨트롤 펼치기" : "▾ 컨트롤 접기";
-  if (localStorage.getItem("jlp:controlsPinned") === "1") {
-    localStorage.setItem("jlp:controlsCollapsed", on ? "1" : "0");
-  }
 }
 function wireControlsCollapse() {
-  const pinned = localStorage.getItem("jlp:controlsPinned") === "1";
-  $("#controls-pin").classList.toggle("on", pinned);
-  setControlsCollapsed(pinned && localStorage.getItem("jlp:controlsCollapsed") === "1");
-
+  setControlsCollapsed(true);
   $("#controls-toggle").addEventListener("click", () => {
     setControlsCollapsed(!appEl.classList.contains("controls-collapsed"));
-  });
-  $("#controls-pin").addEventListener("click", () => {
-    const on = !$("#controls-pin").classList.contains("on");
-    $("#controls-pin").classList.toggle("on", on);
-    localStorage.setItem("jlp:controlsPinned", on ? "1" : "0");
-    if (on) localStorage.setItem("jlp:controlsCollapsed", appEl.classList.contains("controls-collapsed") ? "1" : "0");
   });
 }
 
