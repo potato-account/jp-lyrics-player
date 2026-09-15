@@ -417,8 +417,6 @@ function wireControls() {
     appEl.classList.remove("edit-tools-on", "sync-open");
     $("#edit-tools").textContent = "설정";
     collapseCats();
-    driftExit();                       // 드리프트 보정 진행 중이었으면 취소
-    rippleExit();                      // 밀기 진행 중이었으면 취소
     liveSyncExit();                    // 실시간 반영 진행 중이었으면 취소
     view.setEditable(on);
     if (on) acquireWakeLock();
@@ -430,7 +428,7 @@ function wireControls() {
     document.querySelectorAll(".cat-btn.active").forEach((n) => n.classList.remove("active"));
   };
 
-  // 설정: 목록(붙여넣기·전체싱크·드리프트)을 펼치거나 접는다 (2단 잠금)
+  // 설정: 목록(붙여넣기·전체싱크)을 펼치거나 접는다 (2단 잠금)
   $("#edit-tools").addEventListener("click", () => {
     const open = appEl.classList.toggle("edit-tools-on");
     $("#edit-tools").textContent = open ? "설정 닫기" : "설정";
@@ -454,8 +452,6 @@ function wireControls() {
   });
 
   wireSyncBar();
-  wireDrift();
-  wireRipple();
   wireLiveSync();
 }
 
@@ -471,123 +467,6 @@ function nudgeLine(i, delta) {
   nudgeSaveTimer = setTimeout(persist, 400);  // 연타 시 마지막 한 번만 저장
 }
 
-// ---------- 이 줄부터 밀기 (B, ripple shift) ----------
-// 한 줄을 고르고 밀기량 X초를 정하면, 그 줄부터 곡 끝까지의 모든 타임에 X를 더한다.
-// 줄 사이 간격은 그대로 유지된다("구간이 통째로 어긋남"에 바로 먹힌다).
-let rippleState = 0;              // 0 꺼짐 / 1 시작 줄 대기 / 2 줄 선택됨(밀기량 조절)
-let rippleAnchor = -1;           // 밀기 시작 줄 인덱스
-let rippleDelta = 0;            // 더할 초 (음수 = 당김)
-
-function rippleExit() {
-  rippleState = 0; rippleAnchor = -1; rippleDelta = 0;
-  appEl.classList.remove("ripple-mode");
-  document.querySelectorAll(".lyric-line.ripple-anchor, .lyric-line.ripple-after")
-    .forEach((n) => n.classList.remove("ripple-anchor", "ripple-after"));
-}
-function rippleTimedCount(from) {
-  return song.lines.slice(from).filter((l) => l.t != null).length;
-}
-function rippleRenderVal() {
-  const r = Math.round(rippleDelta * 10) / 10;
-  $("#ripple-val").textContent = (r > 0 ? "+" : "") + r.toFixed(1) + "s";
-}
-function rippleRenderInfo() {
-  const msg = $("#ripple-msg");
-  const info = $("#ripple-info");
-  if (rippleState === 1) {
-    msg.textContent = "밀기를 시작할 줄을 탭하세요 — 그 줄부터 끝까지 옮겨집니다.";
-    info.textContent = "";
-    $("#ripple-apply").disabled = true;
-    return;
-  }
-  const L = song.lines[rippleAnchor];
-  const n = rippleTimedCount(rippleAnchor);
-  msg.textContent = `${rippleAnchor + 1}번째 줄부터 ${n}줄 이동`;
-  if (L && L.t != null) {
-    const to = Math.round((L.t + rippleDelta) * 100) / 100;
-    info.textContent = `${fmtTime(L.t)} → ${fmtTime(to)}`;
-  } else {
-    info.textContent = "";
-  }
-  $("#ripple-apply").disabled = !(rippleDelta && isFinite(rippleDelta));
-}
-function rippleEnter() {
-  if (!song) return;
-  if (!song.lines.some((l) => l.t != null)) { alert("타임이 있는 줄이 없어요."); return; }
-  driftExit();                          // 드리프트와 동시에 켜지 않는다
-  liveSyncExit();                       // 실시간 반영과 동시에 켜지 않는다
-  rippleState = 1; rippleAnchor = -1; rippleDelta = 0;
-  appEl.classList.add("ripple-mode");
-  document.querySelectorAll(".lyric-line.ripple-anchor, .lyric-line.ripple-after")
-    .forEach((n) => n.classList.remove("ripple-anchor", "ripple-after"));
-  rippleRenderVal();
-  rippleRenderInfo();
-}
-function ripplePick(idx) {
-  const line = song && song.lines[idx];
-  if (!line || line.t == null) { alert("타임이 없는 줄은 시작점으로 쓸 수 없어요."); return; }
-  rippleAnchor = idx;
-  rippleDelta = 0;                     // 시작 줄을 다시 고르면 밀기량도 0부터
-  rippleState = 2;
-  // 시작 줄 강조 + 그 아래(영향받는 줄) 표시
-  document.querySelectorAll("#lyrics-list .lyric-line").forEach((n) => {
-    const i = +n.dataset.idx;
-    n.classList.toggle("ripple-anchor", i === idx);
-    n.classList.toggle("ripple-after", i > idx);
-  });
-  rippleRenderVal();
-  rippleRenderInfo();
-}
-function rippleBump(d) {
-  if (rippleState !== 2) return;
-  rippleDelta = Math.round((rippleDelta + d) * 100) / 100;
-  rippleRenderVal();
-  rippleRenderInfo();
-}
-// 재생 위치로 밀기량 잡기 — 시작 줄이 "실제로 들리는" 지점까지 재생하고 누른다.
-function rippleGrab() {
-  if (rippleState !== 2 || rippleAnchor < 0) { alert("먼저 시작 줄을 탭하세요."); return; }
-  const L = song.lines[rippleAnchor];
-  rippleDelta = Math.round((player.currentTime - (L.t + activeOffset())) * 100) / 100;
-  rippleRenderVal();
-  rippleRenderInfo();
-}
-async function rippleApply() {
-  if (rippleState !== 2 || rippleAnchor < 0 || !song) return;
-  if (!rippleDelta) { alert("밀기량이 0이에요."); return; }
-  const n = rippleTimedCount(rippleAnchor);
-  const r = Math.round(rippleDelta * 10) / 10;
-  if (!confirm(`${rippleAnchor + 1}번째 줄부터 ${n}줄을 ${r > 0 ? "+" : ""}${r}초 옮깁니다. 되돌릴 수 없어요. 진행할까요?`)) return;
-  for (let i = rippleAnchor; i < song.lines.length; i++) {
-    const l = song.lines[i];
-    if (l.t == null) continue;
-    l.t = Math.round((l.t + rippleDelta) * 100) / 100;
-  }
-  await persist();
-  view.setSong(song);
-  view.setEditable(appEl.classList.contains("edit-on"));
-  updateAutofillBanner();
-  rippleExit();
-}
-function wireRipple() {
-  $("#ripple-start").addEventListener("click", rippleEnter);
-  $("#ripple-cancel").addEventListener("click", rippleExit);
-  $("#ripple-apply").addEventListener("click", rippleApply);
-  $("#ripple-grab").addEventListener("click", rippleGrab);
-  $("#ripple-m1").addEventListener("click", () => rippleBump(-1));
-  $("#ripple-m01").addEventListener("click", () => rippleBump(-0.1));
-  $("#ripple-p01").addEventListener("click", () => rippleBump(0.1));
-  $("#ripple-p1").addEventListener("click", () => rippleBump(1));
-  // 밀기 모드에서 가사 줄 탭 = 시작 줄 선택 (seek/수정 대신)
-  $("#lyrics-list").addEventListener("click", (e) => {
-    if (rippleState === 0) return;
-    const li = e.target.closest(".lyric-line");
-    if (!li) return;
-    e.stopImmediatePropagation();
-    e.preventDefault();
-    ripplePick(+li.dataset.idx);
-  }, true);
-}
 
 // ---------- 실시간 반영 (재생하면서 가사를 탭 → 그 줄 t 를 바로 기록) ----------
 // 드리프트(2점)·밀기와 달리 매 탭마다 그 줄의 t 를 "지금 재생 위치"로 즉시 덮어쓴다.
@@ -601,8 +480,6 @@ function liveSyncMsg() {
 }
 function liveSyncEnter() {
   if (!song) return;
-  driftExit();                       // 다른 보정 모드와 동시에 켜지 않는다
-  rippleExit();
   liveSyncOn = true;
   liveSyncCount = 0;
   appEl.classList.add("livesync-mode");
@@ -684,101 +561,6 @@ function wireSyncBar() {
   });
 }
 
-// ---------- 드리프트 보정 (2점 선형 보정) ----------
-// 앞/뒤 두 줄의 "실제 재생시각"을 잡아 전체 타임을 t' = k·t + b 로 다시 계산.
-// offset(전체 싱크)이 못 잡는, 뒤로 갈수록 벌어지는 어긋남을 고친다.
-let driftState = 0;                 // 0 꺼짐 / 1 앞 대기 / 2 뒤 대기 / 3 적용 가능
-let driftA = null, driftB = null;
-
-function driftExit() {
-  driftState = 0; driftA = null; driftB = null;
-  appEl.classList.remove("drift-mode");
-  document.querySelectorAll(".lyric-line.drift-anchor").forEach((n) => n.classList.remove("drift-anchor"));
-}
-function driftMsg() {
-  const m = $("#drift-msg");
-  if (driftState === 1) m.textContent = "재생하면서, 지금 들리는 가사 줄을 탭하세요 — ① 앞부분 1곳";
-  else if (driftState === 2) m.textContent = "② 뒷부분 1곳을 탭하세요 (앞 기준보다 뒤쪽 줄, 멀수록 정확)";
-  else if (driftState === 3) m.textContent = "두 지점 기록됨. [적용] 하면 전체 타임을 다시 계산합니다.";
-}
-function driftEnter() {
-  if (!song) return;
-  // 드리프트는 재생 중인 소스의 절대 시각을 그대로 구워 넣는다(offset 을 거치지 않음).
-  // 노래방 모드에서 하면 원곡 기준이어야 할 t 가 MR 영상 시각으로 박혀버리니 막는다.
-  if (mrMode) { alert("드리프트 보정은 원곡 재생 중에만 할 수 있어요. 노래방 모드를 끄고 다시 시도하세요."); return; }
-  if (song.lines.filter((l) => l.t != null).length < 2) { alert("타임이 있는 줄이 2개 이상이어야 해요."); return; }
-  rippleExit();                       // 밀기와 동시에 켜지 않는다
-  liveSyncExit();                     // 실시간 반영과 동시에 켜지 않는다
-  driftState = 1; driftA = null; driftB = null;
-  appEl.classList.add("drift-mode");
-  document.querySelectorAll(".lyric-line.drift-anchor").forEach((n) => n.classList.remove("drift-anchor"));
-  $("#drift-apply").disabled = true;
-  $("#drift-info").textContent = "";
-  driftMsg();
-}
-function driftMark(idx) {
-  const li = $(`#lyrics-list .lyric-line[data-idx="${idx}"]`);
-  if (li) li.classList.add("drift-anchor");
-}
-function driftPick(idx) {
-  const line = song && song.lines[idx];
-  if (!line || line.t == null) { alert("타임이 없는 줄은 기준으로 쓸 수 없어요."); return; }
-  const real = +Number(player.currentTime).toFixed(2);
-  if (driftState === 1) {
-    driftA = { idx, oldT: line.t, real };
-    driftMark(idx);
-    driftState = 2; driftMsg();
-    return;
-  }
-  // 뒤 기준 (2 또는 3에서 다시 찍기 허용)
-  if (idx === driftA.idx || line.t <= driftA.oldT) { alert("뒤 기준은 앞 기준보다 뒤쪽 줄이어야 해요."); return; }
-  driftB = { idx, oldT: line.t, real };
-  document.querySelectorAll(".lyric-line.drift-anchor").forEach((n) => {
-    if (+n.dataset.idx !== driftA.idx) n.classList.remove("drift-anchor");
-  });
-  driftMark(idx);
-  const k = (driftB.real - driftA.real) / (driftB.oldT - driftA.oldT);
-  const perMin = (k - 1) * 60;
-  const n = song.lines.filter((l) => l.t != null).length;
-  driftState = 3;
-  $("#drift-apply").disabled = !(isFinite(k) && k > 0.3 && k < 3);
-  $("#drift-info").textContent =
-    `배속 k=${k.toFixed(3)} · 분당 ${perMin >= 0 ? "+" : ""}${perMin.toFixed(1)}초 · ${n}줄 적용`;
-  driftMsg();
-}
-async function driftApply() {
-  if (driftState !== 3 || !driftA || !driftB || !song) return;
-  const k = (driftB.real - driftA.real) / (driftB.oldT - driftA.oldT);
-  const b = driftA.real - k * driftA.oldT;
-  if (!isFinite(k) || k <= 0) { alert("계산값이 이상해요. 취소하고 다시 시도하세요."); return; }
-  if (!confirm(`전체 줄 타임을 다시 계산합니다 (배속 ${k.toFixed(3)}). 되돌릴 수 없어요. 진행할까요?`)) return;
-  for (const l of song.lines) {
-    if (l.t == null) continue;
-    l.t = Math.round((k * l.t + b) * 100) / 100;
-  }
-  song.offset = 0;                 // 절대 시각으로 구웠으니 보정치는 0
-  await persist();
-  view.setSong(song);
-  view.setEditable(appEl.classList.contains("edit-on"));
-  view.setOffset(activeOffset());
-  renderSyncVal();
-  updateAutofillBanner();
-  driftExit();
-}
-function wireDrift() {
-  $("#drift-start").addEventListener("click", driftEnter);
-  $("#drift-cancel").addEventListener("click", driftExit);
-  $("#drift-apply").addEventListener("click", driftApply);
-  // 드리프트 모드에서 가사 줄 탭 = 앵커 선택 (seek/수정 다이얼로그 대신)
-  $("#lyrics-list").addEventListener("click", (e) => {
-    if (driftState === 0) return;
-    const li = e.target.closest(".lyric-line");
-    if (!li) return;
-    e.stopImmediatePropagation();
-    e.preventDefault();
-    driftPick(+li.dataset.idx);
-  }, true);
-}
 
 // ---------- 편집: 타임/칸 ----------
 // 영상 시작 전(0초 이전)을 나타내야 하는 줄도 있을 수 있어(예: 보정치를 반대로 뺐을 때) —
