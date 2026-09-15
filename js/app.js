@@ -464,7 +464,7 @@ function wireControls() {
 let nudgeSaveTimer = null;
 function nudgeLine(i, delta) {
   if (!song || !song.lines[i] || song.lines[i].t == null) return;
-  song.lines[i].t = Math.max(0, Math.round((song.lines[i].t + delta) * 100) / 100);
+  song.lines[i].t = Math.round((song.lines[i].t + delta) * 100) / 100;
   view.refreshRow(i);
   view.update(player.currentTime);            // 활성 줄이 바뀔 수도 있으니 다시 계산
   clearTimeout(nudgeSaveTimer);
@@ -504,7 +504,7 @@ function rippleRenderInfo() {
   const n = rippleTimedCount(rippleAnchor);
   msg.textContent = `${rippleAnchor + 1}번째 줄부터 ${n}줄 이동`;
   if (L && L.t != null) {
-    const to = Math.max(0, Math.round((L.t + rippleDelta) * 100) / 100);
+    const to = Math.round((L.t + rippleDelta) * 100) / 100;
     info.textContent = `${fmtTime(L.t)} → ${fmtTime(to)}`;
   } else {
     info.textContent = "";
@@ -561,7 +561,7 @@ async function rippleApply() {
   for (let i = rippleAnchor; i < song.lines.length; i++) {
     const l = song.lines[i];
     if (l.t == null) continue;
-    l.t = Math.max(0, Math.round((l.t + rippleDelta) * 100) / 100);
+    l.t = Math.round((l.t + rippleDelta) * 100) / 100;
   }
   await persist();
   view.setSong(song);
@@ -618,7 +618,7 @@ function liveSyncExit() {
 function liveSyncPick(idx) {
   const line = song && song.lines[idx];
   if (!line) return;
-  line.t = Math.max(0, +(player.currentTime - activeOffset()).toFixed(2));
+  line.t = +(player.currentTime - activeOffset()).toFixed(2);
   view.refreshRow(idx);
   view.update(player.currentTime);
   liveSyncCount++;
@@ -754,7 +754,7 @@ async function driftApply() {
   if (!confirm(`전체 줄 타임을 다시 계산합니다 (배속 ${k.toFixed(3)}). 되돌릴 수 없어요. 진행할까요?`)) return;
   for (const l of song.lines) {
     if (l.t == null) continue;
-    l.t = Math.max(0, Math.round((k * l.t + b) * 100) / 100);
+    l.t = Math.round((k * l.t + b) * 100) / 100;
   }
   song.offset = 0;                 // 절대 시각으로 구웠으니 보정치는 0
   await persist();
@@ -781,18 +781,25 @@ function wireDrift() {
 }
 
 // ---------- 편집: 타임/칸 ----------
+// 영상 시작 전(0초 이전)을 나타내야 하는 줄도 있을 수 있어(예: 보정치를 반대로 뺐을 때) —
+// 음수도 "-m:ss.xx" 로 정확히 표시·복원되게 부호를 따로 뗐다 붙인다.
 const fmtTime = (t) => {
   if (t == null) return "";
-  const m = Math.floor(t / 60);
-  const s = (t % 60).toFixed(2).padStart(5, "0");
-  return `${m}:${s}`;
+  const neg = t < 0;
+  const at = Math.abs(t);
+  const m = Math.floor(at / 60);
+  const s = (at % 60).toFixed(2).padStart(5, "0");
+  return `${neg ? "-" : ""}${m}:${s}`;
 };
-// "m:ss.xx" 또는 초 숫자 → 초. 빈 문자열이면 null.
+// "m:ss.xx"(음수면 앞에 "-") 또는 초 숫자 → 초. 빈 문자열이면 null.
 function parseTime(str) {
   const s = (str || "").trim();
   if (!s) return null;
-  const mm = s.match(/^(\d+):(\d+(?:\.\d+)?)$/);
-  if (mm) return +mm[1] * 60 + +mm[2];
+  const mm = s.match(/^(-)?(\d+):(\d+(?:\.\d+)?)$/);
+  if (mm) {
+    const v = +mm[2] * 60 + +mm[3];
+    return mm[1] ? -v : v;
+  }
   const n = parseFloat(s);
   return isFinite(n) ? n : null;
 }

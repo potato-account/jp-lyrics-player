@@ -181,9 +181,12 @@ function fmtClock(t) {
   return `${m}:${String(s).padStart(2, "0")}`;
 }
 // 편집 모드 줄 표시용 — 1/100초까지 ("1:23.45"). 미세 조정 결과가 바로 보이게.
+// t 가 음수(영상 시작 전을 나타내는 줄)일 수도 있어 부호를 따로 떼서 처리한다.
 function fmtClock2(t) {
-  const m = Math.floor(t / 60);
-  const s = (t % 60).toFixed(2).padStart(5, "0");
-  return `${m}:${s}`;
+  const neg = t < 0;
+  const at = Math.abs(t);
+  const m = Math.floor(at / 60);
+  const s = (at % 60).toFixed(2).padStart(5, "0");
+  return `${neg ? "-" : ""}${m}:${s}`;
 }
 export { fmtClock };
