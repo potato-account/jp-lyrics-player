@@ -5,3 +5,16 @@ Thumbs.db
 .idea/
 .claude/
 node_modules/
+
+# 절대 공개하면 안 되는 개인 메들리/비공개 곡 데이터용 안전망.
+# (정상적인 작업 위치는 이 레포 밖 ../medley-private 이며, 여기 걸리는 건
+#  실수로 레포 안에 들어온 경우를 막기 위한 이중 방어선이다.)
+# 데이터 파일(json/txt)만 대상으로 하고, tools/ 안의 스크립트 코드(.mjs 등)는
+# 이름에 "medley"가 들어가도 걸리지 않게 확장자를 한정한다.
+*private*.json
+*private*.txt
+*메들리*.json
+*메들리*.txt
+*medley*.json
+*medley*.txt
+songs/private/
