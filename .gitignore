@@ -18,3 +18,20 @@ node_modules/
 *medley*.json
 *medley*.txt
 songs/private/
+
+# 백업 사본에는 폰의 모든 곡 데이터가 들어가므로 레포에 두지 않는다.
+backups/
+
+# 영상·음성 파일은 이름과 상관없이 확장자로 막는다 (로컬 미디어는 폰에만 둔다).
+*.mp4
+*.mov
+*.m4v
+*.webm
+*.mkv
+*.avi
+*.m4a
+*.mp3
+*.wav
+*.aac
+*.flac
+*.ogg

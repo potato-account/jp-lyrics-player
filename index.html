@@ -20,11 +20,16 @@
     <header id="video-area" class="video-expanded">
       <div id="player-wrap">
         <div id="player"></div>
+        <!-- 로컬(기기 저장) 영상/음성 재생용. 유튜브 iframe 과 달리 파일 자체가 이 기기 밖으로 나가지 않는다. -->
+        <video id="player-local" playsinline style="display:none"></video>
       </div>
       <div id="art-layer">
         <img id="art-img" alt="" />
         <span id="art-empty">이미지 없음<br /><small>정보 › 이미지에서 추가</small></span>
       </div>
+      <!-- 로컬 미디어 곡인데 아직 이 기기에 파일을 고른 적 없을 때만 보임 -->
+      <button id="pick-local-media" type="button" hidden>🎬 영상/음성 파일 선택</button>
+      <input id="local-media-input" type="file" accept="video/*,audio/*" hidden />
       <button id="go-fullscreen" type="button" aria-label="영상 전체화면" title="전체화면 (홈 버튼으로 작은 창 재생)">⛶</button>
       <button id="toggle-video" type="button" aria-label="이미지 / 영상 전환" title="이미지 ↔ 영상">⇅</button>
       <button id="mr-toggle" type="button" hidden>노래방 모드</button>

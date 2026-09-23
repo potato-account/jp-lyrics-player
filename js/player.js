@@ -20,6 +20,17 @@ export class Player {
     this.yt = null;
     this._onState = () => {};
     this._ready = false;
+    // "yt" | "local" — 지금 재생 소스가 유튜브인지, 이 기기에 저장된 파일인지.
+    // 로컬 모드는 메들리처럼 유튜브에 없는 영상/음성을 위한 것으로, 파일 자체가
+    // 이 기기 밖으로 절대 나가지 않는다(서버 업로드 없음, IndexedDB 에만 저장됨).
+    this.mode = "yt";
+    this.videoEl = document.getElementById(elId + "-local");
+    this._mediaUrl = null; // 로컬 파일의 objectURL. 교체/해제 시 revoke 필요.
+    if (this.videoEl) {
+      this.videoEl.addEventListener("playing", () => this._onState(1));
+      this.videoEl.addEventListener("pause", () => { if (!this.videoEl.ended) this._onState(2); });
+      this.videoEl.addEventListener("ended", () => this._onState(0));
+    }
   }
 
   // videoId 로 플레이어를 만들거나, 이미 있으면 곡만 교체한다.
@@ -29,6 +40,7 @@ export class Player {
   // 안 됐을 수 있어서 — loadVideoById/cueVideoById 자체의 startSeconds 로 넘긴다(노래방 모드 전환용).
   async load(videoId, { autoplay = false, seek = 0 } = {}) {
     await waitForApi();
+    this._setMode("yt");
     if (this.yt) {
       if (autoplay) this.yt.loadVideoById({ videoId, startSeconds: seek });
       else this.yt.cueVideoById({ videoId, startSeconds: seek });
@@ -51,20 +63,60 @@ export class Player {
     });
   }
 
+  // blob(File/Blob)로 로컬 영상·음성 파일을 재생한다. 서버에는 아무것도 안 보낸다 —
+  // URL.createObjectURL 로 이 기기 메모리 안에서만 재생 가능한 임시 주소를 만들 뿐이다.
+  async loadLocal(blob, { autoplay = false, seek = 0 } = {}) {
+    this._setMode("local");
+    if (!this.videoEl) return;
+    if (this._mediaUrl) URL.revokeObjectURL(this._mediaUrl);
+    this._mediaUrl = URL.createObjectURL(blob);
+    this.videoEl.src = this._mediaUrl;
+    this.videoEl.currentTime = seek;
+    this._ready = true;
+    if (autoplay) { try { await this.videoEl.play(); } catch {} }
+  }
+
+  // 유튜브 iframe ↔ 로컬 <video> 중 지금 쓸 쪽만 보이게/재생 가능하게 전환.
+  _setMode(mode) {
+    this.mode = mode;
+    const ytEl = document.getElementById(this.elId);            // 아직 YT.Player 생성 전이면 원래 div
+    const ytIframe = this.yt && this.yt.getIframe ? this.yt.getIframe() : null;
+    if (ytEl) ytEl.style.display = mode === "yt" ? "" : "none";
+    if (ytIframe) ytIframe.style.display = mode === "yt" ? "" : "none";
+    if (this.videoEl) this.videoEl.style.display = mode === "local" ? "" : "none";
+    if (mode === "local" && this.yt && typeof this.yt.pauseVideo === "function") this.yt.pauseVideo();
+    if (mode === "yt" && this.videoEl) this.videoEl.pause();
+  }
+
   onStateChange(fn) { this._onState = fn; }
 
-  get ready() { return this._ready; }
+  get ready() { return this.mode === "local" ? !!this.videoEl : this._ready; }
 
   // ---- 재생 제어 ----
-  play()  { this.yt && this.yt.playVideo(); }
-  pause() { this.yt && this.yt.pauseVideo(); }
-  seek(sec) { this.yt && this.yt.seekTo(Math.max(0, sec), true); }
+  play()  { this.mode === "local" ? (this.videoEl && this.videoEl.play().catch(() => {})) : (this.yt && this.yt.playVideo()); }
+  pause() { this.mode === "local" ? (this.videoEl && this.videoEl.pause()) : (this.yt && this.yt.pauseVideo()); }
+  seek(sec) {
+    if (this.mode === "local") { if (this.videoEl) this.videoEl.currentTime = Math.max(0, sec); }
+    else this.yt && this.yt.seekTo(Math.max(0, sec), true);
+  }
 
-  get currentTime() { return this.yt ? this.yt.getCurrentTime() : 0; }
-  get duration()    { return this.yt ? this.yt.getDuration() : 0; }
-  // 플레이어가 아직 덜 붙었을 때 getPlayerState 가 없을 수 있어 방어적으로 처리. 1 = PLAYING
-  get isPlaying()   { return this.yt && typeof this.yt.getPlayerState === "function" ? this.yt.getPlayerState() === 1 : false; }
-  get iframeEl()    { return this.yt && this.yt.getIframe ? this.yt.getIframe() : null; }
+  get currentTime() {
+    if (this.mode === "local") return this.videoEl ? this.videoEl.currentTime : 0;
+    return this.yt ? this.yt.getCurrentTime() : 0;
+  }
+  get duration() {
+    if (this.mode === "local") return this.videoEl ? this.videoEl.duration || 0 : 0;
+    return this.yt ? this.yt.getDuration() : 0;
+  }
+  get isPlaying() {
+    if (this.mode === "local") return this.videoEl ? !this.videoEl.paused && !this.videoEl.ended : false;
+    // 플레이어가 아직 덜 붙었을 때 getPlayerState 가 없을 수 있어 방어적으로 처리. 1 = PLAYING
+    return this.yt && typeof this.yt.getPlayerState === "function" ? this.yt.getPlayerState() === 1 : false;
+  }
+  get iframeEl() {
+    if (this.mode === "local") return this.videoEl;
+    return this.yt && this.yt.getIframe ? this.yt.getIframe() : null;
+  }
 }
 
 // "https://youtu.be/ID", "https://www.youtube.com/watch?v=ID", 혹은 그냥 "ID" 에서 11자리 ID 추출.

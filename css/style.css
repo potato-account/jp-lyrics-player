@@ -64,10 +64,27 @@ button:active { transform: scale(0.97); }
   position: absolute;
   inset: 0;
 }
-#player, #player iframe {
+#player, #player iframe, #player-local {
   width: 100% !important;
   height: 100% !important;
   border: 0;
+  object-fit: contain;
+  background: #000;
+}
+
+/* 로컬 미디어 곡인데 아직 파일을 안 고른 상태에서 누르는 버튼 */
+#pick-local-media {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 200px;
+  height: 44px;
+  z-index: 6;
+  border-radius: 22px;
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-size: 0.9rem;
+  font-weight: 600;
 }
 
 /* 곡 이미지 레이어 — iframe 위를 덮는다. 기본 상태. */

@@ -70,7 +70,14 @@ function main() {
 
   let promotedNum = index.songs.length;
 
+  // 비공개 메들리/로컬 미디어 곡은 제목과 무관하게 레포에 절대 안 들어가게 통째로 제외한다.
+  // (.gitignore 는 파일 이름으로만 거르므로, 앱에서 제목을 바꾸면 못 막는다)
+  const isPrivate = (s) => !!(s && (s.localMedia || s.isMedley));
+  const privateCount = backup.songs.filter(isPrivate).length;
+  if (privateCount) log(`private ${privateCount}곡 (메들리/로컬 미디어) — 레포에 쓰지 않고 건너뜀`);
+
   for (const s of backup.songs) {
+    if (isPrivate(s)) continue;
     if (s.bundleId && byBundle.has(s.bundleId)) {
       // --- 기존 번들 곡: 사용자 수정 병합 ---
       const entry = byBundle.get(s.bundleId);
@@ -160,7 +167,7 @@ function main() {
   log(`state.json  v${stateVersion}  (playlists ${state.playlists.length}, hidden ${state.hidden.length})`);
 
   // --- 가벼운 백업 사본 ---
-  const lite = { ...backup, images: Object.fromEntries(Object.keys(backup.images || {}).map((r) => {
+  const lite = { ...backup, songs: backup.songs.filter((s) => !isPrivate(s)), images: Object.fromEntries(Object.keys(backup.images || {}).map((r) => {
     const hit = refMap.get(r);
     return [r, hit ? `img/${path.basename(hit.entry.file, ".json")}` : "?"];
   })) };

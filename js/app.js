@@ -4,6 +4,7 @@ import {
   allSongs, getSong, putSong, getLastId, setLastId, migrateLegacy,
   allPlaylists, getPlaylist, putPlaylist, deletePlaylist, songRef, findByRef,
   getImage, putImage, deleteImage, flush,
+  getMedia, putMedia,
 } from "./store.js";
 import { autofillSong, hasFillable } from "./autofill.js";
 
@@ -117,8 +118,32 @@ async function loadSong(next, { autoplay = false, startMr = false } = {}) {
   $("#time-dur").textContent = "0:00";
   $("#time-cur").textContent = "0:00";
   $("#seekbar").value = "0";
+  $("#pick-local-media").hidden = true;   // 로컬 미디어 곡일 때만 아래서 다시 켠다
   if (mrMode) await player.load(song.mr.youtubeId, { autoplay, seek: song.mr.offset || 0 });
+  else if (song.localMedia) await loadLocalMedia(song, { autoplay });
   else if (song.youtubeId) await player.load(song.youtubeId, { autoplay });
+}
+
+// ---------- 로컬 미디어 곡 (유튜브에 없는 영상/음성 — 예: 비공개 메들리) ----------
+// 파일 자체는 이 기기의 IndexedDB 에만 있고, 곡 JSON 은 그걸 가리키는 표시(localMedia:true)만 가진다.
+// 아직 이 기기에서 파일을 한 번도 고른 적 없으면 재생 대신 "파일 선택" 버튼을 보여준다.
+async function loadLocalMedia(song, { autoplay = false } = {}) {
+  const rec = song.id ? await getMedia(song.id) : null;
+  $("#pick-local-media").hidden = !!rec;
+  if (rec && rec.blob) await player.loadLocal(rec.blob, { autoplay });
+}
+
+function wireLocalMedia() {
+  $("#pick-local-media").addEventListener("click", () => $("#local-media-input").click());
+  $("#local-media-input").addEventListener("change", async (e) => {
+    const file = e.target.files[0];
+    e.target.value = "";
+    if (!file || !song || !song.localMedia) return;
+    if (!song.id) await putSong(song);   // id 없으면(막 만든 로컬 곡) 먼저 발급받아야 미디어를 그 id 에 묶을 수 있음
+    await putMedia(song.id, file);
+    $("#pick-local-media").hidden = true;
+    await player.loadLocal(file, { autoplay: true });
+  });
 }
 
 // ---------- 노래방 모드 (MR 재생) ----------
@@ -893,7 +918,7 @@ async function renderList() {
       const full = await getSong(s.id);
       await loadSong(full, { autoplay: true });
       closeSheet();
-      if (!full.youtubeId) openMeta(); // 영상 링크 없는 곡이면 바로 입력창
+      if (!full.youtubeId && !full.localMedia) openMeta(); // 영상 링크도 로컬 미디어도 없는 곡이면 바로 입력창
     });
     li.appendChild(info);
 
@@ -1688,6 +1713,7 @@ async function main() {
   wirePlPick();
   wireSelectMode();
   wireBackup();
+  wireLocalMedia();
   $("#open-list").addEventListener("click", openSheet);
   $("#close-list").addEventListener("click", closeSheet);
   $("#song-list").addEventListener("click", (e) => { if (e.target.id === "song-list") closeSheet(); });

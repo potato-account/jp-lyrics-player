@@ -2,12 +2,15 @@
 // 스키마: { id, title, artist, youtubeId, offset, hidden, lines:[{t,orig,pron,trans}], updatedAt }
 // 플레이리스트: { id, name, refs:["b:bundleId" | "i:songId", ...], createdAt, updatedAt }
 // 곡 이미지: { id(=songId), blob, updatedAt } — 영상 대신 화면에 띄울 사진. 기기 로컬 전용.
+// 로컬 미디어: { id(=songId), blob, updatedAt } — 유튜브 대신 재생할 영상/음성 파일 원본.
+//   song.localMedia === true 인 곡에서만 쓰인다. 파일 자체가 이 기기 밖으로 절대 안 나간다.
 
 const DB_NAME = "jlp";
 const STORE = "songs";
 const PLISTS = "playlists";
 const IMAGES = "images";
-const VERSION = 4;
+const MEDIA = "media";
+const VERSION = 5;
 
 let _db = null;
 function db() {
@@ -24,6 +27,9 @@ function db() {
       }
       if (!d.objectStoreNames.contains(IMAGES)) {
         d.createObjectStore(IMAGES, { keyPath: "id" });
+      }
+      if (!d.objectStoreNames.contains(MEDIA)) {
+        d.createObjectStore(MEDIA, { keyPath: "id" });
       }
     };
     req.onsuccess = () => { _db = req.result; resolve(_db); };
@@ -73,7 +79,7 @@ export async function deleteSong(id) {
 // 그 트랜잭션의 complete 를 기다리면 앞선 쓰기가 모두 끝난 것이다.
 export async function flush() {
   const d = await db();
-  await Promise.all([STORE, IMAGES, PLISTS].map((st) => new Promise((res, rej) => {
+  await Promise.all([STORE, IMAGES, PLISTS, MEDIA].map((st) => new Promise((res, rej) => {
     const t = d.transaction(st, "readwrite");
     t.objectStore(st).get("__flush__");     // 아무 것도 안 바꾸는 no-op
     t.oncomplete = () => res();
@@ -95,6 +101,21 @@ export async function putImage(id, blob) {
 }
 export async function deleteImage(id) {
   await wrap((await tx(IMAGES, "readwrite")).delete(id));
+}
+
+// ---------- 로컬 미디어 (유튜브 대신 재생할 영상/음성 파일) ----------
+// 이 데이터는 이 기기의 브라우저에만 저장된다. GitHub 저장소로는 올라가지 않는다.
+export async function getMedia(id) {
+  if (!id) return null;
+  return wrap((await tx(MEDIA, "readonly")).get(id));
+}
+export async function putMedia(id, blob) {
+  const rec = { id, blob, updatedAt: Date.now() };
+  await wrap((await tx(MEDIA, "readwrite")).put(rec));
+  return rec;
+}
+export async function deleteMedia(id) {
+  await wrap((await tx(MEDIA, "readwrite")).delete(id));
 }
 
 // ---------- 플레이리스트 ----------
